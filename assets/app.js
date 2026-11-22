@@ -71,21 +71,27 @@ const TRANSLATIONS = {
     imp6_title: "Cross-Team Rollouts, CSP Plugins & Outlook-Safe Templates",
     imp6_body:
       "Led requirements, Kanban workflows, and cross-department rollouts; built a full ~13 KB CSS theme and user KPI dashboard plugin respecting strict CSP; and authored table-based HTML email & SVG→PNG alert templates.",
-    privacy_title: "Data Privacy (LGPD / GDPR) & Security Governance",
+    privacy_title: "Data Privacy (LGPD / GDPR), DPO & AppSec",
     privacy_desc:
-      "Practical privacy engineering bridging regulatory compliance, relational database design, AI safety, and operational workflows.",
-    priv1_title: "DPIA / RIPD & Data Flow Mapping",
+      "Practical DPO governance, offensive security remediation, relational anonymization, and AI safety bridging regulation and engineering.",
+    priv1_title: "DPO Governance, RoPA & DPIA / RIPD",
     priv1_body:
-      "Structured personal data inventories and privacy impact assessments covering transactional retail systems, back-office workflows, physical records, and network security controls.",
-    priv2_title: "Irreversible Anonymization & Secure Disposal",
+      "Structured LGPD (Law 13.709/2018) & GDPR compliance programs: RoPA inventories, Arts. 7 & 11 legal bases, Art. 18 Data Subject Rights workflows, and full DPIA / RIPD across retail, back-office, and physical archives.",
+    priv2_title: "OWASP AppSec & Digital Forensics",
     priv2_body:
-      "Defined irreversible anonymization patterns in relational schemas when hard deletion would break referential integrity or audit trails, alongside secure physical document destruction flows.",
-    priv3_title: "Zero-Trust AI & Practical DLP Boundaries",
+      "Executed web penetration tests mapping and remediating 16 critical and medium vulnerabilities across OWASP Top 10 (injections, broken auth, data exposure), alongside network traffic inspection and OS/media digital forensics.",
+    priv3_title: "Irreversible Anonymization & Disposal",
     priv3_body:
-      "Established organizational DLP guardrails barring PII/internal secrets from external AI platforms, backed by automated Vision & deterministic DLP checks prior to external publishing.",
-    priv4_title: "Time-Boxed Access & Security Awareness",
+      "Defined irreversible anonymization patterns in relational schemas when hard deletion would break referential integrity or audit trails, paired with sanitized test datasets and certified physical document destruction.",
+    priv4_title: "Third-Party DPAs, Biometrics & Zero-Trust AI",
     priv4_body:
-      "Designed ticket-validated temporary vendor access (AD logonHours, expiration, RDS logoff, DKIM/SPF/DMARC, ClamAV) and modular corporate training on LGPD, disposal, and safe AI adoption.",
+      "Authored Privacy Notices, vendor DPAs, and Portaria MTE 671/2021 biometric time-tracking controls, backed by Zero-Trust DLP boundaries and automated Vision checks barring PII from external AI platforms.",
+    priv5_title: "Time-Boxed Access & Hardening",
+    priv5_body:
+      "Designed ticket-validated temporary vendor access (AD logonHours, expiration alerts, RDS logoff, encrypted VPN DB tunnels, least-privilege RBAC) alongside Privacy by Design, DKIM/SPF/DMARC, and ClamAV.",
+    priv6_title: "LGPD Technical Authoring & Training",
+    priv6_body:
+      "Co-authored a 12-page technical book chapter on LGPD & Digital Privacy Law and delivered modular corporate awareness tracks covering data governance, secure disposal, and responsible AI adoption.",
     stack_title: "Technical Stack",
     stack_desc:
       "End-to-end versatility from database internals and Linux/Windows administration to modern web interfaces and privacy tooling.",
@@ -170,21 +176,27 @@ const TRANSLATIONS = {
     imp6_title: "Implantações Multi-Área, Extensões CSP & Templates Outlook",
     imp6_body:
       "Conduziu requisitos, fluxos Kanban e implantações entre áreas; desenvolveu tema (~13 KB CSS) e plugin de dashboard respeitando CSP estrita; e criou e-mails HTML em tabela compatíveis com Outlook + banners SVG→PNG.",
-    privacy_title: "Privacidade de Dados (LGPD / GDPR) & Governança de Segurança",
+    privacy_title: "Privacidade de Dados (LGPD / GDPR), DPO & AppSec",
     privacy_desc:
-      "Engenharia prática de privacidade conectando conformidade regulatória, bancos relacionais, segurança em IA e fluxos operacionais.",
-    priv1_title: "DPIA / RIPD & Mapeamento de Fluxo de Dados",
+      "Governança prática de DPO, remediação ofensiva (OWASP), anonimização relacional e segurança em IA conectando regulação e engenharia.",
+    priv1_title: "Governança DPO, RoPA & DPIA / RIPD",
     priv1_body:
-      "Estruturação de inventários de dados pessoais e relatórios de impacto à proteção de dados cobrindo sistemas transacionais de vendas, retaguarda administrativa, guarda física e controles de rede.",
-    priv2_title: "Anonimização Irreversível & Descarte Seguro",
+      "Programas de conformidade LGPD (Lei 13.709/2018) e GDPR: inventários RoPA, bases legais (Arts. 7º e 11º), fluxos de Direitos dos Titulares (Art. 18) e DPIA / RIPD em sistemas de varejo, retaguarda e arquivo físico.",
+    priv2_title: "OWASP AppSec & Forense Digital",
     priv2_body:
-      "Definição de estratégias de anonimização irreversível em bancos relacionais quando a exclusão física quebraria integridade referencial/auditoria, além de fluxos de destruição segura de documentos físicos.",
-    priv3_title: "Fronteiras Zero-Trust de IA & DLP Prático",
+      "Testes de intrusão em aplicações web mapeando e remediando 16 vulnerabilidades críticas e médias (OWASP Top 10: injeções, falhas de autenticação, exposição de dados), análise de tráfego e perícia forense digital.",
+    priv3_title: "Anonimização Irreversível & Descarte",
     priv3_body:
-      "Diretrizes de prevenção a vazamentos barrando PII e segredos internos em plataformas externas de IA, apoiadas por checagens automatizadas (Visão + DLP determinístico) antes de qualquer publicação.",
-    priv4_title: "Acessos Temporários & Capacitação Corporativa",
+      "Estratégias de anonimização irreversível em bancos relacionais sem quebrar integridade referencial/auditoria, além de massas de testes sanitizadas e fluxos certificados de descarte físico.",
+    priv4_title: "DPAs, Biometria & IA Zero-Trust",
     priv4_body:
-      "Fluxos de acesso temporário validados por chamado (AD logonHours, expiração, logoff RDS, DKIM/SPF/DMARC, ClamAV) e trilhas modulares de treinamento em LGPD, descarte e uso seguro de IA.",
+      "Redação de Avisos de Privacidade, cláusulas DPA com fornecedores e conformidade trabalhista/biométrica (Portaria MTE 671/2021), somados a diretrizes DLP e checagem por Visão barrando PII em plataformas de IA.",
+    priv5_title: "Acessos Temporários & Hardening",
+    priv5_body:
+      "Fluxos de acesso temporário por chamado (AD logonHours, expiração, logoff RDS, túneis VPN para bancos, RBAC), Privacy by Design, autenticação de e-mail (DKIM/SPF/DMARC) e proteção ClamAV.",
+    priv6_title: "Capítulo Técnico de LGPD & Capacitação",
+    priv6_body:
+      "Coautoria de capítulo técnico de 12 páginas sobre LGPD e Direito Digital, além de trilhas modulares de conscientização corporativa sobre privacidade, descarte seguro e uso responsável de IA.",
     stack_title: "Stack Técnica",
     stack_desc:
       "Versatilidade ponta a ponta — de internals de banco de dados e administração Linux/Windows até interfaces web modernas e privacidade.",
