@@ -8,17 +8,18 @@
 
 **Live Portfolio & Interactive Resume:** **[https://gavicoding.github.io](https://gavicoding.github.io)**
 
-Official bilingual (`EN` / `PT-BR`) portfolio website of **Gabriel Souza (`@gavicoding`)**, built with zero runtime frameworks — pure semantic **HTML5**, responsive mobile-first **CSS3** (`prefers-reduced-motion` aware), and **Vanilla JavaScript**.
+Official bilingual (`EN` / `PT-BR`) portfolio website of **Gabriel Souza (`@gavicoding`)**, built with zero runtime frameworks: pure semantic **HTML5**, responsive mobile-first **CSS3** (`prefers-reduced-motion` aware), custom dark-tech illustrations, and **Vanilla JavaScript**.
 
 ---
 
 ## Highlights
 
+- **Split Visual Hero & Dark-Tech Illustrations:** Custom raster illustrations (`assets/images/*.png`) highlighting hybrid infrastructure (Windows Server, Active Directory, Linux/Docker), cybersecurity (DPO / OWASP Top 10 / Zero-Trust DLP), and software engineering / Product Ownership (PO).
+- **About Me, Education & Sanitized Career Timeline:** Showcases Computer Science & Cybersecurity (UTFPR) education, APDADOS® Security Committee membership, certifications, and nearly a decade of hands-on IT progression (from L1/L2 remote & chat support to Systems PO & DPO).
 - **Instant Bilingual Switcher (`🇺🇸 EN` ↔ `🇧🇷 PT-BR`):** 100% key-parity translation dictionary persisted in `localStorage`.
 - **Interactive Project Showcase:** Filterable cards across all 6 flagship open-source repositories (`Security & AI`, `Observability`, `Data / T-SQL`, `Infra / DevOps`, `Desktop`).
-- **Sanitized Production Case Studies:** Before → After operational metrics covering Next.js dashboards (`6.8s → 0.1s` TTFB), interactive Leaflet/OSM store locators, WebSocket + mTLS fleet management, fiscal/ITSM recovery, and T-SQL performance tuning.
-- **LGPD & GDPR Governance Showcase:** Highlights DPIA/RIPD assessments, relational anonymization, Zero-Trust AI DLP boundaries, time-boxed access governance, and corporate training programs.
-- **Automated CI Verification:** Validates HTML structure, CSS accessibility guardrails, JS syntax (`node --check`), 100% EN/PT translation key parity, and sanitization rules on every push.
+- **Sanitized Production Case Studies & LGPD Governance:** Before -> After operational metrics (`6.8s -> 0.1s` TTFB), interactive Leaflet/OSM store locators, WebSocket + mTLS fleet management, ERP deployments, and LGPD/GDPR + OWASP AppSec governance.
+- **Automated CI Verification:** Validates HTML structure, local image references, LinkedIn links, CSS accessibility guardrails, JS syntax (`node --check`), 100% EN/PT translation key parity, zero em-dashes, and sanitization rules on every push.
 
 ---
 

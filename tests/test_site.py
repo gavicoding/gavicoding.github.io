@@ -54,9 +54,19 @@ class TestPortfolioSite(unittest.TestCase):
         self.assertIn("viewport", parser.meta_names)
         self.assertIn("description", parser.meta_names)
 
-        for local_ref in ("assets/styles.css", "assets/app.js"):
+        expected_assets = (
+            "assets/styles.css",
+            "assets/app.js",
+            "assets/images/hero-visual.png",
+            "assets/images/pillar-infra.png",
+            "assets/images/pillar-security.png",
+            "assets/images/pillar-product.png",
+        )
+        for local_ref in expected_assets:
             self.assertTrue((ROOT / local_ref).is_file(), f"Missing referenced asset: {local_ref}")
-            self.assertTrue(local_ref in parser.hrefs or local_ref in parser.srcs)
+            self.assertTrue(local_ref in parser.hrefs or local_ref in parser.srcs, f"Unreferenced asset: {local_ref}")
+
+        self.assertIn("https://www.linkedin.com/in/gabrielvsouza/", parser.hrefs)
 
         expected_repos = (
             "pii-screenshot-guard",
@@ -102,6 +112,17 @@ class TestPortfolioSite(unittest.TestCase):
             content = path.read_text(encoding="utf-8").lower()
             for term in FORBIDDEN_TERMS:
                 self.assertNotIn(term, content, f"Forbidden term detected in {path.name}")
+
+    def test_zero_em_dashes(self):
+        files_to_scan = [
+            ROOT / "index.html",
+            ROOT / "assets" / "styles.css",
+            ROOT / "assets" / "app.js",
+            ROOT / "README.md",
+        ]
+        for path in files_to_scan:
+            content = path.read_text(encoding="utf-8")
+            self.assertNotIn("\u2014", content, f"Em-dash detected in {path.name}")
 
 
 if __name__ == "__main__":
