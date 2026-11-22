@@ -13,7 +13,7 @@ const TRANSLATIONS = {
     hero_badge: "Remote · Async-First · Brazil & International",
     hero_title: "Building resilient automation, observable backends, and privacy-safe systems.",
     hero_subtitle:
-      "I'm Gabriel Souza — an IT Automation & Software Engineer working across Python, TypeScript, Next.js, T-SQL, C# (.NET), and hybrid Linux/Windows infrastructure, pairing practical engineering with Applied AI and LGPD/GDPR governance.",
+      "I'm Gabriel Souza — an IT Automation & Software Engineer, Product Owner (PO), and DPO working across Python, TypeScript, Next.js, T-SQL, C# (.NET), and hybrid Linux/Windows infrastructure — combining end-to-end ERP/system deployments with Applied AI and LGPD/GDPR governance.",
     cta_projects: "Explore Open-Source Projects",
     cta_github: "GitHub Profile",
     cta_copy_email: "Copy Email",
@@ -67,10 +67,10 @@ const TRANSLATIONS = {
     imp5_title: "SQL Server Optimization & Warehouse Throughput Analytics",
     imp5_body:
       "Eliminated multi-trip returnable container duplicates via ROW_NUMBER(), unified strategic sales KPIs in one pass, instrumented WMS picking/checkout stage bottlenecks, and captured sys.dm_tran_locks wait snapshots asynchronously.",
-    imp6_tag: "Product Ownership · UI Extensions · Email HTML",
-    imp6_title: "Cross-Team Rollouts, CSP Plugins & Outlook-Safe Templates",
+    imp6_tag: "Product Ownership (PO) · System Deployment · Rollouts",
+    imp6_title: "End-to-End ERP & System Implementations, PO & UI Extensions",
     imp6_body:
-      "Led requirements, Kanban workflows, and cross-department rollouts; built a full ~13 KB CSS theme and user KPI dashboard plugin respecting strict CSP; and authored table-based HTML email & SVG→PNG alert templates.",
+      "Acted as Solutions Product Owner translating business needs into specs, Kanban pipelines, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training — plus CSP-safe UI plugins (~13 KB theme) and Outlook-safe HTML/SVG→PNG alert templates.",
     privacy_title: "Data Privacy (LGPD / GDPR), DPO & AppSec",
     privacy_desc:
       "Practical DPO governance, offensive security remediation, relational anonymization, and AI safety bridging regulation and engineering.",
@@ -118,7 +118,7 @@ const TRANSLATIONS = {
     hero_badge: "Remoto · Async-First · Brasil & Exterior",
     hero_title: "Construindo automações resilientes, backends observáveis e sistemas seguros com privacidade.",
     hero_subtitle:
-      "Sou Gabriel Souza — Engenheiro de Automação de TI e Software atuando com Python, TypeScript, Next.js, T-SQL, C# (.NET) e infraestrutura híbrida Linux/Windows, unindo engenharia prática com IA Aplicada e governança LGPD/GDPR.",
+      "Sou Gabriel Souza — Engenheiro de Automação de TI e Software, Product Owner (PO) e DPO atuando com Python, TypeScript, Next.js, T-SQL, C# (.NET) e infraestrutura híbrida Linux/Windows — unindo implantações ponta a ponta de ERPs/sistemas com IA Aplicada e governança LGPD/GDPR.",
     cta_projects: "Ver Projetos Open-Source",
     cta_github: "Perfil no GitHub",
     cta_copy_email: "Copiar E-mail",
@@ -172,10 +172,10 @@ const TRANSLATIONS = {
     imp5_title: "Otimização SQL Server & Produtividade de Separação",
     imp5_body:
       "Eliminou duplicidade em rastreamento de caixas retornáveis via ROW_NUMBER(), unificou vendas estratégicas em passada única, mediu gargalos de separação/conferência WMS e registrou snapshots assíncronos de sys.dm_tran_locks.",
-    imp6_tag: "Product Ownership · Plugins CSP · E-mails HTML",
-    imp6_title: "Implantações Multi-Área, Extensões CSP & Templates Outlook",
+    imp6_tag: "Product Ownership (PO) · Implantação de Sistemas · Rollouts",
+    imp6_title: "Implantação de ERPs & Sistemas, PO & Extensões Web",
     imp6_body:
-      "Conduziu requisitos, fluxos Kanban e implantações entre áreas; desenvolveu tema (~13 KB CSS) e plugin de dashboard respeitando CSP estrita; e criou e-mails HTML em tabela compatíveis com Outlook + banners SVG→PNG.",
+      "Atuação como Product Owner (PO) de soluções internas traduzindo demandas de negócio em especificações, fluxos Kanban, homologação (UAT), runbooks de migração, viradas em paralelo, rollouts em ondas e treinamentos práticos — além de plugins CSP (~13 KB) e templates HTML/SVG→PNG compatíveis com Outlook.",
     privacy_title: "Privacidade de Dados (LGPD / GDPR), DPO & AppSec",
     privacy_desc:
       "Governança prática de DPO, remediação ofensiva (OWASP), anonimização relacional e segurança em IA conectando regulação e engenharia.",
