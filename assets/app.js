@@ -79,7 +79,7 @@ const TRANSLATIONS = {
       "Structured LGPD (Law 13.709/2018) & GDPR compliance programs: RoPA inventories, Arts. 7 & 11 legal bases, Art. 18 Data Subject Rights workflows, and full DPIA / RIPD across retail, back-office, and physical archives.",
     priv2_title: "OWASP AppSec & Digital Forensics",
     priv2_body:
-      "Executed web penetration tests mapping and remediating 16 critical and medium vulnerabilities across OWASP Top 10 (injections, broken auth, data exposure), alongside network traffic inspection and OS/media digital forensics.",
+      "Executed web penetration tests mapping 16 critical and medium vulnerabilities across OWASP Top 10 (injections, broken auth, data exposure) with code remediation & server-hardening plans, alongside network traffic inspection and OS/media digital forensics.",
     priv3_title: "Irreversible Anonymization & Disposal",
     priv3_body:
       "Defined irreversible anonymization patterns in relational schemas when hard deletion would break referential integrity or audit trails, paired with sanitized test datasets and certified physical document destruction.",
@@ -91,7 +91,7 @@ const TRANSLATIONS = {
       "Designed ticket-validated temporary vendor access (AD logonHours, expiration alerts, RDS logoff, encrypted VPN DB tunnels, least-privilege RBAC) alongside Privacy by Design, DKIM/SPF/DMARC, and ClamAV.",
     priv6_title: "LGPD Technical Authoring & Training",
     priv6_body:
-      "Co-authored a 12-page technical book chapter on LGPD & Digital Privacy Law and delivered modular corporate awareness tracks covering data governance, secure disposal, and responsible AI adoption.",
+      "Authored a 12-page practical technical chapter on real-world LGPD implementation, retail risk management, and regulatory audit readiness, alongside modular corporate awareness tracks on privacy, secure disposal, and responsible AI adoption.",
     stack_title: "Technical Stack",
     stack_desc:
       "End-to-end versatility from database internals and Linux/Windows administration to modern web interfaces and privacy tooling.",
@@ -184,7 +184,7 @@ const TRANSLATIONS = {
       "Programas de conformidade LGPD (Lei 13.709/2018) e GDPR: inventários RoPA, bases legais (Arts. 7º e 11º), fluxos de Direitos dos Titulares (Art. 18) e DPIA / RIPD em sistemas de varejo, retaguarda e arquivo físico.",
     priv2_title: "OWASP AppSec & Forense Digital",
     priv2_body:
-      "Testes de intrusão em aplicações web mapeando e remediando 16 vulnerabilidades críticas e médias (OWASP Top 10: injeções, falhas de autenticação, exposição de dados), análise de tráfego e perícia forense digital.",
+      "Testes de intrusão em aplicações web mapeando 16 vulnerabilidades críticas e médias (OWASP Top 10: injeções, falhas de autenticação, exposição de dados) com planos de remediação de código e hardening, além de análise de tráfego e perícia forense digital.",
     priv3_title: "Anonimização Irreversível & Descarte",
     priv3_body:
       "Estratégias de anonimização irreversível em bancos relacionais sem quebrar integridade referencial/auditoria, além de massas de testes sanitizadas e fluxos certificados de descarte físico.",
@@ -196,7 +196,7 @@ const TRANSLATIONS = {
       "Fluxos de acesso temporário por chamado (AD logonHours, expiração, logoff RDS, túneis VPN para bancos, RBAC), Privacy by Design, autenticação de e-mail (DKIM/SPF/DMARC) e proteção ClamAV.",
     priv6_title: "Capítulo Técnico de LGPD & Capacitação",
     priv6_body:
-      "Coautoria de capítulo técnico de 12 páginas sobre LGPD e Direito Digital, além de trilhas modulares de conscientização corporativa sobre privacidade, descarte seguro e uso responsável de IA.",
+      "Redação de capítulo técnico-prático de 12 páginas sobre implementação real da LGPD, gestão de riscos no varejo e preparação regulatória, além de trilhas modulares de conscientização corporativa sobre privacidade, descarte seguro e uso responsável de IA.",
     stack_title: "Stack Técnica",
     stack_desc:
       "Versatilidade ponta a ponta — de internals de banco de dados e administração Linux/Windows até interfaces web modernas e privacidade.",
