@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gabriel Souza (@gavicoding) — IT Automation, Software Engineering &amp; Data Privacy</title>
+  <meta name="description" content="Official bilingual portfolio and interactive resume of Gabriel Souza (@gavicoding): Python, TypeScript, Next.js, T-SQL, Hybrid Infrastructure (Linux/Windows/Docker), Applied AI, and LGPD/GDPR Governance." />
+  <meta property="og:title" content="Gabriel Souza (@gavicoding) — Engineering Portfolio" />
+  <meta property="og:description" content="IT Automation &amp; Software Engineer | Python · TypeScript · Next.js · T-SQL · C# (.NET) | Hybrid Infra, Applied AI &amp; Data Privacy (LGPD/GDPR)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gavicoding.github.io/" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip_link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Gabriel Souza home">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>Gabriel Souza</span>
+        <span class="brand-handle">@gavicoding</span>
+      </a>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#impact" data-i18n="nav_impact">Impact</a>
+        <a href="#privacy" data-i18n="nav_privacy">Privacy &amp; LGPD</a>
+        <a href="#stack" data-i18n="nav_stack">Stack</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="lang-toggle" class="btn-ghost" aria-label="Switch language">
+          <span id="lang-label">🇧🇷 PT-BR</span>
+        </button>
+        <button
+          type="button"
+          id="menu-toggle"
+          class="btn-ghost menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation menu"
+        >☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="status-pill">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span data-i18n="hero_badge">Remote · Async-First · Brazil &amp; International</span>
+        </div>
+
+        <h1 class="hero-title" data-i18n="hero_title">
+          Building resilient automation, observable backends, and privacy-safe systems.
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          I'm Gabriel Souza — an IT Automation &amp; Software Engineer working across Python, TypeScript, Next.js, T-SQL, C# (.NET), and hybrid Linux/Windows infrastructure, pairing practical engineering with Applied AI and LGPD/GDPR governance.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects" data-i18n="cta_projects">Explore Open-Source Projects</a>
+          <a class="btn btn-secondary" href="https://github.com/gavicoding" target="_blank" rel="noopener noreferrer" data-i18n="cta_github">GitHub Profile</a>
+          <button type="button" id="copy-email-hero" class="btn btn-secondary copy-email-btn" data-i18n="cta_copy_email">Copy Email</button>
+        </div>
+
+        <div class="metrics-grid">
+          <article class="metric-card reveal">
+            <div class="metric-value">6.8s → 0.1s</div>
+            <div class="metric-label" data-i18n="metric_1_label">Next.js dashboard TTFB after replacing 85 parallel queries with a single aggregation</div>
+          </article>
+          <article class="metric-card reveal">
+            <div class="metric-value">~80 / ~400</div>
+            <div class="metric-label" data-i18n="metric_2_label">Multi-branch stores &amp; Windows endpoints supported across hybrid Linux + AD ops</div>
+          </article>
+          <article class="metric-card reveal">
+            <div class="metric-value">6 CI-Tested</div>
+            <div class="metric-label" data-i18n="metric_3_label">Open-source repositories spanning Python, TypeScript, T-SQL, Bash/PS &amp; C#</div>
+          </article>
+          <article class="metric-card reveal">
+            <div class="metric-value">LGPD · GDPR</div>
+            <div class="metric-label" data-i18n="metric_4_label">DPIA/RIPD assessments, Zero-Trust DLP, anonymization &amp; access governance</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="projects_title">Featured Open-Source Projects</h2>
+          <p data-i18n="projects_desc">Every project below ships with automated tests or linters in GitHub Actions, bilingual documentation, and zero proprietary data.</p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true" data-i18n="filter_all">All</button>
+          <button type="button" class="filter-btn" data-filter="security" aria-pressed="false" data-i18n="filter_security">Security &amp; AI</button>
+          <button type="button" class="filter-btn" data-filter="observability" aria-pressed="false" data-i18n="filter_observability">Observability</button>
+          <button type="button" class="filter-btn" data-filter="data" aria-pressed="false" data-i18n="filter_data">Data / T-SQL</button>
+          <button type="button" class="filter-btn" data-filter="infra" aria-pressed="false" data-i18n="filter_infra">Infra / DevOps</button>
+          <button type="button" class="filter-btn" data-filter="desktop" aria-pressed="false" data-i18n="filter_desktop">Desktop</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card project-card reveal" data-category="security">
+            <div class="card-top">
+              <span class="tag">Python · Zero-Trust DLP</span>
+              <span class="badge-live">v1.0.0 · CI</span>
+            </div>
+            <h3>pii-screenshot-guard</h3>
+            <p data-i18n="proj_pii_desc">
+              Zero-dependency CLI, library &amp; GitHub PR diff auditor catching LGPD/GDPR PII (mod-11 CPF/CNPJ, Luhn cards), API secrets, and RFC 1918 internal IPs across logs, PRs, and screenshots (OCR/Vision).
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/pii-screenshot-guard" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <a href="https://gavicoding.github.io/pii-screenshot-guard/" target="_blank" rel="noopener noreferrer" data-i18n="link_docs">Live Docs</a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="observability">
+            <div class="card-top">
+              <span class="tag">TypeScript · Node.js · Docker</span>
+              <span class="badge-live">v1.0.0 · CI</span>
+            </div>
+            <h3>queue-health-watchdog</h3>
+            <p data-i18n="proj_watchdog_desc">
+              Read-only replication &amp; job queue monitor using snapshot trend heuristics to distinguish active HIGH_LOAD from STALLED queues — preventing alert fatigue with cooldowns, webhooks, and a live HTML dashboard.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/queue-health-watchdog" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="data">
+            <div class="card-top">
+              <span class="tag">T-SQL · SQL Server · DBA</span>
+              <span class="badge-live">v1.0.0 · CI</span>
+            </div>
+            <h3>tsql-retail-ops-analytics</h3>
+            <p data-i18n="proj_sql_desc">
+              Synthetic T-SQL analytics &amp; DBA toolkit covering single-pass conditional sales KPIs, ROW_NUMBER() asset deduplication, multi-mode stored procedures, WMS bottlenecks, sys.dm_tran_locks logging &amp; RBAC grants.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/tsql-retail-ops-analytics" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="infra">
+            <div class="card-top">
+              <span class="tag">Bash · PowerShell · Docker · mTLS</span>
+              <span class="badge-live">v1.0.0 · CI</span>
+            </div>
+            <h3>infra-ops-playbook</h3>
+            <p data-i18n="proj_infra_desc">
+              Hybrid Linux + Windows/AD operations playbook featuring RSA-3072 signed PowerShell agents, language-agnostic SID ACL recovery, Postgres Docker backups, Nginx mTLS templates, and 24 sanitized troubleshooting cases.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/infra-ops-playbook" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="desktop">
+            <div class="card-top">
+              <span class="tag">C# · .NET 8 · WPF (MVVM)</span>
+              <span class="badge-live">.NET Build CI</span>
+            </div>
+            <h3>OtimizaPC</h3>
+            <p data-i18n="proj_otimizapc_desc">
+              Dark-mode Windows system optimizer built with strict deletion previews, one-click Restore Points, multi-profile junk cleanup, content-hash duplicate finder, 90-day orphan residue scanner, S.M.A.R.T. &amp; instant disk analyzer.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/OtimizaPC" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal" data-category="desktop">
+            <div class="card-top">
+              <span class="tag">Python · COM · SQLite · vCard 3.0</span>
+              <span class="badge-live">Unit Tests CI</span>
+            </div>
+            <h3>Thunderbird-Outlook</h3>
+            <p data-i18n="proj_tb_desc">
+              Bidirectional Windows email &amp; address-book migrator preserving folder trees, original received timestamps (MSGFLAG_UNSENT / MAPI), senders, attachments, and \\?\ long file paths.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/Thunderbird-Outlook" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="impact_title">Sanitized Production Case Studies (Before → After)</h2>
+          <p data-i18n="impact_desc">Measurable architecture, web engineering, and reliability improvements delivered across distributed retail, warehouse, and IT operations.</p>
+        </div>
+
+        <div class="impact-grid">
+          <article class="card impact-card reveal">
+            <span class="impact-pill" data-i18n="imp1_tag">Next.js · SVG Topology · Observability</span>
+            <h3 data-i18n="imp1_title">Operational Dashboard &amp; Live Infrastructure Map</h3>
+            <p data-i18n="imp1_body">Replaced 85 parallel per-store queries with single-query aggregations, dynamic Server Components, animated SVG dependency topology, and hourly batched HTML alerts — cutting TTFB from 6.8s to 0.1s and email noise from 80+/day to digests.</p>
+          </article>
+
+          <article class="card impact-card reveal">
+            <span class="impact-pill" data-i18n="imp2_tag">Web · Leaflet/OSM · WCAG Accessibility</span>
+            <h3 data-i18n="imp2_title">Corporate Site Rebuild &amp; Interactive Store Locator</h3>
+            <p data-i18n="imp2_body">Rebuilt a 7-page institutional website with a city/service-filtered Leaflet + OpenStreetMap locator, ResizeObserver iframe sizing, mobile-first breakpoints (tested at 390px), and automated contrast audits achieving 0 WCAG failures.</p>
+          </article>
+
+          <article class="card impact-card reveal">
+            <span class="impact-pill" data-i18n="imp3_tag">Windows Fleet · WebSockets + mTLS · PowerShell</span>
+            <h3 data-i18n="imp3_title">Endpoint Fleet Control Plane &amp; ACL Self-Healing</h3>
+            <p data-i18n="imp3_body">Deployed an NSSM Windows agent over WebSockets + mTLS with wave rollouts, kill-switch recovery, RSA-signed auto-updates, and language-agnostic SID ACL repair — cutting post-restart reconnection from 60s to 3–7s.</p>
+          </article>
+
+          <article class="card impact-card reveal">
+            <span class="impact-pill" data-i18n="imp4_tag">Sync Recovery · ITSM · Automation</span>
+            <h3 data-i18n="imp4_title">Sales &amp; Fiscal Retransmission + ITSM Backlog Recovery</h3>
+            <p data-i18n="imp4_body">Automated contingency fiscal/sales retransmission with retry safeguards and vendor ticketing, automated CCTV evidence retrieval across 83 NVRs/DVRs, and recovered a stalled 109k-ticket ITSM notification queue without email storms.</p>
+          </article>
+
+          <article class="card impact-card reveal">
+            <span class="impact-pill" data-i18n="imp5_tag">T-SQL · WMS Picking · Lock Diagnostics</span>
+            <h3 data-i18n="imp5_title">SQL Server Optimization &amp; Warehouse Throughput Analytics</h3>
+            <p data-i18n="imp5_body">Eliminated multi-trip returnable container duplicates via ROW_NUMBER(), unified strategic sales KPIs in one pass, instrumented WMS picking/checkout stage bottlenecks, and captured sys.dm_tran_locks wait snapshots asynchronously.</p>
+          </article>
+
+          <article class="card impact-card reveal">
+            <span class="impact-pill" data-i18n="imp6_tag">Product Ownership · UI Extensions · Email HTML</span>
+            <h3 data-i18n="imp6_title">Cross-Team Rollouts, CSP Plugins &amp; Outlook-Safe Templates</h3>
+            <p data-i18n="imp6_body">Led requirements, Kanban workflows, and cross-department rollouts; built a full ~13 KB CSS theme and user KPI dashboard plugin respecting strict CSP; and authored table-based HTML email &amp; SVG→PNG alert templates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="privacy_title">Data Privacy (LGPD / GDPR) &amp; Security Governance</h2>
+          <p data-i18n="privacy_desc">Practical privacy engineering bridging regulatory compliance, relational database design, AI safety, and operational workflows.</p>
+        </div>
+
+        <div class="privacy-grid">
+          <article class="card reveal">
+            <h3 data-i18n="priv1_title">DPIA / RIPD &amp; Data Flow Mapping</h3>
+            <p data-i18n="priv1_body">Structured personal data inventories and privacy impact assessments covering transactional retail systems, back-office workflows, physical records, and network security controls.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3 data-i18n="priv2_title">Irreversible Anonymization &amp; Secure Disposal</h3>
+            <p data-i18n="priv2_body">Defined irreversible anonymization patterns in relational schemas when hard deletion would break referential integrity or audit trails, alongside secure physical document destruction flows.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3 data-i18n="priv3_title">Zero-Trust AI &amp; Practical DLP Boundaries</h3>
+            <p data-i18n="priv3_body">Established organizational DLP guardrails barring PII/internal secrets from external AI platforms, backed by automated Vision &amp; deterministic DLP checks prior to external publishing.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3 data-i18n="priv4_title">Time-Boxed Access &amp; Security Awareness</h3>
+            <p data-i18n="priv4_body">Designed ticket-validated temporary vendor access (AD logonHours, expiration, RDS logoff, DKIM/SPF/DMARC, ClamAV) and modular corporate training on LGPD, disposal, and safe AI adoption.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="stack_title">Technical Stack</h2>
+          <p data-i18n="stack_desc">End-to-end versatility from database internals and Linux/Windows administration to modern web interfaces and privacy tooling.</p>
+        </div>
+
+        <div class="stack-groups">
+          <div class="stack-group reveal">
+            <h3 data-i18n="stack_g1">Languages &amp; Scripting</h3>
+            <div class="pill-list">
+              <span>Python</span><span>TypeScript</span><span>JavaScript (ES2022+)</span><span>T-SQL</span>
+              <span>C# / .NET 8</span><span>Bash</span><span>PowerShell</span><span>HTML5</span><span>CSS3</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <h3 data-i18n="stack_g2">Web, APIs &amp; Desktop</h3>
+            <div class="pill-list">
+              <span>Next.js (App Router)</span><span>React</span><span>FastAPI</span><span>Node.js</span>
+              <span>Tailwind CSS</span><span>Prisma</span><span>Leaflet / OSM</span><span>WPF (MVVM)</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <h3 data-i18n="stack_g3">Databases &amp; Hybrid Infra</h3>
+            <div class="pill-list">
+              <span>Microsoft SQL Server</span><span>PostgreSQL</span><span>SQLite</span><span>MySQL</span>
+              <span>Linux (Debian/Ubuntu)</span><span>Docker &amp; Compose</span><span>Nginx TLS/mTLS</span>
+              <span>systemd</span><span>Active Directory</span><span>GitHub Actions</span><span>Google Cloud</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <h3 data-i18n="stack_g4">Governance, Security &amp; Operations</h3>
+            <div class="pill-list">
+              <span>LGPD &amp; GDPR</span><span>DPIA / RIPD</span><span>Zero-Trust DLP</span><span>Least-Privilege RBAC</span>
+              <span>DKIM / SPF / DMARC</span><span>ClamAV</span><span>ITSM / GLPI</span><span>Product Ownership / Kanban</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-box reveal">
+        <div>
+          <h2 data-i18n="contact_title">Let's Work Together</h2>
+          <p data-i18n="contact_desc">Open to remote opportunities in Brazil and internationally (US, Canada, Europe) across IT Automation, Software/Backend Engineering, Observability, and Privacy Engineering.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://github.com/gavicoding" target="_blank" rel="noopener noreferrer" data-i18n="contact_github">Visit GitHub (@gavicoding)</a>
+          <button type="button" id="copy-email-footer" class="btn btn-secondary copy-email-btn" data-i18n="contact_copy_email">Copy Email (gavicoding@gmail.com)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Gabriel Souza (@gavicoding)</span>
+      <span data-i18n="footer_note">Built with semantic HTML5, CSS3 &amp; Vanilla JS · Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
