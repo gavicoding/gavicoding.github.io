@@ -13,7 +13,7 @@ const TRANSLATIONS = {
     hero_title:
       "Engineering resilient automation, hybrid Windows/Linux ops, and privacy governance by design.",
     hero_subtitle:
-      "I'm Gabriel Souza: IT Automation & Software Engineer, Solutions Product Owner (PO), and DPO (LGPD/GDPR). I combine Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server, and Active Directory to deliver ERP/system deployments, L2 remote/chat operations, and OWASP AppSec hardening.",
+      "I'm Gabriel Souza: IT Automation, DevOps & Software Engineer, Solutions Product Owner (PO), and DPO (LGPD/GDPR). I combine Python, TypeScript, Next.js, T-SQL, C# (.NET), Docker, Windows Server, and Active Directory to deliver ERP/system deployments, L2 remote/chat operations, and OWASP AppSec hardening.",
     cta_lab: "Launch Interactive Lab",
     cta_github: "GitHub",
     cta_linkedin: "LinkedIn",
@@ -168,7 +168,7 @@ const TRANSLATIONS = {
     contact_eyebrow: "NEXT STEP",
     contact_title: "Let's Work Together",
     contact_desc:
-      "Open to remote opportunities in Brazil and internationally across IT Automation, Software/Backend Engineering, Solutions PO / Systems Implementation, Hybrid Infrastructure, and DPO / AppSec.",
+      "Open to remote opportunities in Brazil and internationally across IT Automation, Software/Backend Engineering, Solutions PO / Systems Implementation, DevOps / Hybrid Infrastructure, and DPO / AppSec.",
     contact_github: "Visit GitHub (@gavicoding)",
     contact_linkedin: "Connect on LinkedIn",
     contact_copy_email: "Copy Email (gavicoding@gmail.com)",
@@ -188,7 +188,7 @@ const TRANSLATIONS = {
     hero_title:
       "Engenharia de automações resilientes, infraestrutura Windows/Linux e governança de privacidade.",
     hero_subtitle:
-      "Sou Gabriel Souza: Engenheiro de Automação de TI e Software, Product Owner (PO) de Soluções e DPO (LGPD/GDPR). Unindo Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server e Active Directory para entregas de ERPs/sistemas, suporte remoto/chat N2 e hardening OWASP AppSec.",
+      "Sou Gabriel Souza: Engenheiro de Automação de TI, DevOps e Software, Product Owner (PO) de Soluções e DPO (LGPD/GDPR). Unindo Python, TypeScript, Next.js, T-SQL, C# (.NET), Docker, Windows Server e Active Directory para entregas de ERPs/sistemas, suporte remoto/chat N2 e hardening OWASP AppSec.",
     cta_lab: "Testar Laboratório Interativo",
     cta_github: "GitHub",
     cta_linkedin: "LinkedIn",
@@ -343,7 +343,7 @@ const TRANSLATIONS = {
     contact_eyebrow: "PRÓXIMO PASSO",
     contact_title: "Vamos Trabalhar Juntos",
     contact_desc:
-      "Aberto a oportunidades remotas no Brasil e no exterior em Automação de TI, Engenharia de Software/Backend, Implantação de Sistemas (PO), Infraestrutura Híbrida e DPO / AppSec.",
+      "Aberto a oportunidades remotas no Brasil e no exterior em Automação de TI, Engenharia de Software/Backend, Implantação de Sistemas (PO), DevOps / Infraestrutura Híbrida e DPO / AppSec.",
     contact_github: "Visitar GitHub (@gavicoding)",
     contact_linkedin: "Conectar no LinkedIn",
     contact_copy_email: "Copiar E-mail (gavicoding@gmail.com)",
@@ -362,8 +362,8 @@ const TERMINAL_DATA = {
     ],
     whoami: [
       "$ whoami --profile",
-      "Gabriel Souza (@gavicoding) | IT Admin, Solutions PO & DPO (LGPD/GDPR)",
-      "Focus: Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server & AD",
+      "Gabriel Souza (@gavicoding) | IT Admin, DevOps, Solutions PO & DPO (LGPD/GDPR)",
+      "Focus: Python, TypeScript, Next.js, T-SQL, C# (.NET), Docker, Windows Server & AD",
       "Education: B.Sc. Computer Science | MBA Process Mgmt | Postgrad InfoSec & Cybersecurity (UTFPR)",
       "Volunteering: Security Committee Member at APDADOS® (since 2021)",
     ],
@@ -414,8 +414,8 @@ const TERMINAL_DATA = {
     ],
     whoami: [
       "$ whoami --profile",
-      "Gabriel Souza (@gavicoding) | Adm. de TI, PO de Soluções & DPO (LGPD/GDPR)",
-      "Foco: Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server & AD",
+      "Gabriel Souza (@gavicoding) | Adm. de TI, DevOps, PO de Soluções & DPO (LGPD/GDPR)",
+      "Foco: Python, TypeScript, Next.js, T-SQL, C# (.NET), Docker, Windows Server & AD",
       "Formação: Ciência da Computação | MBA Processos | Pós Seg. Info & Cibersegurança (UTFPR)",
       "Voluntariado: Membro do Comitê de Segurança da APDADOS® (desde 2021)",
     ],
