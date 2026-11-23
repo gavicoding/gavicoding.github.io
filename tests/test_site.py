@@ -52,6 +52,7 @@ class TestPortfolioSite(unittest.TestCase):
     def test_html_structure_assets_and_repo_links(self):
         html_text = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertTrue(html_text.lower().lstrip().startswith("<!doctype html>"))
+        self.assertIn("<title>Gavicoding</title>", html_text)
 
         parser = PortfolioHTMLParser()
         parser.feed(html_text)
