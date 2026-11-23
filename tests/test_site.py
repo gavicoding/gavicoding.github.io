@@ -12,6 +12,8 @@ FORBIDDEN_TERMS = [
     "nex" + "us",
     "ekle" + "sia",
     "ed" + "oc",
+    "port" + "aria",
+    "671/" + "2021",
 ]
 
 
@@ -21,6 +23,7 @@ class PortfolioHTMLParser(HTMLParser):
         self.meta_names = set()
         self.hrefs = []
         self.srcs = []
+        self.ids = set()
         self.i18n_keys = set()
 
     def handle_starttag(self, tag, attrs):
@@ -31,6 +34,8 @@ class PortfolioHTMLParser(HTMLParser):
             self.hrefs.append(attr_map["href"])
         if "src" in attr_map:
             self.srcs.append(attr_map["src"])
+        if "id" in attr_map:
+            self.ids.add(attr_map["id"])
         if "data-i18n" in attr_map:
             self.i18n_keys.add(attr_map["data-i18n"])
 
@@ -55,19 +60,31 @@ class TestPortfolioSite(unittest.TestCase):
         self.assertIn("description", parser.meta_names)
 
         expected_assets = (
+            "assets/favicon.svg",
             "assets/styles.css",
             "assets/app.js",
-            "assets/images/hero-visual.png",
-            "assets/images/pillar-infra.png",
-            "assets/images/pillar-security.png",
-            "assets/images/pillar-product.png",
         )
         for local_ref in expected_assets:
             self.assertTrue((ROOT / local_ref).is_file(), f"Missing referenced asset: {local_ref}")
-            self.assertTrue(local_ref in parser.hrefs or local_ref in parser.srcs, f"Unreferenced asset: {local_ref}")
+            self.assertTrue(
+                local_ref in parser.hrefs or local_ref in parser.srcs,
+                f"Unreferenced asset: {local_ref}",
+            )
 
-        self.assertIn("https://www.linkedin.com/in/gabrielvsouza/", parser.hrefs)
+        self.assertTrue((ROOT / "assets" / "images" / "hero-visual.png").is_file())
         self.assertIn("https://gavicoding.github.io/assets/images/hero-visual.png", html_text)
+        self.assertIn("https://www.linkedin.com/in/gabrielvsouza/", parser.hrefs)
+
+        required_ids = (
+            "hero-terminal",
+            "dlp-input",
+            "dlp-output",
+            "topo-svg",
+            "dpo-stepper",
+            "theme-toggle",
+        )
+        for element_id in required_ids:
+            self.assertIn(element_id, parser.ids, f"Missing interactive element #{element_id}")
 
         expected_repos = (
             "pii-screenshot-guard",
@@ -81,9 +98,10 @@ class TestPortfolioSite(unittest.TestCase):
         for repo in expected_repos:
             self.assertIn(f"https://github.com/gavicoding/{repo}", all_hrefs)
 
-    def test_css_variables_responsive_and_reduced_motion(self):
+    def test_css_variables_themes_responsive_and_reduced_motion(self):
         css_text = (ROOT / "assets" / "styles.css").read_text(encoding="utf-8")
         self.assertIn(":root", css_text)
+        self.assertIn('[data-theme="light"]', css_text)
         self.assertIn("@media (max-width:", css_text)
         self.assertIn("prefers-reduced-motion", css_text)
 
@@ -102,7 +120,7 @@ class TestPortfolioSite(unittest.TestCase):
         self.assertEqual(missing_en, set(), f"HTML keys missing in EN: {missing_en}")
         self.assertEqual(missing_pt, set(), f"HTML keys missing in PT: {missing_pt}")
 
-    def test_zero_confidential_terms(self):
+    def test_zero_confidential_or_removed_terms(self):
         files_to_scan = [
             ROOT / "index.html",
             ROOT / "assets" / "styles.css",
@@ -112,7 +130,7 @@ class TestPortfolioSite(unittest.TestCase):
         for path in files_to_scan:
             content = path.read_text(encoding="utf-8").lower()
             for term in FORBIDDEN_TERMS:
-                self.assertNotIn(term, content, f"Forbidden term detected in {path.name}")
+                self.assertNotIn(term, content, f"Forbidden term '{term}' detected in {path.name}")
 
     def test_zero_em_dashes(self):
         files_to_scan = [
@@ -124,8 +142,6 @@ class TestPortfolioSite(unittest.TestCase):
         for path in files_to_scan:
             content = path.read_text(encoding="utf-8")
             self.assertNotIn("\u2014", content, f"Em-dash detected in {path.name}")
-            self.assertNotIn("671/2021", content, f"Portaria reference detected in {path.name}")
-            self.assertNotIn("portaria", content.lower(), f"Portaria reference detected in {path.name}")
 
 
 if __name__ == "__main__":
