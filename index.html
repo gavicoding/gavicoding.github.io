@@ -1,45 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gabriel Souza (@gavicoding) - IT Automation, Software Engineering &amp; Data Privacy</title>
-  <meta name="description" content="Official bilingual portfolio and interactive resume of Gabriel Souza (@gavicoding): Python, TypeScript, Next.js, T-SQL, Windows Server, Active Directory, Product Ownership (PO), System &amp; ERP Implementation, Applied AI, and LGPD/GDPR Governance." />
-  <meta property="og:title" content="Gabriel Souza (@gavicoding) - Engineering Portfolio" />
-  <meta property="og:description" content="IT Automation &amp; Software Engineer | Product Owner (PO) &amp; System Implementation | Windows Server &amp; AD | Python · TypeScript · Next.js · T-SQL · C# | Applied AI &amp; LGPD/GDPR" />
+  <title>Gabriel Souza (@gavicoding) - Engineering Studio, IT Operations &amp; DPO (LGPD/GDPR)</title>
+  <meta name="description" content="Interactive engineering portfolio of Gabriel Souza (@gavicoding): DPO (LGPD/GDPR), Python, TypeScript, Next.js, T-SQL, Windows Server, Active Directory, Solutions Product Ownership (PO), and OWASP AppSec." />
+  <meta name="theme-color" content="#09090b" />
+  <meta property="og:title" content="Gabriel Souza (@gavicoding) - Engineering Portfolio &amp; DPO Governance" />
+  <meta property="og:description" content="IT Automation &amp; Software Engineer | Solutions Product Owner (PO) | DPO (LGPD/GDPR) | Windows Server &amp; AD | Python · TypeScript · Next.js · T-SQL · C#" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://gavicoding.github.io/" />
   <meta property="og:image" content="https://gavicoding.github.io/assets/images/hero-visual.png" />
   <meta property="og:image:alt" content="Gabriel Souza (@gavicoding) - Bilingual Engineering &amp; Privacy Portfolio" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://gavicoding.github.io/assets/images/hero-visual.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
   <script src="assets/app.js" defer></script>
 </head>
 <body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main-content" data-i18n="skip_link">Skip to main content</a>
 
   <header class="site-header">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="Gabriel Souza home">
         <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
-        <span>Gabriel Souza</span>
+        <span class="brand-name">Gabriel Souza</span>
         <span class="brand-handle">@gavicoding</span>
       </a>
 
       <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
-        <a href="#about" data-i18n="nav_about">About</a>
-        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#lab" data-i18n="nav_lab">Live Lab</a>
+        <a href="#dpo" data-i18n="nav_dpo">DPO &amp; LGPD</a>
         <a href="#projects" data-i18n="nav_projects">Projects</a>
-        <a href="#impact" data-i18n="nav_impact">Impact</a>
-        <a href="#privacy" data-i18n="nav_privacy">Privacy &amp; AppSec</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
         <a href="#stack" data-i18n="nav_stack">Stack</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <div class="nav-actions">
         <button type="button" id="lang-toggle" class="btn-ghost" aria-label="Switch language">
-          <span id="lang-label">🇧🇷 PT-BR</span>
+          <span id="lang-label">PT-BR</span>
+        </button>
+        <button type="button" id="theme-toggle" class="btn-ghost btn-icon" aria-label="Toggle color theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
         </button>
         <button
           type="button"
@@ -48,107 +62,300 @@
           aria-expanded="false"
           aria-controls="primary-nav"
           aria-label="Toggle navigation menu"
-        >☰</button>
+        >&#9776;</button>
       </div>
     </div>
   </header>
 
   <main id="main-content">
     <section id="top" class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grid-bg" aria-hidden="true"></div>
       <div class="container hero-content">
         <div class="hero-split">
-          <div>
+          <div class="hero-copy">
             <div class="status-pill">
               <span class="pulse-dot" aria-hidden="true"></span>
-              <span data-i18n="hero_badge">Remote · Async-First · Brazil &amp; International</span>
+              <span class="mono" data-i18n="hero_badge">REMOTE · ASYNC-FIRST · BRAZIL &amp; GLOBAL</span>
             </div>
 
             <h1 class="hero-title" data-i18n="hero_title">
-              Building resilient automation, hybrid infrastructure, and privacy-safe systems.
+              Engineering resilient automation, hybrid Windows/Linux ops, and privacy governance by design.
             </h1>
 
             <p class="hero-subtitle" data-i18n="hero_subtitle">
-              I'm Gabriel Souza: an IT Automation &amp; Software Engineer, Solutions Product Owner (PO), and DPO (LGPD/GDPR). Across Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server, and Active Directory, I lead end-to-end ERP/system deployments, cybersecurity hardening, and scalable automation.
+              I'm Gabriel Souza: IT Automation &amp; Software Engineer, Solutions Product Owner (PO), and DPO (LGPD/GDPR). I combine Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server, and Active Directory to deliver ERP/system deployments, L2 remote/chat operations, and OWASP AppSec hardening.
             </p>
 
             <div class="hero-cta">
-              <a class="btn btn-primary" href="#projects" data-i18n="cta_projects">Explore Projects</a>
-              <a class="btn btn-secondary" href="https://github.com/gavicoding" target="_blank" rel="noopener noreferrer" data-i18n="cta_github">GitHub Profile</a>
+              <a class="btn btn-primary" href="#lab" data-i18n="cta_lab">Launch Interactive Lab</a>
+              <a class="btn btn-secondary" href="https://github.com/gavicoding" target="_blank" rel="noopener noreferrer" data-i18n="cta_github">GitHub</a>
               <a class="btn btn-secondary" href="https://www.linkedin.com/in/gabrielvsouza/" target="_blank" rel="noopener noreferrer" data-i18n="cta_linkedin">LinkedIn</a>
               <button type="button" id="copy-email-hero" class="btn btn-secondary copy-email-btn" data-i18n="cta_copy_email">Copy Email</button>
             </div>
           </div>
 
-          <aside class="hero-visual-card reveal" aria-label="Systems Architecture Highlight">
-            <div class="hero-visual-frame">
-              <img
-                src="assets/images/hero-visual.png"
-                alt="Isometric dark-mode systems architecture hub showing connected compute nodes, encrypted tunnels, and cybersecurity shield"
-                width="1280"
-                height="720"
-                loading="eager"
+          <aside class="terminal-window spotlight-card" id="hero-terminal" aria-label="Interactive Engineering Terminal">
+            <div class="terminal-chrome">
+              <div class="terminal-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="terminal-title mono">gavicoding@prod:~</span>
+              <span class="terminal-badge mono" data-i18n="term_status">INTERACTIVE CLI</span>
+            </div>
+
+            <div class="terminal-body">
+              <div class="terminal-output mono" id="terminal-output" aria-live="polite"></div>
+            </div>
+
+            <div class="terminal-chips" role="group" aria-label="Quick terminal commands">
+              <button type="button" class="term-chip mono" data-cmd="whoami">whoami</button>
+              <button type="button" class="term-chip mono" data-cmd="dpo">dpo</button>
+              <button type="button" class="term-chip mono" data-cmd="infra">infra</button>
+              <button type="button" class="term-chip mono" data-cmd="projects">projects</button>
+              <button type="button" class="term-chip mono" data-cmd="stack">stack</button>
+            </div>
+
+            <form class="terminal-input-row" id="terminal-form" autocomplete="off">
+              <label for="terminal-input" class="terminal-prompt mono" aria-label="Terminal prompt">$</label>
+              <input
+                type="text"
+                id="terminal-input"
+                class="terminal-input mono"
+                placeholder="Type 'help', 'dpo', 'infra'..."
+                data-i18n-placeholder="term_placeholder"
+                spellcheck="false"
               />
-            </div>
-            <div class="hero-visual-chips">
-              <span data-i18n="hero_chip_1">UTFPR Cybersecurity</span>
-              <span data-i18n="hero_chip_2">APDADOS® Security Committee</span>
-              <span data-i18n="hero_chip_3">Windows Server · AD · Linux</span>
-              <span data-i18n="hero_chip_4">Python · TS · T-SQL · PO</span>
-            </div>
+              <button type="submit" class="term-run mono" data-i18n="term_run">Run</button>
+            </form>
           </aside>
         </div>
 
         <div class="metrics-grid">
-          <article class="metric-card reveal">
-            <div class="metric-value">6.8s -&gt; 0.1s</div>
-            <div class="metric-label" data-i18n="metric_1_label">Next.js dashboard TTFB after replacing 85 parallel queries with a single aggregation</div>
+          <article class="metric-card spotlight-card reveal" data-metric="ttfb">
+            <div class="metric-value mono">6.8s -&gt; 0.1s</div>
+            <div class="metric-label" data-i18n="metric_1_label">Next.js dashboard TTFB after replacing 85 parallel queries with single-pass SQL aggregation</div>
           </article>
-          <article class="metric-card reveal">
-            <div class="metric-value">~80 / ~400</div>
-            <div class="metric-label" data-i18n="metric_2_label">Multi-branch stores &amp; Windows endpoints supported across hybrid Linux + AD ops</div>
+          <article class="metric-card spotlight-card reveal" data-metric="fleet">
+            <div class="metric-value mono">~80 / ~400</div>
+            <div class="metric-label" data-i18n="metric_2_label">Distributed branches &amp; Windows endpoints across hybrid AD, Linux &amp; L2 remote/chat ops</div>
           </article>
-          <article class="metric-card reveal">
-            <div class="metric-value">6 CI-Tested</div>
-            <div class="metric-label" data-i18n="metric_3_label">Open-source repositories spanning Python, TypeScript, T-SQL, Bash/PS &amp; C#</div>
+          <article class="metric-card spotlight-card reveal" data-metric="repos">
+            <div class="metric-value mono">6 CI Repos</div>
+            <div class="metric-label" data-i18n="metric_3_label">Public open-source tools tested with GitHub Actions across Python, TS, T-SQL, Bash/PS &amp; C#</div>
           </article>
-          <article class="metric-card reveal">
-            <div class="metric-value">LGPD · OWASP</div>
-            <div class="metric-label" data-i18n="metric_4_label">DPO governance, 16 OWASP Top 10 flaws mapped + hardening &amp; Zero-Trust DLP</div>
+          <article class="metric-card spotlight-card reveal" data-metric="dpo">
+            <div class="metric-value mono">DPO · OWASP</div>
+            <div class="metric-label" data-i18n="metric_4_label">LGPD/GDPR governance, APDADOS® Security Committee &amp; 16 OWASP Top 10 flaws remediated</div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section section-alt">
+    <section id="lab" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
-          <h2 data-i18n="about_title">About Me, Education &amp; Credentials</h2>
-          <p data-i18n="about_desc">From L1/L2 remote support and Windows Server administration to full-stack automation, Solutions PO, and DPO governance.</p>
+          <span class="eyebrow mono" data-i18n="lab_eyebrow">LIVE BROWSER SANDBOX</span>
+          <h2 data-i18n="lab_title">Interactive Engineering Lab</h2>
+          <p data-i18n="lab_desc">Playable front-end simulations built in pure HTML5, CSS3, and Vanilla JavaScript to demonstrate Zero-Trust DLP redaction and distributed queue observability with synthetic test data.</p>
         </div>
 
-        <div class="about-grid">
-          <article class="card about-card reveal">
-            <h3 data-i18n="about_bio_title">Who I Am</h3>
-            <p data-i18n="about_lead">
-              I hold a B.Sc. in Computer Science, an MBA in Process Management, a Postgraduate degree in Information Security, and I am pursuing a Postgraduate specialization in Cybersecurity at UTFPR. Since 2021, I also serve as a volunteer Security Committee Member at APDADOS® (Brazilian National Association of Data Privacy Professionals).
-            </p>
-            <p data-i18n="about_story">
-              My day-to-day work connects hands-on infrastructure (Windows Server, Active Directory access governance, Linux/Docker, remote and chat-based L2 troubleshooting) with software automation, ERP/system deployments as Product Owner (PO), and practical LGPD/GDPR and OWASP Top 10 security remediation.
-            </p>
-            <div class="highlight-pills">
-              <span data-i18n="about_hl1">5+ yrs IT Admin &amp; DPO</span>
-              <span data-i18n="about_hl2">UTFPR Cybersecurity</span>
-              <span data-i18n="about_hl3">APDADOS® Security Committee</span>
-              <span data-i18n="about_hl4">Hybrid Infra &amp; Remote Support</span>
+        <div class="lab-grid">
+          <!-- Lab 1: Zero-Trust DLP Scanner -->
+          <article class="lab-card spotlight-card reveal">
+            <div class="lab-card-head">
+              <div>
+                <span class="tag mono">pii-screenshot-guard · Zero-Trust DLP</span>
+                <h3 data-i18n="dlp_title">Live LGPD / Secret Redaction Engine</h3>
+              </div>
+              <span class="badge-live mono" id="dlp-gate-status">GATE: PASS</span>
+            </div>
+            <p class="lab-sub" data-i18n="dlp_desc">Edit the text below or load a synthetic payload to inspect real-time CPF/CNPJ, email, API token, and RFC 1918 internal IP detection in the browser.</p>
+
+            <div class="lab-controls" role="group" aria-label="DLP sample presets">
+              <button type="button" class="pill-btn is-active" data-dlp-preset="ticket" data-i18n="dlp_preset_ticket">Sample: ITSM Ticket</button>
+              <button type="button" class="pill-btn" data-dlp-preset="ai" data-i18n="dlp_preset_ai">Sample: AI Prompt</button>
+              <button type="button" class="pill-btn" data-dlp-preset="config" data-i18n="dlp_preset_config">Sample: Env Log</button>
+            </div>
+
+            <div class="dlp-workspace">
+              <div class="dlp-pane">
+                <label for="dlp-input" class="pane-label mono" data-i18n="dlp_input_label">RAW INPUT (SYNTHETIC DATA)</label>
+                <textarea id="dlp-input" class="dlp-textarea mono" rows="6" spellcheck="false"></textarea>
+              </div>
+              <div class="dlp-pane">
+                <span class="pane-label mono" data-i18n="dlp_output_label">REDACTED OUTPUT PREVIEW</span>
+                <div id="dlp-output" class="dlp-output mono" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="lab-stats">
+              <div class="stat-chip">
+                <span class="stat-k mono" data-i18n="dlp_stat_pii">PII (CPF/CNPJ/Email)</span>
+                <strong class="stat-v mono" id="dlp-count-pii">0</strong>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-k mono" data-i18n="dlp_stat_secrets">API Keys / Tokens</span>
+                <strong class="stat-v mono" id="dlp-count-secrets">0</strong>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-k mono" data-i18n="dlp_stat_ips">Internal IPs</span>
+                <strong class="stat-v mono" id="dlp-count-ips">0</strong>
+              </div>
+            </div>
+
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/pii-screenshot-guard" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <a href="https://gavicoding.github.io/pii-screenshot-guard/" target="_blank" rel="noopener noreferrer" data-i18n="link_docs">Live Docs</a>
             </div>
           </article>
 
-          <article class="card edu-card reveal">
-            <h3 data-i18n="edu_card_title">Education &amp; Volunteering</h3>
+          <!-- Lab 2: Animated Topology & Queue Watchdog -->
+          <article class="lab-card spotlight-card reveal">
+            <div class="lab-card-head">
+              <div>
+                <span class="tag mono">queue-health-watchdog · infra-ops-playbook</span>
+                <h3 data-i18n="topo_title">Animated Hybrid Topology &amp; Queue Watchdog</h3>
+              </div>
+              <span class="badge-live mono" id="topo-alert-state">HEALTHY</span>
+            </div>
+            <p class="lab-sub" data-i18n="topo_desc">Switch operational load states to see how snapshot trend heuristics separate active HIGH_LOAD bursts from true STALLED bottlenecks without false-alarm floods.</p>
+
+            <div class="lab-controls" role="group" aria-label="Topology simulation modes">
+              <button type="button" class="pill-btn is-active" data-topo-mode="healthy" data-i18n="topo_btn_healthy">Healthy Sync</button>
+              <button type="button" class="pill-btn" data-topo-mode="high_load" data-i18n="topo_btn_high">HIGH_LOAD (Draining)</button>
+              <button type="button" class="pill-btn" data-topo-mode="stalled" data-i18n="topo_btn_stalled">STALLED (Bottleneck)</button>
+              <button type="button" class="pill-btn pill-btn-accent" id="topo-recover-btn" data-i18n="topo_btn_recover">Run Auto-Recovery</button>
+            </div>
+
+            <div class="topo-stage">
+              <svg id="topo-svg" class="topo-svg mode-healthy" viewBox="0 0 640 270" role="img" aria-label="Animated distributed retail infrastructure and replication watchdog topology">
+                <!-- Animated connection paths -->
+                <path class="topo-edge edge-1" d="M 155 68 L 250 68" />
+                <path class="topo-edge edge-2" d="M 390 68 L 485 68" />
+                <path class="topo-edge edge-3" d="M 155 198 L 250 198" />
+                <path class="topo-edge edge-4" d="M 390 198 L 485 198" />
+                <path class="topo-edge edge-vertical-1" d="M 320 98 L 320 166" />
+                <path class="topo-edge edge-vertical-2" d="M 555 98 L 555 166" />
+
+                <!-- Nodes row 1 -->
+                <g class="topo-node" transform="translate(20, 36)">
+                  <rect width="135" height="64" rx="10" />
+                  <text x="67.5" y="27" text-anchor="middle" class="node-title">~80 Branches</text>
+                  <text x="67.5" y="45" text-anchor="middle" class="node-sub">POS &amp; Windows AD</text>
+                </g>
+
+                <g class="topo-node" transform="translate(250, 36)">
+                  <rect width="140" height="64" rx="10" />
+                  <text x="70" y="27" text-anchor="middle" class="node-title">Fleet Agent</text>
+                  <text x="70" y="45" text-anchor="middle" class="node-sub">WebSockets + mTLS</text>
+                </g>
+
+                <g class="topo-node" transform="translate(485, 36)">
+                  <rect width="135" height="64" rx="10" />
+                  <text x="67.5" y="27" text-anchor="middle" class="node-title">Control Plane</text>
+                  <text x="67.5" y="45" text-anchor="middle" class="node-sub">FastAPI + Postgres</text>
+                </g>
+
+                <!-- Nodes row 2 -->
+                <g class="topo-node" transform="translate(20, 166)">
+                  <rect width="135" height="64" rx="10" />
+                  <text x="67.5" y="27" text-anchor="middle" class="node-title">SQL Replication</text>
+                  <text x="67.5" y="45" text-anchor="middle" class="node-sub">Pending Sync Queue</text>
+                </g>
+
+                <g class="topo-node node-watchdog" transform="translate(250, 166)">
+                  <rect width="140" height="64" rx="10" />
+                  <text x="70" y="27" text-anchor="middle" class="node-title">Watchdog</text>
+                  <text x="70" y="45" text-anchor="middle" class="node-sub">Read-Only Heuristics</text>
+                </g>
+
+                <g class="topo-node" transform="translate(485, 166)">
+                  <rect width="135" height="64" rx="10" />
+                  <text x="67.5" y="27" text-anchor="middle" class="node-title">ITSM / Alerts</text>
+                  <text x="67.5" y="45" text-anchor="middle" class="node-sub">Cooldown &amp; Runbooks</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="lab-stats lab-stats-4">
+              <div class="stat-chip">
+                <span class="stat-k mono" data-i18n="topo_stat_depth">Queue Depth</span>
+                <strong class="stat-v mono" id="topo-queue-depth">14 msgs</strong>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-k mono" data-i18n="topo_stat_trend">Drain Trend</span>
+                <strong class="stat-v mono" id="topo-trend">-6 / tick</strong>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-k mono" data-i18n="topo_stat_mtls">mTLS Link</span>
+                <strong class="stat-v mono" id="topo-mtls">3.8s ACK</strong>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-k mono" data-i18n="topo_stat_policy">Alert Policy</span>
+                <strong class="stat-v mono" id="topo-policy">SILENT</strong>
+              </div>
+            </div>
+
+            <div class="topo-log mono" id="topo-log" aria-live="polite"></div>
+
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/queue-health-watchdog" target="_blank" rel="noopener noreferrer">queue-health-watchdog</a>
+              <a href="https://github.com/gavicoding/infra-ops-playbook" target="_blank" rel="noopener noreferrer">infra-ops-playbook</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="dpo" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono" data-i18n="dpo_eyebrow">DATA PROTECTION OFFICER &amp; SECURITY GOVERNANCE</span>
+          <h2 data-i18n="dpo_title">DPO Governance (LGPD / GDPR), APDADOS® &amp; OWASP AppSec</h2>
+          <p data-i18n="dpo_desc">Bridging legal compliance and hands-on engineering: RoPA inventories, DPIA/RIPD risk assessments, Art. 18 data subject workflows, relational anonymization, OWASP Top 10 remediation, and active Security Committee participation at APDADOS® since 2021.</p>
+        </div>
+
+        <div class="dpo-layout reveal">
+          <div class="dpo-stepper" id="dpo-stepper" role="tablist" aria-label="DPO governance lifecycle">
+            <button type="button" class="dpo-step-btn is-active" data-dpo-step="0" role="tab" aria-selected="true">
+              <span class="step-num mono">01</span>
+              <span class="step-label" data-i18n="dpo_step_1">Mapping &amp; RoPA</span>
+            </button>
+            <button type="button" class="dpo-step-btn" data-dpo-step="1" role="tab" aria-selected="false">
+              <span class="step-num mono">02</span>
+              <span class="step-label" data-i18n="dpo_step_2">Legal Bases &amp; DPIA/RIPD</span>
+            </button>
+            <button type="button" class="dpo-step-btn" data-dpo-step="2" role="tab" aria-selected="false">
+              <span class="step-num mono">03</span>
+              <span class="step-label" data-i18n="dpo_step_3">Art. 18 &amp; Anonymization</span>
+            </button>
+            <button type="button" class="dpo-step-btn" data-dpo-step="3" role="tab" aria-selected="false">
+              <span class="step-num mono">04</span>
+              <span class="step-label" data-i18n="dpo_step_4">OWASP &amp; Access Hardening</span>
+            </button>
+            <button type="button" class="dpo-step-btn" data-dpo-step="4" role="tab" aria-selected="false">
+              <span class="step-num mono">05</span>
+              <span class="step-label" data-i18n="dpo_step_5">Zero-Trust AI &amp; APDADOS®</span>
+            </button>
+          </div>
+
+          <article class="dpo-panel spotlight-card" role="tabpanel">
+            <div class="dpo-panel-top">
+              <span class="badge-live mono" id="dpo-detail-tag">LGPD Arts. 37 &amp; 50</span>
+            </div>
+            <h3 id="dpo-detail-title">Data Discovery &amp; Record of Processing Activities (RoPA)</h3>
+            <p id="dpo-detail-summary"></p>
+            <ul class="dpo-deliverables" id="dpo-detail-deliverables"></ul>
+          </article>
+        </div>
+
+        <div class="credentials-bento reveal">
+          <article class="card spotlight-card cred-card">
+            <span class="tag mono" data-i18n="cred_edu_tag">ACADEMIC FOUNDATION</span>
+            <h3 data-i18n="cred_edu_title">Education &amp; Cybersecurity Specialization</h3>
             <ul class="edu-list">
               <li class="edu-item">
-                <strong data-i18n="edu1_title">Postgraduate Specialization in Cybersecurity</strong>
+                <strong data-i18n="edu1_title">Postgraduate in Cybersecurity</strong>
                 <span data-i18n="edu1_meta">UTFPR · Apr 2026 - Mar 2028</span>
               </li>
               <li class="edu-item">
@@ -156,111 +363,34 @@
                 <span data-i18n="edu2_meta">Estácio · 2023</span>
               </li>
               <li class="edu-item">
-                <strong data-i18n="edu3_title">Postgraduate Degree in Information Security</strong>
+                <strong data-i18n="edu3_title">Postgraduate in Information Security</strong>
                 <span data-i18n="edu3_meta">Estácio · 2023</span>
               </li>
               <li class="edu-item">
-                <strong data-i18n="edu4_title">B.Sc. in Computer Science</strong>
+                <strong data-i18n="edu4_title">Bachelor's Degree in Computer Science</strong>
                 <span data-i18n="edu4_meta">Estácio · 2019 - 2022</span>
               </li>
-              <li class="edu-item">
-                <strong data-i18n="edu5_title">Security Committee Member (Volunteer)</strong>
-                <span data-i18n="edu5_meta">APDADOS® · Jul 2021 - Present</span>
-              </li>
             </ul>
-            <div class="certs-box">
-              <h4 data-i18n="certs_langs_title">Certifications &amp; Languages</h4>
-              <p data-i18n="certs_langs_body">Minicurso LGPD (APDADOS®) &amp; Curso LGPD 4.0 (Mariana Toledo) | Portuguese (Native) &amp; Technical English (Reading, Docs &amp; Async)</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 data-i18n="exp_title">What I Do &amp; Career Journey</h2>
-          <p data-i18n="exp_desc">Three core engineering pillars backed by nearly a decade of real-world IT operations, software development, and security governance.</p>
-        </div>
-
-        <div class="pillars-grid">
-          <article class="card pillar-card reveal">
-            <div class="pillar-media">
-              <img
-                src="assets/images/pillar-infra.png"
-                alt="Hybrid enterprise infrastructure illustration showing server racks, cloud gateway, and workstation endpoints"
-                width="1280"
-                height="720"
-                loading="lazy"
-              />
-            </div>
-            <div class="pillar-body">
-              <span class="tag" data-i18n="pil1_tag">Windows Server · AD · Remote &amp; Chat Support</span>
-              <h3 data-i18n="pil1_title">Hybrid Infrastructure, Access Control &amp; L2 Ops</h3>
-              <p data-i18n="pil1_body">Administration of Windows Server, Active Directory (GPOs, RBAC access control, SID ACL healing, AD logonHours), Linux/Docker, Nginx mTLS, VPNs, SQL Server, Level 2 Service Desk, remote desktop and chat-based support, and GLPI ITSM across ~80 branches.</p>
-            </div>
           </article>
 
-          <article class="card pillar-card reveal">
-            <div class="pillar-media">
-              <img
-                src="assets/images/pillar-security.png"
-                alt="Cybersecurity and data privacy illustration with translucent glass shield, padlock prism, and scanning beams"
-                width="1280"
-                height="720"
-                loading="lazy"
-              />
+          <article class="card spotlight-card cred-card">
+            <span class="tag mono" data-i18n="cred_gov_tag">COMMITTEE, CERTS &amp; CONTROLS</span>
+            <h3 data-i18n="cred_gov_title">APDADOS®, Certifications &amp; Technical Controls</h3>
+            <div class="cred-block">
+              <strong data-i18n="edu5_title">Volunteer Security Committee Member</strong>
+              <p class="cred-meta" data-i18n="edu5_meta">APDADOS® (National Association of Data Privacy Professionals) · Jul 2021 - Present</p>
+              <p class="cred-copy" data-i18n="cred_apdados_desc">Active contribution to cybersecurity practices, ANPD regulatory readiness, corporate privacy training, and incident-response guidance.</p>
             </div>
-            <div class="pillar-body">
-              <span class="tag" data-i18n="pil2_tag">DPO (LGPD/GDPR) · OWASP AppSec · AI DLP</span>
-              <h3 data-i18n="pil2_title">Privacy Governance &amp; Offensive Security</h3>
-              <p data-i18n="pil2_body">Practical LGPD/GDPR DPO programs (RoPA, DPIA/RIPD, legal bases, Art. 18 rights, vendor DPAs, irreversible anonymization, certified disposal), OWASP Top 10 pentesting (16 critical/medium flaws mapped with remediation &amp; hardening plans), digital forensics, and Zero-Trust AI DLP.</p>
+            <div class="cred-block">
+              <strong data-i18n="certs_langs_title">Certifications &amp; Languages</strong>
+              <p class="cred-copy" data-i18n="certs_langs_body">Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Portuguese (Native) &amp; Technical English (Reading, Docs &amp; Async)</p>
             </div>
-          </article>
-
-          <article class="card pillar-card reveal">
-            <div class="pillar-media">
-              <img
-                src="assets/images/pillar-product.png"
-                alt="Software engineering and product deployment pipeline illustration with dark glass UI frames and analytics curves"
-                width="1280"
-                height="720"
-                loading="lazy"
-              />
+            <div class="highlight-pills">
+              <span data-i18n="dpo_pill_1">RoPA &amp; DPIA / RIPD</span>
+              <span data-i18n="dpo_pill_2">Vendor DPAs &amp; Notices</span>
+              <span data-i18n="dpo_pill_3">16 OWASP Flaws Mapped</span>
+              <span data-i18n="dpo_pill_4">AD logonHours &amp; RBAC</span>
             </div>
-            <div class="pillar-body">
-              <span class="tag" data-i18n="pil3_tag">Python / TS / Next.js · PO · ERP Rollouts</span>
-              <h3 data-i18n="pil3_title">Software Engineering, PO &amp; System Deployments</h3>
-              <p data-i18n="pil3_body">Production automation and dashboards in Python, TypeScript, Next.js, Node.js, T-SQL, C# (.NET), and Playwright, combined with Solutions Product Ownership (PO), Kanban specs, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training.</p>
-            </div>
-          </article>
-        </div>
-
-        <h3 class="sub-heading reveal" data-i18n="timeline_heading">Sanitized Career Progression</h3>
-        <div class="timeline-grid">
-          <article class="card timeline-card reveal">
-            <span class="timeline-period" data-i18n="tl1_period">Aug 2021 - Present · Multi-Branch Retail</span>
-            <h3 data-i18n="tl1_title">IT Administrator, DPO (LGPD) &amp; Solutions Product Owner (PO)</h3>
-            <p data-i18n="tl1_body">Lead end-to-end ERP/system deployments, Solutions PO backlogs, Windows Server &amp; Active Directory access governance, L2 remote/chat escalation, Python/TypeScript/T-SQL automation, and corporate LGPD compliance across ~80 branches.</p>
-          </article>
-
-          <article class="card timeline-card reveal">
-            <span class="timeline-period" data-i18n="tl2_period">Apr 2021 - Aug 2021 · Multi-Branch Retail</span>
-            <h3 data-i18n="tl2_title">Senior IT Assistant: Information Security, LGPD &amp; Level 2 Support</h3>
-            <p data-i18n="tl2_body">Led initial Information Security and LGPD compliance structuring alongside Level 2 branch technical support, incident response, Active Directory controls, and early privacy risk mapping.</p>
-          </article>
-
-          <article class="card timeline-card reveal">
-            <span class="timeline-period" data-i18n="tl3_period">Sep 2019 - Apr 2021 · Multi-Branch Retail</span>
-            <h3 data-i18n="tl3_title">IT Assistant: Remote &amp; Chat Support, Service Desk &amp; ERP</h3>
-            <p data-i18n="tl3_body">Delivered L1/L2 technical support via remote access, chat, and on-site troubleshooting, hardware/network maintenance, Active Directory user/access routines, and ERP system rollout support.</p>
-          </article>
-
-          <article class="card timeline-card reveal">
-            <span class="timeline-period" data-i18n="tl4_period">Feb 2016 - Dec 2016 · Municipal Data Processing</span>
-            <h3 data-i18n="tl4_title">IT Intern: Software Development &amp; Technical Support</h3>
-            <p data-i18n="tl4_body">Worked in the Software Development department supporting internal application development and maintenance alongside end-user technical support and preventive/corrective workstation maintenance.</p>
           </article>
         </div>
       </div>
@@ -269,8 +399,9 @@
     <section id="projects" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
+          <span class="eyebrow mono" data-i18n="projects_eyebrow">OPEN-SOURCE &amp; CI VERIFIED</span>
           <h2 data-i18n="projects_title">Featured Open-Source Projects</h2>
-          <p data-i18n="projects_desc">Every project below ships with automated tests or linters in GitHub Actions, bilingual documentation, and zero proprietary data.</p>
+          <p data-i18n="projects_desc">Six public repositories built with automated CI checks in GitHub Actions, bilingual English/Portuguese documentation, and zero confidential company data.</p>
         </div>
 
         <div class="filter-bar" role="group" aria-label="Filter projects by category">
@@ -283,10 +414,10 @@
         </div>
 
         <div class="projects-grid">
-          <article class="card project-card reveal" data-category="security">
+          <article class="card project-card spotlight-card reveal" data-category="security">
             <div class="card-top">
-              <span class="tag">Python · Zero-Trust DLP</span>
-              <span class="badge-live">v1.0.0 · CI</span>
+              <span class="tag mono">Python · Zero-Trust DLP</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
             </div>
             <h3>pii-screenshot-guard</h3>
             <p data-i18n="proj_pii_desc">
@@ -298,10 +429,10 @@
             </div>
           </article>
 
-          <article class="card project-card reveal" data-category="observability">
+          <article class="card project-card spotlight-card reveal" data-category="observability">
             <div class="card-top">
-              <span class="tag">TypeScript · Node.js · Docker</span>
-              <span class="badge-live">v1.0.0 · CI</span>
+              <span class="tag mono">TypeScript · Node.js · Docker</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
             </div>
             <h3>queue-health-watchdog</h3>
             <p data-i18n="proj_watchdog_desc">
@@ -312,10 +443,10 @@
             </div>
           </article>
 
-          <article class="card project-card reveal" data-category="data">
+          <article class="card project-card spotlight-card reveal" data-category="data">
             <div class="card-top">
-              <span class="tag">T-SQL · SQL Server · DBA</span>
-              <span class="badge-live">v1.0.0 · CI</span>
+              <span class="tag mono">T-SQL · SQL Server · DBA</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
             </div>
             <h3>tsql-retail-ops-analytics</h3>
             <p data-i18n="proj_sql_desc">
@@ -326,10 +457,10 @@
             </div>
           </article>
 
-          <article class="card project-card reveal" data-category="infra">
+          <article class="card project-card spotlight-card reveal" data-category="infra">
             <div class="card-top">
-              <span class="tag">Bash · PowerShell · Docker · mTLS</span>
-              <span class="badge-live">v1.0.0 · CI</span>
+              <span class="tag mono">Bash · PowerShell · Docker · mTLS</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
             </div>
             <h3>infra-ops-playbook</h3>
             <p data-i18n="proj_infra_desc">
@@ -340,10 +471,10 @@
             </div>
           </article>
 
-          <article class="card project-card reveal" data-category="desktop">
+          <article class="card project-card spotlight-card reveal" data-category="desktop">
             <div class="card-top">
-              <span class="tag">C# · .NET 8 · WPF (MVVM)</span>
-              <span class="badge-live">.NET Build CI</span>
+              <span class="tag mono">C# · .NET 8 · WPF (MVVM)</span>
+              <span class="badge-live mono">.NET Build CI</span>
             </div>
             <h3>OtimizaPC</h3>
             <p data-i18n="proj_otimizapc_desc">
@@ -354,10 +485,10 @@
             </div>
           </article>
 
-          <article class="card project-card reveal" data-category="desktop">
+          <article class="card project-card spotlight-card reveal" data-category="desktop">
             <div class="card-top">
-              <span class="tag">Python · COM · SQLite · vCard 3.0</span>
-              <span class="badge-live">Unit Tests CI</span>
+              <span class="tag mono">Python · COM · SQLite · vCard 3.0</span>
+              <span class="badge-live mono">Unit Tests CI</span>
             </div>
             <h3>Thunderbird-Outlook</h3>
             <p data-i18n="proj_tb_desc">
@@ -371,103 +502,91 @@
       </div>
     </section>
 
-    <section id="impact" class="section">
+    <section id="experience" class="section">
       <div class="container">
         <div class="section-head reveal">
-          <h2 data-i18n="impact_title">Sanitized Production Case Studies (Before -&gt; After)</h2>
-          <p data-i18n="impact_desc">Measurable architecture, web engineering, and reliability improvements delivered across distributed retail, warehouse, and IT operations.</p>
+          <span class="eyebrow mono" data-i18n="exp_eyebrow">PRODUCTION IMPACT &amp; TIMELINE</span>
+          <h2 data-i18n="impact_title">Sanitized Production Case Studies &amp; Career Progression</h2>
+          <p data-i18n="impact_desc">Measurable architecture, web engineering, Windows Server / AD operations, Solutions Product Ownership (PO), and reliability outcomes across distributed retail.</p>
         </div>
 
         <div class="impact-grid">
-          <article class="card impact-card reveal">
-            <span class="impact-pill" data-i18n="imp1_tag">Next.js · SVG Topology · Observability</span>
+          <article class="card spotlight-card reveal">
+            <span class="impact-pill mono" data-i18n="imp1_tag">Next.js · SVG Topology · Observability</span>
             <h3 data-i18n="imp1_title">Operational Dashboard &amp; Live Infrastructure Map</h3>
             <p data-i18n="imp1_body">Replaced 85 parallel per-store queries with single-query aggregations, dynamic Server Components, animated SVG dependency topology, and hourly batched HTML alerts, cutting TTFB from 6.8s to 0.1s and email noise from 80+/day to digests.</p>
           </article>
 
-          <article class="card impact-card reveal">
-            <span class="impact-pill" data-i18n="imp2_tag">Web · Leaflet/OSM · WCAG Accessibility</span>
+          <article class="card spotlight-card reveal">
+            <span class="impact-pill mono" data-i18n="imp2_tag">Web · Leaflet/OSM · WCAG Accessibility</span>
             <h3 data-i18n="imp2_title">Corporate Site Rebuild &amp; Interactive Store Locator</h3>
             <p data-i18n="imp2_body">Rebuilt a 7-page institutional website with a city/service-filtered Leaflet + OpenStreetMap locator, ResizeObserver iframe sizing, mobile-first breakpoints (tested at 390px), and automated contrast audits achieving 0 WCAG failures.</p>
           </article>
 
-          <article class="card impact-card reveal">
-            <span class="impact-pill" data-i18n="imp3_tag">Windows Fleet · WebSockets + mTLS · PowerShell</span>
+          <article class="card spotlight-card reveal">
+            <span class="impact-pill mono" data-i18n="imp3_tag">Windows Fleet · WebSockets + mTLS · PowerShell</span>
             <h3 data-i18n="imp3_title">Endpoint Fleet Control Plane &amp; ACL Self-Healing</h3>
             <p data-i18n="imp3_body">Deployed an NSSM Windows agent over WebSockets + mTLS with wave rollouts, kill-switch recovery, RSA-signed auto-updates, and language-agnostic SID ACL repair, cutting post-restart reconnection from 60s to 3-7s.</p>
           </article>
 
-          <article class="card impact-card reveal">
-            <span class="impact-pill" data-i18n="imp4_tag">Sync Recovery · ITSM · Automation</span>
+          <article class="card spotlight-card reveal">
+            <span class="impact-pill mono" data-i18n="imp4_tag">Sync Recovery · ITSM · Automation</span>
             <h3 data-i18n="imp4_title">Sales &amp; Fiscal Retransmission + ITSM Backlog Recovery</h3>
             <p data-i18n="imp4_body">Automated contingency fiscal/sales retransmission with retry safeguards and vendor ticketing, automated CCTV evidence retrieval across 83 NVRs/DVRs, and recovered a stalled 109k-ticket ITSM notification queue without email storms.</p>
           </article>
 
-          <article class="card impact-card reveal">
-            <span class="impact-pill" data-i18n="imp5_tag">T-SQL · WMS Picking · Lock Diagnostics</span>
+          <article class="card spotlight-card reveal">
+            <span class="impact-pill mono" data-i18n="imp5_tag">T-SQL · WMS Picking · Lock Diagnostics</span>
             <h3 data-i18n="imp5_title">SQL Server Optimization &amp; Warehouse Throughput Analytics</h3>
             <p data-i18n="imp5_body">Eliminated multi-trip returnable container duplicates via ROW_NUMBER(), unified strategic sales KPIs in one pass, instrumented WMS picking/checkout stage bottlenecks, and captured sys.dm_tran_locks wait snapshots asynchronously.</p>
           </article>
 
-          <article class="card impact-card reveal">
-            <span class="impact-pill" data-i18n="imp6_tag">Product Ownership (PO) · System Deployment · Rollouts</span>
+          <article class="card spotlight-card reveal">
+            <span class="impact-pill mono" data-i18n="imp6_tag">Product Ownership (PO) · System Deployment · Rollouts</span>
             <h3 data-i18n="imp6_title">End-to-End ERP &amp; System Implementations, PO &amp; UI Extensions</h3>
-            <p data-i18n="imp6_body">Acted as Solutions Product Owner translating business needs into specs, Kanban pipelines, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training, plus CSP-safe UI plugins (~13 KB theme) and Outlook-safe HTML/SVG alert templates.</p>
+            <p data-i18n="imp6_body">Acted as Solutions Product Owner translating business needs into specs, Kanban pipelines, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training, plus CSP-safe UI plugins (~13 KB theme) and Outlook-safe HTML/SVG templates.</p>
+          </article>
+        </div>
+
+        <h3 class="sub-heading reveal" data-i18n="timeline_heading">Career Timeline</h3>
+        <div class="timeline-rail reveal">
+          <article class="card timeline-card spotlight-card">
+            <span class="timeline-period mono" data-i18n="tl1_period">Aug 2021 - Present · Multi-Branch Retail</span>
+            <h4 data-i18n="tl1_title">IT Administrator, DPO (LGPD) &amp; Solutions Product Owner (PO)</h4>
+            <p data-i18n="tl1_body">Lead end-to-end ERP/system deployments, Solutions PO backlogs, Windows Server &amp; Active Directory access governance, L2 remote/chat escalation, Python/TypeScript/T-SQL automation, and corporate LGPD compliance across ~80 branches.</p>
+          </article>
+
+          <article class="card timeline-card spotlight-card">
+            <span class="timeline-period mono" data-i18n="tl2_period">Apr 2021 - Aug 2021 · Multi-Branch Retail</span>
+            <h4 data-i18n="tl2_title">Senior IT Assistant: Information Security, LGPD &amp; Level 2 Support</h4>
+            <p data-i18n="tl2_body">Led initial Information Security and LGPD compliance structuring alongside Level 2 branch technical support, incident response, Active Directory controls, and early privacy risk mapping.</p>
+          </article>
+
+          <article class="card timeline-card spotlight-card">
+            <span class="timeline-period mono" data-i18n="tl3_period">Sep 2019 - Apr 2021 · Multi-Branch Retail</span>
+            <h4 data-i18n="tl3_title">IT Assistant: Remote &amp; Chat Support, Service Desk &amp; ERP</h4>
+            <p data-i18n="tl3_body">Delivered L1/L2 technical support via remote access, chat, and on-site troubleshooting, hardware/network maintenance, Active Directory user/access routines, and ERP system rollout support.</p>
+          </article>
+
+          <article class="card timeline-card spotlight-card">
+            <span class="timeline-period mono" data-i18n="tl4_period">Feb 2016 - Dec 2016 · Municipal Data Processing</span>
+            <h4 data-i18n="tl4_title">IT Intern: Software Development &amp; Technical Support</h4>
+            <p data-i18n="tl4_body">Worked in the Software Development department supporting internal application development and maintenance alongside end-user technical support and preventive/corrective workstation maintenance.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="privacy" class="section section-alt">
+    <section id="stack" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
-          <h2 data-i18n="privacy_title">Data Privacy (LGPD / GDPR), DPO &amp; AppSec</h2>
-          <p data-i18n="privacy_desc">Practical DPO governance, offensive security remediation, relational anonymization, and AI safety bridging regulation and engineering.</p>
-        </div>
-
-        <div class="privacy-grid">
-          <article class="card reveal">
-            <h3 data-i18n="priv1_title">DPO Governance, RoPA &amp; DPIA / RIPD</h3>
-            <p data-i18n="priv1_body">Structured LGPD (Law 13.709/2018) &amp; GDPR compliance programs: RoPA inventories, Arts. 7 &amp; 11 legal bases, Art. 18 Data Subject Rights workflows, and full DPIA / RIPD across retail, back-office, and physical archives.</p>
-          </article>
-
-          <article class="card reveal">
-            <h3 data-i18n="priv2_title">OWASP AppSec &amp; Digital Forensics</h3>
-            <p data-i18n="priv2_body">Executed web penetration tests mapping 16 critical and medium vulnerabilities across OWASP Top 10 (injections, broken auth, data exposure) with code remediation &amp; server-hardening plans, alongside network traffic inspection and OS/media digital forensics.</p>
-          </article>
-
-          <article class="card reveal">
-            <h3 data-i18n="priv3_title">Irreversible Anonymization &amp; Disposal</h3>
-            <p data-i18n="priv3_body">Defined irreversible anonymization patterns in relational schemas when hard deletion would break referential integrity or audit trails, paired with sanitized test datasets and certified physical document destruction.</p>
-          </article>
-
-          <article class="card reveal">
-            <h3 data-i18n="priv4_title">Third-Party DPAs &amp; Zero-Trust AI</h3>
-            <p data-i18n="priv4_body">Authored Privacy Notices and vendor DPAs, backed by Zero-Trust DLP boundaries and automated Vision checks barring PII and internal secrets from external AI platforms.</p>
-          </article>
-
-          <article class="card reveal">
-            <h3 data-i18n="priv5_title">Time-Boxed Access &amp; Hardening</h3>
-            <p data-i18n="priv5_body">Designed ticket-validated temporary vendor access (AD logonHours, expiration alerts, RDS logoff, encrypted VPN DB tunnels, least-privilege RBAC) alongside Privacy by Design, DKIM/SPF/DMARC, and ClamAV.</p>
-          </article>
-
-          <article class="card reveal">
-            <h3 data-i18n="priv6_title">APDADOS® Committee &amp; Corporate Training</h3>
-            <p data-i18n="priv6_body">Active Security Committee Member at APDADOS® contributing to cybersecurity, ANPD regulatory readiness, and LGPD guidance, alongside modular corporate awareness tracks on data governance, secure disposal, and responsible AI adoption.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="stack" class="section">
-      <div class="container">
-        <div class="section-head reveal">
+          <span class="eyebrow mono" data-i18n="stack_eyebrow">CORE TOOLKIT</span>
           <h2 data-i18n="stack_title">Technical Stack</h2>
-          <p data-i18n="stack_desc">End-to-end versatility from Windows Server, Active Directory, and database internals to modern web interfaces and privacy tooling.</p>
+          <p data-i18n="stack_desc">End-to-end engineering from Windows Server, Active Directory, and SQL internals to modern web interfaces, CI/CD, and DPO governance.</p>
         </div>
 
         <div class="stack-groups">
-          <div class="stack-group reveal">
+          <div class="stack-group spotlight-card reveal">
             <h3 data-i18n="stack_g1">Languages &amp; Scripting</h3>
             <div class="pill-list">
               <span>Python</span><span>TypeScript</span><span>JavaScript (ES2022+)</span><span>T-SQL</span>
@@ -475,7 +594,7 @@
             </div>
           </div>
 
-          <div class="stack-group reveal">
+          <div class="stack-group spotlight-card reveal">
             <h3 data-i18n="stack_g2">Web, APIs &amp; Desktop</h3>
             <div class="pill-list">
               <span>Next.js (App Router)</span><span>React</span><span>FastAPI</span><span>Node.js</span>
@@ -483,19 +602,19 @@
             </div>
           </div>
 
-          <div class="stack-group reveal">
+          <div class="stack-group spotlight-card reveal">
             <h3 data-i18n="stack_g3">Windows Server, AD, Databases &amp; Infra</h3>
             <div class="pill-list">
               <span>Windows Server</span><span>Active Directory &amp; GPOs</span><span>Access Control &amp; RDS</span>
-              <span>Remote &amp; Chat Support (L2)</span><span>Service Desk / Help Desk</span>
+              <span>Remote &amp; Chat Support (L2)</span><span>Service Desk / ITSM</span>
               <span>Microsoft SQL Server</span><span>PostgreSQL</span><span>SQLite</span><span>MySQL</span>
               <span>Linux (Debian/Ubuntu)</span><span>Docker &amp; Compose</span><span>Nginx TLS/mTLS</span>
               <span>systemd</span><span>GitHub Actions</span><span>Google Cloud</span>
             </div>
           </div>
 
-          <div class="stack-group reveal">
-            <h3 data-i18n="stack_g4">Governance, Security &amp; Operations</h3>
+          <div class="stack-group spotlight-card reveal">
+            <h3 data-i18n="stack_g4">DPO Governance, Security &amp; Product</h3>
             <div class="pill-list">
               <span>LGPD &amp; GDPR</span><span>DPO Governance</span><span>RoPA &amp; DPAs</span><span>DPIA / RIPD</span>
               <span>OWASP Top 10 / AppSec</span><span>Digital Forensics</span><span>Zero-Trust DLP</span><span>Privacy by Design</span>
@@ -508,11 +627,12 @@
       </div>
     </section>
 
-    <section id="contact" class="section section-alt">
-      <div class="container contact-box reveal">
+    <section id="contact" class="section">
+      <div class="container contact-box spotlight-card reveal">
         <div>
+          <span class="eyebrow mono" data-i18n="contact_eyebrow">NEXT STEP</span>
           <h2 data-i18n="contact_title">Let's Work Together</h2>
-          <p data-i18n="contact_desc">Open to remote opportunities in Brazil and internationally across IT Automation, Software/Backend Engineering, Systems Implementation (PO), Hybrid Infrastructure, and Privacy/AppSec.</p>
+          <p data-i18n="contact_desc">Open to remote opportunities in Brazil and internationally across IT Automation, Software/Backend Engineering, Solutions PO / Systems Implementation, Hybrid Infrastructure, and DPO / AppSec.</p>
         </div>
         <div class="contact-actions">
           <a class="btn btn-primary" href="https://github.com/gavicoding" target="_blank" rel="noopener noreferrer" data-i18n="contact_github">Visit GitHub (@gavicoding)</a>
@@ -525,12 +645,12 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© 2026 Gabriel Souza (@gavicoding)</span>
+      <span>&copy; 2026 Gabriel Souza (@gavicoding)</span>
       <div class="footer-links">
         <a href="https://github.com/gavicoding" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/gabrielvsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
-      <span data-i18n="footer_note">Built with semantic HTML5, CSS3 &amp; Vanilla JS · Hosted on GitHub Pages</span>
+      <span data-i18n="footer_note">Handcrafted with HTML5, CSS3 &amp; Vanilla JS · Hosted on GitHub Pages</span>
     </div>
   </footer>
 

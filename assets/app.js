@@ -1,94 +1,97 @@
-"use strict";
-
 const EMAIL_ADDRESS = "gavicoding@gmail.com";
 
 const TRANSLATIONS = {
   en: {
     skip_link: "Skip to main content",
-    nav_about: "About",
-    nav_experience: "Experience",
+    nav_lab: "Live Lab",
+    nav_dpo: "DPO & LGPD",
     nav_projects: "Projects",
-    nav_impact: "Impact",
-    nav_privacy: "Privacy & AppSec",
+    nav_experience: "Experience",
     nav_stack: "Stack",
     nav_contact: "Contact",
-    hero_badge: "Remote · Async-First · Brazil & International",
-    hero_title: "Building resilient automation, hybrid infrastructure, and privacy-safe systems.",
+    hero_badge: "REMOTE · ASYNC-FIRST · BRAZIL & GLOBAL",
+    hero_title:
+      "Engineering resilient automation, hybrid Windows/Linux ops, and privacy governance by design.",
     hero_subtitle:
-      "I'm Gabriel Souza: an IT Automation & Software Engineer, Solutions Product Owner (PO), and DPO (LGPD/GDPR). Across Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server, and Active Directory, I lead end-to-end ERP/system deployments, cybersecurity hardening, and scalable automation.",
-    cta_projects: "Explore Projects",
-    cta_github: "GitHub Profile",
+      "I'm Gabriel Souza: IT Automation & Software Engineer, Solutions Product Owner (PO), and DPO (LGPD/GDPR). I combine Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server, and Active Directory to deliver ERP/system deployments, L2 remote/chat operations, and OWASP AppSec hardening.",
+    cta_lab: "Launch Interactive Lab",
+    cta_github: "GitHub",
     cta_linkedin: "LinkedIn",
     cta_copy_email: "Copy Email",
-    hero_chip_1: "UTFPR Cybersecurity",
-    hero_chip_2: "APDADOS® Security Committee",
-    hero_chip_3: "Windows Server · AD · Linux",
-    hero_chip_4: "Python · TS · T-SQL · PO",
-    metric_1_label: "Next.js dashboard TTFB after replacing 85 parallel queries with a single aggregation",
-    metric_2_label: "Multi-branch stores & Windows endpoints supported across hybrid Linux + AD ops",
-    metric_3_label: "Open-source repositories spanning Python, TypeScript, T-SQL, Bash/PS & C#",
-    metric_4_label: "DPO governance, 16 OWASP Top 10 flaws mapped + hardening & Zero-Trust DLP",
-    about_title: "About Me, Education & Credentials",
-    about_desc:
-      "From L1/L2 remote support and Windows Server administration to full-stack automation, Solutions PO, and DPO governance.",
-    about_bio_title: "Who I Am",
-    about_lead:
-      "I hold a B.Sc. in Computer Science, an MBA in Process Management, a Postgraduate degree in Information Security, and I am pursuing a Postgraduate specialization in Cybersecurity at UTFPR. Since 2021, I also serve as a volunteer Security Committee Member at APDADOS® (Brazilian National Association of Data Privacy Professionals).",
-    about_story:
-      "My day-to-day work connects hands-on infrastructure (Windows Server, Active Directory access governance, Linux/Docker, remote and chat-based L2 troubleshooting) with software automation, ERP/system deployments as Product Owner (PO), and practical LGPD/GDPR and OWASP Top 10 security remediation.",
-    about_hl1: "5+ yrs IT Admin & DPO",
-    about_hl2: "UTFPR Cybersecurity",
-    about_hl3: "APDADOS® Security Committee",
-    about_hl4: "Hybrid Infra & Remote Support",
-    edu_card_title: "Education & Volunteering",
-    edu1_title: "Postgraduate Specialization in Cybersecurity",
+    term_status: "INTERACTIVE CLI",
+    term_placeholder: "Type 'help', 'dpo', 'infra'...",
+    term_run: "Run",
+    metric_1_label:
+      "Next.js dashboard TTFB after replacing 85 parallel queries with single-pass SQL aggregation",
+    metric_2_label:
+      "Distributed branches & Windows endpoints across hybrid AD, Linux & L2 remote/chat ops",
+    metric_3_label:
+      "Public open-source tools tested with GitHub Actions across Python, TS, T-SQL, Bash/PS & C#",
+    metric_4_label:
+      "LGPD/GDPR governance, APDADOS® Security Committee & 16 OWASP Top 10 flaws remediated",
+    lab_eyebrow: "LIVE BROWSER SANDBOX",
+    lab_title: "Interactive Engineering Lab",
+    lab_desc:
+      "Playable front-end simulations built in pure HTML5, CSS3, and Vanilla JavaScript to demonstrate Zero-Trust DLP redaction and distributed queue observability with synthetic test data.",
+    dlp_title: "Live LGPD / Secret Redaction Engine",
+    dlp_desc:
+      "Edit the text below or load a synthetic payload to inspect real-time CPF/CNPJ, email, API token, and RFC 1918 internal IP detection in the browser.",
+    dlp_preset_ticket: "Sample: ITSM Ticket",
+    dlp_preset_ai: "Sample: AI Prompt",
+    dlp_preset_config: "Sample: Env Log",
+    dlp_input_label: "RAW INPUT (SYNTHETIC DATA)",
+    dlp_output_label: "REDACTED OUTPUT PREVIEW",
+    dlp_stat_pii: "PII (CPF/CNPJ/Email)",
+    dlp_stat_secrets: "API Keys / Tokens",
+    dlp_stat_ips: "Internal IPs",
+    topo_title: "Animated Hybrid Topology & Queue Watchdog",
+    topo_desc:
+      "Switch operational load states to see how snapshot trend heuristics separate active HIGH_LOAD bursts from true STALLED bottlenecks without false-alarm floods.",
+    topo_btn_healthy: "Healthy Sync",
+    topo_btn_high: "HIGH_LOAD (Draining)",
+    topo_btn_stalled: "STALLED (Bottleneck)",
+    topo_btn_recover: "Run Auto-Recovery",
+    topo_stat_depth: "Queue Depth",
+    topo_stat_trend: "Drain Trend",
+    topo_stat_mtls: "mTLS Link",
+    topo_stat_policy: "Alert Policy",
+    dpo_eyebrow: "DATA PROTECTION OFFICER & SECURITY GOVERNANCE",
+    dpo_title: "DPO Governance (LGPD / GDPR), APDADOS® & OWASP AppSec",
+    dpo_desc:
+      "Bridging legal compliance and hands-on engineering: RoPA inventories, DPIA/RIPD risk assessments, Art. 18 data subject workflows, relational anonymization, OWASP Top 10 remediation, and active Security Committee participation at APDADOS® since 2021.",
+    dpo_step_1: "Mapping & RoPA",
+    dpo_step_2: "Legal Bases & DPIA/RIPD",
+    dpo_step_3: "Art. 18 & Anonymization",
+    dpo_step_4: "OWASP & Access Hardening",
+    dpo_step_5: "Zero-Trust AI & APDADOS®",
+    cred_edu_tag: "ACADEMIC FOUNDATION",
+    cred_edu_title: "Education & Cybersecurity Specialization",
+    edu1_title: "Postgraduate in Cybersecurity",
     edu1_meta: "UTFPR · Apr 2026 - Mar 2028",
     edu2_title: "MBA in Process Management",
     edu2_meta: "Estácio · 2023",
-    edu3_title: "Postgraduate Degree in Information Security",
+    edu3_title: "Postgraduate in Information Security",
     edu3_meta: "Estácio · 2023",
-    edu4_title: "B.Sc. in Computer Science",
+    edu4_title: "Bachelor's Degree in Computer Science",
     edu4_meta: "Estácio · 2019 - 2022",
-    edu5_title: "Security Committee Member (Volunteer)",
-    edu5_meta: "APDADOS® · Jul 2021 - Present",
+    cred_gov_tag: "COMMITTEE, CERTS & CONTROLS",
+    cred_gov_title: "APDADOS®, Certifications & Technical Controls",
+    edu5_title: "Volunteer Security Committee Member",
+    edu5_meta:
+      "APDADOS® (National Association of Data Privacy Professionals) · Jul 2021 - Present",
+    cred_apdados_desc:
+      "Active contribution to cybersecurity practices, ANPD regulatory readiness, corporate privacy training, and incident-response guidance.",
     certs_langs_title: "Certifications & Languages",
     certs_langs_body:
-      "Minicurso LGPD (APDADOS®) & Curso LGPD 4.0 (Mariana Toledo) | Portuguese (Native) & Technical English (Reading, Docs & Async)",
-    exp_title: "What I Do & Career Journey",
-    exp_desc:
-      "Three core engineering pillars backed by nearly a decade of real-world IT operations, software development, and security governance.",
-    pil1_tag: "Windows Server · AD · Remote & Chat Support",
-    pil1_title: "Hybrid Infrastructure, Access Control & L2 Ops",
-    pil1_body:
-      "Administration of Windows Server, Active Directory (GPOs, RBAC access control, SID ACL healing, AD logonHours), Linux/Docker, Nginx mTLS, VPNs, SQL Server, Level 2 Service Desk, remote desktop and chat-based support, and GLPI ITSM across ~80 branches.",
-    pil2_tag: "DPO (LGPD/GDPR) · OWASP AppSec · AI DLP",
-    pil2_title: "Privacy Governance & Offensive Security",
-    pil2_body:
-      "Practical LGPD/GDPR DPO programs (RoPA, DPIA/RIPD, legal bases, Art. 18 rights, vendor DPAs, irreversible anonymization, certified disposal), OWASP Top 10 pentesting (16 critical/medium flaws mapped with remediation & hardening plans), digital forensics, and Zero-Trust AI DLP.",
-    pil3_tag: "Python / TS / Next.js · PO · ERP Rollouts",
-    pil3_title: "Software Engineering, PO & System Deployments",
-    pil3_body:
-      "Production automation and dashboards in Python, TypeScript, Next.js, Node.js, T-SQL, C# (.NET), and Playwright, combined with Solutions Product Ownership (PO), Kanban specs, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training.",
-    timeline_heading: "Sanitized Career Progression",
-    tl1_period: "Aug 2021 - Present · Multi-Branch Retail",
-    tl1_title: "IT Administrator, DPO (LGPD) & Solutions Product Owner (PO)",
-    tl1_body:
-      "Lead end-to-end ERP/system deployments, Solutions PO backlogs, Windows Server & Active Directory access governance, L2 remote/chat escalation, Python/TypeScript/T-SQL automation, and corporate LGPD compliance across ~80 branches.",
-    tl2_period: "Apr 2021 - Aug 2021 · Multi-Branch Retail",
-    tl2_title: "Senior IT Assistant: Information Security, LGPD & Level 2 Support",
-    tl2_body:
-      "Led initial Information Security and LGPD compliance structuring alongside Level 2 branch technical support, incident response, Active Directory controls, and early privacy risk mapping.",
-    tl3_period: "Sep 2019 - Apr 2021 · Multi-Branch Retail",
-    tl3_title: "IT Assistant: Remote & Chat Support, Service Desk & ERP",
-    tl3_body:
-      "Delivered L1/L2 technical support via remote access, chat, and on-site troubleshooting, hardware/network maintenance, Active Directory user/access routines, and ERP system rollout support.",
-    tl4_period: "Feb 2016 - Dec 2016 · Municipal Data Processing",
-    tl4_title: "IT Intern: Software Development & Technical Support",
-    tl4_body:
-      "Worked in the Software Development department supporting internal application development and maintenance alongside end-user technical support and preventive/corrective workstation maintenance.",
+      "Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Portuguese (Native) & Technical English (Reading, Docs & Async)",
+    dpo_pill_1: "RoPA & DPIA / RIPD",
+    dpo_pill_2: "Vendor DPAs & Notices",
+    dpo_pill_3: "16 OWASP Flaws Mapped",
+    dpo_pill_4: "AD logonHours & RBAC",
+    projects_eyebrow: "OPEN-SOURCE & CI VERIFIED",
     projects_title: "Featured Open-Source Projects",
     projects_desc:
-      "Every project below ships with automated tests or linters in GitHub Actions, bilingual documentation, and zero proprietary data.",
+      "Six public repositories built with automated CI checks in GitHub Actions, bilingual English/Portuguese documentation, and zero confidential company data.",
     filter_all: "All",
     filter_security: "Security & AI",
     filter_observability: "Observability",
@@ -109,9 +112,10 @@ const TRANSLATIONS = {
       "Bidirectional Windows email & address-book migrator preserving folder trees, original received timestamps (MSGFLAG_UNSENT / MAPI), senders, attachments, and \\\\?\\ long file paths.",
     link_repo: "Repository",
     link_docs: "Live Docs",
-    impact_title: "Sanitized Production Case Studies (Before -> After)",
+    exp_eyebrow: "PRODUCTION IMPACT & TIMELINE",
+    impact_title: "Sanitized Production Case Studies & Career Progression",
     impact_desc:
-      "Measurable architecture, web engineering, and reliability improvements delivered across distributed retail, warehouse, and IT operations.",
+      "Measurable architecture, web engineering, Windows Server / AD operations, Solutions Product Ownership (PO), and reliability outcomes across distributed retail.",
     imp1_tag: "Next.js · SVG Topology · Observability",
     imp1_title: "Operational Dashboard & Live Infrastructure Map",
     imp1_body:
@@ -135,83 +139,108 @@ const TRANSLATIONS = {
     imp6_tag: "Product Ownership (PO) · System Deployment · Rollouts",
     imp6_title: "End-to-End ERP & System Implementations, PO & UI Extensions",
     imp6_body:
-      "Acted as Solutions Product Owner translating business needs into specs, Kanban pipelines, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training, plus CSP-safe UI plugins (~13 KB theme) and Outlook-safe HTML/SVG alert templates.",
-    privacy_title: "Data Privacy (LGPD / GDPR), DPO & AppSec",
-    privacy_desc:
-      "Practical DPO governance, offensive security remediation, relational anonymization, and AI safety bridging regulation and engineering.",
-    priv1_title: "DPO Governance, RoPA & DPIA / RIPD",
-    priv1_body:
-      "Structured LGPD (Law 13.709/2018) & GDPR compliance programs: RoPA inventories, Arts. 7 & 11 legal bases, Art. 18 Data Subject Rights workflows, and full DPIA / RIPD across retail, back-office, and physical archives.",
-    priv2_title: "OWASP AppSec & Digital Forensics",
-    priv2_body:
-      "Executed web penetration tests mapping 16 critical and medium vulnerabilities across OWASP Top 10 (injections, broken auth, data exposure) with code remediation & server-hardening plans, alongside network traffic inspection and OS/media digital forensics.",
-    priv3_title: "Irreversible Anonymization & Disposal",
-    priv3_body:
-      "Defined irreversible anonymization patterns in relational schemas when hard deletion would break referential integrity or audit trails, paired with sanitized test datasets and certified physical document destruction.",
-    priv4_title: "Third-Party DPAs & Zero-Trust AI",
-    priv4_body:
-      "Authored Privacy Notices and vendor DPAs, backed by Zero-Trust DLP boundaries and automated Vision checks barring PII and internal secrets from external AI platforms.",
-    priv5_title: "Time-Boxed Access & Hardening",
-    priv5_body:
-      "Designed ticket-validated temporary vendor access (AD logonHours, expiration alerts, RDS logoff, encrypted VPN DB tunnels, least-privilege RBAC) alongside Privacy by Design, DKIM/SPF/DMARC, and ClamAV.",
-    priv6_title: "APDADOS® Committee & Corporate Training",
-    priv6_body:
-      "Active Security Committee Member at APDADOS® contributing to cybersecurity, ANPD regulatory readiness, and LGPD guidance, alongside modular corporate awareness tracks on data governance, secure disposal, and responsible AI adoption.",
+      "Acted as Solutions Product Owner translating business needs into specs, Kanban pipelines, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training, plus CSP-safe UI plugins (~13 KB theme) and Outlook-safe HTML/SVG templates.",
+    timeline_heading: "Career Timeline",
+    tl1_period: "Aug 2021 - Present · Multi-Branch Retail",
+    tl1_title: "IT Administrator, DPO (LGPD) & Solutions Product Owner (PO)",
+    tl1_body:
+      "Lead end-to-end ERP/system deployments, Solutions PO backlogs, Windows Server & Active Directory access governance, L2 remote/chat escalation, Python/TypeScript/T-SQL automation, and corporate LGPD compliance across ~80 branches.",
+    tl2_period: "Apr 2021 - Aug 2021 · Multi-Branch Retail",
+    tl2_title: "Senior IT Assistant: Information Security, LGPD & Level 2 Support",
+    tl2_body:
+      "Led initial Information Security and LGPD compliance structuring alongside Level 2 branch technical support, incident response, Active Directory controls, and early privacy risk mapping.",
+    tl3_period: "Sep 2019 - Apr 2021 · Multi-Branch Retail",
+    tl3_title: "IT Assistant: Remote & Chat Support, Service Desk & ERP",
+    tl3_body:
+      "Delivered L1/L2 technical support via remote access, chat, and on-site troubleshooting, hardware/network maintenance, Active Directory user/access routines, and ERP system rollout support.",
+    tl4_period: "Feb 2016 - Dec 2016 · Municipal Data Processing",
+    tl4_title: "IT Intern: Software Development & Technical Support",
+    tl4_body:
+      "Worked in the Software Development department supporting internal application development and maintenance alongside end-user technical support and preventive/corrective workstation maintenance.",
+    stack_eyebrow: "CORE TOOLKIT",
     stack_title: "Technical Stack",
     stack_desc:
-      "End-to-end versatility from Windows Server, Active Directory, and database internals to modern web interfaces and privacy tooling.",
+      "End-to-end engineering from Windows Server, Active Directory, and SQL internals to modern web interfaces, CI/CD, and DPO governance.",
     stack_g1: "Languages & Scripting",
     stack_g2: "Web, APIs & Desktop",
     stack_g3: "Windows Server, AD, Databases & Infra",
-    stack_g4: "Governance, Security & Operations",
+    stack_g4: "DPO Governance, Security & Product",
+    contact_eyebrow: "NEXT STEP",
     contact_title: "Let's Work Together",
     contact_desc:
-      "Open to remote opportunities in Brazil and internationally across IT Automation, Software/Backend Engineering, Systems Implementation (PO), Hybrid Infrastructure, and Privacy/AppSec.",
+      "Open to remote opportunities in Brazil and internationally across IT Automation, Software/Backend Engineering, Solutions PO / Systems Implementation, Hybrid Infrastructure, and DPO / AppSec.",
     contact_github: "Visit GitHub (@gavicoding)",
     contact_linkedin: "Connect on LinkedIn",
     contact_copy_email: "Copy Email (gavicoding@gmail.com)",
-    footer_note: "Built with semantic HTML5, CSS3 & Vanilla JS · Hosted on GitHub Pages",
+    footer_note: "Handcrafted with HTML5, CSS3 & Vanilla JS · Hosted on GitHub Pages",
     toast_copied: "Email copied: gavicoding@gmail.com",
     toast_copy_fallback: "Email: gavicoding@gmail.com",
   },
   pt: {
     skip_link: "Ir para o conteúdo principal",
-    nav_about: "Sobre",
-    nav_experience: "Atuação",
+    nav_lab: "Lab ao Vivo",
+    nav_dpo: "DPO & LGPD",
     nav_projects: "Projetos",
-    nav_impact: "Impacto",
-    nav_privacy: "Privacidade & AppSec",
-    nav_stack: "Tecnologias",
+    nav_experience: "Experiência",
+    nav_stack: "Stack",
     nav_contact: "Contato",
-    hero_badge: "Remoto · Async-First · Brasil & Exterior",
-    hero_title: "Construindo automações resilientes, infraestrutura híbrida e sistemas seguros com privacidade.",
+    hero_badge: "REMOTO · ASYNC-FIRST · BRASIL & EXTERIOR",
+    hero_title:
+      "Engenharia de automações resilientes, infraestrutura Windows/Linux e governança de privacidade.",
     hero_subtitle:
-      "Sou Gabriel Souza: Engenheiro de Automação de TI e Software, Product Owner (PO) de Soluções e DPO (LGPD/GDPR). Unindo Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server e Active Directory, conduzo implantações completas de ERPs/sistemas, segurança cibernética e automações em produção.",
-    cta_projects: "Ver Projetos",
-    cta_github: "Perfil no GitHub",
+      "Sou Gabriel Souza: Engenheiro de Automação de TI e Software, Product Owner (PO) de Soluções e DPO (LGPD/GDPR). Unindo Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server e Active Directory para entregas de ERPs/sistemas, suporte remoto/chat N2 e hardening OWASP AppSec.",
+    cta_lab: "Testar Laboratório Interativo",
+    cta_github: "GitHub",
     cta_linkedin: "LinkedIn",
     cta_copy_email: "Copiar E-mail",
-    hero_chip_1: "Pós Segurança Cibernética UTFPR",
-    hero_chip_2: "Comitê Segurança APDADOS®",
-    hero_chip_3: "Windows Server · AD · Linux",
-    hero_chip_4: "Python · TS · T-SQL · PO",
-    metric_1_label: "TTFB do dashboard Next.js após trocar 85 consultas paralelas por uma única agregação",
-    metric_2_label: "Filiais & estações Windows atendidas em operação híbrida Linux + Active Directory",
-    metric_3_label: "Repositórios open-source testados no CI em Python, TypeScript, T-SQL, Bash/PS e C#",
-    metric_4_label: "Governança DPO, 16 falhas OWASP Top 10 mapeadas + hardening e DLP Zero-Trust",
-    about_title: "Sobre Mim, Formação & Credenciais",
-    about_desc:
-      "Do suporte remoto N1/N2 e administração Windows Server à automação full-stack, Product Ownership (PO) e governança de privacidade como DPO.",
-    about_bio_title: "Quem Sou Eu",
-    about_lead:
-      "Sou Bacharel em Ciência da Computação, MBA em Gestão de Processos, Pós-graduado em Segurança da Informação e pós-graduando em Segurança Cibernética pela UTFPR. Desde 2021, também atuo como Membro voluntário do Comitê de Segurança da APDADOS® (Associação Nacional dos Profissionais de Privacidade de Dados).",
-    about_story:
-      "Minha rotina une infraestrutura prática (Windows Server, Active Directory e controle de acessos, Linux/Docker, atendimento remoto e via chat em nível N2) com desenvolvimento de automações, implantações de ERPs e sistemas como Product Owner (PO), além de conformidade LGPD/GDPR e remediação de falhas OWASP Top 10.",
-    about_hl1: "5+ anos Adm. TI & DPO",
-    about_hl2: "Segurança Cibernética UTFPR",
-    about_hl3: "Comitê APDADOS®",
-    about_hl4: "Infra Híbrida & Atendimento Remoto",
-    edu_card_title: "Formação Acadêmica & Voluntariado",
+    term_status: "CLI INTERATIVO",
+    term_placeholder: "Digite 'help', 'dpo', 'infra'...",
+    term_run: "Executar",
+    metric_1_label:
+      "TTFB do painel Next.js após trocar 85 consultas paralelas por agregação única em SQL",
+    metric_2_label:
+      "Filiais e estações Windows atendidas em operação híbrida AD, Linux e suporte remoto/chat N2",
+    metric_3_label:
+      "Repositórios públicos com testes no GitHub Actions em Python, TS, T-SQL, Bash/PS e C#",
+    metric_4_label:
+      "Governança DPO (LGPD/GDPR), Comitê de Segurança APDADOS® e 16 falhas OWASP Top 10 mapeadas",
+    lab_eyebrow: "SANDBOX AO VIVO NO NAVEGADOR",
+    lab_title: "Laboratório Interativo de Engenharia",
+    lab_desc:
+      "Simulações reais construídas em HTML5, CSS3 e JavaScript puro para demonstrar mascaramento DLP Zero-Trust e observabilidade de filas distribuídas usando dados sintéticos.",
+    dlp_title: "Motor Ao Vivo de Redação LGPD & Segredos",
+    dlp_desc:
+      "Edite o texto abaixo ou carregue um exemplo fictício para ver a detecção e o mascaramento instantâneo de CPF, CNPJ, e-mail, chaves de API e IPs internos no navegador.",
+    dlp_preset_ticket: "Exemplo: Chamado ITSM",
+    dlp_preset_ai: "Exemplo: Prompt de IA",
+    dlp_preset_config: "Exemplo: Log de Env",
+    dlp_input_label: "ENTRADA BRUTA (DADOS FICTÍCIOS)",
+    dlp_output_label: "SAÍDA MASCARADA EM TEMPO REAL",
+    dlp_stat_pii: "PII (CPF/CNPJ/E-mail)",
+    dlp_stat_secrets: "Chaves / Tokens",
+    dlp_stat_ips: "IPs Internos",
+    topo_title: "Topologia Híbrida Animada & Watchdog de Filas",
+    topo_desc:
+      "Alterne os estados de carga para visualizar como a heurística de tendência diferencia picos saudáveis (HIGH_LOAD) de travamentos reais (STALLED) sem gerar tempestade de alertas.",
+    topo_btn_healthy: "Sync Saudável",
+    topo_btn_high: "HIGH_LOAD (Drenando)",
+    topo_btn_stalled: "STALLED (Gargalo)",
+    topo_btn_recover: "Executar Auto-Recuperação",
+    topo_stat_depth: "Tamanho da Fila",
+    topo_stat_trend: "Tendência",
+    topo_stat_mtls: "Link mTLS",
+    topo_stat_policy: "Política de Alerta",
+    dpo_eyebrow: "ENCARREGADO DE DADOS (DPO) & SEGURANÇA",
+    dpo_title: "Governança DPO (LGPD / GDPR), APDADOS® & OWASP AppSec",
+    dpo_desc:
+      "Unindo adequação regulatória e engenharia prática: inventários RoPA, relatórios DPIA/RIPD, fluxos do Art. 18, anonimização relacional, remediação OWASP Top 10 e atuação voluntária no Comitê de Segurança da APDADOS® desde 2021.",
+    dpo_step_1: "Mapeamento & RoPA",
+    dpo_step_2: "Bases Legais & RIPD",
+    dpo_step_3: "Art. 18 & Anonimização",
+    dpo_step_4: "OWASP & Controle de Acesso",
+    dpo_step_5: "IA Zero-Trust & APDADOS®",
+    cred_edu_tag: "BASE ACADÊMICA",
+    cred_edu_title: "Formação & Especialização em Segurança",
     edu1_title: "Pós-graduação em Segurança Cibernética",
     edu1_meta: "UTFPR · Abr 2026 - Mar 2028",
     edu2_title: "MBA em Gestão de Processos",
@@ -220,46 +249,24 @@ const TRANSLATIONS = {
     edu3_meta: "Estácio · 2023",
     edu4_title: "Bacharelado em Ciência da Computação",
     edu4_meta: "Estácio · 2019 - 2022",
+    cred_gov_tag: "COMITÊ, CERTIFICAÇÕES & CONTROLES",
+    cred_gov_title: "APDADOS®, Certificações & Controles Técnicos",
     edu5_title: "Membro do Comitê de Segurança (Voluntário)",
-    edu5_meta: "APDADOS® · Jul 2021 - Atual",
+    edu5_meta:
+      "APDADOS® (Associação Nacional dos Profissionais de Privacidade de Dados) · Jul 2021 - Atual",
+    cred_apdados_desc:
+      "Atuação ativa em práticas de cibersegurança, prontidão regulatória junto à ANPD, capacitação corporativa e diretrizes de resposta a incidentes.",
     certs_langs_title: "Certificações & Idiomas",
     certs_langs_body:
-      "Minicurso LGPD (APDADOS®) & Curso LGPD 4.0 (Mariana Toledo) | Português (Nativo) & Inglês Básico/Técnico (Leitura e Documentação)",
-    exp_title: "Atuação Prática & Trajetória",
-    exp_desc:
-      "Três pilares técnicos sustentados por quase uma década de operação real de TI, desenvolvimento de software e governança de segurança.",
-    pil1_tag: "Windows Server · AD · Atendimento Remoto & Chat",
-    pil1_title: "Infraestrutura Híbrida, Controle de Acessos & Suporte N2",
-    pil1_body:
-      "Administração de Windows Server, Active Directory (GPOs, controle de acessos RBAC, reparo de ACL por SID, logonHours), Linux/Docker, Nginx mTLS, VPNs, SQL Server, Service Desk N2, atendimento remoto e via chat, e governança ITSM/GLPI em ~80 filiais.",
-    pil2_tag: "DPO (LGPD/GDPR) · OWASP AppSec · IA DLP",
-    pil2_title: "Governança de Privacidade & Segurança Ofensiva",
-    pil2_body:
-      "Programas práticos de DPO (RoPA, DPIA/RIPD, bases legais, direitos do Art. 18, DPAs com fornecedores, anonimização irreversível e descarte certificado), pentests web OWASP Top 10 (16 falhas críticas/médias com remediação e hardening), forense digital e DLP Zero-Trust.",
-    pil3_tag: "Python / TS / Next.js · PO · Implantações",
-    pil3_title: "Engenharia de Software, PO & Implantação de Sistemas",
-    pil3_body:
-      "Automações e painéis em produção com Python, TypeScript, Next.js, Node.js, T-SQL, C# (.NET) e Playwright, combinados com Product Ownership (PO), especificações Kanban, homologação (UAT), runbooks de migração, viradas em paralelo, rollouts em ondas e treinamentos.",
-    timeline_heading: "Trajetória Profissional (Sanitizada)",
-    tl1_period: "Ago 2021 - Atual · Varejo Multilojas",
-    tl1_title: "Administrador de TI, DPO (LGPD) & Product Owner (PO) de Soluções",
-    tl1_body:
-      "Liderança de implantações ponta a ponta de ERPs/sistemas, backlog de soluções como PO, governança de acessos em Windows Server e Active Directory, suporte N2 remoto/chat, automações em Python/TypeScript/T-SQL e conformidade LGPD em ~80 filiais.",
-    tl2_period: "Abr 2021 - Ago 2021 · Varejo Multilojas",
-    tl2_title: "Auxiliar de TI Sênior: Segurança da Informação, LGPD & Suporte N2",
-    tl2_body:
-      "Estruturação inicial de Segurança da Informação e adequação à LGPD somada ao suporte técnico N2 para matriz e filiais, resposta a incidentes, controles no Active Directory e mapeamento inicial de riscos.",
-    tl3_period: "Set 2019 - Abr 2021 · Varejo Multilojas",
-    tl3_title: "Auxiliar de TI: Atendimento Remoto, Chat, Service Desk & ERP",
-    tl3_body:
-      "Suporte técnico N1/N2 a usuários via acesso remoto, chat e atendimento presencial, manutenção preventiva/corretiva de hardware e redes, rotinas de Active Directory e apoio em implantações de sistemas ERP.",
-    tl4_period: "Fev 2016 - Dez 2016 · Processamento de Dados Municipal",
-    tl4_title: "Estagiário de TI: Desenvolvimento de Sistemas & Suporte Técnico",
-    tl4_body:
-      "Atuação no setor de Desenvolvimento apoiando criação e manutenção de sistemas internos, além de suporte técnico a usuários finais e manutenção preventiva/corretiva de estações e infraestrutura.",
+      "Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Português (Nativo) & Inglês Básico/Técnico (Leitura e Documentação)",
+    dpo_pill_1: "RoPA & DPIA / RIPD",
+    dpo_pill_2: "DPAs & Avisos de Privacidade",
+    dpo_pill_3: "16 Falhas OWASP Mapeadas",
+    dpo_pill_4: "AD logonHours & RBAC",
+    projects_eyebrow: "OPEN-SOURCE VALIDADO NO CI",
     projects_title: "Projetos Open-Source em Destaque",
     projects_desc:
-      "Todos os projetos abaixo possuem testes automatizados ou linters no GitHub Actions, documentação bilíngue e zero dados proprietários.",
+      "Seis repositórios públicos com validações automatizadas no GitHub Actions, documentação bilíngue (Inglês/Português) e zero dados proprietários.",
     filter_all: "Todos",
     filter_security: "Segurança & IA",
     filter_observability: "Observabilidade",
@@ -280,9 +287,10 @@ const TRANSLATIONS = {
       "Migrador bidirecional Windows de e-mails e contatos preservando hierarquia de pastas, datas originais de recebimento (MSGFLAG_UNSENT / MAPI), remetentes, anexos e caminhos longos (\\\\?\\).",
     link_repo: "Repositório",
     link_docs: "Documentação",
-    impact_title: "Casos de Produção Sanitizados (Antes -> Depois)",
+    exp_eyebrow: "IMPACTO EM PRODUÇÃO & TRAJETÓRIA",
+    impact_title: "Casos Sanitizados em Produção & Evolução de Carreira",
     impact_desc:
-      "Melhorias mensuráveis de arquitetura, engenharia web e confiabilidade entregues em operações distribuídas de varejo, CD e TI.",
+      "Resultados mensuráveis em arquitetura, engenharia web, operação Windows Server / Active Directory, Product Ownership (PO) de soluções e confiabilidade no varejo multilojas.",
     imp1_tag: "Next.js · Topologia SVG · Observabilidade",
     imp1_title: "Dashboard Operacional & Mapa de Infraestrutura",
     imp1_body:
@@ -307,44 +315,285 @@ const TRANSLATIONS = {
     imp6_title: "Implantação de ERPs & Sistemas, PO & Extensões Web",
     imp6_body:
       "Atuação como Product Owner (PO) de soluções internas traduzindo demandas de negócio em especificações, fluxos Kanban, homologação (UAT), runbooks de migração, viradas em paralelo, rollouts em ondas e treinamentos práticos, além de plugins CSP (~13 KB) e templates HTML/SVG compatíveis com Outlook.",
-    privacy_title: "Privacidade de Dados (LGPD / GDPR), DPO & AppSec",
-    privacy_desc:
-      "Governança prática de DPO, remediação ofensiva (OWASP), anonimização relacional e segurança em IA conectando regulação e engenharia.",
-    priv1_title: "Governança DPO, RoPA & DPIA / RIPD",
-    priv1_body:
-      "Programas de conformidade LGPD (Lei 13.709/2018) e GDPR: inventários RoPA, bases legais (Arts. 7º e 11º), fluxos de Direitos dos Titulares (Art. 18) e DPIA / RIPD em sistemas de varejo, retaguarda e arquivo físico.",
-    priv2_title: "OWASP AppSec & Forense Digital",
-    priv2_body:
-      "Testes de intrusão em aplicações web mapeando 16 vulnerabilidades críticas e médias (OWASP Top 10: injeções, falhas de autenticação, exposição de dados) com planos de remediação de código e hardening, além de análise de tráfego e perícia forense digital.",
-    priv3_title: "Anonimização Irreversível & Descarte",
-    priv3_body:
-      "Estratégias de anonimização irreversível em bancos relacionais sem quebrar integridade referencial/auditoria, além de massas de testes sanitizadas e fluxos certificados de descarte físico.",
-    priv4_title: "DPAs & IA Zero-Trust",
-    priv4_body:
-      "Redação de Avisos de Privacidade e cláusulas DPA com fornecedores, somados a diretrizes DLP Zero-Trust e checagem por Visão barrando PII e segredos internos em plataformas de IA.",
-    priv5_title: "Acessos Temporários & Hardening",
-    priv5_body:
-      "Fluxos de acesso temporário por chamado (AD logonHours, expiração, logoff RDS, túneis VPN para bancos, RBAC), Privacy by Design, autenticação de e-mail (DKIM/SPF/DMARC) e proteção ClamAV.",
-    priv6_title: "Comitê APDADOS® & Capacitação Corporativa",
-    priv6_body:
-      "Atuação ativa no Comitê de Segurança da APDADOS® contribuindo em cibersegurança, diretrizes regulatórias (ANPD) e LGPD, somada a trilhas modulares de conscientização sobre governança de dados, descarte seguro e uso responsável de IA.",
+    timeline_heading: "Trajetória Profissional",
+    tl1_period: "Ago 2021 - Atual · Varejo Multilojas",
+    tl1_title: "Administrador de TI, DPO (LGPD) & Product Owner (PO) de Soluções",
+    tl1_body:
+      "Liderança de implantações ponta a ponta de ERPs/sistemas, backlog de soluções como PO, governança de acessos em Windows Server e Active Directory, suporte N2 remoto/chat, automações em Python/TypeScript/T-SQL e conformidade LGPD em ~80 filiais.",
+    tl2_period: "Abr 2021 - Ago 2021 · Varejo Multilojas",
+    tl2_title: "Auxiliar de TI Sênior: Segurança da Informação, LGPD & Suporte N2",
+    tl2_body:
+      "Estruturação inicial de Segurança da Informação e adequação à LGPD somada ao suporte técnico N2 para matriz e filiais, resposta a incidentes, controles no Active Directory e mapeamento inicial de riscos.",
+    tl3_period: "Set 2019 - Abr 2021 · Varejo Multilojas",
+    tl3_title: "Auxiliar de TI: Atendimento Remoto, Chat, Service Desk & ERP",
+    tl3_body:
+      "Suporte técnico N1/N2 a usuários via acesso remoto, chat e atendimento presencial, manutenção preventiva/corretiva de hardware e redes, rotinas de Active Directory e apoio em implantações de sistemas ERP.",
+    tl4_period: "Fev 2016 - Dez 2016 · Processamento de Dados Municipal",
+    tl4_title: "Estagiário de TI: Desenvolvimento de Sistemas & Suporte Técnico",
+    tl4_body:
+      "Atuação no setor de Desenvolvimento apoiando criação e manutenção de sistemas internos, além de suporte técnico a usuários finais e manutenção preventiva/corretiva de estações e infraestrutura.",
+    stack_eyebrow: "CAIXA DE FERRAMENTAS",
     stack_title: "Stack Técnica",
     stack_desc:
-      "Versatilidade ponta a ponta: de Windows Server, Active Directory e internals de banco de dados até interfaces web modernas e privacidade.",
+      "Engenharia ponta a ponta: de Windows Server, Active Directory e internals de banco de dados até interfaces web modernas, CI/CD e governança DPO.",
     stack_g1: "Linguagens & Scripting",
     stack_g2: "Web, APIs & Desktop",
     stack_g3: "Windows Server, AD, Bancos & Infra",
-    stack_g4: "Governança, Segurança & Operações",
+    stack_g4: "Governança DPO, Segurança & Produto",
+    contact_eyebrow: "PRÓXIMO PASSO",
     contact_title: "Vamos Trabalhar Juntos",
     contact_desc:
-      "Aberto a oportunidades remotas no Brasil e no exterior em Automação de TI, Engenharia de Software/Backend, Implantação de Sistemas (PO), Infraestrutura Híbrida e Privacidade/AppSec.",
+      "Aberto a oportunidades remotas no Brasil e no exterior em Automação de TI, Engenharia de Software/Backend, Implantação de Sistemas (PO), Infraestrutura Híbrida e DPO / AppSec.",
     contact_github: "Visitar GitHub (@gavicoding)",
     contact_linkedin: "Conectar no LinkedIn",
     contact_copy_email: "Copiar E-mail (gavicoding@gmail.com)",
-    footer_note: "Construído com HTML5 semântico, CSS3 & JS puro · Hospedado no GitHub Pages",
+    footer_note: "Desenvolvido em HTML5, CSS3 & JS puro · Hospedado no GitHub Pages",
     toast_copied: "E-mail copiado: gavicoding@gmail.com",
     toast_copy_fallback: "E-mail: gavicoding@gmail.com",
   },
+};
+
+const TERMINAL_DATA = {
+  en: {
+    help: [
+      "$ help",
+      "Available commands: whoami, dpo, infra, projects, stack, contact, clear",
+      "Tip: click any command chip below or type your own.",
+    ],
+    whoami: [
+      "$ whoami --profile",
+      "Gabriel Souza (@gavicoding) | IT Admin, Solutions PO & DPO (LGPD/GDPR)",
+      "Focus: Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server & AD",
+      "Education: B.Sc. Computer Science | MBA Process Mgmt | Postgrad InfoSec & Cybersecurity (UTFPR)",
+      "Volunteering: Security Committee Member at APDADOS® (since 2021)",
+    ],
+    dpo: [
+      "$ dpo --status",
+      "[OK] RoPA inventory & Arts. 7/11 legal bases mapped across retail & SaaS",
+      "[OK] DPIA/RIPD risk governance, vendor DPAs & Art. 18 rights workflows",
+      "[OK] OWASP Top 10 web pentesting: 16 critical/medium findings remediated",
+      "[OK] Zero-Trust AI DLP gate preventing PII & internal secrets leakage",
+    ],
+    infra: [
+      "$ infra --health",
+      "[OK] ~80 branches / ~400 Windows endpoints managed via AD & GPOs",
+      "[OK] Fleet Agent: WebSockets + mTLS (3-7s reconnect after reboot)",
+      "[OK] L2 Service Desk, remote/chat escalation & SQL read-only watchdog",
+    ],
+    projects: [
+      "$ ls ./open-source",
+      "1. pii-screenshot-guard   (Python)     Zero-Trust DLP & PR auditor",
+      "2. queue-health-watchdog  (TypeScript) Replication trend monitor",
+      "3. tsql-retail-ops        (T-SQL)      Single-pass KPIs & DBA locks",
+      "4. infra-ops-playbook     (PS/Bash)    RSA agents, SID ACL & mTLS",
+      "5. OtimizaPC              (C#/.NET 8)  Safe Windows MVVM optimizer",
+      "6. Thunderbird-Outlook    (Python/COM) Bidirectional mail migrator",
+    ],
+    stack: [
+      "$ stack --summary",
+      "Code:  Python, TypeScript, JS, T-SQL, C# (.NET 8), Bash, PowerShell",
+      "Web:   Next.js, React, FastAPI, Node.js, Playwright, HTML5, CSS3",
+      "Infra: Windows Server, Active Directory, Linux, Docker, Nginx mTLS, SQL Server",
+    ],
+    contact: [
+      "$ contact --links",
+      "Email:    gavicoding@gmail.com",
+      "GitHub:   https://github.com/gavicoding",
+      "LinkedIn: https://www.linkedin.com/in/gabrielvsouza/",
+    ],
+    unknown: (cmd) => [
+      `$ ${cmd}`,
+      `Command not found: '${cmd}'. Try 'help', 'whoami', 'dpo', 'infra', 'projects', or 'stack'.`,
+    ],
+  },
+  pt: {
+    help: [
+      "$ help",
+      "Comandos disponíveis: whoami, dpo, infra, projects, stack, contact, clear",
+      "Dica: clique nos botões abaixo ou digite um comando.",
+    ],
+    whoami: [
+      "$ whoami --profile",
+      "Gabriel Souza (@gavicoding) | Adm. de TI, PO de Soluções & DPO (LGPD/GDPR)",
+      "Foco: Python, TypeScript, Next.js, T-SQL, C# (.NET), Windows Server & AD",
+      "Formação: Ciência da Computação | MBA Processos | Pós Seg. Info & Cibersegurança (UTFPR)",
+      "Voluntariado: Membro do Comitê de Segurança da APDADOS® (desde 2021)",
+    ],
+    dpo: [
+      "$ dpo --status",
+      "[OK] Inventário RoPA e bases legais (Arts. 7 e 11) mapeados",
+      "[OK] Relatórios DPIA/RIPD, DPAs com fornecedores e fluxos do Art. 18",
+      "[OK] Pentests web OWASP Top 10: 16 falhas críticas/médias remediadas",
+      "[OK] Barreira DLP Zero-Trust impedindo exposição de PII/segredos em IA",
+    ],
+    infra: [
+      "$ infra --health",
+      "[OK] ~80 filiais / ~400 estações Windows geridas via AD e GPOs",
+      "[OK] Agente de Frota: WebSockets + mTLS (reconexão em 3-7s pós-boot)",
+      "[OK] Service Desk N2, suporte remoto/chat e watchdog SQL somente leitura",
+    ],
+    projects: [
+      "$ ls ./open-source",
+      "1. pii-screenshot-guard   (Python)     Scanner DLP Zero-Trust & PRs",
+      "2. queue-health-watchdog  (TypeScript) Monitor de filas por tendência",
+      "3. tsql-retail-ops        (T-SQL)      KPIs em 1 passada & locks DBA",
+      "4. infra-ops-playbook     (PS/Bash)    Agentes RSA, ACL por SID & mTLS",
+      "5. OtimizaPC              (C#/.NET 8)  Otimizador Windows MVVM seguro",
+      "6. Thunderbird-Outlook    (Python/COM) Migrador bidirecional MAPI",
+    ],
+    stack: [
+      "$ stack --summary",
+      "Código: Python, TypeScript, JS, T-SQL, C# (.NET 8), Bash, PowerShell",
+      "Web:    Next.js, React, FastAPI, Node.js, Playwright, HTML5, CSS3",
+      "Infra:  Windows Server, Active Directory, Linux, Docker, Nginx mTLS, SQL Server",
+    ],
+    contact: [
+      "$ contact --links",
+      "E-mail:   gavicoding@gmail.com",
+      "GitHub:   https://github.com/gavicoding",
+      "LinkedIn: https://www.linkedin.com/in/gabrielvsouza/",
+    ],
+    unknown: (cmd) => [
+      `$ ${cmd}`,
+      `Comando desconhecido: '${cmd}'. Tente 'help', 'whoami', 'dpo', 'infra', 'projects' ou 'stack'.`,
+    ],
+  },
+};
+
+const DLP_PRESETS = {
+  en: {
+    ticket:
+      "Ticket #8421 (Fictional Store 12): User Maria Silva, CPF 123.456.789-01, e-mail maria.silva@exemplo-ficticio.com.br reported printer error on host 10.24.8.15. Fallback token sk_live_demo_9f8a7b6c5d4e removed before sharing.",
+    ai:
+      "Prompt draft: Analyze vendor CNPJ 12.345.678/0001-99 invoice lag for contact ops@varejo-demo.test using webhook key ghp_demoTokenExample9876543210 on internal DB 192.168.40.22.",
+    config:
+      "DEBUG 2026-11-23T14:02Z gateway=172.16.12.8 auth='Bearer demo_jwt_secret_payload_abc123' owner=carlos.lima@exemplo-ficticio.org cpf=987.654.321-00",
+  },
+  pt: {
+    ticket:
+      "Chamado #8421 (Loja Fictícia 12): Usuária Maria Silva, CPF 123.456.789-01, e-mail maria.silva@exemplo-ficticio.com.br relatou erro de impressora no host 10.24.8.15. Token sk_live_demo_9f8a7b6c5d4e barrado antes do envio.",
+    ai:
+      "Rascunho de prompt: Analisar atraso do fornecedor CNPJ 12.345.678/0001-99 (contato ops@varejo-demo.test) usando chave ghp_demoTokenExample9876543210 no banco interno 192.168.40.22.",
+    config:
+      "DEBUG 2026-11-23T14:02Z gateway=172.16.12.8 auth='Bearer demo_jwt_secret_payload_abc123' resp=carlos.lima@exemplo-ficticio.org cpf=987.654.321-00",
+  },
+};
+
+const DPO_STAGES = {
+  en: [
+    {
+      tag: "LGPD Arts. 37 & 50 · GDPR Art. 30",
+      title: "01. Data Discovery & Record of Processing Activities (RoPA)",
+      summary:
+        "Complete mapping of personal and sensitive data flows across retail POS, ERP modules, HR/back-office databases, physical archives, and third-party portals.",
+      deliverables: [
+        "Structured RoPA inventory linking business processes, tables, retention windows, and owners.",
+        "Segregation between standard commercial records and sensitive/clinical datasets.",
+        "Physical archive audit and certified document disposal procedures.",
+      ],
+    },
+    {
+      tag: "LGPD Arts. 7 & 11 · Accountability",
+      title: "02. Legal Bases, Vendor DPAs & DPIA / RIPD",
+      summary:
+        "Alignment of every processing activity with valid legal hypotheses, Data Protection Impact Assessments (RIPD), and contractual Data Processing Agreements.",
+      deliverables: [
+        "Written DPIA / RIPD documents evaluating operational risks and technical mitigations.",
+        "Privacy Notices and vendor DPA clauses defining clear Controller/Processor boundaries.",
+        "Regulatory readiness aligned with ANPD guidelines and Privacy by Design.",
+      ],
+    },
+    {
+      tag: "LGPD Art. 18 · Data Integrity",
+      title: "03. Data Subject Rights & Irreversible Anonymization",
+      summary:
+        "Operational workflows for access, correction, portability, and deletion requests without breaking relational foreign keys or fiscal audit logs.",
+      deliverables: [
+        "Art. 18 SLA workflows connecting Legal/DPO triage with engineering execution.",
+        "Irreversible relational anonymization patterns preserving aggregate KPIs and audit trails.",
+        "Sanitized synthetic datasets replacing real customer data in QA and staging.",
+      ],
+    },
+    {
+      tag: "OWASP Top 10 · Least-Privilege AD",
+      title: "04. Offensive AppSec Remediation & Access Hardening",
+      summary:
+        "Hands-on technical security controls bridging DPO compliance with infrastructure: web pentesting, temporary vendor access, and email/endpoint defense.",
+      deliverables: [
+        "Web penetration tests mapping 16 critical/medium OWASP Top 10 vulnerabilities with remediation plans.",
+        "Ticket-validated temporary vendor access using AD logonHours, RDS logoff, and encrypted VPN tunnels.",
+        "Hardening stack: least-privilege RBAC, DKIM/SPF/DMARC, ClamAV, and digital forensics.",
+      ],
+    },
+    {
+      tag: "Zero-Trust AI · APDADOS® Since 2021",
+      title: "05. Zero-Trust AI DLP & Voluntary Security Committee",
+      summary:
+        "Practical safeguards allowing teams to use modern AI tools safely while contributing actively to the national privacy and cybersecurity community.",
+      deliverables: [
+        "Deterministic & Vision-assisted DLP gates blocking CPF/CNPJ, tokens, and internal IPs before external AI calls.",
+        "Modular corporate awareness training on privacy, secure disposal, and responsible AI.",
+        "Active Volunteer Security Committee Member at APDADOS® contributing since July 2021.",
+      ],
+    },
+  ],
+  pt: [
+    {
+      tag: "LGPD Arts. 37 e 50 · GDPR Art. 30",
+      title: "01. Mapeamento de Fluxos & Inventário RoPA",
+      summary:
+        "Levantamento completo do ciclo de vida de dados pessoais e sensíveis entre sistemas de PDV, módulos ERP, retaguarda, portais web, integrações e arquivos físicos.",
+      deliverables: [
+        "Inventário RoPA estruturado conectando processos de negócio, tabelas, prazos de retenção e responsáveis.",
+        "Segregação lógica entre cadastros comerciais comuns e bases sensíveis.",
+        "Auditoria de arquivo físico com fluxos certificados de eliminação e descarte seguro.",
+      ],
+    },
+    {
+      tag: "LGPD Arts. 7 e 11 · Prestação de Contas",
+      title: "02. Bases Legais, DPAs com Fornecedores & DPIA / RIPD",
+      summary:
+        "Enquadramento de cada tratamento em hipóteses legais válidas, elaboração de Relatórios de Impacto (RIPD) e revisão contratual de proteção de dados.",
+      deliverables: [
+        "Elaboração de DPIA / RIPD avaliando riscos operacionais, probabilidades e salvaguardas técnicas.",
+        "Redação de Avisos de Privacidade e cláusulas DPA definindo papéis de Controlador e Operador.",
+        "Prontidão regulatória alinhada às diretrizes da ANPD e Privacy by Design.",
+      ],
+    },
+    {
+      tag: "LGPD Art. 18 · Integridade Relacional",
+      title: "03. Direitos dos Titulares & Anonimização Irreversível",
+      summary:
+        "Atendimento estruturado a solicitações de acesso, correção e eliminação de dados sem quebrar integridade referencial de bancos ou trilhas fiscais.",
+      deliverables: [
+        "Fluxos operacionais do Art. 18 conectando triagem do DPO e execução técnica auditável.",
+        "Padrões de anonimização relacional irreversível preservando KPIs históricos e auditoria.",
+        "Massas de dados sintéticas substituindo dados reais em homologação e testes.",
+      ],
+    },
+    {
+      tag: "OWASP Top 10 · Active Directory RBAC",
+      title: "04. Remediação OWASP AppSec & Hardening de Acessos",
+      summary:
+        "Controles técnicos reais unindo governança de DPO com operação de infraestrutura: testes ofensivos, acessos temporários auditáveis e defesa de e-mail.",
+      deliverables: [
+        "Testes de intrusão web mapeando 16 vulnerabilidades críticas e médias (OWASP Top 10) com planos de correção.",
+        "Acessos temporários de terceiros vinculados a chamado com AD logonHours, logoff RDS e VPN criptografada.",
+        "Hardening prático com RBAC mínimo privilégio, DKIM/SPF/DMARC, ClamAV e perícia forense digital.",
+      ],
+    },
+    {
+      tag: "IA Zero-Trust · APDADOS® Desde 2021",
+      title: "05. DLP para IA Generativa & Comitê de Segurança APDADOS®",
+      summary:
+        "Barreiras técnicas para uso seguro de IA no dia a dia corporativo somadas à atuação voluntária contínua na comunidade nacional de privacidade.",
+      deliverables: [
+        "Filtros DLP determinísticos e por Visão barrando CPF/CNPJ, chaves de API e IPs internos antes de prompts externos.",
+        "Trilhas práticas de conscientização corporativa sobre privacidade, descarte seguro e IA responsável.",
+        "Atuação ativa como Membro do Comitê de Segurança da APDADOS® desde julho de 2021.",
+      ],
+    },
+  ],
 };
 
 function getInitialLang() {
@@ -356,30 +605,22 @@ function getInitialLang() {
   } catch {
     // Ignore storage access restrictions.
   }
+  if (typeof navigator !== "undefined" && navigator.language && navigator.language.toLowerCase().startsWith("pt")) {
+    return "pt";
+  }
   return "en";
 }
 
-function applyLanguage(lang) {
-  const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
-  document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (key && Object.prototype.hasOwnProperty.call(dict, key)) {
-      el.textContent = dict[key];
-    }
-  });
-
-  const langLabel = document.getElementById("lang-label");
-  if (langLabel) {
-    langLabel.textContent = lang === "en" ? "🇧🇷 PT-BR" : "🇺🇸 EN";
-  }
-
+function getInitialTheme() {
   try {
-    localStorage.setItem("portfolio_lang", lang);
+    const saved = localStorage.getItem("portfolio_theme");
+    if (saved === "dark" || saved === "light") {
+      return saved;
+    }
   } catch {
     // Ignore storage access restrictions.
   }
+  return "dark";
 }
 
 function showToast(message) {
@@ -395,14 +636,365 @@ function showToast(message) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const prefersReduced =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   let currentLang = getInitialLang();
+  let currentTheme = getInitialTheme();
+  let currentDpoStep = 0;
+  let currentPreset = "ticket";
+  let topoMode = "healthy";
+  let topoQueueDepth = 14;
+  let termTypingTimer = null;
+
+  function applyTheme(theme) {
+    currentTheme = theme === "light" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    const themeBtn = document.getElementById("theme-toggle");
+    if (themeBtn) {
+      themeBtn.setAttribute("aria-pressed", String(currentTheme === "light"));
+    }
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) {
+      metaTheme.setAttribute("content", currentTheme === "light" ? "#fafafa" : "#09090b");
+    }
+    try {
+      localStorage.setItem("portfolio_theme", currentTheme);
+    } catch {
+      // Ignore storage access restrictions.
+    }
+  }
+
+  function renderDpoStage(stepIndex) {
+    const stages = DPO_STAGES[currentLang] || DPO_STAGES.en;
+    const idx = Math.max(0, Math.min(stepIndex, stages.length - 1));
+    currentDpoStep = idx;
+    const stage = stages[idx];
+
+    const tagEl = document.getElementById("dpo-detail-tag");
+    const titleEl = document.getElementById("dpo-detail-title");
+    const summaryEl = document.getElementById("dpo-detail-summary");
+    const listEl = document.getElementById("dpo-detail-deliverables");
+
+    if (tagEl) tagEl.textContent = stage.tag;
+    if (titleEl) titleEl.textContent = stage.title;
+    if (summaryEl) summaryEl.textContent = stage.summary;
+    if (listEl) {
+      listEl.replaceChildren();
+      stage.deliverables.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        listEl.appendChild(li);
+      });
+    }
+
+    document.querySelectorAll(".dpo-step-btn").forEach((btn, i) => {
+      const active = i === idx;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-selected", String(active));
+    });
+  }
+
+  function renderTerminalLines(lines) {
+    const out = document.getElementById("terminal-output");
+    if (!out) return;
+    if (termTypingTimer) {
+      window.clearInterval(termTypingTimer);
+      termTypingTimer = null;
+    }
+
+    const fullText = lines.join("\n");
+    if (prefersReduced) {
+      out.textContent = fullText;
+      return;
+    }
+
+    out.textContent = "";
+    let pos = 0;
+    const step = 4;
+    termTypingTimer = window.setInterval(() => {
+      pos = Math.min(fullText.length, pos + step);
+      out.textContent = fullText.slice(0, pos);
+      if (pos >= fullText.length) {
+        window.clearInterval(termTypingTimer);
+        termTypingTimer = null;
+        const cursor = document.createElement("span");
+        cursor.className = "term-cursor";
+        cursor.setAttribute("aria-hidden", "true");
+        out.appendChild(cursor);
+      }
+    }, 14);
+  }
+
+  function runTerminalCommand(rawCmd) {
+    const cmd = (rawCmd || "").trim().toLowerCase();
+    const out = document.getElementById("terminal-output");
+    if (!cmd) return;
+
+    if (cmd === "clear") {
+      if (termTypingTimer) {
+        window.clearInterval(termTypingTimer);
+        termTypingTimer = null;
+      }
+      if (out) out.textContent = "";
+      return;
+    }
+
+    const dict = TERMINAL_DATA[currentLang] || TERMINAL_DATA.en;
+    const lines = Object.prototype.hasOwnProperty.call(dict, cmd)
+      ? dict[cmd]
+      : dict.unknown(cmd);
+    renderTerminalLines(lines);
+
+    document.querySelectorAll(".term-chip").forEach((chip) => {
+      chip.classList.toggle("is-active", chip.getAttribute("data-cmd") === cmd);
+    });
+  }
+
+  function scanAndRenderDlp(text) {
+    const out = document.getElementById("dlp-output");
+    const piiEl = document.getElementById("dlp-count-pii");
+    const secEl = document.getElementById("dlp-count-secrets");
+    const ipEl = document.getElementById("dlp-count-ips");
+    const gateEl = document.getElementById("dlp-gate-status");
+    if (!out) return;
+
+    const rules = [
+      {
+        kind: "pii",
+        label: "[CPF_MASKED]",
+        cls: "mask-pii",
+        rx: /\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b/g,
+      },
+      {
+        kind: "pii",
+        label: "[CNPJ_MASKED]",
+        cls: "mask-pii",
+        rx: /\b\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}\b/g,
+      },
+      {
+        kind: "pii",
+        label: "[EMAIL_MASKED]",
+        cls: "mask-pii",
+        rx: /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g,
+      },
+      {
+        kind: "secret",
+        label: "[SECRET_MASKED]",
+        cls: "mask-secret",
+        rx: /\b(?:sk_live_[A-Za-z0-9_]+|ghp_[A-Za-z0-9_]+|AKIA[0-9A-Z]{16}|Bearer\s+[A-Za-z0-9._-]+|demo_jwt_[A-Za-z0-9_]+)\b/g,
+      },
+      {
+        kind: "ip",
+        label: "[INTERNAL_IP_MASKED]",
+        cls: "mask-ip",
+        rx: /\b(?:10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3})\b/g,
+      },
+    ];
+
+    const matches = [];
+    rules.forEach((rule) => {
+      rule.rx.lastIndex = 0;
+      let m;
+      while ((m = rule.rx.exec(text)) !== null) {
+        matches.push({
+          start: m.index,
+          end: m.index + m[0].length,
+          kind: rule.kind,
+          label: rule.label,
+          cls: rule.cls,
+        });
+      }
+    });
+
+    matches.sort((a, b) => a.start - b.start || b.end - a.end);
+    const filtered = [];
+    let cursor = 0;
+    for (const item of matches) {
+      if (item.start >= cursor) {
+        filtered.push(item);
+        cursor = item.end;
+      }
+    }
+
+    const counts = { pii: 0, secret: 0, ip: 0 };
+    out.replaceChildren();
+    let pos = 0;
+    for (const item of filtered) {
+      if (item.start > pos) {
+        out.appendChild(document.createTextNode(text.slice(pos, item.start)));
+      }
+      const span = document.createElement("span");
+      span.className = `mask-token ${item.cls}`;
+      span.textContent = item.label;
+      out.appendChild(span);
+      counts[item.kind] += 1;
+      pos = item.end;
+    }
+    if (pos < text.length) {
+      out.appendChild(document.createTextNode(text.slice(pos)));
+    }
+
+    const total = counts.pii + counts.secret + counts.ip;
+    if (piiEl) piiEl.textContent = String(counts.pii);
+    if (secEl) secEl.textContent = String(counts.secret);
+    if (ipEl) ipEl.textContent = String(counts.ip);
+    if (gateEl) {
+      if (total > 0) {
+        gateEl.textContent =
+          currentLang === "pt"
+            ? `BLOQUEADO (${total} REDIGIDOS)`
+            : `REDACTED (${total} FINDINGS)`;
+        gateEl.classList.add("is-warn");
+      } else {
+        gateEl.textContent = currentLang === "pt" ? "LIMPO: LIBERADO" : "GATE: CLEAN";
+        gateEl.classList.remove("is-warn");
+      }
+    }
+  }
+
+  function updateTopologyDisplay() {
+    const svg = document.getElementById("topo-svg");
+    const badge = document.getElementById("topo-alert-state");
+    const depthEl = document.getElementById("topo-queue-depth");
+    const trendEl = document.getElementById("topo-trend");
+    const mtlsEl = document.getElementById("topo-mtls");
+    const policyEl = document.getElementById("topo-policy");
+    const logEl = document.getElementById("topo-log");
+
+    if (svg) {
+      svg.classList.remove("mode-healthy", "mode-high-load", "mode-stalled");
+      svg.classList.add(
+        topoMode === "stalled"
+          ? "mode-stalled"
+          : topoMode === "high_load"
+            ? "mode-high-load"
+            : "mode-healthy",
+      );
+    }
+
+    if (badge) {
+      badge.classList.remove("is-warn", "is-danger");
+      if (topoMode === "high_load") {
+        badge.textContent = "HIGH_LOAD";
+        badge.classList.add("is-warn");
+      } else if (topoMode === "stalled") {
+        badge.textContent = "STALLED";
+        badge.classList.add("is-danger");
+      } else {
+        badge.textContent = "HEALTHY";
+      }
+    }
+
+    if (depthEl) depthEl.textContent = `${topoQueueDepth} msgs`;
+    if (trendEl) {
+      trendEl.textContent =
+        topoMode === "stalled"
+          ? "+42 / tick"
+          : topoMode === "high_load"
+            ? "-28 / tick"
+            : "-6 / tick";
+    }
+    if (mtlsEl) {
+      mtlsEl.textContent =
+        topoMode === "stalled" ? "14.2s RETRY" : topoMode === "high_load" ? "4.6s ACK" : "3.8s ACK";
+    }
+    if (policyEl) {
+      policyEl.textContent =
+        topoMode === "stalled"
+          ? currentLang === "pt"
+            ? "ALERTA + RUNBOOK"
+            : "ALERT + RUNBOOK"
+          : topoMode === "high_load"
+            ? currentLang === "pt"
+              ? "SUPRIMIDO (DRENANDO)"
+              : "SUPPRESSED (DRAINING)"
+            : currentLang === "pt"
+              ? "SILENCIOSO"
+              : "SILENT";
+    }
+
+    if (logEl) {
+      if (currentLang === "pt") {
+        logEl.textContent =
+          topoMode === "stalled"
+            ? `[WATCHDOG] Fila=${topoQueueDepth} | Tendência estacionada por 3 snapshots -> Estado=STALLED\n[AÇÃO] Alerta enviado ao ITSM com cooldown ativo. Clique em "Executar Auto-Recuperação".`
+            : topoMode === "high_load"
+              ? `[WATCHDOG] Fila=${topoQueueDepth} | Volume alto porém drenando (-28/tick) -> Estado=HIGH_LOAD\n[AÇÃO] Falso alarme evitado; mTLS mantendo telemetria normal nas ~80 filiais.`
+              : `[WATCHDOG] Fila=${topoQueueDepth} | Replicação estável e agente Windows mTLS ativo -> Estado=HEALTHY\n[AÇÃO] Nenhuma intervenção necessária; snapshots somente leitura em execução.`;
+      } else {
+        logEl.textContent =
+          topoMode === "stalled"
+            ? `[WATCHDOG] Queue=${topoQueueDepth} | Stagnant trend across 3 snapshots -> State=STALLED\n[ACTION] Dispatched throttled ITSM alert with runbook. Click "Run Auto-Recovery".`
+            : topoMode === "high_load"
+              ? `[WATCHDOG] Queue=${topoQueueDepth} | Burst active but draining (-28/tick) -> State=HIGH_LOAD\n[ACTION] False alarm suppressed; WebSockets + mTLS telemetry green across ~80 branches.`
+              : `[WATCHDOG] Queue=${topoQueueDepth} | Replication steady & Windows mTLS fleet online -> State=HEALTHY\n[ACTION] Zero intervention needed; read-only polling snapshots running.`;
+      }
+    }
+
+    document.querySelectorAll("[data-topo-mode]").forEach((btn) => {
+      btn.classList.toggle("is-active", btn.getAttribute("data-topo-mode") === topoMode);
+    });
+  }
+
+  function applyLanguage(lang) {
+    currentLang = lang === "pt" ? "pt" : "en";
+    const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+    document.documentElement.lang = currentLang === "pt" ? "pt-BR" : "en";
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (key && Object.prototype.hasOwnProperty.call(dict, key)) {
+        el.textContent = dict[key];
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (key && Object.prototype.hasOwnProperty.call(dict, key)) {
+        el.setAttribute("placeholder", dict[key]);
+      }
+    });
+
+    const langLabel = document.getElementById("lang-label");
+    if (langLabel) {
+      langLabel.textContent = currentLang === "en" ? "PT-BR" : "EN";
+    }
+
+    try {
+      localStorage.setItem("portfolio_lang", currentLang);
+    } catch {
+      // Ignore storage access restrictions.
+    }
+
+    const dlpInput = document.getElementById("dlp-input");
+    if (dlpInput) {
+      const presetText = (DLP_PRESETS[currentLang] || DLP_PRESETS.en)[currentPreset];
+      if (!dlpInput.dataset.dirty) {
+        dlpInput.value = presetText;
+      }
+      scanAndRenderDlp(dlpInput.value);
+    }
+
+    renderDpoStage(currentDpoStep);
+    updateTopologyDisplay();
+    runTerminalCommand("whoami");
+  }
+
+  applyTheme(currentTheme);
   applyLanguage(currentLang);
 
   const langToggle = document.getElementById("lang-toggle");
   if (langToggle) {
     langToggle.addEventListener("click", () => {
-      currentLang = currentLang === "en" ? "pt" : "en";
-      applyLanguage(currentLang);
+      applyLanguage(currentLang === "en" ? "pt" : "en");
+    });
+  }
+
+  const themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      applyTheme(currentTheme === "dark" ? "light" : "dark");
     });
   }
 
@@ -422,6 +1014,96 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Terminal events
+  document.querySelectorAll(".term-chip[data-cmd]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const cmd = chip.getAttribute("data-cmd") || "whoami";
+      runTerminalCommand(cmd);
+    });
+  });
+
+  const termForm = document.getElementById("terminal-form");
+  const termInput = document.getElementById("terminal-input");
+  if (termForm && termInput) {
+    termForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (termInput.value.trim()) {
+        runTerminalCommand(termInput.value);
+        termInput.value = "";
+      }
+    });
+  }
+
+  // DLP events
+  const dlpInput = document.getElementById("dlp-input");
+  if (dlpInput) {
+    dlpInput.addEventListener("input", () => {
+      dlpInput.dataset.dirty = "1";
+      scanAndRenderDlp(dlpInput.value);
+    });
+  }
+
+  document.querySelectorAll("[data-dlp-preset]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      currentPreset = btn.getAttribute("data-dlp-preset") || "ticket";
+      document.querySelectorAll("[data-dlp-preset]").forEach((b) => {
+        b.classList.toggle("is-active", b === btn);
+      });
+      if (dlpInput) {
+        delete dlpInput.dataset.dirty;
+        dlpInput.value = (DLP_PRESETS[currentLang] || DLP_PRESETS.en)[currentPreset];
+        scanAndRenderDlp(dlpInput.value);
+      }
+    });
+  });
+
+  // Topology Watchdog events & timer
+  document.querySelectorAll("[data-topo-mode]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const mode = btn.getAttribute("data-topo-mode") || "healthy";
+      topoMode = mode;
+      topoQueueDepth = mode === "stalled" ? 412 : mode === "high_load" ? 186 : 14;
+      updateTopologyDisplay();
+    });
+  });
+
+  const recoverBtn = document.getElementById("topo-recover-btn");
+  if (recoverBtn) {
+    recoverBtn.addEventListener("click", () => {
+      topoMode = "high_load";
+      topoQueueDepth = Math.max(48, Math.round(topoQueueDepth * 0.4));
+      updateTopologyDisplay();
+      window.setTimeout(() => {
+        topoMode = "healthy";
+        topoQueueDepth = 9;
+        updateTopologyDisplay();
+      }, 900);
+    });
+  }
+
+  window.setInterval(() => {
+    if (topoMode === "healthy") {
+      topoQueueDepth = 8 + Math.floor(Math.random() * 11);
+    } else if (topoMode === "high_load") {
+      topoQueueDepth = Math.max(24, topoQueueDepth - 14);
+      if (topoQueueDepth <= 28) {
+        topoMode = "healthy";
+      }
+    } else if (topoMode === "stalled") {
+      topoQueueDepth = Math.min(999, topoQueueDepth + 12);
+    }
+    updateTopologyDisplay();
+  }, 2400);
+
+  // DPO Stepper events
+  document.querySelectorAll(".dpo-step-btn[data-dpo-step]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const step = Number(btn.getAttribute("data-dpo-step") || "0");
+      renderDpoStage(step);
+    });
+  });
+
+  // Project filters
   const filterButtons = document.querySelectorAll(".filter-btn[data-filter]");
   const projectCards = document.querySelectorAll(".project-card[data-category]");
   filterButtons.forEach((btn) => {
@@ -439,6 +1121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Copy email toast
   document.querySelectorAll(".copy-email-btn").forEach((btn) => {
     btn.addEventListener("click", async () => {
       const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
@@ -455,24 +1138,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const revealEls = document.querySelectorAll(".reveal");
-  const prefersReduced =
-    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Scroll progress bar
+  const progressBar = document.getElementById("scroll-progress");
+  function updateProgress() {
+    if (!progressBar) return;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? Math.min(100, Math.max(0, (window.scrollY / docHeight) * 100)) : 0;
+    progressBar.style.width = `${pct.toFixed(1)}%`;
+  }
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
 
+  // Spotlight cursor glow
+  if (!prefersReduced) {
+    document.querySelectorAll(".spotlight-card").forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+        card.style.setProperty("--my", `${e.clientY - rect.top}px`);
+      });
+    });
+  }
+
+  // Active nav highlight & reveal animations
+  const revealEls = document.querySelectorAll(".reveal");
   if (prefersReduced || typeof IntersectionObserver === "undefined") {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   } else {
-    const observer = new IntersectionObserver(
+    const revealObs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
+            revealObs.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.08 },
     );
-    revealEls.forEach((el) => observer.observe(el));
+    revealEls.forEach((el) => revealObs.observe(el));
+
+    const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+    const sections = Array.from(document.querySelectorAll("main section[id]"));
+    const navObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach((a) => {
+              a.classList.toggle("is-active", a.getAttribute("href") === `#${id}`);
+            });
+          }
+        });
+      },
+      { rootMargin: "-35% 0px -55% 0px" },
+    );
+    sections.forEach((s) => navObs.observe(s));
   }
 });

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="gavicoding icon">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#09090b" stroke="#27272a" stroke-width="2" />
+  <path d="M23 22L13 32L23 42" fill="none" stroke="#fafafa" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M41 22L51 32L41 42" fill="none" stroke="#fafafa" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M35.5 19L28.5 45" fill="none" stroke="#818cf8" stroke-width="4.2" stroke-linecap="round" />
+</svg>
