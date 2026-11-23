@@ -64,7 +64,7 @@ const TRANSLATIONS = {
     pil2_tag: "DPO (LGPD/GDPR) · OWASP AppSec · AI DLP",
     pil2_title: "Privacy Governance & Offensive Security",
     pil2_body:
-      "Practical LGPD/GDPR DPO programs (RoPA, DPIA/RIPD, legal bases, Art. 18 rights, vendor DPAs, Portaria MTE 671/2021 biometrics, irreversible anonymization, certified disposal), OWASP Top 10 pentesting (16 critical/medium flaws mapped with remediation & hardening plans), digital forensics, and Zero-Trust AI DLP.",
+      "Practical LGPD/GDPR DPO programs (RoPA, DPIA/RIPD, legal bases, Art. 18 rights, vendor DPAs, irreversible anonymization, certified disposal), OWASP Top 10 pentesting (16 critical/medium flaws mapped with remediation & hardening plans), digital forensics, and Zero-Trust AI DLP.",
     pil3_tag: "Python / TS / Next.js · PO · ERP Rollouts",
     pil3_title: "Software Engineering, PO & System Deployments",
     pil3_body:
@@ -148,9 +148,9 @@ const TRANSLATIONS = {
     priv3_title: "Irreversible Anonymization & Disposal",
     priv3_body:
       "Defined irreversible anonymization patterns in relational schemas when hard deletion would break referential integrity or audit trails, paired with sanitized test datasets and certified physical document destruction.",
-    priv4_title: "Third-Party DPAs, Biometrics & Zero-Trust AI",
+    priv4_title: "Third-Party DPAs & Zero-Trust AI",
     priv4_body:
-      "Authored Privacy Notices, vendor DPAs, and Portaria MTE 671/2021 biometric time-tracking controls, backed by Zero-Trust DLP boundaries and automated Vision checks barring PII from external AI platforms.",
+      "Authored Privacy Notices and vendor DPAs, backed by Zero-Trust DLP boundaries and automated Vision checks barring PII and internal secrets from external AI platforms.",
     priv5_title: "Time-Boxed Access & Hardening",
     priv5_body:
       "Designed ticket-validated temporary vendor access (AD logonHours, expiration alerts, RDS logoff, encrypted VPN DB tunnels, least-privilege RBAC) alongside Privacy by Design, DKIM/SPF/DMARC, and ClamAV.",
@@ -235,7 +235,7 @@ const TRANSLATIONS = {
     pil2_tag: "DPO (LGPD/GDPR) · OWASP AppSec · IA DLP",
     pil2_title: "Governança de Privacidade & Segurança Ofensiva",
     pil2_body:
-      "Programas práticos de DPO (RoPA, DPIA/RIPD, bases legais, direitos do Art. 18, DPAs com fornecedores, biometria Portaria MTE 671/2021, anonimização irreversível e descarte certificado), pentests web OWASP Top 10 (16 falhas críticas/médias com remediação e hardening), forense digital e DLP Zero-Trust.",
+      "Programas práticos de DPO (RoPA, DPIA/RIPD, bases legais, direitos do Art. 18, DPAs com fornecedores, anonimização irreversível e descarte certificado), pentests web OWASP Top 10 (16 falhas críticas/médias com remediação e hardening), forense digital e DLP Zero-Trust.",
     pil3_tag: "Python / TS / Next.js · PO · Implantações",
     pil3_title: "Engenharia de Software, PO & Implantação de Sistemas",
     pil3_body:
@@ -319,9 +319,9 @@ const TRANSLATIONS = {
     priv3_title: "Anonimização Irreversível & Descarte",
     priv3_body:
       "Estratégias de anonimização irreversível em bancos relacionais sem quebrar integridade referencial/auditoria, além de massas de testes sanitizadas e fluxos certificados de descarte físico.",
-    priv4_title: "DPAs, Biometria & IA Zero-Trust",
+    priv4_title: "DPAs & IA Zero-Trust",
     priv4_body:
-      "Redação de Avisos de Privacidade, cláusulas DPA com fornecedores e conformidade trabalhista/biométrica (Portaria MTE 671/2021), somados a diretrizes DLP e checagem por Visão barrando PII em plataformas de IA.",
+      "Redação de Avisos de Privacidade e cláusulas DPA com fornecedores, somados a diretrizes DLP Zero-Trust e checagem por Visão barrando PII e segredos internos em plataformas de IA.",
     priv5_title: "Acessos Temporários & Hardening",
     priv5_body:
       "Fluxos de acesso temporário por chamado (AD logonHours, expiração, logoff RDS, túneis VPN para bancos, RBAC), Privacy by Design, autenticação de e-mail (DKIM/SPF/DMARC) e proteção ClamAV.",

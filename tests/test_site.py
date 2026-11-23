@@ -67,6 +67,7 @@ class TestPortfolioSite(unittest.TestCase):
             self.assertTrue(local_ref in parser.hrefs or local_ref in parser.srcs, f"Unreferenced asset: {local_ref}")
 
         self.assertIn("https://www.linkedin.com/in/gabrielvsouza/", parser.hrefs)
+        self.assertIn("https://gavicoding.github.io/assets/images/hero-visual.png", html_text)
 
         expected_repos = (
             "pii-screenshot-guard",
@@ -123,6 +124,8 @@ class TestPortfolioSite(unittest.TestCase):
         for path in files_to_scan:
             content = path.read_text(encoding="utf-8")
             self.assertNotIn("\u2014", content, f"Em-dash detected in {path.name}")
+            self.assertNotIn("671/2021", content, f"Portaria reference detected in {path.name}")
+            self.assertNotIn("portaria", content.lower(), f"Portaria reference detected in {path.name}")
 
 
 if __name__ == "__main__":
