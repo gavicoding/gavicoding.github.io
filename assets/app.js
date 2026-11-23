@@ -726,10 +726,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 14);
   }
 
+  const TERMINAL_ALIASES = {
+    ajuda: "help",
+    "?": "help",
+    sobre: "whoami",
+    quem: "whoami",
+    lgpd: "dpo",
+    privacidade: "dpo",
+    redes: "infra",
+    ad: "infra",
+    projetos: "projects",
+    ls: "projects",
+    tecnologias: "stack",
+    contato: "contact",
+    email: "contact",
+    limpar: "clear",
+    cls: "clear",
+  };
+
   function runTerminalCommand(rawCmd) {
-    const cmd = (rawCmd || "").trim().toLowerCase();
+    const cleaned = (rawCmd || "").trim().replace(/^\$\s*/, "").toLowerCase();
+    const baseToken = cleaned.split(/\s+/)[0] || "help";
+    const cmd = TERMINAL_ALIASES[baseToken] || baseToken;
     const out = document.getElementById("terminal-output");
-    if (!cmd) return;
 
     if (cmd === "clear") {
       if (termTypingTimer) {
@@ -737,13 +756,14 @@ document.addEventListener("DOMContentLoaded", () => {
         termTypingTimer = null;
       }
       if (out) out.textContent = "";
+      document.querySelectorAll(".term-chip").forEach((chip) => chip.classList.remove("is-active"));
       return;
     }
 
     const dict = TERMINAL_DATA[currentLang] || TERMINAL_DATA.en;
     const lines = Object.prototype.hasOwnProperty.call(dict, cmd)
       ? dict[cmd]
-      : dict.unknown(cmd);
+      : dict.unknown(cleaned);
     renderTerminalLines(lines);
 
     document.querySelectorAll(".term-chip").forEach((chip) => {
@@ -1027,10 +1047,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (termForm && termInput) {
     termForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (termInput.value.trim()) {
-        runTerminalCommand(termInput.value);
-        termInput.value = "";
-      }
+      const val = termInput.value.trim();
+      runTerminalCommand(val || "help");
+      termInput.value = "";
+      termInput.focus();
     });
   }
 
