@@ -637,6 +637,28 @@
         </div>
 
         <div class="impact-grid">
+          <article class="card spotlight-card reveal impact-featured">
+            <div class="card-top">
+              <span class="impact-pill mono" data-i18n="imp7_tag">Python · SQL Server · OData API · IMAP · Desktop 24/7</span>
+              <span class="badge-live mono" data-i18n="imp7_badge">IN PRODUCTION</span>
+            </div>
+            <h3 data-i18n="imp7_title">E-Invoice (NF-e) Intake Hub &amp; Daily Reconciliation</h3>
+            <div class="case-steps">
+              <div class="case-step">
+                <span class="case-step-k mono" data-i18n="case_pain">THE PAIN</span>
+                <p data-i18n="imp7_pain">Supplier invoice XMLs arrived by email, invoices stalled in the ERP import queue, and a separate manual tool made someone pick date ranges and re-scan 40k+ invoices a month, so gaps stayed open until the next manual run.</p>
+              </div>
+              <div class="case-step">
+                <span class="case-step-k mono" data-i18n="case_solution">WHAT I BUILT</span>
+                <p data-i18n="imp7_solution">One always-on desktop hub: IMAP intake of XMLs, automatic re-queue of stalled invoices in the ERP, incremental sync from the fiscal platform's OData API, key-only daily reconciliation, certificate expiry alerts, and a watchdog that restarts any hung cycle.</p>
+              </div>
+              <div class="case-step">
+                <span class="case-step-k mono" data-i18n="case_result">RESULT</span>
+                <p data-i18n="imp7_result">Manual monthly sweeps became 10-minute cycles of ~4s each, plus one daily pass that checks every day since a set start date (~12s per day) and fetches only what is missing. Also fixed a 3-hour timezone gap and a field the old tool always left empty.</p>
+              </div>
+            </div>
+          </article>
+
           <article class="card spotlight-card reveal">
             <span class="impact-pill mono" data-i18n="imp1_tag">Next.js · SVG Topology · Observability</span>
             <h3 data-i18n="imp1_title">Operational Dashboard &amp; Live Infrastructure Map</h3>

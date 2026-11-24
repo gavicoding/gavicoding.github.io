@@ -150,6 +150,18 @@ const TRANSLATIONS = {
     imp6_title: "End-to-End ERP & System Implementations, PO & UI Extensions",
     imp6_body:
       "Acted as Solutions Product Owner translating business needs into specs, Kanban pipelines, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training, plus CSP-safe UI plugins (~13 KB theme) and Outlook-safe HTML/SVG templates.",
+    imp7_tag: "Python · SQL Server · OData API · IMAP · Desktop 24/7",
+    imp7_badge: "IN PRODUCTION",
+    imp7_title: "E-Invoice (NF-e) Intake Hub & Daily Reconciliation",
+    case_pain: "THE PAIN",
+    case_solution: "WHAT I BUILT",
+    case_result: "RESULT",
+    imp7_pain:
+      "Supplier invoice XMLs arrived by email, invoices stalled in the ERP import queue, and a separate manual tool made someone pick date ranges and re-scan 40k+ invoices a month, so gaps stayed open until the next manual run.",
+    imp7_solution:
+      "One always-on desktop hub: IMAP intake of XMLs, automatic re-queue of stalled invoices in the ERP, incremental sync from the fiscal platform's OData API, key-only daily reconciliation, certificate expiry alerts, and a watchdog that restarts any hung cycle.",
+    imp7_result:
+      "Manual monthly sweeps became 10-minute cycles of ~4s each, plus one daily pass that checks every day since a set start date (~12s per day) and fetches only what is missing. Also fixed a 3-hour timezone gap and a field the old tool always left empty.",
     timeline_heading: "Career Timeline",
     tl1_period: "Aug 2021 - Present · Multi-Branch Retail",
     tl1_title: "IT Administrator, DPO (LGPD) & Solutions Product Owner (PO)",
@@ -199,7 +211,7 @@ const TRANSLATIONS = {
     hero_title:
       "Engenharia de automações resilientes, infraestrutura Windows/Linux e governança de privacidade.",
     hero_subtitle:
-      "Sou Gabriel Souza: Engenheiro de Automação de TI, DevOps e Software, Product Owner (PO) de Soluções e DPO (LGPD/GDPR). Unindo Python, TypeScript, Next.js, T-SQL, C# (.NET), Docker, Windows Server e Active Directory para entregas de ERPs/sistemas, suporte remoto/chat N2 e hardening OWASP AppSec.",
+      "Sou Gabriel Souza: Engenheiro de Automação de TI, DevOps e Software, Product Owner (PO) de Soluções e DPO (LGPD/GDPR). Uno Python, TypeScript, Next.js, T-SQL, C# (.NET), Docker, Windows Server e Active Directory para implantar ERPs e sistemas, sustentar o suporte remoto/chat N2 e aplicar hardening OWASP AppSec.",
     cta_lab: "Testar Laboratório Interativo",
     cta_github: "GitHub",
     cta_linkedin: "LinkedIn",
@@ -218,8 +230,8 @@ const TRANSLATIONS = {
     lab_eyebrow: "SANDBOX AO VIVO NO NAVEGADOR",
     lab_title: "Laboratório Interativo de Engenharia",
     lab_desc:
-      "Simulações reais construídas em HTML5, CSS3 e JavaScript puro para demonstrar mascaramento DLP Zero-Trust e observabilidade de filas distribuídas usando dados sintéticos.",
-    dlp_title: "Motor Ao Vivo de Redação LGPD & Segredos",
+      "Simulações interativas construídas em HTML5, CSS3 e JavaScript puro para demonstrar mascaramento DLP Zero-Trust e observabilidade de filas distribuídas usando dados fictícios.",
+    dlp_title: "Mascaramento de Dados LGPD & Segredos ao Vivo",
     dlp_desc:
       "Edite o texto abaixo ou carregue um exemplo fictício para ver a detecção e o mascaramento instantâneo de CPF, CNPJ, e-mail, chaves de API e IPs internos no navegador.",
     dlp_preset_ticket: "Exemplo: Chamado ITSM",
@@ -244,7 +256,7 @@ const TRANSLATIONS = {
     demos_eyebrow: "VITRINE ANIMADA DE ENGENHARIA (1080P60)",
     demos_title: "Vídeos Demonstrativos dos Projetos & DPO",
     demos_desc:
-      "Sete demos determinísticos de 30s mostrando arquitetura, execução em código e governança DPO com dados 100% fictícios.",
+      "Sete vídeos curtos (30s) mostrando arquitetura, execução do código e fluxos de governança DPO, com dados 100% fictícios.",
     demo_synthetic_badge: "DEMO · 100% FICTÍCIO",
     demo_open_project: "Abrir Projeto",
     demo_07_nav_title: "07 · Governança DPO & LGPD",
@@ -335,6 +347,18 @@ const TRANSLATIONS = {
     imp6_title: "Implantação de ERPs & Sistemas, PO & Extensões Web",
     imp6_body:
       "Atuação como Product Owner (PO) de soluções internas traduzindo demandas de negócio em especificações, fluxos Kanban, homologação (UAT), runbooks de migração, viradas em paralelo, rollouts em ondas e treinamentos práticos, além de plugins CSP (~13 KB) e templates HTML/SVG compatíveis com Outlook.",
+    imp7_tag: "Python · SQL Server · API OData · IMAP · Desktop 24/7",
+    imp7_badge: "EM PRODUÇÃO",
+    imp7_title: "Hub de Entrada de NF-e & Conciliação Diária",
+    case_pain: "A DOR",
+    case_solution: "O QUE EU CONSTRUÍ",
+    case_result: "RESULTADO",
+    imp7_pain:
+      "Os XMLs de NF-e dos fornecedores chegavam por e-mail, notas travavam na fila de importação do ERP e uma ferramenta manual à parte exigia alguém escolher datas e reprocessar mais de 40 mil notas por mês, então as lacunas ficavam abertas até a próxima rodada manual.",
+    imp7_solution:
+      "Um hub desktop que roda 24/7: entrada dos XMLs via IMAP, reprocessamento automático das notas travadas no ERP, sincronização incremental pela API OData da plataforma fiscal, conciliação diária comparando só as chaves, alerta de certificado digital vencendo e um watchdog que reinicia qualquer ciclo travado.",
+    imp7_result:
+      "A varredura manual do mês virou ciclos a cada 10 min de ~4s cada, mais uma passada diária que confere todos os dias desde uma data inicial (~12s por dia) e baixa só o que falta. De quebra, corrigi uma janela de fuso deslocada em 3h e um campo que a ferramenta antiga sempre deixava vazio.",
     timeline_heading: "Trajetória Profissional",
     tl1_period: "Ago 2021 - Atual · Varejo Multilojas",
     tl1_title: "Administrador de TI, DPO (LGPD) & Product Owner (PO) de Soluções",
