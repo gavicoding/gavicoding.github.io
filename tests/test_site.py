@@ -72,8 +72,8 @@ class TestPortfolioSite(unittest.TestCase):
                 f"Unreferenced asset: {local_ref}",
             )
 
-        self.assertTrue((ROOT / "assets" / "images" / "hero-visual.png").is_file())
-        self.assertIn("https://gavicoding.github.io/assets/images/hero-visual.png", html_text)
+        self.assertTrue((ROOT / "assets" / "images" / "og-portfolio.png").is_file())
+        self.assertIn("https://gavicoding.github.io/assets/images/og-portfolio.png", html_text)
         self.assertIn("https://www.linkedin.com/in/gabrielvsouza/", parser.hrefs)
 
         required_ids = (
