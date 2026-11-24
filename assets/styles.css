@@ -227,7 +227,8 @@ a:hover {
   display: none;
 }
 
-.menu-toggle {
+.menu-toggle,
+.btn-ghost.menu-toggle {
   display: none;
   font-size: 1.05rem;
   padding: 6px 11px;
@@ -785,6 +786,93 @@ a:hover {
   color: var(--text);
 }
 
+/* Lab 3: daily reconciliation pass */
+.lab-card-wide {
+  grid-column: 1 / -1;
+}
+
+.recon-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.recon-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 6px;
+  padding: 12px;
+  background: var(--surface-code);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.recon-cell {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: 1px solid #2a2a33;
+  background: #16161c;
+  color: #71717a;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.recon-cell small {
+  font-size: 0.56rem;
+  opacity: 0.85;
+}
+
+.recon-cell.is-weekend {
+  opacity: 0.75;
+}
+
+.recon-cell.is-scan {
+  border-color: var(--accent);
+  color: #fff;
+  background: color-mix(in srgb, var(--accent) 30%, #16161c);
+  transform: scale(1.08);
+}
+
+.recon-cell.is-ok {
+  border-color: color-mix(in srgb, var(--emerald) 45%, #2a2a33);
+  background: color-mix(in srgb, var(--emerald) 16%, #16161c);
+  color: #d1fae5;
+}
+
+.recon-cell.is-gap {
+  border-color: var(--rose);
+  background: color-mix(in srgb, var(--rose) 28%, #16161c);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.recon-cell.is-fixed {
+  border-color: var(--emerald);
+  background: color-mix(in srgb, var(--emerald) 34%, #16161c);
+  color: #fff;
+}
+
+.recon-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recon-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.recon-log {
+  min-height: 132px;
+}
+
 /* Topology SVG Stage */
 .topo-stage {
   background: var(--surface-code);
@@ -1072,6 +1160,106 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+/* Case em destaque: largura total, contado como Dor -> Solucao -> Resultado */
+.impact-featured {
+  grid-column: 1 / -1;
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.case-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.case-step {
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent) 5%, var(--surface));
+  border: 1px solid var(--border);
+}
+
+.case-step p {
+  margin: 6px 0 0;
+}
+
+.case-step-k {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.case-step:first-child .case-step-k {
+  color: var(--rose);
+}
+
+.case-step:last-child .case-step-k {
+  color: var(--emerald);
+}
+
+/* Cards compactos: Dor / O que construi / Resultado empilhados */
+.case-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.case-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.case-row {
+  padding-left: 12px;
+  border-left: 2px solid var(--border-strong);
+}
+
+.case-row dt {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.case-row dd {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.case-row.is-pain {
+  border-left-color: color-mix(in srgb, var(--rose) 70%, transparent);
+}
+
+.case-row.is-pain dt {
+  color: var(--rose);
+}
+
+.case-row.is-built {
+  border-left-color: color-mix(in srgb, var(--accent) 70%, transparent);
+}
+
+.case-row.is-built dt {
+  color: var(--accent);
+}
+
+.case-row.is-result {
+  border-left-color: color-mix(in srgb, var(--emerald) 70%, transparent);
+}
+
+.case-row.is-result dt {
+  color: var(--emerald);
+}
+
+.case-row.is-result dd {
+  color: var(--text);
 }
 
 .stack-groups {
@@ -1480,6 +1668,129 @@ a:hover {
   transform: translateY(0);
 }
 
+/* Command palette (Ctrl/Cmd + K) */
+.cmdk-trigger {
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+}
+
+.cmdk[hidden] {
+  display: none;
+}
+
+.cmdk {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 14vh 16px 16px;
+}
+
+.cmdk-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 9, 11, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.cmdk-panel {
+  position: relative;
+  width: min(560px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  animation: cmdk-in 0.16s ease-out;
+}
+
+@keyframes cmdk-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.cmdk-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cmdk-prompt {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.cmdk-input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.98rem;
+}
+
+.cmdk-kbd {
+  font-size: 0.68rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.cmdk-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  max-height: min(52vh, 380px);
+  overflow-y: auto;
+}
+
+.cmdk-item,
+.cmdk-empty {
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.cmdk-item {
+  cursor: pointer;
+}
+
+.cmdk-item.is-active {
+  background: color-mix(in srgb, var(--accent) 16%, var(--surface));
+  color: var(--text);
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+
+.cmdk-empty {
+  color: var(--muted);
+}
+
+.cmdk-foot {
+  font-size: 0.68rem;
+  color: var(--muted);
+  padding: 8px 14px;
+  border-top: 1px solid var(--border);
+}
+
+body.cmdk-open {
+  overflow: hidden;
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;
@@ -1496,6 +1807,7 @@ a:hover {
 @media (max-width: 1020px) {
   .hero-split,
   .lab-grid,
+  .recon-board,
   .cinema-grid,
   .dpo-layout,
   .credentials-bento {
@@ -1515,7 +1827,8 @@ a:hover {
 }
 
 @media (max-width: 860px) {
-  .menu-toggle {
+  .menu-toggle,
+  .btn-ghost.menu-toggle {
     display: inline-flex;
   }
 
@@ -1546,12 +1859,26 @@ a:hover {
   .metrics-grid,
   .projects-grid,
   .impact-grid,
+  .case-steps,
   .timeline-rail,
   .stack-groups,
   .edu-list,
   .lab-stats,
   .lab-stats-4 {
     grid-template-columns: 1fr;
+  }
+
+  .recon-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  /* atalho de teclado nao faz sentido no celular */
+  .btn-ghost.cmdk-trigger {
+    display: none;
+  }
+
+  .recon-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero {

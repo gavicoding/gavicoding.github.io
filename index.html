@@ -47,6 +47,9 @@
       </nav>
 
       <div class="nav-actions">
+        <button type="button" id="cmdk-open" class="btn-ghost cmdk-trigger" aria-haspopup="dialog" aria-controls="cmdk" aria-label="Open command palette">
+          <span class="mono" data-i18n="cmdk_hint">Ctrl K</span>
+        </button>
         <button type="button" id="lang-toggle" class="btn-ghost" aria-label="Switch language">
           <span id="lang-label">PT-BR</span>
         </button>
@@ -113,9 +116,11 @@
 
             <div class="terminal-chips" role="group" aria-label="Quick terminal commands">
               <button type="button" class="term-chip mono" data-cmd="whoami">whoami</button>
+              <button type="button" class="term-chip mono" data-cmd="cases">cases</button>
+              <button type="button" class="term-chip mono" data-cmd="projects">projects</button>
+              <button type="button" class="term-chip mono" data-cmd="sim">sim</button>
               <button type="button" class="term-chip mono" data-cmd="dpo">dpo</button>
               <button type="button" class="term-chip mono" data-cmd="infra">infra</button>
-              <button type="button" class="term-chip mono" data-cmd="projects">projects</button>
               <button type="button" class="term-chip mono" data-cmd="stack">stack</button>
             </div>
 
@@ -149,7 +154,7 @@
           </article>
           <article class="metric-card spotlight-card reveal" data-metric="dpo">
             <div class="metric-value mono">DPO · OWASP</div>
-            <div class="metric-label" data-i18n="metric_4_label">LGPD/GDPR governance, APDADOS® Security Committee &amp; 16 OWASP Top 10 flaws remediated</div>
+            <div class="metric-label" data-i18n="metric_4_label">LGPD/GDPR governance, APDADOS® Security Committee &amp; 16 OWASP Top 10 findings mapped with fix plans</div>
           </article>
         </div>
       </div>
@@ -160,7 +165,7 @@
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="lab_eyebrow">LIVE BROWSER SANDBOX</span>
           <h2 data-i18n="lab_title">Interactive Engineering Lab</h2>
-          <p data-i18n="lab_desc">Playable front-end simulations built in pure HTML5, CSS3, and Vanilla JavaScript to demonstrate Zero-Trust DLP redaction and distributed queue observability with synthetic test data.</p>
+          <p data-i18n="lab_desc">Three playable simulations in plain HTML5, CSS3 and JavaScript (no frameworks): Zero-Trust DLP redaction, queue health heuristics and a daily invoice reconciliation pass. All data is fictional.</p>
         </div>
 
         <div class="lab-grid">
@@ -305,6 +310,53 @@
             <div class="card-links">
               <a href="https://github.com/gavicoding/queue-health-watchdog" target="_blank" rel="noopener noreferrer">queue-health-watchdog</a>
               <a href="https://github.com/gavicoding/infra-ops-playbook" target="_blank" rel="noopener noreferrer">infra-ops-playbook</a>
+            </div>
+          </article>
+
+          <!-- Lab 3: Daily invoice reconciliation pass (private case, fictional data) -->
+          <article class="lab-card lab-card-wide spotlight-card reveal" id="recon-lab">
+            <div class="lab-card-head">
+              <div>
+                <span class="tag mono" data-i18n="recon_tag">Private case · E-invoice hub · Fictional data</span>
+                <h3 data-i18n="recon_title">Daily Invoice Reconciliation Pass</h3>
+              </div>
+              <span class="badge-live mono" id="recon-state">READY</span>
+            </div>
+            <p class="lab-sub" data-i18n="recon_desc">Each square is one day of invoices. The pass lists only the invoice keys of each day on the fiscal platform, compares them with the local database and downloads full data only for what is missing. Press Run, or inject gaps first.</p>
+
+            <div class="lab-controls" role="group" aria-label="Reconciliation simulation controls">
+              <button type="button" class="pill-btn pill-btn-accent" id="recon-run" data-i18n="recon_btn_run">Run daily pass</button>
+              <button type="button" class="pill-btn" id="recon-gaps" data-i18n="recon_btn_gaps">Inject random gaps</button>
+              <button type="button" class="pill-btn" id="recon-reset" data-i18n="recon_btn_reset">Reset</button>
+            </div>
+
+            <div class="recon-board">
+              <div class="recon-grid" id="recon-grid" aria-hidden="true"></div>
+              <div class="recon-side">
+                <div class="lab-stats recon-stats">
+                  <div class="stat-chip">
+                    <span class="stat-k mono" data-i18n="recon_stat_days">Days checked</span>
+                    <strong class="stat-v mono" id="recon-days">0 / 30</strong>
+                  </div>
+                  <div class="stat-chip">
+                    <span class="stat-k mono" data-i18n="recon_stat_total">Keys compared</span>
+                    <strong class="stat-v mono" id="recon-total">0</strong>
+                  </div>
+                  <div class="stat-chip">
+                    <span class="stat-k mono" data-i18n="recon_stat_missing">Missing found</span>
+                    <strong class="stat-v mono" id="recon-missing">0</strong>
+                  </div>
+                  <div class="stat-chip">
+                    <span class="stat-k mono" data-i18n="recon_stat_fixed">Recovered</span>
+                    <strong class="stat-v mono" id="recon-fixed">0</strong>
+                  </div>
+                </div>
+                <div class="topo-log mono recon-log" id="recon-log" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="card-links">
+              <a href="#experience" data-i18n="recon_see_case">See the real case study</a>
             </div>
           </article>
         </div>
@@ -503,7 +555,7 @@
             </div>
             <div class="cred-block">
               <strong data-i18n="certs_langs_title">Certifications &amp; Languages</strong>
-              <p class="cred-copy" data-i18n="certs_langs_body">Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Portuguese (Native) &amp; Technical English (Reading, Docs &amp; Async)</p>
+              <p class="cred-copy" data-i18n="certs_langs_body">Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Portuguese (native) &amp; technical English (reading &amp; documentation)</p>
             </div>
             <div class="highlight-pills">
               <span data-i18n="dpo_pill_1">RoPA &amp; DPIA / RIPD</span>
@@ -632,45 +684,203 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="exp_eyebrow">PRODUCTION IMPACT &amp; TIMELINE</span>
-          <h2 data-i18n="impact_title">Sanitized Production Case Studies &amp; Career Progression</h2>
-          <p data-i18n="impact_desc">Measurable architecture, web engineering, Windows Server / AD operations, Solutions Product Ownership (PO), and reliability outcomes across distributed retail.</p>
+          <h2 data-i18n="impact_title">Production Case Studies &amp; Career Timeline</h2>
+          <p data-i18n="impact_desc">Private work for a multi-branch retail company, told as the pain, what I built and the result. Company names, systems and data are left out on purpose; the numbers are real.</p>
         </div>
 
         <div class="impact-grid">
-          <article class="card spotlight-card reveal">
-            <span class="impact-pill mono" data-i18n="imp1_tag">Next.js · SVG Topology · Observability</span>
-            <h3 data-i18n="imp1_title">Operational Dashboard &amp; Live Infrastructure Map</h3>
-            <p data-i18n="imp1_body">Replaced 85 parallel per-store queries with single-query aggregations, dynamic Server Components, animated SVG dependency topology, and hourly batched HTML alerts, cutting TTFB from 6.8s to 0.1s and email noise from 80+/day to digests.</p>
+
+          <article class="card spotlight-card reveal impact-featured">
+            <div class="card-top">
+              <span class="impact-pill mono" data-i18n="c0_tag">Python · SQL Server · OData API · IMAP · Desktop 24/7</span>
+              <span class="badge-live mono" data-i18n="c0_badge">IN PRODUCTION</span>
+            </div>
+            <h3 data-i18n="c0_title">E-Invoice (NF-e) Intake Hub &amp; Daily Reconciliation</h3>
+            <div class="case-steps">
+              <div class="case-step">
+                <span class="case-step-k mono" data-i18n="case_pain">THE PAIN</span>
+                <p data-i18n="c0_pain">Supplier invoice XMLs arrived by email, invoices stalled in the ERP import queue, and a separate manual tool made someone pick date ranges and re-scan 40k+ invoices a month, so gaps stayed open until the next manual run.</p>
+              </div>
+              <div class="case-step">
+                <span class="case-step-k mono" data-i18n="case_solution">WHAT I BUILT</span>
+                <p data-i18n="c0_built">One always-on desktop hub: IMAP intake of XMLs, automatic re-queue of stalled invoices in the ERP, incremental sync from the fiscal platform's OData API, key-only daily reconciliation, certificate expiry alerts, and a watchdog that restarts any hung cycle.</p>
+              </div>
+              <div class="case-step">
+                <span class="case-step-k mono" data-i18n="case_result">RESULT</span>
+                <p data-i18n="c0_result">Manual monthly sweeps became 10-minute cycles of ~4s each, plus one daily pass that checks every day since a set start date (~12s per day) and fetches only what is missing. Also fixed a 3-hour timezone gap and a field the old tool always left empty.</p>
+              </div>
+            </div>
           </article>
 
-          <article class="card spotlight-card reveal">
-            <span class="impact-pill mono" data-i18n="imp2_tag">Web · Leaflet/OSM · WCAG Accessibility</span>
-            <h3 data-i18n="imp2_title">Corporate Site Rebuild &amp; Interactive Store Locator</h3>
-            <p data-i18n="imp2_body">Rebuilt a 7-page institutional website with a city/service-filtered Leaflet + OpenStreetMap locator, ResizeObserver iframe sizing, mobile-first breakpoints (tested at 390px), and automated contrast audits achieving 0 WCAG failures.</p>
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c1_tag">Next.js · SQL · SVG · Observability</span>
+            <h3 data-i18n="c1_title">Operations Dashboard &amp; Live Infrastructure Map</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c1_pain">The ops dashboard fired 85 queries per page load (one per store) and took 6.8s to open, while alert emails passed 80 a day.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c1_built">Single-query SQL aggregation, dynamic Server Components, an animated SVG map of service dependencies and hourly batched HTML alerts.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c1_result">Page response (TTFB) dropped from 6.8s to 0.1s and alert email went from 80+ a day to hourly digests.</dd>
+              </div>
+            </dl>
           </article>
 
-          <article class="card spotlight-card reveal">
-            <span class="impact-pill mono" data-i18n="imp3_tag">Windows Fleet · WebSockets + mTLS · PowerShell</span>
-            <h3 data-i18n="imp3_title">Endpoint Fleet Control Plane &amp; ACL Self-Healing</h3>
-            <p data-i18n="imp3_body">Deployed an NSSM Windows agent over WebSockets + mTLS with wave rollouts, kill-switch recovery, RSA-signed auto-updates, and language-agnostic SID ACL repair, cutting post-restart reconnection from 60s to 3-7s.</p>
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c2_tag">Web · Leaflet/OSM · WCAG</span>
+            <h3 data-i18n="c2_title">Corporate Site Rebuild &amp; Store Locator</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c2_pain">Customers had no easy way to find the nearest store or what it offers, and several pages broke on phones and failed contrast checks.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c2_built">A 7-page institutional site with a Leaflet + OpenStreetMap locator filtered by city and service, auto-sized embeds and a mobile-first layout tested at 390px.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c2_result">Zero WCAG contrast failures in the automated audit and a locator that works on any screen.</dd>
+              </div>
+            </dl>
           </article>
 
-          <article class="card spotlight-card reveal">
-            <span class="impact-pill mono" data-i18n="imp4_tag">Sync Recovery · ITSM · Automation</span>
-            <h3 data-i18n="imp4_title">Sales &amp; Fiscal Retransmission + ITSM Backlog Recovery</h3>
-            <p data-i18n="imp4_body">Automated contingency fiscal/sales retransmission with retry safeguards and vendor ticketing, automated CCTV evidence retrieval across 83 NVRs/DVRs, and recovered a stalled 109k-ticket ITSM notification queue without email storms.</p>
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c3_tag">Windows · WebSockets + mTLS · PowerShell</span>
+            <h3 data-i18n="c3_title">Endpoint Fleet Control Plane &amp; ACL Self-Healing</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c3_pain">Hundreds of Windows endpoints across ~80 branches needed remote actions; after a reboot agents took ~60s to come back, and a broken folder permission could lock them out.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c3_built">A Windows service agent over WebSockets + mTLS with wave rollouts, a kill switch, RSA-signed auto-updates and SID-based permission repair that works in any OS language.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c3_result">Reconnection after restart went from 60s to 3-7s, and only correctly signed updates ever install.</dd>
+              </div>
+            </dl>
           </article>
 
-          <article class="card spotlight-card reveal">
-            <span class="impact-pill mono" data-i18n="imp5_tag">T-SQL · WMS Picking · Lock Diagnostics</span>
-            <h3 data-i18n="imp5_title">SQL Server Optimization &amp; Warehouse Throughput Analytics</h3>
-            <p data-i18n="imp5_body">Eliminated multi-trip returnable container duplicates via ROW_NUMBER(), unified strategic sales KPIs in one pass, instrumented WMS picking/checkout stage bottlenecks, and captured sys.dm_tran_locks wait snapshots asynchronously.</p>
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c4_tag">Automation · Retry Logic · Vendor Tickets</span>
+            <h3 data-i18n="c4_title">Offline Sales Invoice Retransmission</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c4_pain">When stores issued sales invoices in offline contingency mode, someone had to retransmit them by hand and open vendor tickets for each failure.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c4_built">A continuous retransmission robot with retry safeguards, a status page and automatic vendor ticket creation during business hours.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c4_result">Contingency backlogs clear without manual work, and failures reach the vendor as tickets on their own.</dd>
+              </div>
+            </dl>
           </article>
 
-          <article class="card spotlight-card reveal">
-            <span class="impact-pill mono" data-i18n="imp6_tag">Product Ownership (PO) · System Deployment · Rollouts</span>
-            <h3 data-i18n="imp6_title">End-to-End ERP &amp; System Implementations, PO &amp; UI Extensions</h3>
-            <p data-i18n="imp6_body">Acted as Solutions Product Owner translating business needs into specs, Kanban pipelines, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training, plus CSP-safe UI plugins (~13 KB theme) and Outlook-safe HTML/SVG templates.</p>
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c5_tag">Python · ITSM API · NVR/DVR</span>
+            <h3 data-i18n="c5_title">CCTV Footage Request Orchestrator</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c5_pain">Every footage request from a store meant someone logging into the right recorder by hand, among 83 devices from different brands.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c5_built">An orchestrator that reads the request from the help desk, connects to the right NVR/DVR, retrieves the footage, retries on failure and updates the ticket with notifications.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c5_result">Footage requests flow end to end without manual logins, and recorders with wrong credentials are flagged for fixing.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c6_tag">ITSM · Email · Data Cleanup</span>
+            <h3 data-i18n="c6_title">Help Desk Notification Recovery (109k Tickets)</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c6_pain">Help desk email notifications had been stuck for weeks, with 109k old resolved tickets queued: turning email back on would have flooded every user.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c6_built">Cleared the stale queue, set a dedicated sender, limited notifications to the events and people that matter, and closed the 109k backlog silently.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c6_result">Notifications came back without an email storm, with auto-close after 3 days and satisfaction surveys only for new tickets.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c7_tag">T-SQL · WMS · Lock Diagnostics</span>
+            <h3 data-i18n="c7_title">SQL Server Tuning &amp; Warehouse Throughput</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c7_pain">Returnable containers were counted twice when they made several trips, sales KPIs needed several slow passes, and nobody could see where warehouse picking stalled.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c7_built">ROW_NUMBER() deduplication, single-pass conditional aggregation, timing for each picking and checkout stage, and async sys.dm_tran_locks snapshots.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c7_result">Duplicate-free container tracking, KPIs in one pass and measurable picking bottlenecks with the locks behind them.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c8_tag">Product Ownership · ERP · Rollouts</span>
+            <h3 data-i18n="c8_title">ERP &amp; System Implementations as Product Owner</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c8_pain">System rollouts across dozens of branches risked downtime and confusion, and business requests often arrived vague.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c8_built">Specs and Kanban backlogs, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts and hands-on training, plus CSP-safe UI plugins and Outlook-safe email templates.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c8_result">Rollouts went out in waves with a parallel fallback and trained teams on day one.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="card spotlight-card reveal case-card">
+            <span class="impact-pill mono" data-i18n="c9_tag">Python · SQL Server · Chat Approvals</span>
+            <h3 data-i18n="c9_title">Time-Boxed Database Access Automation</h3>
+            <dl class="case-list">
+              <div class="case-row is-pain">
+                <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
+                <dd data-i18n="c9_pain">Temporary database access for analysts and vendors was granted by hand, sometimes stayed open after hours, and nobody could easily see who was connected.</dd>
+              </div>
+              <div class="case-row is-built">
+                <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
+                <dd data-i18n="c9_built">A bot that registers each request, creates time-boxed access and emails it, cuts it at the end of business hours, sends after-hours requests to an approval poll in chat and shows live sessions.</dd>
+              </div>
+              <div class="case-row is-result">
+                <dt class="mono" data-i18n="case_result">RESULT</dt>
+                <dd data-i18n="c9_result">Every access now has an owner, a window and an automatic end; extensions only move the end time.</dd>
+              </div>
+            </dl>
           </article>
         </div>
 
@@ -781,5 +991,29 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="cmdk" id="cmdk" hidden>
+    <div class="cmdk-backdrop" data-cmdk-close></div>
+    <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="cmdk-input-row">
+        <span class="cmdk-prompt mono" aria-hidden="true">&gt;</span>
+        <input
+          id="cmdk-input"
+          class="cmdk-input"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          role="combobox"
+          aria-expanded="true"
+          aria-controls="cmdk-list"
+          aria-autocomplete="list"
+          aria-label="Search sections or actions"
+        />
+        <kbd class="cmdk-kbd mono">Esc</kbd>
+      </div>
+      <ul id="cmdk-list" class="cmdk-list" role="listbox" aria-label="Results"></ul>
+      <div id="cmdk-foot" class="cmdk-foot mono"></div>
+    </div>
+  </div>
 </body>
 </html>

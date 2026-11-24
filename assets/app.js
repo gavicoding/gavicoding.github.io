@@ -29,11 +29,11 @@ const TRANSLATIONS = {
     metric_3_label:
       "Public open-source tools tested with GitHub Actions across Python, TS, T-SQL, Bash/PS & C#",
     metric_4_label:
-      "LGPD/GDPR governance, APDADOS® Security Committee & 16 OWASP Top 10 flaws remediated",
+      "LGPD/GDPR governance, APDADOS® Security Committee & 16 OWASP Top 10 findings mapped with fix plans",
     lab_eyebrow: "LIVE BROWSER SANDBOX",
     lab_title: "Interactive Engineering Lab",
     lab_desc:
-      "Playable front-end simulations built in pure HTML5, CSS3, and Vanilla JavaScript to demonstrate Zero-Trust DLP redaction and distributed queue observability with synthetic test data.",
+      "Three playable simulations in plain HTML5, CSS3 and JavaScript (no frameworks): Zero-Trust DLP redaction, queue health heuristics and a daily invoice reconciliation pass. All data is fictional.",
     dlp_title: "Live LGPD / Secret Redaction Engine",
     dlp_desc:
       "Edit the text below or load a synthetic payload to inspect real-time CPF/CNPJ, email, API token, and RFC 1918 internal IP detection in the browser.",
@@ -56,6 +56,18 @@ const TRANSLATIONS = {
     topo_stat_trend: "Drain Trend",
     topo_stat_mtls: "mTLS Link",
     topo_stat_policy: "Alert Policy",
+    recon_tag: "Private case · E-invoice hub · Fictional data",
+    recon_title: "Daily Invoice Reconciliation Pass",
+    recon_desc: "Each square is one day of invoices. The pass lists only the invoice keys of each day on the fiscal platform, compares them with the local database and downloads full data only for what is missing. Press Run, or inject gaps first.",
+    recon_btn_run: "Run daily pass",
+    recon_btn_gaps: "Inject random gaps",
+    recon_btn_reset: "Reset",
+    recon_stat_days: "Days checked",
+    recon_stat_total: "Keys compared",
+    recon_stat_missing: "Missing found",
+    recon_stat_fixed: "Recovered",
+    recon_see_case: "See the real case study",
+    cmdk_hint: "Ctrl K",
     demos_eyebrow: "ANIMATED ENGINEERING SHOWCASE (1080P60)",
     demos_title: "Project & Governance Video Demos",
     demos_desc:
@@ -93,7 +105,7 @@ const TRANSLATIONS = {
       "Active contribution to cybersecurity practices, ANPD regulatory readiness, corporate privacy training, and incident-response guidance.",
     certs_langs_title: "Certifications & Languages",
     certs_langs_body:
-      "Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Portuguese (Native) & Technical English (Reading, Docs & Async)",
+      "Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Portuguese (native) & technical English (reading & documentation)",
     dpo_pill_1: "RoPA & DPIA / RIPD",
     dpo_pill_2: "Vendor DPAs & Notices",
     dpo_pill_3: "16 OWASP Flaws Mapped",
@@ -123,33 +135,114 @@ const TRANSLATIONS = {
     link_repo: "Repository",
     link_docs: "Live Docs",
     exp_eyebrow: "PRODUCTION IMPACT & TIMELINE",
-    impact_title: "Sanitized Production Case Studies & Career Progression",
+    impact_title: "Production Case Studies & Career Timeline",
     impact_desc:
-      "Measurable architecture, web engineering, Windows Server / AD operations, Solutions Product Ownership (PO), and reliability outcomes across distributed retail.",
-    imp1_tag: "Next.js · SVG Topology · Observability",
-    imp1_title: "Operational Dashboard & Live Infrastructure Map",
-    imp1_body:
-      "Replaced 85 parallel per-store queries with single-query aggregations, dynamic Server Components, animated SVG dependency topology, and hourly batched HTML alerts, cutting TTFB from 6.8s to 0.1s and email noise from 80+/day to digests.",
-    imp2_tag: "Web · Leaflet/OSM · WCAG Accessibility",
-    imp2_title: "Corporate Site Rebuild & Interactive Store Locator",
-    imp2_body:
-      "Rebuilt a 7-page institutional website with a city/service-filtered Leaflet + OpenStreetMap locator, ResizeObserver iframe sizing, mobile-first breakpoints (tested at 390px), and automated contrast audits achieving 0 WCAG failures.",
-    imp3_tag: "Windows Fleet · WebSockets + mTLS · PowerShell",
-    imp3_title: "Endpoint Fleet Control Plane & ACL Self-Healing",
-    imp3_body:
-      "Deployed an NSSM Windows agent over WebSockets + mTLS with wave rollouts, kill-switch recovery, RSA-signed auto-updates, and language-agnostic SID ACL repair, cutting post-restart reconnection from 60s to 3-7s.",
-    imp4_tag: "Sync Recovery · ITSM · Automation",
-    imp4_title: "Sales & Fiscal Retransmission + ITSM Backlog Recovery",
-    imp4_body:
-      "Automated contingency fiscal/sales retransmission with retry safeguards and vendor ticketing, automated CCTV evidence retrieval across 83 NVRs/DVRs, and recovered a stalled 109k-ticket ITSM notification queue without email storms.",
-    imp5_tag: "T-SQL · WMS Picking · Lock Diagnostics",
-    imp5_title: "SQL Server Optimization & Warehouse Throughput Analytics",
-    imp5_body:
-      "Eliminated multi-trip returnable container duplicates via ROW_NUMBER(), unified strategic sales KPIs in one pass, instrumented WMS picking/checkout stage bottlenecks, and captured sys.dm_tran_locks wait snapshots asynchronously.",
-    imp6_tag: "Product Ownership (PO) · System Deployment · Rollouts",
-    imp6_title: "End-to-End ERP & System Implementations, PO & UI Extensions",
-    imp6_body:
-      "Acted as Solutions Product Owner translating business needs into specs, Kanban pipelines, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts, and hands-on team training, plus CSP-safe UI plugins (~13 KB theme) and Outlook-safe HTML/SVG templates.",
+      "Private work for a multi-branch retail company, told as the pain, what I built and the result. Company names, systems and data are left out on purpose; the numbers are real.",
+    case_pain: "THE PAIN",
+    case_solution: "WHAT I BUILT",
+    case_result: "RESULT",
+    c0_tag:
+      "Python · SQL Server · OData API · IMAP · Desktop 24/7",
+    c0_badge:
+      "IN PRODUCTION",
+    c0_title:
+      "E-Invoice (NF-e) Intake Hub & Daily Reconciliation",
+    c0_pain:
+      "Supplier invoice XMLs arrived by email, invoices stalled in the ERP import queue, and a separate manual tool made someone pick date ranges and re-scan 40k+ invoices a month, so gaps stayed open until the next manual run.",
+    c0_built:
+      "One always-on desktop hub: IMAP intake of XMLs, automatic re-queue of stalled invoices in the ERP, incremental sync from the fiscal platform's OData API, key-only daily reconciliation, certificate expiry alerts, and a watchdog that restarts any hung cycle.",
+    c0_result:
+      "Manual monthly sweeps became 10-minute cycles of ~4s each, plus one daily pass that checks every day since a set start date (~12s per day) and fetches only what is missing. Also fixed a 3-hour timezone gap and a field the old tool always left empty.",
+    c1_tag:
+      "Next.js · SQL · SVG · Observability",
+    c1_title:
+      "Operations Dashboard & Live Infrastructure Map",
+    c1_pain:
+      "The ops dashboard fired 85 queries per page load (one per store) and took 6.8s to open, while alert emails passed 80 a day.",
+    c1_built:
+      "Single-query SQL aggregation, dynamic Server Components, an animated SVG map of service dependencies and hourly batched HTML alerts.",
+    c1_result:
+      "Page response (TTFB) dropped from 6.8s to 0.1s and alert email went from 80+ a day to hourly digests.",
+    c2_tag:
+      "Web · Leaflet/OSM · WCAG",
+    c2_title:
+      "Corporate Site Rebuild & Store Locator",
+    c2_pain:
+      "Customers had no easy way to find the nearest store or what it offers, and several pages broke on phones and failed contrast checks.",
+    c2_built:
+      "A 7-page institutional site with a Leaflet + OpenStreetMap locator filtered by city and service, auto-sized embeds and a mobile-first layout tested at 390px.",
+    c2_result:
+      "Zero WCAG contrast failures in the automated audit and a locator that works on any screen.",
+    c3_tag:
+      "Windows · WebSockets + mTLS · PowerShell",
+    c3_title:
+      "Endpoint Fleet Control Plane & ACL Self-Healing",
+    c3_pain:
+      "Hundreds of Windows endpoints across ~80 branches needed remote actions; after a reboot agents took ~60s to come back, and a broken folder permission could lock them out.",
+    c3_built:
+      "A Windows service agent over WebSockets + mTLS with wave rollouts, a kill switch, RSA-signed auto-updates and SID-based permission repair that works in any OS language.",
+    c3_result:
+      "Reconnection after restart went from 60s to 3-7s, and only correctly signed updates ever install.",
+    c4_tag:
+      "Automation · Retry Logic · Vendor Tickets",
+    c4_title:
+      "Offline Sales Invoice Retransmission",
+    c4_pain:
+      "When stores issued sales invoices in offline contingency mode, someone had to retransmit them by hand and open vendor tickets for each failure.",
+    c4_built:
+      "A continuous retransmission robot with retry safeguards, a status page and automatic vendor ticket creation during business hours.",
+    c4_result:
+      "Contingency backlogs clear without manual work, and failures reach the vendor as tickets on their own.",
+    c5_tag:
+      "Python · ITSM API · NVR/DVR",
+    c5_title:
+      "CCTV Footage Request Orchestrator",
+    c5_pain:
+      "Every footage request from a store meant someone logging into the right recorder by hand, among 83 devices from different brands.",
+    c5_built:
+      "An orchestrator that reads the request from the help desk, connects to the right NVR/DVR, retrieves the footage, retries on failure and updates the ticket with notifications.",
+    c5_result:
+      "Footage requests flow end to end without manual logins, and recorders with wrong credentials are flagged for fixing.",
+    c6_tag:
+      "ITSM · Email · Data Cleanup",
+    c6_title:
+      "Help Desk Notification Recovery (109k Tickets)",
+    c6_pain:
+      "Help desk email notifications had been stuck for weeks, with 109k old resolved tickets queued: turning email back on would have flooded every user.",
+    c6_built:
+      "Cleared the stale queue, set a dedicated sender, limited notifications to the events and people that matter, and closed the 109k backlog silently.",
+    c6_result:
+      "Notifications came back without an email storm, with auto-close after 3 days and satisfaction surveys only for new tickets.",
+    c7_tag:
+      "T-SQL · WMS · Lock Diagnostics",
+    c7_title:
+      "SQL Server Tuning & Warehouse Throughput",
+    c7_pain:
+      "Returnable containers were counted twice when they made several trips, sales KPIs needed several slow passes, and nobody could see where warehouse picking stalled.",
+    c7_built:
+      "ROW_NUMBER() deduplication, single-pass conditional aggregation, timing for each picking and checkout stage, and async sys.dm_tran_locks snapshots.",
+    c7_result:
+      "Duplicate-free container tracking, KPIs in one pass and measurable picking bottlenecks with the locks behind them.",
+    c8_tag:
+      "Product Ownership · ERP · Rollouts",
+    c8_title:
+      "ERP & System Implementations as Product Owner",
+    c8_pain:
+      "System rollouts across dozens of branches risked downtime and confusion, and business requests often arrived vague.",
+    c8_built:
+      "Specs and Kanban backlogs, UAT sign-off, migration runbooks, parallel cutovers, wave rollouts and hands-on training, plus CSP-safe UI plugins and Outlook-safe email templates.",
+    c8_result:
+      "Rollouts went out in waves with a parallel fallback and trained teams on day one.",
+    c9_tag:
+      "Python · SQL Server · Chat Approvals",
+    c9_title:
+      "Time-Boxed Database Access Automation",
+    c9_pain:
+      "Temporary database access for analysts and vendors was granted by hand, sometimes stayed open after hours, and nobody could easily see who was connected.",
+    c9_built:
+      "A bot that registers each request, creates time-boxed access and emails it, cuts it at the end of business hours, sends after-hours requests to an approval poll in chat and shows live sessions.",
+    c9_result:
+      "Every access now has an owner, a window and an automatic end; extensions only move the end time.",
     timeline_heading: "Career Timeline",
     tl1_period: "Aug 2021 - Present · Multi-Branch Retail",
     tl1_title: "IT Administrator, DPO (LGPD) & Solutions Product Owner (PO)",
@@ -199,7 +292,7 @@ const TRANSLATIONS = {
     hero_title:
       "Engenharia de automações resilientes, infraestrutura Windows/Linux e governança de privacidade.",
     hero_subtitle:
-      "Sou Gabriel Souza: Engenheiro de Automação de TI, DevOps e Software, Product Owner (PO) de Soluções e DPO (LGPD/GDPR). Unindo Python, TypeScript, Next.js, T-SQL, C# (.NET), Docker, Windows Server e Active Directory para entregas de ERPs/sistemas, suporte remoto/chat N2 e hardening OWASP AppSec.",
+      "Sou Gabriel Souza: Engenheiro de Automação de TI, DevOps e Software, Product Owner (PO) de Soluções e DPO (LGPD/GDPR). Uno Python, TypeScript, Next.js, T-SQL, C# (.NET), Docker, Windows Server e Active Directory para implantar ERPs e sistemas, sustentar o suporte remoto/chat N2 e aplicar hardening OWASP AppSec.",
     cta_lab: "Testar Laboratório Interativo",
     cta_github: "GitHub",
     cta_linkedin: "LinkedIn",
@@ -214,12 +307,12 @@ const TRANSLATIONS = {
     metric_3_label:
       "Repositórios públicos com testes no GitHub Actions em Python, TS, T-SQL, Bash/PS e C#",
     metric_4_label:
-      "Governança DPO (LGPD/GDPR), Comitê de Segurança APDADOS® e 16 falhas OWASP Top 10 mapeadas",
+      "Governança DPO (LGPD/GDPR), Comitê de Segurança APDADOS® e 16 falhas OWASP Top 10 mapeadas com plano de correção",
     lab_eyebrow: "SANDBOX AO VIVO NO NAVEGADOR",
     lab_title: "Laboratório Interativo de Engenharia",
     lab_desc:
-      "Simulações reais construídas em HTML5, CSS3 e JavaScript puro para demonstrar mascaramento DLP Zero-Trust e observabilidade de filas distribuídas usando dados sintéticos.",
-    dlp_title: "Motor Ao Vivo de Redação LGPD & Segredos",
+      "Três simulações interativas em HTML5, CSS3 e JavaScript puro (sem frameworks): mascaramento DLP Zero-Trust, heurística de saúde de filas e uma conciliação diária de notas fiscais. Todos os dados são fictícios.",
+    dlp_title: "Mascaramento de Dados LGPD & Segredos ao Vivo",
     dlp_desc:
       "Edite o texto abaixo ou carregue um exemplo fictício para ver a detecção e o mascaramento instantâneo de CPF, CNPJ, e-mail, chaves de API e IPs internos no navegador.",
     dlp_preset_ticket: "Exemplo: Chamado ITSM",
@@ -241,10 +334,22 @@ const TRANSLATIONS = {
     topo_stat_trend: "Tendência",
     topo_stat_mtls: "Link mTLS",
     topo_stat_policy: "Política de Alerta",
+    recon_tag: "Case privado · Hub de NF-e · Dados fictícios",
+    recon_title: "Conciliação Diária de Notas Fiscais",
+    recon_desc: "Cada quadrado é um dia de notas. A conciliação lista só as chaves das notas de cada dia na plataforma fiscal, compara com o banco local e baixa os dados completos apenas do que falta. Clique em Executar, ou crie lacunas antes.",
+    recon_btn_run: "Executar conciliação",
+    recon_btn_gaps: "Criar lacunas aleatórias",
+    recon_btn_reset: "Reiniciar",
+    recon_stat_days: "Dias conferidos",
+    recon_stat_total: "Chaves comparadas",
+    recon_stat_missing: "Faltando",
+    recon_stat_fixed: "Recuperadas",
+    recon_see_case: "Ver o case real",
+    cmdk_hint: "Ctrl K",
     demos_eyebrow: "VITRINE ANIMADA DE ENGENHARIA (1080P60)",
     demos_title: "Vídeos Demonstrativos dos Projetos & DPO",
     demos_desc:
-      "Sete demos determinísticos de 30s mostrando arquitetura, execução em código e governança DPO com dados 100% fictícios.",
+      "Sete vídeos curtos (30s) mostrando arquitetura, execução do código e fluxos de governança DPO, com dados 100% fictícios.",
     demo_synthetic_badge: "DEMO · 100% FICTÍCIO",
     demo_open_project: "Abrir Projeto",
     demo_07_nav_title: "07 · Governança DPO & LGPD",
@@ -278,7 +383,7 @@ const TRANSLATIONS = {
       "Atuação ativa em práticas de cibersegurança, prontidão regulatória junto à ANPD, capacitação corporativa e diretrizes de resposta a incidentes.",
     certs_langs_title: "Certificações & Idiomas",
     certs_langs_body:
-      "Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Português (Nativo) & Inglês Básico/Técnico (Leitura e Documentação)",
+      "Minicurso LGPD (APDADOS®) · Curso LGPD 4.0 (Mariana Toledo) | Português (nativo) & inglês técnico (leitura e documentação)",
     dpo_pill_1: "RoPA & DPIA / RIPD",
     dpo_pill_2: "DPAs & Avisos de Privacidade",
     dpo_pill_3: "16 Falhas OWASP Mapeadas",
@@ -308,33 +413,114 @@ const TRANSLATIONS = {
     link_repo: "Repositório",
     link_docs: "Documentação",
     exp_eyebrow: "IMPACTO EM PRODUÇÃO & TRAJETÓRIA",
-    impact_title: "Casos Sanitizados em Produção & Evolução de Carreira",
+    impact_title: "Casos Reais em Produção & Trajetória",
     impact_desc:
-      "Resultados mensuráveis em arquitetura, engenharia web, operação Windows Server / Active Directory, Product Ownership (PO) de soluções e confiabilidade no varejo multilojas.",
-    imp1_tag: "Next.js · Topologia SVG · Observabilidade",
-    imp1_title: "Dashboard Operacional & Mapa de Infraestrutura",
-    imp1_body:
-      "Substituiu 85 consultas paralelas por agregação única, Server Components dinâmicos, mapa de topologia animado em SVG e alertas HTML consolidados por hora, reduzindo TTFB de 6,8s para 0,1s e e-mails de 80+/dia para resumos.",
-    imp2_tag: "Web · Leaflet/OSM · Acessibilidade WCAG",
-    imp2_title: "Reconstrução de Site & Localizador Interativo de Lojas",
-    imp2_body:
-      "Reconstruiu site institucional de 7 páginas com localizador Leaflet + OpenStreetMap filtrável por cidade/serviço, ajuste de iframe com ResizeObserver, responsividade mobile (390px) e auditoria de contraste com 0 falhas WCAG.",
-    imp3_tag: "Frota Windows · WebSockets + mTLS · PowerShell",
-    imp3_title: "Painel de Controle de Frota & Auto-Cura de ACLs",
-    imp3_body:
-      "Implantou agente Windows (NSSM) via WebSockets + mTLS com rollout em ondas, kill switch, auto-update assinado em RSA e reparo de ACLs por SID independente de idioma, reduzindo reconexão pós-restart de 60s para 3-7s.",
-    imp4_tag: "Retransmissão · ITSM · Automação",
-    imp4_title: "Retransmissão de Vendas/Fiscal & Fila de 109k Chamados",
-    imp4_body:
-      "Automatizou retransmissão fiscal e de vendas em contingência com salvaguardas e abertura de chamados, coleta de imagens em 83 DVRs/NVRs e normalização de fila de 109 mil notificações ITSM sem disparo em massa.",
-    imp5_tag: "T-SQL · Separação WMS · Diagnóstico de Locks",
-    imp5_title: "Otimização SQL Server & Produtividade de Separação",
-    imp5_body:
-      "Eliminou duplicidade em rastreamento de caixas retornáveis via ROW_NUMBER(), unificou vendas estratégicas em passada única, mediu gargalos de separação/conferência WMS e registrou snapshots assíncronos de sys.dm_tran_locks.",
-    imp6_tag: "Product Ownership (PO) · Implantação de Sistemas · Rollouts",
-    imp6_title: "Implantação de ERPs & Sistemas, PO & Extensões Web",
-    imp6_body:
-      "Atuação como Product Owner (PO) de soluções internas traduzindo demandas de negócio em especificações, fluxos Kanban, homologação (UAT), runbooks de migração, viradas em paralelo, rollouts em ondas e treinamentos práticos, além de plugins CSP (~13 KB) e templates HTML/SVG compatíveis com Outlook.",
+      "Projetos privados feitos para uma rede de varejo multilojas, contados como a dor, o que eu construí e o resultado. Nomes de empresa, sistemas e dados ficaram de fora de propósito; os números são reais.",
+    case_pain: "A DOR",
+    case_solution: "O QUE EU CONSTRUÍ",
+    case_result: "RESULTADO",
+    c0_tag:
+      "Python · SQL Server · API OData · IMAP · Desktop 24/7",
+    c0_badge:
+      "EM PRODUÇÃO",
+    c0_title:
+      "Hub de Entrada de NF-e & Conciliação Diária",
+    c0_pain:
+      "Os XMLs de NF-e dos fornecedores chegavam por e-mail, notas travavam na fila de importação do ERP e uma ferramenta manual à parte exigia alguém escolher datas e reprocessar mais de 40 mil notas por mês, então as lacunas ficavam abertas até a próxima rodada manual.",
+    c0_built:
+      "Um hub desktop que roda 24/7: entrada dos XMLs via IMAP, reprocessamento automático das notas travadas no ERP, sincronização incremental pela API OData da plataforma fiscal, conciliação diária comparando só as chaves, alerta de certificado digital vencendo e um watchdog que reinicia qualquer ciclo travado.",
+    c0_result:
+      "A varredura manual do mês virou ciclos a cada 10 min de ~4s cada, mais uma passada diária que confere todos os dias desde uma data inicial (~12s por dia) e baixa só o que falta. De quebra, corrigi uma janela de fuso deslocada em 3h e um campo que a ferramenta antiga sempre deixava vazio.",
+    c1_tag:
+      "Next.js · SQL · SVG · Observabilidade",
+    c1_title:
+      "Painel Operacional & Mapa de Infraestrutura ao Vivo",
+    c1_pain:
+      "O painel disparava 85 consultas por carregamento (uma por loja) e levava 6,8s para abrir, enquanto os e-mails de alerta passavam de 80 por dia.",
+    c1_built:
+      "Agregação em uma única consulta SQL, Server Components dinâmicos, mapa animado em SVG das dependências e alertas HTML consolidados por hora.",
+    c1_result:
+      "Resposta da página (TTFB) caiu de 6,8s para 0,1s e os alertas foram de 80+ e-mails por dia para resumos por hora.",
+    c2_tag:
+      "Web · Leaflet/OSM · WCAG",
+    c2_title:
+      "Novo Site Institucional & Localizador de Lojas",
+    c2_pain:
+      "O cliente não tinha um jeito fácil de achar a loja mais próxima e o que ela oferece, e várias páginas quebravam no celular e reprovavam no contraste.",
+    c2_built:
+      "Site institucional de 7 páginas com localizador Leaflet + OpenStreetMap filtrado por cidade e serviço, incorporações com tamanho automático e layout mobile-first testado em 390px.",
+    c2_result:
+      "Zero falhas de contraste WCAG na auditoria automática e um localizador que funciona em qualquer tela.",
+    c3_tag:
+      "Windows · WebSockets + mTLS · PowerShell",
+    c3_title:
+      "Controle Central de Estações & Auto-Reparo de Permissões",
+    c3_pain:
+      "Centenas de estações Windows em ~80 filiais precisavam de ações remotas; depois de reiniciar, o agente levava ~60s para voltar e uma permissão de pasta quebrada podia trancá-lo para fora.",
+    c3_built:
+      "Agente em serviço Windows via WebSockets + mTLS com implantação em ondas, kill switch, atualização automática assinada em RSA e reparo de permissões por SID, independente do idioma do sistema.",
+    c3_result:
+      "Reconexão após reinício caiu de 60s para 3-7s, e só atualização com assinatura válida é instalada.",
+    c4_tag:
+      "Automação · Retentativas · Chamados",
+    c4_title:
+      "Retransmissão de Notas Emitidas em Contingência",
+    c4_pain:
+      "Quando as lojas emitiam notas de venda em contingência, alguém precisava retransmiti-las à mão e abrir chamado no fornecedor para cada falha.",
+    c4_built:
+      "Robô de retransmissão contínua com proteções de retentativa, página de status e abertura automática de chamado no fornecedor em horário comercial.",
+    c4_result:
+      "O acúmulo de contingência é resolvido sem trabalho manual, e as falhas chegam ao fornecedor como chamado sozinhas.",
+    c5_tag:
+      "Python · API de ITSM · NVR/DVR",
+    c5_title:
+      "Orquestrador de Pedidos de Imagens de CFTV",
+    c5_pain:
+      "Cada pedido de imagem de uma loja exigia alguém entrar à mão no gravador certo, entre 83 aparelhos de marcas diferentes.",
+    c5_built:
+      "Orquestrador que lê o pedido no help desk, conecta no NVR/DVR certo, baixa as imagens, tenta de novo em caso de falha e atualiza o chamado com notificações.",
+    c5_result:
+      "Os pedidos andam de ponta a ponta sem login manual, e gravadores com credencial errada são sinalizados para correção.",
+    c6_tag:
+      "ITSM · E-mail · Limpeza de Dados",
+    c6_title:
+      "Recuperação de Notificações do Help Desk (109 mil chamados)",
+    c6_pain:
+      "As notificações por e-mail do help desk estavam paradas havia semanas, com 109 mil chamados antigos na fila: religar o e-mail inundaria todos os usuários.",
+    c6_built:
+      "Limpei a fila velha, defini um remetente próprio, restringi os avisos aos eventos e pessoas que importam e encerrei os 109 mil chamados em silêncio.",
+    c6_result:
+      "As notificações voltaram sem disparo em massa, com fechamento automático em 3 dias e pesquisa de satisfação só para chamados novos.",
+    c7_tag:
+      "T-SQL · WMS · Diagnóstico de Locks",
+    c7_title:
+      "Otimização SQL Server & Produtividade do Depósito",
+    c7_pain:
+      "Caixas retornáveis eram contadas em dobro quando faziam várias viagens, os indicadores de venda exigiam várias passadas lentas e ninguém via onde a separação travava.",
+    c7_built:
+      "Deduplicação com ROW_NUMBER(), agregação condicional em passada única, medição de cada etapa de separação e conferência e snapshots assíncronos de sys.dm_tran_locks.",
+    c7_result:
+      "Rastreio de caixas sem duplicidade, indicadores em uma passada e gargalos de separação medidos junto com os locks que os causam.",
+    c8_tag:
+      "Product Ownership · ERP · Rollouts",
+    c8_title:
+      "Implantação de ERPs e Sistemas como Product Owner",
+    c8_pain:
+      "Implantar sistemas em dezenas de filiais arriscava parada e confusão, e os pedidos do negócio muitas vezes chegavam vagos.",
+    c8_built:
+      "Especificações e backlog em Kanban, homologação (UAT), runbooks de migração, virada em paralelo, implantação em ondas e treinamento prático, além de plugins de interface seguros (CSP) e modelos de e-mail compatíveis com Outlook.",
+    c8_result:
+      "As implantações saíram em ondas, com o sistema antigo em paralelo como plano B e equipes treinadas desde o primeiro dia.",
+    c9_tag:
+      "Python · SQL Server · Aprovação via Chat",
+    c9_title:
+      "Automação de Acesso Temporário ao Banco de Dados",
+    c9_pain:
+      "O acesso temporário ao banco para analistas e fornecedores era liberado à mão, às vezes ficava aberto fora do horário e não dava para ver com facilidade quem estava conectado.",
+    c9_built:
+      "Robô que registra cada pedido, cria o acesso com prazo e envia por e-mail, corta no fim do expediente, manda pedidos fora do horário para aprovação por enquete no chat e mostra as sessões ativas.",
+    c9_result:
+      "Todo acesso agora tem dono, janela e fim automático; uma prorrogação só muda o horário de término.",
     timeline_heading: "Trajetória Profissional",
     tl1_period: "Ago 2021 - Atual · Varejo Multilojas",
     tl1_title: "Administrador de TI, DPO (LGPD) & Product Owner (PO) de Soluções",
@@ -377,8 +563,8 @@ const TERMINAL_DATA = {
   en: {
     help: [
       "$ help",
-      "Available commands: whoami, dpo, infra, projects, stack, contact, clear",
-      "Tip: click any command chip below or type your own.",
+      "Commands: whoami, cases, projects, sim, dpo, infra, stack, site, contact, clear",
+      "Tips: Tab completes, Up/Down recalls history, Ctrl+K opens the command palette.",
     ],
     whoami: [
       "$ whoami --profile",
@@ -391,7 +577,7 @@ const TERMINAL_DATA = {
       "$ dpo --status",
       "[OK] RoPA inventory & Arts. 7/11 legal bases mapped across retail & SaaS",
       "[OK] DPIA/RIPD risk governance, vendor DPAs & Art. 18 rights workflows",
-      "[OK] OWASP Top 10 web pentesting: 16 critical/medium findings remediated",
+      "[OK] OWASP Top 10 web pentests: 16 critical/medium findings mapped with fix plans",
       "[OK] Zero-Trust AI DLP gate preventing PII & internal secrets leakage",
     ],
     infra: [
@@ -409,6 +595,29 @@ const TERMINAL_DATA = {
       "5. OtimizaPC              (C#/.NET 8)  Safe Windows MVVM optimizer",
       "6. Thunderbird-Outlook    (Python/COM) Bidirectional mail migrator",
     ],
+    cases: [
+      "$ ls ./production-cases --private",
+      "0. E-invoice intake hub     40k+ manual re-scans/month -> 10-min cycles",
+      "1. Ops dashboard            TTFB 6.8s -> 0.1s, 80+ alerts/day -> digests",
+      "2. Site & store locator     0 WCAG contrast failures, mobile-first",
+      "3. Endpoint fleet agent     reconnect 60s -> 3-7s, signed updates",
+      "4. Offline invoice resend   contingency backlog with zero manual work",
+      "5. CCTV footage requests    83 recorders, end-to-end from the ticket",
+      "6. Help desk notifications  109k stale tickets closed, no email storm",
+      "7. SQL & warehouse tuning   one-pass KPIs, measurable picking stalls",
+      "8. Time-boxed DB access     every access has an owner, window and end",
+      "Company names and data removed on purpose. Try 'sim' for a live demo.",
+    ],
+    sim: [
+      "$ ./reconcile --daily --fictional-data",
+      "Scrolling to the Lab and running the daily reconciliation pass...",
+    ],
+    site: [
+      "$ cat ./about-this-site",
+      "Plain HTML5 + CSS3 + vanilla JS: zero frameworks, zero build step.",
+      "Bilingual EN/PT, dark/light themes, respects prefers-reduced-motion.",
+      "3 live simulations, a CLI, a Ctrl+K palette and CI tests on every push.",
+    ],
     stack: [
       "$ stack --summary",
       "Code:  Python, TypeScript, JS, T-SQL, C# (.NET 8), Bash, PowerShell",
@@ -423,14 +632,14 @@ const TERMINAL_DATA = {
     ],
     unknown: (cmd) => [
       `$ ${cmd}`,
-      `Command not found: '${cmd}'. Try 'help', 'whoami', 'dpo', 'infra', 'projects', or 'stack'.`,
+      `Command not found: '${cmd}'. Try 'help', 'whoami', 'cases', 'projects' or 'sim'.`,
     ],
   },
   pt: {
     help: [
       "$ help",
-      "Comandos disponíveis: whoami, dpo, infra, projects, stack, contact, clear",
-      "Dica: clique nos botões abaixo ou digite um comando.",
+      "Comandos: whoami, cases, projects, sim, dpo, infra, stack, site, contact, clear",
+      "Dicas: Tab completa, Cima/Baixo repete comandos, Ctrl+K abre a paleta de comandos.",
     ],
     whoami: [
       "$ whoami --profile",
@@ -443,7 +652,7 @@ const TERMINAL_DATA = {
       "$ dpo --status",
       "[OK] Inventário RoPA e bases legais (Arts. 7 e 11) mapeados",
       "[OK] Relatórios DPIA/RIPD, DPAs com fornecedores e fluxos do Art. 18",
-      "[OK] Pentests web OWASP Top 10: 16 falhas críticas/médias remediadas",
+      "[OK] Pentests web OWASP Top 10: 16 falhas críticas/médias mapeadas com plano de correção",
       "[OK] Barreira DLP Zero-Trust impedindo exposição de PII/segredos em IA",
     ],
     infra: [
@@ -461,6 +670,29 @@ const TERMINAL_DATA = {
       "5. OtimizaPC              (C#/.NET 8)  Otimizador Windows MVVM seguro",
       "6. Thunderbird-Outlook    (Python/COM) Migrador bidirecional MAPI",
     ],
+    cases: [
+      "$ ls ./casos-em-producao --privado",
+      "0. Hub de entrada de NF-e   40 mil+ reprocessos/mês -> ciclos de 10 min",
+      "1. Painel operacional       TTFB 6,8s -> 0,1s, 80+ alertas/dia -> resumos",
+      "2. Site e localizador       0 falhas de contraste WCAG, mobile-first",
+      "3. Agente de estações       reconexão 60s -> 3-7s, update assinado",
+      "4. Reenvio de contingência  acúmulo resolvido sem trabalho manual",
+      "5. Pedidos de imagem CFTV   83 gravadores, de ponta a ponta pelo chamado",
+      "6. Notificações help desk   109 mil chamados velhos, sem disparo em massa",
+      "7. SQL e depósito           KPIs em 1 passada, gargalos de separação",
+      "8. Acesso temporário ao BD  todo acesso com dono, janela e fim",
+      "Nomes de empresa e dados removidos de propósito. Rode 'sim' para ver ao vivo.",
+    ],
+    sim: [
+      "$ ./conciliar --diario --dados-ficticios",
+      "Indo para o Lab e executando a conciliação diária...",
+    ],
+    site: [
+      "$ cat ./sobre-este-site",
+      "HTML5 + CSS3 + JS puro: zero frameworks, zero etapa de build.",
+      "Bilíngue EN/PT, tema claro/escuro, respeita prefers-reduced-motion.",
+      "3 simulações ao vivo, uma CLI, paleta Ctrl+K e testes no CI a cada push.",
+    ],
     stack: [
       "$ stack --summary",
       "Código: Python, TypeScript, JS, T-SQL, C# (.NET 8), Bash, PowerShell",
@@ -475,7 +707,7 @@ const TERMINAL_DATA = {
     ],
     unknown: (cmd) => [
       `$ ${cmd}`,
-      `Comando desconhecido: '${cmd}'. Tente 'help', 'whoami', 'dpo', 'infra', 'projects' ou 'stack'.`,
+      `Comando desconhecido: '${cmd}'. Tente 'help', 'whoami', 'cases', 'projects' ou 'sim'.`,
     ],
   },
 };
@@ -735,14 +967,112 @@ const DEMO_VIDEOS = [
     en: {
       tag: "LGPD / GDPR · OWASP · APDADOS®",
       title: "DPO Governance & Cybersecurity in Production",
-      desc: "RoPA & DPIA, Art. 18 irreversible anonymization, 16 OWASP Top 10 findings remediated, AD logonHours, Zero-Trust AI DLP & APDADOS®.",
+      desc: "RoPA & DPIA, Art. 18 irreversible anonymization, 16 OWASP Top 10 findings mapped, AD logonHours, Zero-Trust AI DLP & APDADOS®.",
     },
     pt: {
       tag: "LGPD / GDPR · OWASP · APDADOS®",
       title: "Governança DPO & Cibersegurança em Produção",
-      desc: "RoPA e RIPD, anonimização do Art. 18, 16 falhas OWASP remediadas, AD logonHours, barreira DLP para IA e Comitê APDADOS®.",
+      desc: "RoPA e RIPD, anonimização do Art. 18, 16 falhas OWASP mapeadas, AD logonHours, barreira DLP para IA e Comitê APDADOS®.",
     },
   },
+];
+
+const RECON_TEXT = {
+  en: {
+    ready: "READY",
+    running: "RUNNING",
+    synced: "IN SYNC",
+    recovered: (n) => `${n} RECOVERED`,
+    intro: "[setup] One month of fictional invoices loaded, with a few gaps. Press Run.",
+    start: (days) => `[pass] Listing invoice keys for ${days} days and comparing with the database...`,
+    ok: (dd, total) => `[ok]    day ${dd}: ${total} keys on the platform, all in the database`,
+    gap: (dd, total, missing) => `[gap]   day ${dd}: ${total} on the platform, ${missing} missing in the database`,
+    fetch: (missing) => `[fetch] downloading only those ${missing} invoices by key... stored`,
+    done: (days, missing, fixed) =>
+      missing
+        ? `[done]  ${days} days checked, ${fixed} of ${missing} missing invoices recovered.`
+        : `[done]  ${days} days checked, nothing missing. Database in sync.`,
+    gaps: (n) => `[setup] ${n} new days with missing invoices. Press Run.`,
+    reset: "[setup] Fresh month loaded. Press Run.",
+  },
+  pt: {
+    ready: "PRONTO",
+    running: "EXECUTANDO",
+    synced: "EM DIA",
+    recovered: (n) => `${n} RECUPERADAS`,
+    intro: "[setup] Um mês de notas fictícias carregado, com algumas lacunas. Clique em Executar.",
+    start: (days) => `[passo] Listando as chaves de ${days} dias e comparando com o banco...`,
+    ok: (dd, total) => `[ok]    dia ${dd}: ${total} chaves na plataforma, todas no banco`,
+    gap: (dd, total, missing) => `[lacuna] dia ${dd}: ${total} na plataforma, ${missing} faltando no banco`,
+    fetch: (missing) => `[busca] baixando só essas ${missing} notas pela chave... gravadas`,
+    done: (days, missing, fixed) =>
+      missing
+        ? `[fim]   ${days} dias conferidos, ${fixed} de ${missing} notas faltantes recuperadas.`
+        : `[fim]   ${days} dias conferidos, nada faltando. Banco em dia.`,
+    gaps: (n) => `[setup] ${n} dias novos com notas faltando. Clique em Executar.`,
+    reset: "[setup] Mês novo carregado. Clique em Executar.",
+  },
+};
+
+const PALETTE_TEXT = {
+  en: {
+    placeholder: "Search sections or actions...",
+    empty: "No matches.",
+    foot: "Up/Down to move · Enter to open · Esc to close",
+    title: "Command palette",
+    items: {
+      lab: "Go to Live Lab",
+      sim: "Run the reconciliation demo",
+      demos: "Go to Video Demos",
+      dpo: "Go to DPO & LGPD",
+      projects: "Go to Open-Source Projects",
+      cases: "Go to Production Case Studies",
+      stack: "Go to Technical Stack",
+      contact: "Go to Contact",
+      terminal: "Focus the terminal",
+      theme: "Toggle light / dark theme",
+      lang: "Mudar para Português",
+      email: "Copy email address",
+      github: "Open GitHub profile",
+      linkedin: "Open LinkedIn profile",
+    },
+  },
+  pt: {
+    placeholder: "Buscar seções ou ações...",
+    empty: "Nada encontrado.",
+    foot: "Cima/Baixo para mover · Enter para abrir · Esc para fechar",
+    title: "Paleta de comandos",
+    items: {
+      lab: "Ir para o Lab ao Vivo",
+      sim: "Executar a demo de conciliação",
+      demos: "Ir para os Vídeos Demo",
+      dpo: "Ir para DPO & LGPD",
+      projects: "Ir para os Projetos Open-Source",
+      cases: "Ir para os Casos em Produção",
+      stack: "Ir para a Stack Técnica",
+      contact: "Ir para Contato",
+      terminal: "Focar no terminal",
+      theme: "Alternar tema claro / escuro",
+      lang: "Switch to English",
+      email: "Copiar e-mail",
+      github: "Abrir perfil no GitHub",
+      linkedin: "Abrir perfil no LinkedIn",
+    },
+  },
+};
+
+const TERMINAL_COMMANDS = [
+  "help",
+  "whoami",
+  "cases",
+  "projects",
+  "sim",
+  "dpo",
+  "infra",
+  "stack",
+  "site",
+  "contact",
+  "clear",
 ];
 
 function getInitialLang() {
@@ -796,6 +1126,328 @@ document.addEventListener("DOMContentLoaded", () => {
   let topoMode = "healthy";
   let topoQueueDepth = 14;
   let termTypingTimer = null;
+  const termHistory = [];
+  let termHistoryIdx = -1;
+
+  // ---- Lab 3: daily reconciliation pass (fictional data, deterministic) ----
+  const RECON_DAYS = 30;
+  let reconSeed = 20261124;
+  let reconData = [];
+  let reconRunning = false;
+  let reconTimers = [];
+  let reconStats = { days: 0, total: 0, missing: 0, fixed: 0 };
+  let reconLog = [];
+  let reconAutoPlayed = false;
+
+  function reconRand() {
+    // mulberry32: same "random" month on every visit
+    reconSeed = (reconSeed + 0x6d2b79f5) | 0;
+    let t = Math.imul(reconSeed ^ (reconSeed >>> 15), 1 | reconSeed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  }
+
+  function reconText() {
+    return RECON_TEXT[currentLang] || RECON_TEXT.en;
+  }
+
+  function reconFmt(n) {
+    return n.toLocaleString(currentLang === "pt" ? "pt-BR" : "en-US");
+  }
+
+  function reconAddGaps(count) {
+    const candidates = reconData.filter((d) => d.missing === 0);
+    let added = 0;
+    for (let n = 0; n < count && candidates.length; n += 1) {
+      const pick = candidates.splice(Math.floor(reconRand() * candidates.length), 1)[0];
+      pick.missing = 2 + Math.floor(reconRand() * 9);
+      added += 1;
+    }
+    return added;
+  }
+
+  function reconBuild() {
+    reconData = [];
+    for (let i = 0; i < RECON_DAYS; i += 1) {
+      const weekend = i % 7 === 5 || i % 7 === 6;
+      const total = weekend ? 240 + Math.floor(reconRand() * 460) : 1800 + Math.floor(reconRand() * 1400);
+      reconData.push({ day: i + 1, weekend, total, missing: 0, recovered: 0, state: "pending" });
+    }
+    reconAddGaps(4);
+    reconStats = { days: 0, total: 0, missing: 0, fixed: 0 };
+  }
+
+  function reconStopTimers() {
+    reconTimers.forEach((t) => window.clearTimeout(t));
+    reconTimers = [];
+    reconRunning = false;
+  }
+
+  function reconPushLog(line) {
+    reconLog.push(line);
+    if (reconLog.length > 7) reconLog = reconLog.slice(-7);
+  }
+
+  function reconRender() {
+    const grid = document.getElementById("recon-grid");
+    if (!grid) return;
+    if (grid.children.length !== reconData.length) {
+      grid.replaceChildren();
+      reconData.forEach((d) => {
+        const cell = document.createElement("div");
+        const num = document.createElement("span");
+        num.textContent = String(d.day).padStart(2, "0");
+        cell.append(num, document.createElement("small"));
+        grid.appendChild(cell);
+      });
+    }
+    reconData.forEach((d, i) => {
+      const cell = grid.children[i];
+      cell.className = `recon-cell is-${d.state}${d.weekend ? " is-weekend" : ""}`;
+      const small = cell.querySelector("small");
+      if (small) {
+        small.textContent =
+          d.state === "gap" ? `-${d.missing}` : d.state === "fixed" ? `+${d.recovered}` : d.state === "ok" ? "ok" : "";
+      }
+    });
+
+    const T = reconText();
+    const set = (id, text) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = text;
+    };
+    set("recon-days", `${reconStats.days} / ${RECON_DAYS}`);
+    set("recon-total", reconFmt(reconStats.total));
+    set("recon-missing", reconFmt(reconStats.missing));
+    set("recon-fixed", reconFmt(reconStats.fixed));
+    set("recon-log", reconLog.join("\n"));
+
+    const badge = document.getElementById("recon-state");
+    if (badge) {
+      badge.classList.remove("is-warn", "is-danger");
+      if (reconRunning) {
+        badge.textContent = T.running;
+        badge.classList.add("is-warn");
+      } else if (reconStats.days === RECON_DAYS) {
+        badge.textContent = reconStats.fixed ? T.recovered(reconStats.fixed) : T.synced;
+      } else {
+        badge.textContent = T.ready;
+      }
+    }
+    ["recon-run", "recon-gaps", "recon-reset"].forEach((id) => {
+      const btn = document.getElementById(id);
+      if (btn && id !== "recon-reset") btn.disabled = reconRunning;
+    });
+  }
+
+  function reconRun() {
+    if (reconRunning || !reconData.length) return;
+    const T = reconText();
+    // dias recuperados na passada anterior agora estao completos
+    reconData.forEach((d) => {
+      if (d.state === "fixed") d.missing = 0;
+      d.state = "pending";
+      d.recovered = 0;
+    });
+    reconStats = { days: 0, total: 0, missing: 0, fixed: 0 };
+    reconLog = [];
+    reconPushLog(T.start(RECON_DAYS));
+
+    const steps = [];
+    reconData.forEach((d) => {
+      const dd = String(d.day).padStart(2, "0");
+      steps.push({ wait: 55, fn: () => { d.state = "scan"; } });
+      steps.push({
+        wait: d.missing ? 260 : 75,
+        fn: () => {
+          const t = reconText();
+          reconStats.days += 1;
+          reconStats.total += d.total;
+          if (d.missing) {
+            d.state = "gap";
+            reconStats.missing += d.missing;
+            reconPushLog(t.gap(dd, reconFmt(d.total), d.missing));
+          } else {
+            d.state = "ok";
+            reconPushLog(t.ok(dd, reconFmt(d.total)));
+          }
+        },
+      });
+      if (d.missing) {
+        steps.push({
+          wait: 420,
+          fn: () => {
+            d.state = "fixed";
+            d.recovered = d.missing;
+            reconStats.fixed += d.missing;
+            reconPushLog(reconText().fetch(d.missing));
+          },
+        });
+      }
+    });
+    steps.push({
+      wait: 120,
+      fn: () => {
+        reconRunning = false;
+        reconPushLog(reconText().done(reconStats.days, reconStats.missing, reconStats.fixed));
+      },
+    });
+
+    reconRunning = true;
+    if (prefersReduced) {
+      steps.forEach((s) => s.fn());
+      reconRender();
+      return;
+    }
+    let at = 0;
+    steps.forEach((s) => {
+      at += s.wait;
+      reconTimers.push(
+        window.setTimeout(() => {
+          s.fn();
+          reconRender();
+        }, at),
+      );
+    });
+    reconRender();
+  }
+
+  function reconInjectGaps() {
+    if (reconRunning) return;
+    reconData.forEach((d) => {
+      if (d.state === "fixed") d.missing = 0;
+      d.state = "pending";
+      d.recovered = 0;
+    });
+    reconStats = { days: 0, total: 0, missing: 0, fixed: 0 };
+    const added = reconAddGaps(2 + Math.floor(reconRand() * 3));
+    reconLog = [reconText().gaps(added)];
+    reconRender();
+  }
+
+  function reconReset() {
+    reconStopTimers();
+    reconBuild();
+    reconLog = [reconText().reset];
+    reconRender();
+  }
+
+  reconBuild();
+  reconLog = [RECON_TEXT[currentLang] ? RECON_TEXT[currentLang].intro : RECON_TEXT.en.intro];
+
+  // ---- Command palette (Ctrl/Cmd + K) ----
+  let paletteIdx = 0;
+  let paletteItems = [];
+  let paletteReturnFocus = null;
+
+  function scrollToId(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+  }
+
+  function paletteActions() {
+    return {
+      lab: () => scrollToId("lab"),
+      sim: () => {
+        scrollToId("recon-lab");
+        window.setTimeout(reconRun, prefersReduced ? 0 : 650);
+      },
+      demos: () => scrollToId("demos"),
+      dpo: () => scrollToId("dpo"),
+      projects: () => scrollToId("projects"),
+      cases: () => scrollToId("experience"),
+      stack: () => scrollToId("stack"),
+      contact: () => scrollToId("contact"),
+      terminal: () => {
+        const input = document.getElementById("terminal-input");
+        scrollToId("top");
+        if (input) window.setTimeout(() => input.focus({ preventScroll: true }), prefersReduced ? 0 : 450);
+      },
+      theme: () => applyTheme(currentTheme === "dark" ? "light" : "dark"),
+      lang: () => applyLanguage(currentLang === "en" ? "pt" : "en"),
+      email: () => {
+        const btn = document.getElementById("copy-email-hero");
+        if (btn) btn.click();
+      },
+      github: () => window.open("https://github.com/gavicoding", "_blank", "noopener"),
+      linkedin: () => window.open("https://www.linkedin.com/in/gabrielvsouza/", "_blank", "noopener"),
+    };
+  }
+
+  function renderPalette() {
+    const list = document.getElementById("cmdk-list");
+    const input = document.getElementById("cmdk-input");
+    if (!list || !input) return;
+    const P = PALETTE_TEXT[currentLang] || PALETTE_TEXT.en;
+    const q = input.value.trim().toLowerCase();
+    paletteItems = Object.entries(P.items)
+      .filter(([id, label]) => !q || label.toLowerCase().includes(q) || id.includes(q))
+      .map(([id, label]) => ({ id, label }));
+    paletteIdx = Math.max(0, Math.min(paletteIdx, paletteItems.length - 1));
+    list.replaceChildren();
+    if (!paletteItems.length) {
+      const li = document.createElement("li");
+      li.className = "cmdk-empty";
+      li.textContent = P.empty;
+      list.appendChild(li);
+      input.removeAttribute("aria-activedescendant");
+      return;
+    }
+    paletteItems.forEach((item, i) => {
+      const li = document.createElement("li");
+      li.id = `cmdk-opt-${item.id}`;
+      li.className = `cmdk-item${i === paletteIdx ? " is-active" : ""}`;
+      li.setAttribute("role", "option");
+      li.setAttribute("aria-selected", String(i === paletteIdx));
+      li.textContent = item.label;
+      li.addEventListener("mousemove", () => {
+        if (paletteIdx !== i) {
+          paletteIdx = i;
+          renderPalette();
+        }
+      });
+      li.addEventListener("click", () => runPaletteItem(item.id));
+      list.appendChild(li);
+    });
+    input.setAttribute("aria-activedescendant", `cmdk-opt-${paletteItems[paletteIdx].id}`);
+    const active = list.children[paletteIdx];
+    if (active && typeof active.scrollIntoView === "function") active.scrollIntoView({ block: "nearest" });
+  }
+
+  function openPalette() {
+    const box = document.getElementById("cmdk");
+    const input = document.getElementById("cmdk-input");
+    if (!box || !input) return;
+    const P = PALETTE_TEXT[currentLang] || PALETTE_TEXT.en;
+    paletteReturnFocus = document.activeElement;
+    input.setAttribute("placeholder", P.placeholder);
+    const foot = document.getElementById("cmdk-foot");
+    if (foot) foot.textContent = P.foot;
+    const panel = box.querySelector(".cmdk-panel");
+    if (panel) panel.setAttribute("aria-label", P.title);
+    input.value = "";
+    paletteIdx = 0;
+    box.hidden = false;
+    document.body.classList.add("cmdk-open");
+    renderPalette();
+    input.focus();
+  }
+
+  function closePalette() {
+    const box = document.getElementById("cmdk");
+    if (!box || box.hidden) return;
+    box.hidden = true;
+    document.body.classList.remove("cmdk-open");
+    if (paletteReturnFocus && typeof paletteReturnFocus.focus === "function") {
+      paletteReturnFocus.focus({ preventScroll: true });
+    }
+  }
+
+  function runPaletteItem(id) {
+    closePalette();
+    const action = paletteActions()[id];
+    if (action) action();
+  }
 
   function applyTheme(theme) {
     currentTheme = theme === "light" ? "light" : "dark";
@@ -942,6 +1594,13 @@ document.addEventListener("DOMContentLoaded", () => {
     email: "contact",
     limpar: "clear",
     cls: "clear",
+    casos: "cases",
+    case: "cases",
+    simular: "sim",
+    conciliar: "sim",
+    reconcile: "sim",
+    demo: "sim",
+    sobre_o_site: "site",
   };
 
   function runTerminalCommand(rawCmd) {
@@ -965,6 +1624,10 @@ document.addEventListener("DOMContentLoaded", () => {
       ? dict[cmd]
       : dict.unknown(cleaned);
     renderTerminalLines(lines);
+
+    if (cmd === "sim") {
+      paletteActions().sim();
+    }
 
     document.querySelectorAll(".term-chip").forEach((chip) => {
       chip.classList.toggle("is-active", chip.getAttribute("data-cmd") === cmd);
@@ -1199,6 +1862,13 @@ document.addEventListener("DOMContentLoaded", () => {
     renderDpoStage(currentDpoStep);
     selectDemo(currentDemoId, false);
     updateTopologyDisplay();
+    if (!reconRunning) {
+      const T = RECON_TEXT[currentLang] || RECON_TEXT.en;
+      reconLog = [reconStats.days === RECON_DAYS ? T.done(reconStats.days, reconStats.missing, reconStats.fixed) : T.intro];
+    }
+    reconRender();
+    const cmdkBox = document.getElementById("cmdk");
+    if (cmdkBox && !cmdkBox.hidden) renderPalette();
     runTerminalCommand("whoami");
   }
 
@@ -1249,11 +1919,99 @@ document.addEventListener("DOMContentLoaded", () => {
     termForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const val = termInput.value.trim();
+      if (val && termHistory[termHistory.length - 1] !== val) termHistory.push(val);
+      termHistoryIdx = -1;
       runTerminalCommand(val || "help");
       termInput.value = "";
       termInput.focus();
     });
+
+    termInput.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        if (!termHistory.length) return;
+        e.preventDefault();
+        if (e.key === "ArrowUp") {
+          termHistoryIdx = termHistoryIdx < 0 ? termHistory.length - 1 : Math.max(0, termHistoryIdx - 1);
+        } else {
+          termHistoryIdx = termHistoryIdx < 0 ? -1 : termHistoryIdx + 1;
+          if (termHistoryIdx >= termHistory.length) termHistoryIdx = -1;
+        }
+        termInput.value = termHistoryIdx < 0 ? "" : termHistory[termHistoryIdx];
+      } else if (e.key === "Tab") {
+        const typed = termInput.value.trim().toLowerCase();
+        if (!typed) return; // Tab vazio segue o fluxo normal de foco (acessibilidade)
+        const hits = TERMINAL_COMMANDS.filter((c) => c.startsWith(typed));
+        if (hits.length === 1) {
+          e.preventDefault();
+          termInput.value = hits[0];
+        } else if (hits.length > 1) {
+          e.preventDefault();
+          renderTerminalLines([`$ ${typed}`, hits.join("   ")]);
+        }
+      }
+    });
   }
+
+  // Lab 3 events + autoplay the first time the card scrolls into view
+  const reconRunBtn = document.getElementById("recon-run");
+  if (reconRunBtn) reconRunBtn.addEventListener("click", reconRun);
+  const reconGapsBtn = document.getElementById("recon-gaps");
+  if (reconGapsBtn) reconGapsBtn.addEventListener("click", reconInjectGaps);
+  const reconResetBtn = document.getElementById("recon-reset");
+  if (reconResetBtn) reconResetBtn.addEventListener("click", reconReset);
+  const reconCard = document.getElementById("recon-lab");
+  if (reconCard && !prefersReduced && typeof IntersectionObserver !== "undefined") {
+    const reconObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !reconAutoPlayed) {
+            reconAutoPlayed = true;
+            reconObs.disconnect();
+            window.setTimeout(reconRun, 500);
+          }
+        });
+      },
+      { threshold: 0.45 },
+    );
+    reconObs.observe(reconCard);
+  }
+
+  // Command palette events
+  const cmdkOpenBtn = document.getElementById("cmdk-open");
+  if (cmdkOpenBtn) cmdkOpenBtn.addEventListener("click", openPalette);
+  document.querySelectorAll("[data-cmdk-close]").forEach((el) => el.addEventListener("click", closePalette));
+  const cmdkInput = document.getElementById("cmdk-input");
+  if (cmdkInput) {
+    cmdkInput.addEventListener("input", () => {
+      paletteIdx = 0;
+      renderPalette();
+    });
+    cmdkInput.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        if (!paletteItems.length) return;
+        const delta = e.key === "ArrowDown" ? 1 : -1;
+        paletteIdx = (paletteIdx + delta + paletteItems.length) % paletteItems.length;
+        renderPalette();
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        if (paletteItems[paletteIdx]) runPaletteItem(paletteItems[paletteIdx].id);
+      } else if (e.key === "Tab") {
+        e.preventDefault(); // foco fica preso na paleta enquanto aberta
+      }
+    });
+  }
+  document.addEventListener("keydown", (e) => {
+    const box = document.getElementById("cmdk");
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      if (box && !box.hidden) closePalette();
+      else openPalette();
+    } else if (e.key === "Escape" && box && !box.hidden) {
+      e.preventDefault();
+      closePalette();
+    }
+  });
 
   // DLP events
   const dlpInput = document.getElementById("dlp-input");
@@ -1303,6 +2061,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.setInterval(() => {
+    if (document.hidden) return; // nao gasta CPU com a aba em segundo plano
     if (topoMode === "healthy") {
       topoQueueDepth = 8 + Math.floor(Math.random() * 11);
     } else if (topoMode === "high_load") {

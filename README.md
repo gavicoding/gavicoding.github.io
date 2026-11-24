@@ -8,18 +8,23 @@
 
 **Live Portfolio & Interactive Resume:** **[https://gavicoding.github.io](https://gavicoding.github.io)**
 
-Official bilingual (`EN` / `PT-BR`) portfolio website of **Gabriel Souza (`@gavicoding`)**, built with zero runtime frameworks: pure semantic **HTML5**, responsive mobile-first **CSS3** (`prefers-reduced-motion` aware), custom dark-tech illustrations, and **Vanilla JavaScript**.
+Official bilingual (`EN` / `PT-BR`) portfolio website of **Gabriel Souza (`@gavicoding`)**, built with zero runtime frameworks: pure semantic **HTML5**, responsive mobile-first **CSS3** (`prefers-reduced-motion` aware), and **Vanilla JavaScript** with no build step.
 
 ---
 
 ## Highlights
 
-- **Split Visual Hero & Dark-Tech Illustrations:** Custom raster illustrations (`assets/images/*.png`) highlighting hybrid infrastructure (Windows Server, Active Directory, Linux/Docker), cybersecurity (DPO / OWASP Top 10 / Zero-Trust DLP), and software engineering / Product Ownership (PO).
-- **About Me, Education & Sanitized Career Timeline:** Showcases Computer Science & Cybersecurity (UTFPR) education, APDADOS® Security Committee membership, certifications, and nearly a decade of hands-on IT progression (from L1/L2 remote & chat support to Systems PO & DPO).
-- **Instant Bilingual Switcher (`🇺🇸 EN` ↔ `🇧🇷 PT-BR`):** 100% key-parity translation dictionary persisted in `localStorage`.
-- **Interactive Project Showcase:** Filterable cards across all 6 flagship open-source repositories (`Security & AI`, `Observability`, `Data / T-SQL`, `Infra / DevOps`, `Desktop`).
-- **Sanitized Production Case Studies & LGPD Governance:** Before -> After operational metrics (`6.8s -> 0.1s` TTFB), interactive Leaflet/OSM store locators, WebSocket + mTLS fleet management, ERP deployments, and LGPD/GDPR + OWASP AppSec governance.
-- **Automated CI Verification:** Validates HTML structure, local image references, LinkedIn links, CSS accessibility guardrails, JS syntax (`node --check`), 100% EN/PT translation key parity, zero em-dashes, and sanitization rules on every push.
+- **Interactive CLI hero:** a typed terminal with `whoami`, `cases`, `projects`, `sim`, `dpo`, `infra`, `stack` and `site`, plus Tab completion and Up/Down history.
+- **Command palette (`Ctrl+K` / `Cmd+K`):** keyboard-first navigation and actions (sections, theme, language, email), built as an accessible combobox dialog.
+- **Live Lab with three simulations (fictional data):**
+  - Zero-Trust DLP redaction of CPF/CNPJ, emails, tokens and internal IPs as you type.
+  - Queue health heuristics that tell a draining burst (HIGH_LOAD) from a real stall (STALLED).
+  - Daily invoice reconciliation pass: lists keys per day, finds gaps and fetches only what is missing.
+- **Production case studies told as Pain -> What I Built -> Result:** ten private projects with real numbers and no company names, systems or data.
+- **Open-source showcase:** filterable cards and 30s video demos for six public repositories.
+- **DPO & LGPD governance, education and career timeline.**
+- **Bilingual EN / PT-BR** with 100% key parity, **dark / light themes**, mobile-first layout and `prefers-reduced-motion` support.
+- **CI on every push:** HTML structure, asset references, JS syntax (`node --check`), EN/PT key parity, zero em-dashes and a forbidden-terms check that keeps confidential names out.
 
 ---
 
