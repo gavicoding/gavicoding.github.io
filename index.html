@@ -35,6 +35,7 @@
 
       <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
         <a href="#lab" data-i18n="nav_lab">Live Lab</a>
+        <a href="#demos" data-i18n="nav_demos">Video Demos</a>
         <a href="#dpo" data-i18n="nav_dpo">DPO &amp; LGPD</a>
         <a href="#projects" data-i18n="nav_projects">Projects</a>
         <a href="#experience" data-i18n="nav_experience">Experience</a>
@@ -307,7 +308,122 @@
       </div>
     </section>
 
-    <section id="dpo" class="section">
+    <section id="demos" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono" data-i18n="demos_eyebrow">ANIMATED ENGINEERING SHOWCASE (1080P60)</span>
+          <h2 data-i18n="demos_title">Project &amp; Governance Video Demos</h2>
+          <p data-i18n="demos_desc">Seven deterministic 30s studio demos illustrating architecture, code execution, and DPO compliance flows using 100% synthetic data.</p>
+        </div>
+
+        <div class="cinema-grid reveal" id="video-showcase">
+          <article class="demo-stage spotlight-card">
+            <div class="demo-stage-bar">
+              <div class="demo-stage-meta">
+                <span class="tag mono" id="demo-active-tag">Python · Zero-Trust DLP</span>
+                <span class="demo-duration-pill mono" id="demo-active-duration">0:30</span>
+              </div>
+              <span class="badge-live mono" data-i18n="demo_synthetic_badge">DEMO · 100% SYNTHETIC</span>
+            </div>
+
+            <div class="demo-player-frame">
+              <video
+                id="demo-player"
+                class="demo-video"
+                controls
+                playsinline
+                preload="none"
+                poster="assets/videos/posters/01-pii-screenshot-guard.jpg"
+              >
+                <source id="demo-source" src="assets/videos/01-pii-screenshot-guard.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div class="demo-stage-footer">
+              <div class="demo-stage-copy">
+                <h3 id="demo-active-title">pii-screenshot-guard</h3>
+                <p id="demo-active-desc">OCR scanning, deterministic PII/secret masking, and GitHub PR CI blocking with zero external dependencies.</p>
+              </div>
+              <a
+                id="demo-active-link"
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/gavicoding/pii-screenshot-guard"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="demo_open_project"
+              >Open Project</a>
+            </div>
+          </article>
+
+          <div class="demo-playlist" role="list" aria-label="Demo video playlist">
+            <button type="button" class="demo-item is-active" data-demo-id="01" aria-current="true">
+              <img class="demo-thumb" src="assets/videos/posters/01-pii-screenshot-guard.jpg" alt="pii-screenshot-guard demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title">01 · pii-screenshot-guard</span>
+                <span class="demo-item-sub mono">Python · OCR · Zero-Trust DLP</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
+
+            <button type="button" class="demo-item" data-demo-id="02">
+              <img class="demo-thumb" src="assets/videos/posters/02-queue-health-watchdog.jpg" alt="queue-health-watchdog demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title">02 · queue-health-watchdog</span>
+                <span class="demo-item-sub mono">TypeScript · Read-Only · Docker</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
+
+            <button type="button" class="demo-item" data-demo-id="03">
+              <img class="demo-thumb" src="assets/videos/posters/03-infra-ops-playbook.jpg" alt="infra-ops-playbook demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title">03 · infra-ops-playbook</span>
+                <span class="demo-item-sub mono">PowerShell · Bash · Nginx mTLS</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
+
+            <button type="button" class="demo-item" data-demo-id="04">
+              <img class="demo-thumb" src="assets/videos/posters/04-tsql-retail-ops-analytics.jpg" alt="tsql-retail-ops-analytics demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title">04 · tsql-retail-ops-analytics</span>
+                <span class="demo-item-sub mono">T-SQL · SQL Server · DBA</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
+
+            <button type="button" class="demo-item" data-demo-id="05">
+              <img class="demo-thumb" src="assets/videos/posters/05-otimizapc.jpg" alt="OtimizaPC demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title">05 · OtimizaPC</span>
+                <span class="demo-item-sub mono">C# · .NET 8 · WPF MVVM</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
+
+            <button type="button" class="demo-item" data-demo-id="06">
+              <img class="demo-thumb" src="assets/videos/posters/06-thunderbird-outlook.jpg" alt="Thunderbird-Outlook demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title">06 · Thunderbird-Outlook</span>
+                <span class="demo-item-sub mono">Python · COM/MAPI · vCard 3.0</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
+
+            <button type="button" class="demo-item" data-demo-id="07">
+              <img class="demo-thumb" src="assets/videos/posters/07-governanca-dpo.jpg" alt="DPO Governance demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title" data-i18n="demo_07_nav_title">07 · DPO &amp; LGPD Governance</span>
+                <span class="demo-item-sub mono">RoPA · OWASP · AD · APDADOS®</span>
+              </div>
+              <span class="demo-item-dur mono">0:32</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dpo" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="dpo_eyebrow">DATA PROTECTION OFFICER &amp; SECURITY GOVERNANCE</span>
@@ -342,6 +458,7 @@
           <article class="dpo-panel spotlight-card" role="tabpanel">
             <div class="dpo-panel-top">
               <span class="badge-live mono" id="dpo-detail-tag">LGPD Arts. 37 &amp; 50</span>
+              <button type="button" class="demo-inline-btn" data-open-demo="07" data-i18n="btn_watch_dpo_demo">Watch DPO Video (32s)</button>
             </div>
             <h3 id="dpo-detail-title">Data Discovery &amp; Record of Processing Activities (RoPA)</h3>
             <p id="dpo-detail-summary"></p>
@@ -396,7 +513,7 @@
       </div>
     </section>
 
-    <section id="projects" class="section section-alt">
+    <section id="projects" class="section">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="projects_eyebrow">OPEN-SOURCE &amp; CI VERIFIED</span>
@@ -426,6 +543,7 @@
             <div class="card-links">
               <a href="https://github.com/gavicoding/pii-screenshot-guard" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
               <a href="https://gavicoding.github.io/pii-screenshot-guard/" target="_blank" rel="noopener noreferrer" data-i18n="link_docs">Live Docs</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="01" data-i18n="btn_watch_demo">Watch Demo</button>
             </div>
           </article>
 
@@ -440,6 +558,7 @@
             </p>
             <div class="card-links">
               <a href="https://github.com/gavicoding/queue-health-watchdog" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="02" data-i18n="btn_watch_demo">Watch Demo</button>
             </div>
           </article>
 
@@ -454,6 +573,7 @@
             </p>
             <div class="card-links">
               <a href="https://github.com/gavicoding/tsql-retail-ops-analytics" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="04" data-i18n="btn_watch_demo">Watch Demo</button>
             </div>
           </article>
 
@@ -468,6 +588,7 @@
             </p>
             <div class="card-links">
               <a href="https://github.com/gavicoding/infra-ops-playbook" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="03" data-i18n="btn_watch_demo">Watch Demo</button>
             </div>
           </article>
 
@@ -482,6 +603,7 @@
             </p>
             <div class="card-links">
               <a href="https://github.com/gavicoding/OtimizaPC" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="05" data-i18n="btn_watch_demo">Watch Demo</button>
             </div>
           </article>
 
@@ -496,13 +618,14 @@
             </p>
             <div class="card-links">
               <a href="https://github.com/gavicoding/Thunderbird-Outlook" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="06" data-i18n="btn_watch_demo">Watch Demo</button>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="exp_eyebrow">PRODUCTION IMPACT &amp; TIMELINE</span>
@@ -577,7 +700,7 @@
       </div>
     </section>
 
-    <section id="stack" class="section section-alt">
+    <section id="stack" class="section">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="stack_eyebrow">CORE TOOLKIT</span>
@@ -627,7 +750,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section section-alt">
       <div class="container contact-box spotlight-card reveal">
         <div>
           <span class="eyebrow mono" data-i18n="contact_eyebrow">NEXT STEP</span>

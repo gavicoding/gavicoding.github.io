@@ -81,11 +81,31 @@ class TestPortfolioSite(unittest.TestCase):
             "dlp-input",
             "dlp-output",
             "topo-svg",
+            "video-showcase",
+            "demo-player",
             "dpo-stepper",
             "theme-toggle",
         )
         for element_id in required_ids:
             self.assertIn(element_id, parser.ids, f"Missing interactive element #{element_id}")
+
+        demo_slugs = (
+            "01-pii-screenshot-guard",
+            "02-queue-health-watchdog",
+            "03-infra-ops-playbook",
+            "04-tsql-retail-ops-analytics",
+            "05-otimizapc",
+            "06-thunderbird-outlook",
+            "07-governanca-dpo",
+        )
+        js_text = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+        for slug in demo_slugs:
+            mp4_rel = f"assets/videos/{slug}.mp4"
+            jpg_rel = f"assets/videos/posters/{slug}.jpg"
+            self.assertTrue((ROOT / mp4_rel).is_file(), f"Missing demo MP4: {mp4_rel}")
+            self.assertTrue((ROOT / jpg_rel).is_file(), f"Missing demo poster: {jpg_rel}")
+            self.assertTrue(mp4_rel in html_text or mp4_rel in js_text, f"Unreferenced MP4: {mp4_rel}")
+            self.assertIn(jpg_rel, html_text, f"Unreferenced poster in HTML: {jpg_rel}")
 
         expected_repos = (
             "pii-screenshot-guard",
