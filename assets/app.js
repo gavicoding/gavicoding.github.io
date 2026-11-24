@@ -4,6 +4,7 @@ const TRANSLATIONS = {
   en: {
     skip_link: "Skip to main content",
     nav_lab: "Live Lab",
+    nav_demos: "Video Demos",
     nav_dpo: "DPO & LGPD",
     nav_projects: "Projects",
     nav_experience: "Experience",
@@ -55,6 +56,15 @@ const TRANSLATIONS = {
     topo_stat_trend: "Drain Trend",
     topo_stat_mtls: "mTLS Link",
     topo_stat_policy: "Alert Policy",
+    demos_eyebrow: "ANIMATED ENGINEERING SHOWCASE (1080P60)",
+    demos_title: "Project & Governance Video Demos",
+    demos_desc:
+      "Seven deterministic 30s studio demos illustrating architecture, code execution, and DPO compliance flows using 100% synthetic data.",
+    demo_synthetic_badge: "DEMO · 100% SYNTHETIC",
+    demo_open_project: "Open Project",
+    demo_07_nav_title: "07 · DPO & LGPD Governance",
+    btn_watch_dpo_demo: "Watch DPO Video (32s)",
+    btn_watch_demo: "Watch Demo",
     dpo_eyebrow: "DATA PROTECTION OFFICER & SECURITY GOVERNANCE",
     dpo_title: "DPO Governance (LGPD / GDPR), APDADOS® & OWASP AppSec",
     dpo_desc:
@@ -179,6 +189,7 @@ const TRANSLATIONS = {
   pt: {
     skip_link: "Ir para o conteúdo principal",
     nav_lab: "Lab ao Vivo",
+    nav_demos: "Vídeos Demo",
     nav_dpo: "DPO & LGPD",
     nav_projects: "Projetos",
     nav_experience: "Experiência",
@@ -230,6 +241,15 @@ const TRANSLATIONS = {
     topo_stat_trend: "Tendência",
     topo_stat_mtls: "Link mTLS",
     topo_stat_policy: "Política de Alerta",
+    demos_eyebrow: "VITRINE ANIMADA DE ENGENHARIA (1080P60)",
+    demos_title: "Vídeos Demonstrativos dos Projetos & DPO",
+    demos_desc:
+      "Sete demos determinísticos de 30s mostrando arquitetura, execução em código e governança DPO com dados 100% fictícios.",
+    demo_synthetic_badge: "DEMO · 100% FICTÍCIO",
+    demo_open_project: "Abrir Projeto",
+    demo_07_nav_title: "07 · Governança DPO & LGPD",
+    btn_watch_dpo_demo: "Ver Vídeo DPO (32s)",
+    btn_watch_demo: "Ver Vídeo",
     dpo_eyebrow: "ENCARREGADO DE DADOS (DPO) & SEGURANÇA",
     dpo_title: "Governança DPO (LGPD / GDPR), APDADOS® & OWASP AppSec",
     dpo_desc:
@@ -596,6 +616,135 @@ const DPO_STAGES = {
   ],
 };
 
+const DEMO_VIDEOS = [
+  {
+    id: "01",
+    mp4: "assets/videos/01-pii-screenshot-guard.mp4",
+    poster: "assets/videos/posters/01-pii-screenshot-guard.jpg",
+    duration: "0:30",
+    href: "https://github.com/gavicoding/pii-screenshot-guard",
+    external: true,
+    en: {
+      tag: "Python · OCR · Zero-Trust DLP",
+      title: "pii-screenshot-guard",
+      desc: "OCR scanning, deterministic CPF/CNPJ/Luhn/secret masking, and GitHub PR CI blocking with zero external dependencies.",
+    },
+    pt: {
+      tag: "Python · OCR · DLP Zero-Trust",
+      title: "pii-screenshot-guard",
+      desc: "Leitura OCR, mascaramento determinístico de CPF/CNPJ/cartões/segredos e bloqueio automático em PRs no GitHub.",
+    },
+  },
+  {
+    id: "02",
+    mp4: "assets/videos/02-queue-health-watchdog.mp4",
+    poster: "assets/videos/posters/02-queue-health-watchdog.jpg",
+    duration: "0:30",
+    href: "https://github.com/gavicoding/queue-health-watchdog",
+    external: true,
+    en: {
+      tag: "TypeScript · Read-Only · Docker",
+      title: "queue-health-watchdog",
+      desc: "Read-only SQL snapshot heuristics separating healthy HIGH_LOAD bursts from STALLED replication queues without alert fatigue.",
+    },
+    pt: {
+      tag: "TypeScript · Somente Leitura · Docker",
+      title: "queue-health-watchdog",
+      desc: "Heurística somente leitura diferenciando picos normais (HIGH_LOAD) de filas travadas (STALLED) com cooldown anti-fadiga.",
+    },
+  },
+  {
+    id: "03",
+    mp4: "assets/videos/03-infra-ops-playbook.mp4",
+    poster: "assets/videos/posters/03-infra-ops-playbook.jpg",
+    duration: "0:30",
+    href: "https://github.com/gavicoding/infra-ops-playbook",
+    external: true,
+    en: {
+      tag: "PowerShell · Bash · Nginx mTLS",
+      title: "infra-ops-playbook",
+      desc: "400 Windows endpoints across 80 branches, RSA-3072 signed fleet agents, language-agnostic SID ACL repair, and Postgres backups.",
+    },
+    pt: {
+      tag: "PowerShell · Bash · Nginx mTLS",
+      title: "infra-ops-playbook",
+      desc: "400 estações em 80 filiais, agente assinado RSA-3072 sobre mTLS, reparo de ACL por SID e backup Postgres em container.",
+    },
+  },
+  {
+    id: "04",
+    mp4: "assets/videos/04-tsql-retail-ops-analytics.mp4",
+    poster: "assets/videos/posters/04-tsql-retail-ops-analytics.jpg",
+    duration: "0:30",
+    href: "https://github.com/gavicoding/tsql-retail-ops-analytics",
+    external: true,
+    en: {
+      tag: "T-SQL · SQL Server · DBA",
+      title: "tsql-retail-ops-analytics",
+      desc: "ROW_NUMBER() deduplication, single-pass SUM(CASE) aggregation, sys.dm_tran_locks wait capture, and least-privilege RBAC.",
+    },
+    pt: {
+      tag: "T-SQL · SQL Server · DBA",
+      title: "tsql-retail-ops-analytics",
+      desc: "Deduplicação com ROW_NUMBER(), agregação em passada única, diagnóstico sys.dm_tran_locks e acesso mínimo privilégio.",
+    },
+  },
+  {
+    id: "05",
+    mp4: "assets/videos/05-otimizapc.mp4",
+    poster: "assets/videos/posters/05-otimizapc.jpg",
+    duration: "0:30",
+    href: "https://github.com/gavicoding/OtimizaPC",
+    external: true,
+    en: {
+      tag: "C# · .NET 8 · WPF MVVM",
+      title: "OtimizaPC",
+      desc: "Native dark-mode Windows optimizer with one-click Restore Points, SHA-256 duplicate finder, explicit previews, and S.M.A.R.T. health.",
+    },
+    pt: {
+      tag: "C# · .NET 8 · WPF MVVM",
+      title: "OtimizaPC",
+      desc: "Otimizador Windows nativo com Ponto de Restauração em 1 clique, busca por hash SHA-256, prévia explícita e leitura S.M.A.R.T.",
+    },
+  },
+  {
+    id: "06",
+    mp4: "assets/videos/06-thunderbird-outlook.mp4",
+    poster: "assets/videos/posters/06-thunderbird-outlook.jpg",
+    duration: "0:30",
+    href: "https://github.com/gavicoding/Thunderbird-Outlook",
+    external: true,
+    en: {
+      tag: "Python · COM/MAPI · vCard 3.0",
+      title: "Thunderbird-Outlook",
+      desc: "Bidirectional email & contact migrator preserving folder trees, original received timestamps, attachments, and \\\\?\\ long paths.",
+    },
+    pt: {
+      tag: "Python · COM/MAPI · vCard 3.0",
+      title: "Thunderbird-Outlook",
+      desc: "Migrador bidirecional preservando árvores de pastas, datas originais de recebimento, anexos, caminhos longos e vCard 3.0.",
+    },
+  },
+  {
+    id: "07",
+    mp4: "assets/videos/07-governanca-dpo.mp4",
+    poster: "assets/videos/posters/07-governanca-dpo.jpg",
+    duration: "0:32",
+    href: "#dpo",
+    external: false,
+    en: {
+      tag: "LGPD / GDPR · OWASP · APDADOS®",
+      title: "DPO Governance & Cybersecurity in Production",
+      desc: "RoPA & DPIA, Art. 18 irreversible anonymization, 16 OWASP Top 10 findings remediated, AD logonHours, Zero-Trust AI DLP & APDADOS®.",
+    },
+    pt: {
+      tag: "LGPD / GDPR · OWASP · APDADOS®",
+      title: "Governança DPO & Cibersegurança em Produção",
+      desc: "RoPA e RIPD, anonimização do Art. 18, 16 falhas OWASP remediadas, AD logonHours, barreira DLP para IA e Comitê APDADOS®.",
+    },
+  },
+];
+
 function getInitialLang() {
   try {
     const saved = localStorage.getItem("portfolio_lang");
@@ -642,6 +791,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentLang = getInitialLang();
   let currentTheme = getInitialTheme();
   let currentDpoStep = 0;
+  let currentDemoId = "01";
   let currentPreset = "ticket";
   let topoMode = "healthy";
   let topoQueueDepth = 14;
@@ -662,6 +812,56 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("portfolio_theme", currentTheme);
     } catch {
       // Ignore storage access restrictions.
+    }
+  }
+
+  function selectDemo(demoId, autoplay = false) {
+    const item = DEMO_VIDEOS.find((d) => d.id === demoId) || DEMO_VIDEOS[0];
+    currentDemoId = item.id;
+    const copy = item[currentLang] || item.en;
+
+    const video = document.getElementById("demo-player");
+    const source = document.getElementById("demo-source");
+    const tagEl = document.getElementById("demo-active-tag");
+    const durEl = document.getElementById("demo-active-duration");
+    const titleEl = document.getElementById("demo-active-title");
+    const descEl = document.getElementById("demo-active-desc");
+    const linkEl = document.getElementById("demo-active-link");
+
+    if (video) {
+      video.setAttribute("poster", item.poster);
+    }
+    if (source && video && source.getAttribute("src") !== item.mp4) {
+      source.setAttribute("src", item.mp4);
+      video.load();
+    }
+    if (tagEl) tagEl.textContent = copy.tag;
+    if (durEl) durEl.textContent = item.duration;
+    if (titleEl) titleEl.textContent = copy.title;
+    if (descEl) descEl.textContent = copy.desc;
+    if (linkEl) {
+      linkEl.setAttribute("href", item.href);
+      if (item.external) {
+        linkEl.setAttribute("target", "_blank");
+        linkEl.setAttribute("rel", "noopener noreferrer");
+      } else {
+        linkEl.removeAttribute("target");
+        linkEl.removeAttribute("rel");
+      }
+    }
+
+    document.querySelectorAll(".demo-item[data-demo-id]").forEach((btn) => {
+      const active = btn.getAttribute("data-demo-id") === item.id;
+      btn.classList.toggle("is-active", active);
+      if (active) {
+        btn.setAttribute("aria-current", "true");
+      } else {
+        btn.removeAttribute("aria-current");
+      }
+    });
+
+    if (autoplay && video) {
+      video.play().catch(() => {});
     }
   }
 
@@ -997,6 +1197,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     renderDpoStage(currentDpoStep);
+    selectDemo(currentDemoId, false);
     updateTopologyDisplay();
     runTerminalCommand("whoami");
   }
@@ -1120,6 +1321,25 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const step = Number(btn.getAttribute("data-dpo-step") || "0");
       renderDpoStage(step);
+    });
+  });
+
+  // Video Cinema Showcase events
+  document.querySelectorAll(".demo-item[data-demo-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-demo-id") || "01";
+      selectDemo(id, true);
+    });
+  });
+
+  document.querySelectorAll("[data-open-demo]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-open-demo") || "01";
+      selectDemo(id, true);
+      const showcase = document.getElementById("demos");
+      if (showcase) {
+        showcase.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+      }
     });
   });
 
