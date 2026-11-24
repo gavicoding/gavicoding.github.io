@@ -223,6 +223,45 @@ END;
 GRANT EXECUTE ON OBJECT::dbo.usp_extend_access_window TO db_access_window_bot;
 DENY INSERT, UPDATE, DELETE ON OBJECT::dbo.access_windows TO db_access_window_bot;`,
   },
+  {
+    id: "lgpd-erasure",
+    file: "procedures/usp_anonymize_customer.sql",
+    en: {
+      tag: "LGPD Art. 18 · Anonymization",
+      title: "Erasure request without breaking fiscal records",
+      pain: "A data subject asks to be erased, but deleting the customer breaks orders and fiscal reports that must be kept by law, and hashing the CPF only pseudonymises it: the whole CPF space can be brute-forced.",
+      fix: "Irreversible anonymization in one transaction: random surrogate for the tax id, name, email and phone removed, birth date generalised to the year, orders untouched. The request closes with an evidence hash and an audit row that holds no personal data.",
+      result: "The person can no longer be identified, while totals, foreign keys and regional or age-band reports stay correct. Tests prove the original data is gone from every table.",
+    },
+    pt: {
+      tag: "LGPD Art. 18 · Anonimização",
+      title: "Pedido de eliminação sem quebrar registros fiscais",
+      pain: "O titular pede a eliminação, mas apagar o cliente quebra pedidos e relatórios fiscais que a lei manda guardar, e fazer hash do CPF só pseudonimiza: dá para testar todos os CPFs por força bruta.",
+      fix: "Anonimização irreversível numa transação: CPF trocado por código aleatório, nome, e-mail e telefone removidos, nascimento reduzido ao ano e pedidos intactos. O pedido é encerrado com hash de evidência e uma linha de auditoria sem nenhum dado pessoal.",
+      result: "A pessoa deixa de ser identificável, enquanto totais, chaves e relatórios por região ou faixa etária continuam certos. Os testes provam que o dado original sumiu de todas as tabelas.",
+    },
+    before: `-- option 1: breaks orders and fiscal reports (FK / legal retention)
+DELETE FROM dbo.customers WHERE customer_id = @id;
+
+-- option 2: looks anonymous, but a CPF hash can be brute-forced
+UPDATE dbo.customers
+SET tax_id = CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', tax_id), 2)
+WHERE customer_id = @id;`,
+    after: `UPDATE dbo.customers
+SET full_name     = N'Anonymized customer',
+    tax_id        = 'ANON-' + REPLACE(CONVERT(VARCHAR(36), NEWID()), '-', ''),
+    email         = NULL,
+    phone         = NULL,
+    birth_date    = DATEFROMPARTS(YEAR(birth_date), 1, 1),  -- age bands still work
+    is_anonymized = 1
+WHERE customer_id = @customer_id;          -- orders keep their FK and totals
+
+UPDATE dbo.privacy_requests
+SET request_state = 'DONE', completed_at = @now,
+    evidence_hash = HASHBYTES('SHA2_256',
+        CONCAT(@request_id, '|', @customer_id, '|', CONVERT(VARCHAR(19), @now, 126)))
+WHERE request_id = @request_id;            -- proof without personal data`,
+  },
 ];
 
 const SQL_UI = {
