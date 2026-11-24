@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/sql-casebook.js" defer></script>
   <script src="assets/app.js" defer></script>
 </head>
 <body>
@@ -41,6 +42,7 @@
         <a href="#demos" data-i18n="nav_demos">Video Demos</a>
         <a href="#dpo" data-i18n="nav_dpo">DPO &amp; LGPD</a>
         <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#sql" data-i18n="nav_sql">SQL</a>
         <a href="#experience" data-i18n="nav_experience">Experience</a>
         <a href="#stack" data-i18n="nav_stack">Stack</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
@@ -634,7 +636,7 @@
             </div>
             <h3>tsql-retail-ops-analytics</h3>
             <p data-i18n="proj_sql_desc">
-              Synthetic T-SQL analytics &amp; DBA toolkit covering single-pass conditional sales KPIs, ROW_NUMBER() asset deduplication, multi-mode stored procedures, WMS bottlenecks, sys.dm_tran_locks logging &amp; RBAC grants.
+              Production-proven T-SQL patterns on a synthetic schema, executed on a real SQL Server 2022 in CI: catch-all reports with RECOMPILE, idempotent batch ingest, incremental MERGE, ROW_NUMBER() dedupe, Extended Events, lock diagnostics and least-privilege RBAC.
             </p>
             <div class="card-links">
               <a href="https://github.com/gavicoding/tsql-retail-ops-analytics" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
@@ -690,7 +692,36 @@
       </div>
     </section>
 
-    <section id="experience" class="section section-alt">
+    <section id="sql" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono" data-i18n="sql_eyebrow">SQL SERVER IN PRODUCTION</span>
+          <h2 data-i18n="sql_title">SQL Casebook</h2>
+          <p data-i18n="sql_desc">Six real SQL Server fixes, rebuilt with generic names and fictional data. Pick one to see the pain, the fix, the result and the code before and after. Every "after" script runs on a real SQL Server 2022 in CI.</p>
+        </div>
+
+        <div class="sqlbook reveal" id="sql-casebook">
+          <div class="sqlbook-list" id="sqlbook-list" role="tablist" aria-label="SQL cases"></div>
+          <article class="sqlbook-panel spotlight-card" role="tabpanel" id="sqlbook-panel">
+            <span class="tag mono" id="sqlbook-tag"></span>
+            <h3 id="sqlbook-title"></h3>
+            <dl class="case-list" id="sqlbook-rows"></dl>
+            <div class="sqlbook-code">
+              <div class="sqlbook-code-bar">
+                <div class="lab-controls" role="group" aria-label="Code version">
+                  <button type="button" class="pill-btn" data-sql-view="before" id="sqlbook-before"></button>
+                  <button type="button" class="pill-btn is-active" data-sql-view="after" id="sqlbook-after"></button>
+                </div>
+                <a class="sqlbook-link mono" id="sqlbook-link" href="https://github.com/gavicoding/tsql-retail-ops-analytics" target="_blank" rel="noopener noreferrer"></a>
+              </div>
+              <pre class="sqlbook-pre"><code id="sqlbook-code" class="mono"></code></pre>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="exp_eyebrow">PRODUCTION IMPACT &amp; TIMELINE</span>
@@ -926,7 +957,7 @@
       </div>
     </section>
 
-    <section id="stack" class="section">
+    <section id="stack" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="stack_eyebrow">CORE TOOLKIT</span>
@@ -976,7 +1007,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section">
       <div class="container contact-box spotlight-card reveal">
         <div>
           <span class="eyebrow mono" data-i18n="contact_eyebrow">NEXT STEP</span>

@@ -1912,3 +1912,138 @@ body.cmdk-open {
     transform: none;
   }
 }
+
+/* SQL Casebook */
+.sqlbook {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.sqlbook-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sqlbook-item {
+  text-align: left;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.sqlbook-item:hover {
+  border-color: var(--border-strong);
+}
+
+.sqlbook-item.is-active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}
+
+.sqlbook-num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding-top: 2px;
+}
+
+.sqlbook-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sqlbook-item-title {
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.sqlbook-item-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.sqlbook-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.sqlbook-panel h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sqlbook-code {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-code);
+}
+
+.sqlbook-code-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  border-bottom: 1px solid #22222a;
+}
+
+.sqlbook-link {
+  font-size: 0.74rem;
+  color: #a5b4fc;
+}
+
+.sqlbook-pre {
+  font-variant-ligatures: none; /* >= e <= sem virar simbolos */
+  margin: 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  max-height: 380px;
+}
+
+.sqlbook-pre .k { color: #c4b5fd; font-weight: 600; }
+.sqlbook-pre .s { color: #86efac; }
+.sqlbook-pre .c { color: #71717a; font-style: italic; }
+.sqlbook-pre .n { color: #fbbf24; }
+.sqlbook-pre .f { color: #7dd3fc; }
+
+@media (max-width: 1020px) {
+  .sqlbook {
+    grid-template-columns: 1fr;
+  }
+
+  .sqlbook-list {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .sqlbook-item {
+    min-width: 220px;
+  }
+}
