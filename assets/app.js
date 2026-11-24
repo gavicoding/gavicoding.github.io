@@ -56,7 +56,7 @@ const TRANSLATIONS = {
     topo_stat_trend: "Drain Trend",
     topo_stat_mtls: "mTLS Link",
     topo_stat_policy: "Alert Policy",
-    recon_tag: "Private case · E-invoice hub · Fictional data",
+    recon_tag: "Case study · E-invoice hub · Fictional data",
     recon_title: "Daily Invoice Reconciliation Pass",
     recon_desc: "Each square is one day of invoices. The pass lists only the invoice keys of each day on the fiscal platform, compares them with the local database and downloads full data only for what is missing. Press Run, or inject gaps first.",
     recon_btn_run: "Run daily pass",
@@ -71,10 +71,11 @@ const TRANSLATIONS = {
     demos_eyebrow: "ANIMATED ENGINEERING SHOWCASE (1080P60)",
     demos_title: "Project & Governance Video Demos",
     demos_desc:
-      "Seven deterministic 30s studio demos illustrating architecture, code execution, and DPO compliance flows using 100% synthetic data.",
+      "Eight deterministic 30s studio demos illustrating architecture, code execution, and DPO compliance flows using 100% synthetic data.",
     demo_synthetic_badge: "DEMO · 100% SYNTHETIC",
     demo_open_project: "Open Project",
     demo_07_nav_title: "07 · DPO & LGPD Governance",
+    demo_08_nav_title: "08 · E-Invoice Intake Hub",
     btn_watch_dpo_demo: "Watch DPO Video (32s)",
     btn_watch_demo: "Watch Demo",
     dpo_eyebrow: "DATA PROTECTION OFFICER & SECURITY GOVERNANCE",
@@ -137,7 +138,7 @@ const TRANSLATIONS = {
     exp_eyebrow: "PRODUCTION IMPACT & TIMELINE",
     impact_title: "Production Case Studies & Career Timeline",
     impact_desc:
-      "Private work for a multi-branch retail company, told as the pain, what I built and the result. Company names, systems and data are left out on purpose; the numbers are real.",
+      "Projects running in production, told as the pain, what I built and the result. Names, systems and data are left out on purpose; the numbers are real.",
     case_pain: "THE PAIN",
     case_solution: "WHAT I BUILT",
     case_result: "RESULT",
@@ -158,7 +159,7 @@ const TRANSLATIONS = {
     c1_title:
       "Operations Dashboard & Live Infrastructure Map",
     c1_pain:
-      "The ops dashboard fired 85 queries per page load (one per store) and took 6.8s to open, while alert emails passed 80 a day.",
+      "The ops dashboard fired 85 queries per page load (one per site) and took 6.8s to open, while alert emails passed 80 a day.",
     c1_built:
       "Single-query SQL aggregation, dynamic Server Components, an animated SVG map of service dependencies and hourly batched HTML alerts.",
     c1_result:
@@ -166,9 +167,9 @@ const TRANSLATIONS = {
     c2_tag:
       "Web · Leaflet/OSM · WCAG",
     c2_title:
-      "Corporate Site Rebuild & Store Locator",
+      "Institutional Website & Location Finder",
     c2_pain:
-      "Customers had no easy way to find the nearest store or what it offers, and several pages broke on phones and failed contrast checks.",
+      "Visitors had no easy way to find the nearest location or what it offers, and several pages broke on phones and failed contrast checks.",
     c2_built:
       "A 7-page institutional site with a Leaflet + OpenStreetMap locator filtered by city and service, auto-sized embeds and a mobile-first layout tested at 390px.",
     c2_result:
@@ -188,7 +189,7 @@ const TRANSLATIONS = {
     c4_title:
       "Offline Sales Invoice Retransmission",
     c4_pain:
-      "When stores issued sales invoices in offline contingency mode, someone had to retransmit them by hand and open vendor tickets for each failure.",
+      "When point-of-sale units issued invoices in offline contingency mode, someone had to retransmit them by hand and open vendor tickets for each failure.",
     c4_built:
       "A continuous retransmission robot with retry safeguards, a status page and automatic vendor ticket creation during business hours.",
     c4_result:
@@ -198,7 +199,7 @@ const TRANSLATIONS = {
     c5_title:
       "CCTV Footage Request Orchestrator",
     c5_pain:
-      "Every footage request from a store meant someone logging into the right recorder by hand, among 83 devices from different brands.",
+      "Every footage request from a site meant someone logging into the right recorder by hand, among 83 devices from different brands.",
     c5_built:
       "An orchestrator that reads the request from the help desk, connects to the right NVR/DVR, retrieves the footage, retries on failure and updates the ticket with notifications.",
     c5_result:
@@ -244,15 +245,15 @@ const TRANSLATIONS = {
     c9_result:
       "Every access now has an owner, a window and an automatic end; extensions only move the end time.",
     timeline_heading: "Career Timeline",
-    tl1_period: "Aug 2021 - Present · Multi-Branch Retail",
+    tl1_period: "Aug 2021 - Present",
     tl1_title: "IT Administrator, DPO (LGPD) & Solutions Product Owner (PO)",
     tl1_body:
-      "Lead end-to-end ERP/system deployments, Solutions PO backlogs, Windows Server & Active Directory access governance, L2 remote/chat escalation, Python/TypeScript/T-SQL automation, and corporate LGPD compliance across ~80 branches.",
-    tl2_period: "Apr 2021 - Aug 2021 · Multi-Branch Retail",
+      "Lead end-to-end ERP/system deployments, Solutions PO backlogs, Windows Server & Active Directory access governance, L2 remote/chat escalation, Python/TypeScript/T-SQL automation, and LGPD compliance across ~80 sites.",
+    tl2_period: "Apr 2021 - Aug 2021",
     tl2_title: "Senior IT Assistant: Information Security, LGPD & Level 2 Support",
     tl2_body:
       "Led initial Information Security and LGPD compliance structuring alongside Level 2 branch technical support, incident response, Active Directory controls, and early privacy risk mapping.",
-    tl3_period: "Sep 2019 - Apr 2021 · Multi-Branch Retail",
+    tl3_period: "Sep 2019 - Apr 2021",
     tl3_title: "IT Assistant: Remote & Chat Support, Service Desk & ERP",
     tl3_body:
       "Delivered L1/L2 technical support via remote access, chat, and on-site troubleshooting, hardware/network maintenance, Active Directory user/access routines, and ERP system rollout support.",
@@ -334,7 +335,7 @@ const TRANSLATIONS = {
     topo_stat_trend: "Tendência",
     topo_stat_mtls: "Link mTLS",
     topo_stat_policy: "Política de Alerta",
-    recon_tag: "Case privado · Hub de NF-e · Dados fictícios",
+    recon_tag: "Case · Hub de NF-e · Dados fictícios",
     recon_title: "Conciliação Diária de Notas Fiscais",
     recon_desc: "Cada quadrado é um dia de notas. A conciliação lista só as chaves das notas de cada dia na plataforma fiscal, compara com o banco local e baixa os dados completos apenas do que falta. Clique em Executar, ou crie lacunas antes.",
     recon_btn_run: "Executar conciliação",
@@ -349,10 +350,11 @@ const TRANSLATIONS = {
     demos_eyebrow: "VITRINE ANIMADA DE ENGENHARIA (1080P60)",
     demos_title: "Vídeos Demonstrativos dos Projetos & DPO",
     demos_desc:
-      "Sete vídeos curtos (30s) mostrando arquitetura, execução do código e fluxos de governança DPO, com dados 100% fictícios.",
+      "Oito vídeos curtos (30s) mostrando arquitetura, execução do código e fluxos de governança DPO, com dados 100% fictícios.",
     demo_synthetic_badge: "DEMO · 100% FICTÍCIO",
     demo_open_project: "Abrir Projeto",
     demo_07_nav_title: "07 · Governança DPO & LGPD",
+    demo_08_nav_title: "08 · Hub de Entrada de NF-e",
     btn_watch_dpo_demo: "Ver Vídeo DPO (32s)",
     btn_watch_demo: "Ver Vídeo",
     dpo_eyebrow: "ENCARREGADO DE DADOS (DPO) & SEGURANÇA",
@@ -415,7 +417,7 @@ const TRANSLATIONS = {
     exp_eyebrow: "IMPACTO EM PRODUÇÃO & TRAJETÓRIA",
     impact_title: "Casos Reais em Produção & Trajetória",
     impact_desc:
-      "Projetos privados feitos para uma rede de varejo multilojas, contados como a dor, o que eu construí e o resultado. Nomes de empresa, sistemas e dados ficaram de fora de propósito; os números são reais.",
+      "Projetos rodando em produção, contados como a dor, o que eu construí e o resultado. Nomes, sistemas e dados ficaram de fora de propósito; os números são reais.",
     case_pain: "A DOR",
     case_solution: "O QUE EU CONSTRUÍ",
     case_result: "RESULTADO",
@@ -436,7 +438,7 @@ const TRANSLATIONS = {
     c1_title:
       "Painel Operacional & Mapa de Infraestrutura ao Vivo",
     c1_pain:
-      "O painel disparava 85 consultas por carregamento (uma por loja) e levava 6,8s para abrir, enquanto os e-mails de alerta passavam de 80 por dia.",
+      "O painel disparava 85 consultas por carregamento (uma por unidade) e levava 6,8s para abrir, enquanto os e-mails de alerta passavam de 80 por dia.",
     c1_built:
       "Agregação em uma única consulta SQL, Server Components dinâmicos, mapa animado em SVG das dependências e alertas HTML consolidados por hora.",
     c1_result:
@@ -444,9 +446,9 @@ const TRANSLATIONS = {
     c2_tag:
       "Web · Leaflet/OSM · WCAG",
     c2_title:
-      "Novo Site Institucional & Localizador de Lojas",
+      "Novo Site Institucional & Localizador de Unidades",
     c2_pain:
-      "O cliente não tinha um jeito fácil de achar a loja mais próxima e o que ela oferece, e várias páginas quebravam no celular e reprovavam no contraste.",
+      "O visitante não tinha um jeito fácil de achar a unidade mais próxima e o que ela oferece, e várias páginas quebravam no celular e reprovavam no contraste.",
     c2_built:
       "Site institucional de 7 páginas com localizador Leaflet + OpenStreetMap filtrado por cidade e serviço, incorporações com tamanho automático e layout mobile-first testado em 390px.",
     c2_result:
@@ -466,7 +468,7 @@ const TRANSLATIONS = {
     c4_title:
       "Retransmissão de Notas Emitidas em Contingência",
     c4_pain:
-      "Quando as lojas emitiam notas de venda em contingência, alguém precisava retransmiti-las à mão e abrir chamado no fornecedor para cada falha.",
+      "Quando os pontos de venda emitiam notas em contingência, alguém precisava retransmiti-las à mão e abrir chamado no fornecedor para cada falha.",
     c4_built:
       "Robô de retransmissão contínua com proteções de retentativa, página de status e abertura automática de chamado no fornecedor em horário comercial.",
     c4_result:
@@ -476,7 +478,7 @@ const TRANSLATIONS = {
     c5_title:
       "Orquestrador de Pedidos de Imagens de CFTV",
     c5_pain:
-      "Cada pedido de imagem de uma loja exigia alguém entrar à mão no gravador certo, entre 83 aparelhos de marcas diferentes.",
+      "Cada pedido de imagem de uma unidade exigia alguém entrar à mão no gravador certo, entre 83 aparelhos de marcas diferentes.",
     c5_built:
       "Orquestrador que lê o pedido no help desk, conecta no NVR/DVR certo, baixa as imagens, tenta de novo em caso de falha e atualiza o chamado com notificações.",
     c5_result:
@@ -522,15 +524,15 @@ const TRANSLATIONS = {
     c9_result:
       "Todo acesso agora tem dono, janela e fim automático; uma prorrogação só muda o horário de término.",
     timeline_heading: "Trajetória Profissional",
-    tl1_period: "Ago 2021 - Atual · Varejo Multilojas",
+    tl1_period: "Ago 2021 - Atual",
     tl1_title: "Administrador de TI, DPO (LGPD) & Product Owner (PO) de Soluções",
     tl1_body:
-      "Liderança de implantações ponta a ponta de ERPs/sistemas, backlog de soluções como PO, governança de acessos em Windows Server e Active Directory, suporte N2 remoto/chat, automações em Python/TypeScript/T-SQL e conformidade LGPD em ~80 filiais.",
-    tl2_period: "Abr 2021 - Ago 2021 · Varejo Multilojas",
+      "Liderança de implantações ponta a ponta de ERPs/sistemas, backlog de soluções como PO, governança de acessos em Windows Server e Active Directory, suporte N2 remoto/chat, automações em Python/TypeScript/T-SQL e conformidade LGPD em ~80 unidades.",
+    tl2_period: "Abr 2021 - Ago 2021",
     tl2_title: "Auxiliar de TI Sênior: Segurança da Informação, LGPD & Suporte N2",
     tl2_body:
       "Estruturação inicial de Segurança da Informação e adequação à LGPD somada ao suporte técnico N2 para matriz e filiais, resposta a incidentes, controles no Active Directory e mapeamento inicial de riscos.",
-    tl3_period: "Set 2019 - Abr 2021 · Varejo Multilojas",
+    tl3_period: "Set 2019 - Abr 2021",
     tl3_title: "Auxiliar de TI: Atendimento Remoto, Chat, Service Desk & ERP",
     tl3_body:
       "Suporte técnico N1/N2 a usuários via acesso remoto, chat e atendimento presencial, manutenção preventiva/corretiva de hardware e redes, rotinas de Active Directory e apoio em implantações de sistemas ERP.",
@@ -575,7 +577,7 @@ const TERMINAL_DATA = {
     ],
     dpo: [
       "$ dpo --status",
-      "[OK] RoPA inventory & Arts. 7/11 legal bases mapped across retail & SaaS",
+      "[OK] RoPA inventory & Arts. 7/11 legal bases mapped across operations & SaaS",
       "[OK] DPIA/RIPD risk governance, vendor DPAs & Art. 18 rights workflows",
       "[OK] OWASP Top 10 web pentests: 16 critical/medium findings mapped with fix plans",
       "[OK] Zero-Trust AI DLP gate preventing PII & internal secrets leakage",
@@ -596,17 +598,17 @@ const TERMINAL_DATA = {
       "6. Thunderbird-Outlook    (Python/COM) Bidirectional mail migrator",
     ],
     cases: [
-      "$ ls ./production-cases --private",
+      "$ ls ./production-cases",
       "0. E-invoice intake hub     40k+ manual re-scans/month -> 10-min cycles",
       "1. Ops dashboard            TTFB 6.8s -> 0.1s, 80+ alerts/day -> digests",
-      "2. Site & store locator     0 WCAG contrast failures, mobile-first",
+      "2. Site & location finder   0 WCAG contrast failures, mobile-first",
       "3. Endpoint fleet agent     reconnect 60s -> 3-7s, signed updates",
       "4. Offline invoice resend   contingency backlog with zero manual work",
       "5. CCTV footage requests    83 recorders, end-to-end from the ticket",
       "6. Help desk notifications  109k stale tickets closed, no email storm",
       "7. SQL & warehouse tuning   one-pass KPIs, measurable picking stalls",
       "8. Time-boxed DB access     every access has an owner, window and end",
-      "Company names and data removed on purpose. Try 'sim' for a live demo.",
+      "Names and data left out on purpose. Try 'sim' for a live demo.",
     ],
     sim: [
       "$ ./reconcile --daily --fictional-data",
@@ -671,7 +673,7 @@ const TERMINAL_DATA = {
       "6. Thunderbird-Outlook    (Python/COM) Migrador bidirecional MAPI",
     ],
     cases: [
-      "$ ls ./casos-em-producao --privado",
+      "$ ls ./casos-em-producao",
       "0. Hub de entrada de NF-e   40 mil+ reprocessos/mês -> ciclos de 10 min",
       "1. Painel operacional       TTFB 6,8s -> 0,1s, 80+ alertas/dia -> resumos",
       "2. Site e localizador       0 falhas de contraste WCAG, mobile-first",
@@ -681,7 +683,7 @@ const TERMINAL_DATA = {
       "6. Notificações help desk   109 mil chamados velhos, sem disparo em massa",
       "7. SQL e depósito           KPIs em 1 passada, gargalos de separação",
       "8. Acesso temporário ao BD  todo acesso com dono, janela e fim",
-      "Nomes de empresa e dados removidos de propósito. Rode 'sim' para ver ao vivo.",
+      "Nomes e dados deixados de fora de propósito. Rode 'sim' para ver ao vivo.",
     ],
     sim: [
       "$ ./conciliar --diario --dados-ficticios",
@@ -715,17 +717,17 @@ const TERMINAL_DATA = {
 const DLP_PRESETS = {
   en: {
     ticket:
-      "Ticket #8421 (Fictional Store 12): User Maria Silva, CPF 123.456.789-01, e-mail maria.silva@exemplo-ficticio.com.br reported printer error on host 10.24.8.15. Fallback token sk_live_demo_9f8a7b6c5d4e removed before sharing.",
+      "Ticket #8421 (Fictional Site 12): User Maria Silva, CPF 123.456.789-01, e-mail maria.silva@exemplo-ficticio.com.br reported printer error on host 10.24.8.15. Fallback token sk_live_demo_9f8a7b6c5d4e removed before sharing.",
     ai:
-      "Prompt draft: Analyze vendor CNPJ 12.345.678/0001-99 invoice lag for contact ops@varejo-demo.test using webhook key ghp_demoTokenExample9876543210 on internal DB 192.168.40.22.",
+      "Prompt draft: Analyze vendor CNPJ 12.345.678/0001-99 invoice lag for contact ops@empresa-demo.test using webhook key ghp_demoTokenExample9876543210 on internal DB 192.168.40.22.",
     config:
       "DEBUG 2026-11-23T14:02Z gateway=172.16.12.8 auth='Bearer demo_jwt_secret_payload_abc123' owner=carlos.lima@exemplo-ficticio.org cpf=987.654.321-00",
   },
   pt: {
     ticket:
-      "Chamado #8421 (Loja Fictícia 12): Usuária Maria Silva, CPF 123.456.789-01, e-mail maria.silva@exemplo-ficticio.com.br relatou erro de impressora no host 10.24.8.15. Token sk_live_demo_9f8a7b6c5d4e barrado antes do envio.",
+      "Chamado #8421 (Unidade Fictícia 12): Usuária Maria Silva, CPF 123.456.789-01, e-mail maria.silva@exemplo-ficticio.com.br relatou erro de impressora no host 10.24.8.15. Token sk_live_demo_9f8a7b6c5d4e barrado antes do envio.",
     ai:
-      "Rascunho de prompt: Analisar atraso do fornecedor CNPJ 12.345.678/0001-99 (contato ops@varejo-demo.test) usando chave ghp_demoTokenExample9876543210 no banco interno 192.168.40.22.",
+      "Rascunho de prompt: Analisar atraso do fornecedor CNPJ 12.345.678/0001-99 (contato ops@empresa-demo.test) usando chave ghp_demoTokenExample9876543210 no banco interno 192.168.40.22.",
     config:
       "DEBUG 2026-11-23T14:02Z gateway=172.16.12.8 auth='Bearer demo_jwt_secret_payload_abc123' resp=carlos.lima@exemplo-ficticio.org cpf=987.654.321-00",
   },
@@ -737,7 +739,7 @@ const DPO_STAGES = {
       tag: "LGPD Arts. 37 & 50 · GDPR Art. 30",
       title: "01. Data Discovery & Record of Processing Activities (RoPA)",
       summary:
-        "Complete mapping of personal and sensitive data flows across retail POS, ERP modules, HR/back-office databases, physical archives, and third-party portals.",
+        "Complete mapping of personal and sensitive data flows across point-of-sale systems, ERP modules, HR/back-office databases, physical archives, and third-party portals.",
       deliverables: [
         "Structured RoPA inventory linking business processes, tables, retention windows, and owners.",
         "Segregation between standard commercial records and sensitive/clinical datasets.",
@@ -973,6 +975,24 @@ const DEMO_VIDEOS = [
       tag: "LGPD / GDPR · OWASP · APDADOS®",
       title: "Governança DPO & Cibersegurança em Produção",
       desc: "RoPA e RIPD, anonimização do Art. 18, 16 falhas OWASP mapeadas, AD logonHours, barreira DLP para IA e Comitê APDADOS®.",
+    },
+  },
+  {
+    id: "08",
+    mp4: "assets/videos/08-nfe-intake-hub.mp4",
+    poster: "assets/videos/posters/08-nfe-intake-hub.jpg",
+    duration: "0:30",
+    href: "#experience",
+    external: false,
+    en: {
+      tag: "Python · OData API · Reconciliation",
+      title: "E-Invoice Intake Hub",
+      desc: "Email intake, stalled-queue recovery, 10-minute incremental sync and a key-only daily reconciliation that fetches only what is missing.",
+    },
+    pt: {
+      tag: "Python · API OData · Conciliação",
+      title: "Hub de Entrada de NF-e",
+      desc: "Entrada por e-mail, fila destravada, sincronização a cada 10 min e conciliação diária por chave que baixa só o que falta.",
     },
   },
 ];

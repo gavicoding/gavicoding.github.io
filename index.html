@@ -237,7 +237,7 @@
             </div>
 
             <div class="topo-stage">
-              <svg id="topo-svg" class="topo-svg mode-healthy" viewBox="0 0 640 270" role="img" aria-label="Animated distributed retail infrastructure and replication watchdog topology">
+              <svg id="topo-svg" class="topo-svg mode-healthy" viewBox="0 0 640 270" role="img" aria-label="Animated distributed infrastructure and replication watchdog topology">
                 <!-- Animated connection paths -->
                 <path class="topo-edge edge-1" d="M 155 68 L 250 68" />
                 <path class="topo-edge edge-2" d="M 390 68 L 485 68" />
@@ -313,11 +313,11 @@
             </div>
           </article>
 
-          <!-- Lab 3: Daily invoice reconciliation pass (private case, fictional data) -->
+          <!-- Lab 3: Daily invoice reconciliation pass (case study, fictional data) -->
           <article class="lab-card lab-card-wide spotlight-card reveal" id="recon-lab">
             <div class="lab-card-head">
               <div>
-                <span class="tag mono" data-i18n="recon_tag">Private case · E-invoice hub · Fictional data</span>
+                <span class="tag mono" data-i18n="recon_tag">Case study · E-invoice hub · Fictional data</span>
                 <h3 data-i18n="recon_title">Daily Invoice Reconciliation Pass</h3>
               </div>
               <span class="badge-live mono" id="recon-state">READY</span>
@@ -357,6 +357,7 @@
 
             <div class="card-links">
               <a href="#experience" data-i18n="recon_see_case">See the real case study</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="08" data-i18n="btn_watch_demo">Watch Demo</button>
             </div>
           </article>
         </div>
@@ -368,7 +369,7 @@
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="demos_eyebrow">ANIMATED ENGINEERING SHOWCASE (1080P60)</span>
           <h2 data-i18n="demos_title">Project &amp; Governance Video Demos</h2>
-          <p data-i18n="demos_desc">Seven deterministic 30s studio demos illustrating architecture, code execution, and DPO compliance flows using 100% synthetic data.</p>
+          <p data-i18n="demos_desc">Eight deterministic 30s studio demos illustrating architecture, code execution, and DPO compliance flows using 100% synthetic data.</p>
         </div>
 
         <div class="cinema-grid reveal" id="video-showcase">
@@ -472,6 +473,15 @@
                 <span class="demo-item-sub mono">RoPA · OWASP · AD · APDADOS®</span>
               </div>
               <span class="demo-item-dur mono">0:32</span>
+            </button>
+
+            <button type="button" class="demo-item" data-demo-id="08">
+              <img class="demo-thumb" src="assets/videos/posters/08-nfe-intake-hub.jpg" alt="E-invoice intake hub demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title" data-i18n="demo_08_nav_title">08 · E-Invoice Intake Hub</span>
+                <span class="demo-item-sub mono">Python · OData API · Reconciliation</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
             </button>
           </div>
         </div>
@@ -685,7 +695,7 @@
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="exp_eyebrow">PRODUCTION IMPACT &amp; TIMELINE</span>
           <h2 data-i18n="impact_title">Production Case Studies &amp; Career Timeline</h2>
-          <p data-i18n="impact_desc">Private work for a multi-branch retail company, told as the pain, what I built and the result. Company names, systems and data are left out on purpose; the numbers are real.</p>
+          <p data-i18n="impact_desc">Projects running in production, told as the pain, what I built and the result. Names, systems and data are left out on purpose; the numbers are real.</p>
         </div>
 
         <div class="impact-grid">
@@ -710,6 +720,9 @@
                 <p data-i18n="c0_result">Manual monthly sweeps became 10-minute cycles of ~4s each, plus one daily pass that checks every day since a set start date (~12s per day) and fetches only what is missing. Also fixed a 3-hour timezone gap and a field the old tool always left empty.</p>
               </div>
             </div>
+            <div class="card-links">
+              <button type="button" class="demo-inline-btn" data-open-demo="08" data-i18n="btn_watch_demo">Watch Demo</button>
+            </div>
           </article>
 
           <article class="card spotlight-card reveal case-card">
@@ -718,7 +731,7 @@
             <dl class="case-list">
               <div class="case-row is-pain">
                 <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
-                <dd data-i18n="c1_pain">The ops dashboard fired 85 queries per page load (one per store) and took 6.8s to open, while alert emails passed 80 a day.</dd>
+                <dd data-i18n="c1_pain">The ops dashboard fired 85 queries per page load (one per site) and took 6.8s to open, while alert emails passed 80 a day.</dd>
               </div>
               <div class="case-row is-built">
                 <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
@@ -733,11 +746,11 @@
 
           <article class="card spotlight-card reveal case-card">
             <span class="impact-pill mono" data-i18n="c2_tag">Web · Leaflet/OSM · WCAG</span>
-            <h3 data-i18n="c2_title">Corporate Site Rebuild &amp; Store Locator</h3>
+            <h3 data-i18n="c2_title">Institutional Website &amp; Location Finder</h3>
             <dl class="case-list">
               <div class="case-row is-pain">
                 <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
-                <dd data-i18n="c2_pain">Customers had no easy way to find the nearest store or what it offers, and several pages broke on phones and failed contrast checks.</dd>
+                <dd data-i18n="c2_pain">Visitors had no easy way to find the nearest location or what it offers, and several pages broke on phones and failed contrast checks.</dd>
               </div>
               <div class="case-row is-built">
                 <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
@@ -775,7 +788,7 @@
             <dl class="case-list">
               <div class="case-row is-pain">
                 <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
-                <dd data-i18n="c4_pain">When stores issued sales invoices in offline contingency mode, someone had to retransmit them by hand and open vendor tickets for each failure.</dd>
+                <dd data-i18n="c4_pain">When point-of-sale units issued invoices in offline contingency mode, someone had to retransmit them by hand and open vendor tickets for each failure.</dd>
               </div>
               <div class="case-row is-built">
                 <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
@@ -794,7 +807,7 @@
             <dl class="case-list">
               <div class="case-row is-pain">
                 <dt class="mono" data-i18n="case_pain">THE PAIN</dt>
-                <dd data-i18n="c5_pain">Every footage request from a store meant someone logging into the right recorder by hand, among 83 devices from different brands.</dd>
+                <dd data-i18n="c5_pain">Every footage request from a site meant someone logging into the right recorder by hand, among 83 devices from different brands.</dd>
               </div>
               <div class="case-row is-built">
                 <dt class="mono" data-i18n="case_solution">WHAT I BUILT</dt>
@@ -887,19 +900,19 @@
         <h3 class="sub-heading reveal" data-i18n="timeline_heading">Career Timeline</h3>
         <div class="timeline-rail reveal">
           <article class="card timeline-card spotlight-card">
-            <span class="timeline-period mono" data-i18n="tl1_period">Aug 2021 - Present · Multi-Branch Retail</span>
+            <span class="timeline-period mono" data-i18n="tl1_period">Aug 2021 - Present</span>
             <h4 data-i18n="tl1_title">IT Administrator, DPO (LGPD) &amp; Solutions Product Owner (PO)</h4>
-            <p data-i18n="tl1_body">Lead end-to-end ERP/system deployments, Solutions PO backlogs, Windows Server &amp; Active Directory access governance, L2 remote/chat escalation, Python/TypeScript/T-SQL automation, and corporate LGPD compliance across ~80 branches.</p>
+            <p data-i18n="tl1_body">Lead end-to-end ERP/system deployments, Solutions PO backlogs, Windows Server &amp; Active Directory access governance, L2 remote/chat escalation, Python/TypeScript/T-SQL automation, and LGPD compliance across ~80 sites.</p>
           </article>
 
           <article class="card timeline-card spotlight-card">
-            <span class="timeline-period mono" data-i18n="tl2_period">Apr 2021 - Aug 2021 · Multi-Branch Retail</span>
+            <span class="timeline-period mono" data-i18n="tl2_period">Apr 2021 - Aug 2021</span>
             <h4 data-i18n="tl2_title">Senior IT Assistant: Information Security, LGPD &amp; Level 2 Support</h4>
             <p data-i18n="tl2_body">Led initial Information Security and LGPD compliance structuring alongside Level 2 branch technical support, incident response, Active Directory controls, and early privacy risk mapping.</p>
           </article>
 
           <article class="card timeline-card spotlight-card">
-            <span class="timeline-period mono" data-i18n="tl3_period">Sep 2019 - Apr 2021 · Multi-Branch Retail</span>
+            <span class="timeline-period mono" data-i18n="tl3_period">Sep 2019 - Apr 2021</span>
             <h4 data-i18n="tl3_title">IT Assistant: Remote &amp; Chat Support, Service Desk &amp; ERP</h4>
             <p data-i18n="tl3_body">Delivered L1/L2 technical support via remote access, chat, and on-site troubleshooting, hardware/network maintenance, Active Directory user/access routines, and ERP system rollout support.</p>
           </article>

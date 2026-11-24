@@ -20,7 +20,7 @@ Official bilingual (`EN` / `PT-BR`) portfolio website of **Gabriel Souza (`@gavi
   - Zero-Trust DLP redaction of CPF/CNPJ, emails, tokens and internal IPs as you type.
   - Queue health heuristics that tell a draining burst (HIGH_LOAD) from a real stall (STALLED).
   - Daily invoice reconciliation pass: lists keys per day, finds gaps and fetches only what is missing.
-- **Production case studies told as Pain -> What I Built -> Result:** ten private projects with real numbers and no company names, systems or data.
+- **Production case studies told as Pain -> What I Built -> Result:** ten production projects with real numbers; names, systems and data are left out.
 - **Open-source showcase:** filterable cards and 30s video demos for six public repositories.
 - **DPO & LGPD governance, education and career timeline.**
 - **Bilingual EN / PT-BR** with 100% key parity, **dark / light themes**, mobile-first layout and `prefers-reduced-motion` support.
