@@ -75,7 +75,7 @@ const TRANSLATIONS = {
     demos_eyebrow: "ANIMATED ENGINEERING SHOWCASE (1080P60)",
     demos_title: "Project & Governance Video Demos",
     demos_desc:
-      "Eight deterministic 30s studio demos illustrating architecture, code execution, and DPO compliance flows using 100% synthetic data.",
+      "Nine deterministic 30s studio demos illustrating architecture, code execution, and DPO compliance flows using 100% synthetic data.",
     demo_synthetic_badge: "DEMO · 100% SYNTHETIC",
     demo_open_project: "Open Project",
     demo_07_nav_title: "07 · DPO & LGPD Governance",
@@ -118,7 +118,7 @@ const TRANSLATIONS = {
     projects_eyebrow: "OPEN-SOURCE & CI VERIFIED",
     projects_title: "Featured Open-Source Projects",
     projects_desc:
-      "Six public repositories built with automated CI checks in GitHub Actions, bilingual English/Portuguese documentation, and zero confidential company data.",
+      "Seven public repositories built with automated CI checks in GitHub Actions, bilingual English/Portuguese documentation, and zero confidential company data.",
     filter_all: "All",
     filter_security: "Security & AI",
     filter_observability: "Observability",
@@ -137,6 +137,8 @@ const TRANSLATIONS = {
       "Dark-mode Windows system optimizer built with strict deletion previews, one-click Restore Points, multi-profile junk cleanup, content-hash duplicate finder, 90-day orphan residue scanner, S.M.A.R.T. & instant disk analyzer.",
     proj_tb_desc:
       "Bidirectional Windows email & address-book migrator preserving folder trees, original received timestamps (MSGFLAG_UNSENT / MAPI), senders, attachments, and \\\\?\\ long file paths.",
+    proj_nfe_desc:
+      "Validate, inspect, organize and reconcile Brazilian e-invoice (NF-e/NFC-e) XML files: mod-11 access key check and breakdown, namespace-agnostic XML reader, dry-run YYYY/MM organizer that never overwrites, and a folder vs. key-list reconciliation with CI-friendly exit codes.",
     link_repo: "Repository",
     link_docs: "Live Docs",
     exp_eyebrow: "PRODUCTION IMPACT & TIMELINE",
@@ -358,7 +360,7 @@ const TRANSLATIONS = {
     demos_eyebrow: "VITRINE ANIMADA DE ENGENHARIA (1080P60)",
     demos_title: "Vídeos Demonstrativos dos Projetos & DPO",
     demos_desc:
-      "Oito vídeos curtos (30s) mostrando arquitetura, execução do código e fluxos de governança DPO, com dados 100% fictícios.",
+      "Nove vídeos curtos (30s) mostrando arquitetura, execução do código e fluxos de governança DPO, com dados 100% fictícios.",
     demo_synthetic_badge: "DEMO · 100% FICTÍCIO",
     demo_open_project: "Abrir Projeto",
     demo_07_nav_title: "07 · Governança DPO & LGPD",
@@ -401,7 +403,7 @@ const TRANSLATIONS = {
     projects_eyebrow: "OPEN-SOURCE VALIDADO NO CI",
     projects_title: "Projetos Open-Source em Destaque",
     projects_desc:
-      "Seis repositórios públicos com validações automatizadas no GitHub Actions, documentação bilíngue (Inglês/Português) e zero dados proprietários.",
+      "Sete repositórios públicos com validações automatizadas no GitHub Actions, documentação bilíngue (Inglês/Português) e zero dados proprietários.",
     filter_all: "Todos",
     filter_security: "Segurança & IA",
     filter_observability: "Observabilidade",
@@ -420,6 +422,8 @@ const TRANSLATIONS = {
       "Otimizador Windows em tema escuro com revisão explícita antes de excluir, Pontos de Restauração em 1 clique, limpeza multi-usuário, busca de duplicados por hash, resíduos órfãos (90 dias), S.M.A.R.T. e análise instantânea de disco.",
     proj_tb_desc:
       "Migrador bidirecional Windows de e-mails e contatos preservando hierarquia de pastas, datas originais de recebimento (MSGFLAG_UNSENT / MAPI), remetentes, anexos e caminhos longos (\\\\?\\).",
+    proj_nfe_desc:
+      "Valida, inspeciona, organiza e concilia XMLs de NF-e/NFC-e: chave de acesso conferida pelo módulo 11 e decomposta, leitura de XML sem depender de namespace, organização em AAAA/MM com simulação por padrão e sem sobrescrever, e conciliação pasta x lista de chaves com código de saída para CI.",
     link_repo: "Repositório",
     link_docs: "Documentação",
     exp_eyebrow: "IMPACTO EM PRODUÇÃO & TRAJETÓRIA",
@@ -604,6 +608,7 @@ const TERMINAL_DATA = {
       "4. infra-ops-playbook     (PS/Bash)    RSA agents, SID ACL & mTLS",
       "5. OtimizaPC              (C#/.NET 8)  Safe Windows MVVM optimizer",
       "6. Thunderbird-Outlook    (Python/COM) Bidirectional mail migrator",
+      "7. nfe-toolkit            (Python)     NF-e key check, organize & reconcile",
     ],
     cases: [
       "$ ls ./production-cases",
@@ -689,6 +694,7 @@ const TERMINAL_DATA = {
       "4. infra-ops-playbook     (PS/Bash)    Agentes RSA, ACL por SID & mTLS",
       "5. OtimizaPC              (C#/.NET 8)  Otimizador Windows MVVM seguro",
       "6. Thunderbird-Outlook    (Python/COM) Migrador bidirecional MAPI",
+      "7. nfe-toolkit            (Python)     Chave, organização e conciliação NF-e",
     ],
     cases: [
       "$ ls ./casos-em-producao",
@@ -1021,6 +1027,24 @@ const DEMO_VIDEOS = [
       tag: "Python · API OData · Conciliação",
       title: "Hub de Entrada de NF-e",
       desc: "Entrada por e-mail, fila destravada, sincronização a cada 10 min e conciliação diária por chave que baixa só o que falta.",
+    },
+  },
+  {
+    id: "09",
+    mp4: "assets/videos/09-nfe-toolkit.mp4",
+    poster: "assets/videos/posters/09-nfe-toolkit.jpg",
+    duration: "0:30",
+    href: "https://github.com/gavicoding/nfe-toolkit",
+    external: true,
+    en: {
+      tag: "Python · CLI · Zero Dependencies",
+      title: "nfe-toolkit",
+      desc: "Mod-11 access key validation, YYYY/MM organizer with dry run and duplicate detection, and folder vs. key-list reconciliation for CI.",
+    },
+    pt: {
+      tag: "Python · CLI · Zero Dependências",
+      title: "nfe-toolkit",
+      desc: "Validação de chave pelo módulo 11, organização em AAAA/MM com simulação e duplicados, e conciliação pasta x lista para CI.",
     },
   },
 ];
