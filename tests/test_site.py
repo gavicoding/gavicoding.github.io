@@ -97,6 +97,7 @@ class TestPortfolioSite(unittest.TestCase):
             "05-otimizapc",
             "06-thunderbird-outlook",
             "07-governanca-dpo",
+            "08-nfe-intake-hub",
         )
         js_text = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
         for slug in demo_slugs:
