@@ -7,6 +7,10 @@ const TRANSLATIONS = {
     nav_demos: "Video Demos",
     nav_dpo: "DPO & LGPD",
     nav_projects: "Projects",
+    nav_sql: "SQL",
+    sql_eyebrow: "SQL SERVER IN PRODUCTION",
+    sql_title: "SQL Casebook",
+    sql_desc: "Six real SQL Server fixes, rebuilt with generic names and fictional data. Pick one to see the pain, the fix, the result and the code before and after. Every \"after\" script runs on a real SQL Server 2022 in CI.",
     nav_experience: "Experience",
     nav_stack: "Stack",
     nav_contact: "Contact",
@@ -126,7 +130,7 @@ const TRANSLATIONS = {
     proj_watchdog_desc:
       "Read-only replication & job queue monitor using snapshot trend heuristics to distinguish active HIGH_LOAD from STALLED queues, preventing alert fatigue with cooldowns, webhooks, and a live HTML dashboard.",
     proj_sql_desc:
-      "Synthetic T-SQL analytics & DBA toolkit covering single-pass conditional sales KPIs, ROW_NUMBER() asset deduplication, multi-mode stored procedures, WMS bottlenecks, sys.dm_tran_locks logging & RBAC grants.",
+      "Production-proven T-SQL patterns on a synthetic schema, executed on a real SQL Server 2022 in CI: catch-all reports with RECOMPILE, idempotent batch ingest, incremental MERGE, ROW_NUMBER() dedupe, Extended Events, lock diagnostics and least-privilege RBAC.",
     proj_infra_desc:
       "Hybrid Linux + Windows/AD operations playbook featuring RSA-3072 signed PowerShell agents, language-agnostic SID ACL recovery, Postgres Docker backups, Nginx mTLS templates, and 24 sanitized troubleshooting cases.",
     proj_otimizapc_desc:
@@ -286,6 +290,10 @@ const TRANSLATIONS = {
     nav_demos: "Vídeos Demo",
     nav_dpo: "DPO & LGPD",
     nav_projects: "Projetos",
+    nav_sql: "SQL",
+    sql_eyebrow: "SQL SERVER EM PRODUÇÃO",
+    sql_title: "SQL Casebook",
+    sql_desc: "Seis correções reais em SQL Server, recriadas com nomes genéricos e dados fictícios. Escolha uma para ver a dor, a correção, o resultado e o código antes e depois. Todo script \"depois\" roda num SQL Server 2022 de verdade no CI.",
     nav_experience: "Experiência",
     nav_stack: "Stack",
     nav_contact: "Contato",
@@ -405,7 +413,7 @@ const TRANSLATIONS = {
     proj_watchdog_desc:
       "Monitor somente leitura de filas e replicação usando heurística de tendência por snapshots para diferenciar HIGH_LOAD de STALLED, evitando fadiga de alertas com cooldowns, webhooks e painel web ao vivo.",
     proj_sql_desc:
-      "Kit sintético de T-SQL e DBA cobrindo KPIs de vendas em passada única, deduplicação por ROW_NUMBER(), procedures multivisão, gargalos WMS, captura de locks (sys.dm_tran_locks) e controle de acesso RBAC.",
+      "Padrões de T-SQL vindos de produção, sobre um esquema fictício e executados num SQL Server 2022 de verdade no CI: relatório catch-all com RECOMPILE, ingestão idempotente, MERGE incremental, deduplicação com ROW_NUMBER(), Extended Events, diagnóstico de locks e RBAC de menor privilégio.",
     proj_infra_desc:
       "Playbook de infra híbrida Linux + Windows/AD com agentes PowerShell assinados (RSA-3072), recuperação de ACL por SID, backups Postgres em Docker, templates Nginx mTLS e 24 casos reais anonimizados.",
     proj_otimizapc_desc:
@@ -565,7 +573,7 @@ const TERMINAL_DATA = {
   en: {
     help: [
       "$ help",
-      "Commands: whoami, cases, projects, sim, dpo, infra, stack, site, contact, clear",
+      "Commands: whoami, cases, sql, projects, sim, dpo, infra, stack, site, contact, clear",
       "Tips: Tab completes, Up/Down recalls history, Ctrl+K opens the command palette.",
     ],
     whoami: [
@@ -610,6 +618,16 @@ const TERMINAL_DATA = {
       "8. Time-boxed DB access     every access has an owner, window and end",
       "Names and data left out on purpose. Try 'sim' for a live demo.",
     ],
+    sql: [
+      "$ ls ./sql-casebook   # runs on SQL Server 2022 in CI",
+      "1. Catch-all report       TRY_CONVERT + OPTION (RECOMPILE), 15 joins",
+      "2. Idempotent ingest      NOT EXISTS x2 + UPDLOCK/HOLDLOCK + OUTPUT INTO",
+      "3. Incremental summary    MERGE a few days per run instead of 12 months",
+      "4. Two-stage aggregation  indexed #temp, no EXISTS inside SUM",
+      "5. Extended Events        map the procedures an app calls, then reuse them",
+      "6. Least privilege        a bot that can only extend an access window",
+      "Scroll to the SQL section to read each one with the code.",
+    ],
     sim: [
       "$ ./reconcile --daily --fictional-data",
       "Scrolling to the Lab and running the daily reconciliation pass...",
@@ -640,7 +658,7 @@ const TERMINAL_DATA = {
   pt: {
     help: [
       "$ help",
-      "Comandos: whoami, cases, projects, sim, dpo, infra, stack, site, contact, clear",
+      "Comandos: whoami, cases, sql, projects, sim, dpo, infra, stack, site, contact, clear",
       "Dicas: Tab completa, Cima/Baixo repete comandos, Ctrl+K abre a paleta de comandos.",
     ],
     whoami: [
@@ -684,6 +702,16 @@ const TERMINAL_DATA = {
       "7. SQL e depósito           KPIs em 1 passada, gargalos de separação",
       "8. Acesso temporário ao BD  todo acesso com dono, janela e fim",
       "Nomes e dados deixados de fora de propósito. Rode 'sim' para ver ao vivo.",
+    ],
+    sql: [
+      "$ ls ./sql-casebook   # roda em SQL Server 2022 no CI",
+      "1. Relatório catch-all    TRY_CONVERT + OPTION (RECOMPILE), 15 JOINs",
+      "2. Ingestão idempotente   NOT EXISTS x2 + UPDLOCK/HOLDLOCK + OUTPUT INTO",
+      "3. Resumo incremental     MERGE de poucos dias por rodada, não 12 meses",
+      "4. Agregação em 2 etapas  #temp indexada, sem EXISTS dentro de SUM",
+      "5. Extended Events        mapear as procedures que o sistema chama",
+      "6. Menor privilégio       robô que só consegue prorrogar um acesso",
+      "Role até a seção SQL para ler cada um com o código.",
     ],
     sim: [
       "$ ./conciliar --diario --dados-ficticios",
@@ -1046,6 +1074,7 @@ const PALETTE_TEXT = {
       demos: "Go to Video Demos",
       dpo: "Go to DPO & LGPD",
       projects: "Go to Open-Source Projects",
+      sql: "Go to SQL Casebook",
       cases: "Go to Production Case Studies",
       stack: "Go to Technical Stack",
       contact: "Go to Contact",
@@ -1068,6 +1097,7 @@ const PALETTE_TEXT = {
       demos: "Ir para os Vídeos Demo",
       dpo: "Ir para DPO & LGPD",
       projects: "Ir para os Projetos Open-Source",
+      sql: "Ir para o SQL Casebook",
       cases: "Ir para os Casos em Produção",
       stack: "Ir para a Stack Técnica",
       contact: "Ir para Contato",
@@ -1085,6 +1115,7 @@ const TERMINAL_COMMANDS = [
   "help",
   "whoami",
   "cases",
+  "sql",
   "projects",
   "sim",
   "dpo",
@@ -1375,6 +1406,7 @@ document.addEventListener("DOMContentLoaded", () => {
       demos: () => scrollToId("demos"),
       dpo: () => scrollToId("dpo"),
       projects: () => scrollToId("projects"),
+      sql: () => scrollToId("sql"),
       cases: () => scrollToId("experience"),
       stack: () => scrollToId("stack"),
       contact: () => scrollToId("contact"),
@@ -1468,6 +1500,121 @@ document.addEventListener("DOMContentLoaded", () => {
     const action = paletteActions()[id];
     if (action) action();
   }
+
+
+  // ---- SQL Casebook ----
+  let sqlIdx = 0;
+  let sqlView = "after";
+  const SQL_KW = new Set(("SELECT FROM WHERE AND OR NOT EXISTS INSERT INTO VALUES UPDATE SET DELETE MERGE USING " +
+    "WHEN MATCHED THEN ELSE END CASE AS ON JOIN LEFT GROUP BY ORDER WITH OUTPUT INSERTED DECLARE INT " +
+    "NVARCHAR DATETIME2 NUMERIC CREATE ALTER PROCEDURE BEGIN IF NULL IS TOP OPTION RECOMPILE INDEX " +
+    "CLUSTERED TABLE EVENT SESSION SERVER ADD ACTION TARGET STATE START EXEC GRANT DENY EXECUTE OBJECT TO " +
+    "THROW PARTITION OVER DESC ASC FOR EACH IN TARGET").split(" "));
+  const SQL_FN = new Set(["ROW_NUMBER", "TRY_CONVERT", "NULLIF", "LTRIM", "RTRIM", "COUNT", "SUM", "MIN", "MAX",
+    "DATEADD", "ISNULL", "UPDLOCK", "HOLDLOCK"]);
+
+  function renderSqlCode(el, code) {
+    el.replaceChildren();
+    const rx = /(--[^\n]*)|('(?:[^']|'')*')|(\b\d+\b)|([A-Za-z_@#][A-Za-z0-9_@#.]*)|(\s+)|([^\sA-Za-z0-9_@#'-]+|-)/g;
+    let m;
+    while ((m = rx.exec(code)) !== null) {
+      const [tok, comment, str, num, word] = m;
+      let cls = "";
+      if (comment) cls = "c";
+      else if (str) cls = "s";
+      else if (num) cls = "n";
+      else if (word && SQL_KW.has(word.toUpperCase())) cls = "k";
+      else if (word && SQL_FN.has(word.toUpperCase())) cls = "f";
+      if (cls) {
+        const span = document.createElement("span");
+        span.className = cls;
+        span.textContent = tok;
+        el.appendChild(span);
+      } else {
+        el.appendChild(document.createTextNode(tok));
+      }
+    }
+  }
+
+  function renderSqlCasebook() {
+    if (typeof SQL_CASES === "undefined") return;
+    const list = document.getElementById("sqlbook-list");
+    if (!list) return;
+    const ui = SQL_UI[currentLang] || SQL_UI.en;
+    list.replaceChildren();
+    SQL_CASES.forEach((c, i) => {
+      const t = c[currentLang] || c.en;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = `sqlbook-item${i === sqlIdx ? " is-active" : ""}`;
+      btn.setAttribute("role", "tab");
+      btn.setAttribute("aria-selected", String(i === sqlIdx));
+      const num = document.createElement("span");
+      num.className = "sqlbook-num";
+      num.textContent = String(i + 1).padStart(2, "0");
+      const txt = document.createElement("span");
+      txt.className = "sqlbook-item-text";
+      const title = document.createElement("span");
+      title.className = "sqlbook-item-title";
+      title.textContent = t.title;
+      const tag = document.createElement("span");
+      tag.className = "sqlbook-item-tag";
+      tag.textContent = t.tag;
+      txt.append(title, tag);
+      btn.append(num, txt);
+      btn.addEventListener("click", () => {
+        sqlIdx = i;
+        sqlView = "after";
+        renderSqlCasebook();
+      });
+      list.appendChild(btn);
+    });
+
+    const c = SQL_CASES[sqlIdx];
+    const t = c[currentLang] || c.en;
+    const set = (id, text) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = text;
+    };
+    set("sqlbook-tag", t.tag);
+    set("sqlbook-title", t.title);
+    set("sqlbook-before", ui.before);
+    set("sqlbook-after", ui.after);
+    const link = document.getElementById("sqlbook-link");
+    if (link) {
+      link.textContent = `${ui.open}: ${c.file}`;
+      link.setAttribute("href", SQL_REPO + c.file);
+    }
+    const rows = document.getElementById("sqlbook-rows");
+    if (rows) {
+      rows.replaceChildren();
+      [["is-pain", ui.pain, t.pain], ["is-built", ui.fix, t.fix], ["is-result", ui.result, t.result]].forEach(([cls, k, v]) => {
+        const row = document.createElement("div");
+        row.className = `case-row ${cls}`;
+        const dt = document.createElement("dt");
+        dt.className = "mono";
+        dt.textContent = k;
+        const dd = document.createElement("dd");
+        dd.textContent = v;
+        row.append(dt, dd);
+        rows.appendChild(row);
+      });
+    }
+    document.querySelectorAll("[data-sql-view]").forEach((b) => {
+      const on = b.getAttribute("data-sql-view") === sqlView;
+      b.classList.toggle("is-active", on);
+      b.setAttribute("aria-pressed", String(on));
+    });
+    const code = document.getElementById("sqlbook-code");
+    if (code) renderSqlCode(code, sqlView === "before" ? c.before : c.after);
+  }
+
+  document.querySelectorAll("[data-sql-view]").forEach((b) => {
+    b.addEventListener("click", () => {
+      sqlView = b.getAttribute("data-sql-view") || "after";
+      renderSqlCasebook();
+    });
+  });
 
   function applyTheme(theme) {
     currentTheme = theme === "light" ? "light" : "dark";
@@ -1615,6 +1762,8 @@ document.addEventListener("DOMContentLoaded", () => {
     limpar: "clear",
     cls: "clear",
     casos: "cases",
+    tsql: "sql",
+    banco: "sql",
     case: "cases",
     simular: "sim",
     conciliar: "sim",
@@ -1887,6 +2036,7 @@ document.addEventListener("DOMContentLoaded", () => {
       reconLog = [reconStats.days === RECON_DAYS ? T.done(reconStats.days, reconStats.missing, reconStats.fixed) : T.intro];
     }
     reconRender();
+    renderSqlCasebook();
     const cmdkBox = document.getElementById("cmdk");
     if (cmdkBox && !cmdkBox.hidden) renderPalette();
     runTerminalCommand("whoami");

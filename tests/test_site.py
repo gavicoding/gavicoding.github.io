@@ -85,6 +85,7 @@ class TestPortfolioSite(unittest.TestCase):
             "demo-player",
             "dpo-stepper",
             "theme-toggle",
+            "sql-casebook",
         )
         for element_id in required_ids:
             self.assertIn(element_id, parser.ids, f"Missing interactive element #{element_id}")
@@ -147,6 +148,7 @@ class TestPortfolioSite(unittest.TestCase):
             ROOT / "index.html",
             ROOT / "assets" / "styles.css",
             ROOT / "assets" / "app.js",
+            ROOT / "assets" / "sql-casebook.js",
             ROOT / "README.md",
         ]
         for path in files_to_scan:
@@ -159,6 +161,7 @@ class TestPortfolioSite(unittest.TestCase):
             ROOT / "index.html",
             ROOT / "assets" / "styles.css",
             ROOT / "assets" / "app.js",
+            ROOT / "assets" / "sql-casebook.js",
             ROOT / "README.md",
         ]
         for path in files_to_scan:
