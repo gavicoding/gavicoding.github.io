@@ -10,7 +10,7 @@ const TRANSLATIONS = {
     nav_sql: "SQL",
     sql_eyebrow: "SQL SERVER IN PRODUCTION",
     sql_title: "SQL Casebook",
-    sql_desc: "Six real SQL Server fixes, rebuilt with generic names and fictional data. Pick one to see the pain, the fix, the result and the code before and after. Every \"after\" script runs on a real SQL Server 2022 in CI.",
+    sql_desc: "Seven real SQL Server fixes, rebuilt with generic names and fictional data. Pick one to see the pain, the fix, the result and the code before and after. Every \"after\" script runs on a real SQL Server 2022 in CI.",
     nav_experience: "Experience",
     nav_stack: "Stack",
     nav_contact: "Contact",
@@ -295,7 +295,7 @@ const TRANSLATIONS = {
     nav_sql: "SQL",
     sql_eyebrow: "SQL SERVER EM PRODUÇÃO",
     sql_title: "SQL Casebook",
-    sql_desc: "Seis correções reais em SQL Server, recriadas com nomes genéricos e dados fictícios. Escolha uma para ver a dor, a correção, o resultado e o código antes e depois. Todo script \"depois\" roda num SQL Server 2022 de verdade no CI.",
+    sql_desc: "Sete correções reais em SQL Server, recriadas com nomes genéricos e dados fictícios. Escolha uma para ver a dor, a correção, o resultado e o código antes e depois. Todo script \"depois\" roda num SQL Server 2022 de verdade no CI.",
     nav_experience: "Experiência",
     nav_stack: "Stack",
     nav_contact: "Contato",
@@ -631,6 +631,7 @@ const TERMINAL_DATA = {
       "4. Two-stage aggregation  indexed #temp, no EXISTS inside SUM",
       "5. Extended Events        map the procedures an app calls, then reuse them",
       "6. Least privilege        a bot that can only extend an access window",
+      "7. LGPD erasure           irreversible anonymization, totals and FKs kept",
       "Scroll to the SQL section to read each one with the code.",
     ],
     sim: [
@@ -717,6 +718,7 @@ const TERMINAL_DATA = {
       "4. Agregação em 2 etapas  #temp indexada, sem EXISTS dentro de SUM",
       "5. Extended Events        mapear as procedures que o sistema chama",
       "6. Menor privilégio       robô que só consegue prorrogar um acesso",
+      "7. Eliminação LGPD        anonimização irreversível, totais e chaves mantidos",
       "Role até a seção SQL para ler cada um com o código.",
     ],
     sim: [
@@ -800,6 +802,7 @@ const DPO_STAGES = {
         "Art. 18 SLA workflows connecting Legal/DPO triage with engineering execution.",
         "Irreversible relational anonymization patterns preserving aggregate KPIs and audit trails.",
         "Sanitized synthetic datasets replacing real customer data in QA and staging.",
+        "Tested T-SQL implementation on SQL Server 2022: see case 07 in the SQL Casebook.",
       ],
     },
     {
@@ -857,6 +860,7 @@ const DPO_STAGES = {
         "Fluxos operacionais do Art. 18 conectando triagem do DPO e execução técnica auditável.",
         "Padrões de anonimização relacional irreversível preservando KPIs históricos e auditoria.",
         "Massas de dados sintéticas substituindo dados reais em homologação e testes.",
+        "Implementação em T-SQL testada em SQL Server 2022: veja o caso 07 do SQL Casebook.",
       ],
     },
     {
