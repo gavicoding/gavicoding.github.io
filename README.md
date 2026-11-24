@@ -21,7 +21,7 @@ Official bilingual (`EN` / `PT-BR`) portfolio website of **Gabriel Souza (`@gavi
   - Queue health heuristics that tell a draining burst (HIGH_LOAD) from a real stall (STALLED).
   - Daily invoice reconciliation pass: lists keys per day, finds gaps and fetches only what is missing.
 - **Production case studies told as Pain -> What I Built -> Result:** ten production projects with real numbers; names, systems and data are left out.
-- **Open-source showcase:** filterable cards and 30s video demos for six public repositories.
+- **Open-source showcase:** filterable cards and 30s video demos for seven public repositories.
 - **DPO & LGPD governance, education and career timeline.**
 - **Bilingual EN / PT-BR** with 100% key parity, **dark / light themes**, mobile-first layout and `prefers-reduced-motion` support.
 - **CI on every push:** HTML structure, asset references, JS syntax (`node --check`), EN/PT key parity, zero em-dashes and a forbidden-terms check that keeps confidential names out.
