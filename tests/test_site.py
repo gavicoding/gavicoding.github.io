@@ -101,6 +101,7 @@ class TestPortfolioSite(unittest.TestCase):
             "08-nfe-intake-hub",
             "09-nfe-toolkit",
             "10-ad-access-audit",
+            "11-auditor-ibs-cbs",
         )
         js_text = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
         for slug in demo_slugs:
@@ -120,6 +121,7 @@ class TestPortfolioSite(unittest.TestCase):
             "Thunderbird-Outlook",
             "nfe-toolkit",
             "ad-access-audit",
+            "auditor-ibs-cbs",
         )
         all_hrefs = "\n".join(parser.hrefs)
         for repo in expected_repos:
