@@ -75,7 +75,7 @@ const TRANSLATIONS = {
     demos_eyebrow: "30-SECOND VIDEOS",
     demos_title: "See each project working",
     demos_desc:
-      "Nine short videos, each one showing the problem, what I built and the result. All data is fake.",
+      "Ten short videos, each one showing the problem, what I built and the result. All data is fake.",
     demo_synthetic_badge: "DEMO · FAKE DATA",
     demo_open_project: "Open project",
     demo_01_nav_title: "01 · Personal data & secrets scanner",
@@ -87,6 +87,7 @@ const TRANSLATIONS = {
     demo_09_nav_title: "09 · Toolkit for NF-e invoices",
     demo_07_nav_title: "07 · Privacy & LGPD in practice",
     demo_08_nav_title: "08 · Invoice intake hub",
+    demo_10_nav_title: "10 · Active Directory access review",
     btn_watch_dpo_demo: "Watch the video (32s)",
     btn_watch_demo: "Watch demo",
     dpo_eyebrow: "DATA PROTECTION & SECURITY",
@@ -125,7 +126,7 @@ const TRANSLATIONS = {
     projects_eyebrow: "OPEN SOURCE, TESTED ON EVERY CHANGE",
     projects_title: "Open-source projects",
     projects_desc:
-      "Seven public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.",
+      "Eight public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.",
     filter_all: "All",
     filter_security: "Security & privacy",
     filter_observability: "Monitoring",
@@ -146,6 +147,8 @@ const TRANSLATIONS = {
       "Moves email and contacts between Thunderbird and Outlook in either direction, through a simple window or the command line. Keeps folders, original dates, senders and attachments.",
     proj_nfe_desc:
       "Command-line tool and Python library for Brazilian electronic invoice XML files (NF-e/NFC-e): checks access keys, shows what is inside a key or an XML, sorts files into year/month folders and compares a folder with a list of keys.",
+    proj_adaudit_desc:
+      "Reads Active Directory without changing anything and lists the access nobody is watching: idle accounts, passwords that never expire, disabled accounts still in admin groups and supplier accounts that can log on at any hour. Everything comes out in one HTML report sorted by severity, plus CSV and JSON.",
     gain_label: "What you gain:",
     proj_pii_name: "Personal data & secrets scanner",
     proj_pii_gain: "Leaks are caught before a log goes into a ticket or a key reaches GitHub. CPF, CNPJ and cards are checked by their check digits, so false alarms are rare.",
@@ -161,6 +164,8 @@ const TRANSLATIONS = {
     proj_tb_gain: "Switch email programs without losing history or ending up with every message dated today.",
     proj_nfe_name: "Toolkit for Brazilian e-invoices (NF-e)",
     proj_nfe_gain: "Know in seconds which invoices are missing or have a bad key. Sorting never overwrites a file and starts as a dry run. Nothing to install besides Python.",
+    proj_adaudit_name: "Active Directory access review",
+    proj_adaudit_gain: "The monthly access review in one command, with the reason and the fix for each item, ready to show a manager or an auditor. It also works from an exported file, so you can audit without touching the domain.",
     link_repo: "Repository",
     link_docs: "Docs",
     exp_eyebrow: "REAL PROJECTS IN PRODUCTION",
@@ -382,7 +387,7 @@ const TRANSLATIONS = {
     demos_eyebrow: "VÍDEOS DE 30 SEGUNDOS",
     demos_title: "Veja cada projeto funcionando",
     demos_desc:
-      "Nove vídeos curtos, cada um mostrando o problema, o que eu construí e o resultado. Todos os dados são fictícios.",
+      "Dez vídeos curtos, cada um mostrando o problema, o que eu construí e o resultado. Todos os dados são fictícios.",
     demo_synthetic_badge: "DEMO · DADOS FICTÍCIOS",
     demo_open_project: "Abrir projeto",
     demo_01_nav_title: "01 · Detector de dados pessoais e senhas",
@@ -394,6 +399,7 @@ const TRANSLATIONS = {
     demo_09_nav_title: "09 · Kit de ferramentas para NF-e",
     demo_07_nav_title: "07 · Privacidade e LGPD na prática",
     demo_08_nav_title: "08 · Central de entrada de notas fiscais",
+    demo_10_nav_title: "10 · Auditoria de acessos do Active Directory",
     btn_watch_dpo_demo: "Ver o vídeo (32s)",
     btn_watch_demo: "Ver vídeo",
     dpo_eyebrow: "PROTEÇÃO DE DADOS E SEGURANÇA",
@@ -432,7 +438,7 @@ const TRANSLATIONS = {
     projects_eyebrow: "CÓDIGO ABERTO, TESTADO A CADA MUDANÇA",
     projects_title: "Projetos de código aberto",
     projects_desc:
-      "Sete repositórios públicos, cada um nascido de um problema real. Cada card conta o que o projeto faz e o que você ganha com ele. Todos têm testes automáticos e documentação em português e inglês.",
+      "Oito repositórios públicos, cada um nascido de um problema real. Cada card conta o que o projeto faz e o que você ganha com ele. Todos têm testes automáticos e documentação em português e inglês.",
     filter_all: "Todos",
     filter_security: "Segurança e privacidade",
     filter_observability: "Monitoramento",
@@ -453,6 +459,8 @@ const TRANSLATIONS = {
       "Leva e-mails e contatos do Thunderbird para o Outlook e vice-versa, por uma janela simples ou pela linha de comando. Mantém as pastas, as datas originais, os remetentes e os anexos.",
     proj_nfe_desc:
       "Ferramenta de linha de comando e biblioteca Python para XMLs de nota fiscal eletrônica (NF-e/NFC-e): confere a chave de acesso, mostra o que tem dentro da chave ou do XML, organiza os arquivos em pastas por ano e mês e compara uma pasta com uma lista de chaves.",
+    proj_adaudit_desc:
+      "Lê o Active Directory sem alterar nada e mostra os acessos que ninguém está olhando: contas paradas, senhas que nunca expiram, contas desativadas que continuam em grupo de administrador e contas de fornecedor que entram a qualquer hora. Sai tudo num relatório HTML em ordem de gravidade, além de CSV e JSON.",
     gain_label: "O que você ganha:",
     proj_pii_name: "Detector de dados pessoais e senhas",
     proj_pii_gain: "O vazamento é barrado antes de o log ir para um chamado ou de a chave chegar ao GitHub. CPF, CNPJ e cartão são validados pelo dígito verificador, então quase não há alarme falso.",
@@ -468,6 +476,8 @@ const TRANSLATIONS = {
     proj_tb_gain: "Trocar de programa de e-mail sem perder o histórico e sem ficar com todas as mensagens com a data de hoje.",
     proj_nfe_name: "Kit de ferramentas para XML de NF-e",
     proj_nfe_gain: "Saber em segundos quais notas estão faltando ou com chave errada. A organização nunca sobrescreve arquivo e começa só simulando. Não precisa instalar nada além do Python.",
+    proj_adaudit_name: "Auditoria de acessos do Active Directory",
+    proj_adaudit_gain: "A revisão de acessos do mês num comando só, com o motivo e a correção de cada item, pronta para mostrar ao gestor ou ao auditor. Também funciona a partir de um arquivo exportado, sem mexer no domínio.",
     link_repo: "Repositório",
     link_docs: "Documentação",
     exp_eyebrow: "PROJETOS REAIS EM PRODUÇÃO",
@@ -653,6 +663,7 @@ const TERMINAL_DATA = {
       "5. OtimizaPC              (C#/.NET 8)  safe Windows cleanup with restore point",
       "6. Thunderbird-Outlook    (Python)     moves mail & contacts, keeps the dates",
       "7. nfe-toolkit            (Python)     checks, sorts & reconciles NF-e XMLs",
+      "8. ad-access-audit        (PowerShell) read-only AD review: idle, admins, passwords",
     ],
     cases: [
       "$ ls ./production-cases",
@@ -740,6 +751,7 @@ const TERMINAL_DATA = {
       "5. OtimizaPC              (C#/.NET 8)  limpeza segura do Windows com restauração",
       "6. Thunderbird-Outlook    (Python)     migra e-mails e contatos mantendo as datas",
       "7. nfe-toolkit            (Python)     confere, organiza e concilia XMLs de NF-e",
+      "8. ad-access-audit        (PowerShell) revisa os acessos do AD sem alterar nada",
     ],
     cases: [
       "$ ls ./casos-em-producao",
@@ -1093,6 +1105,24 @@ const DEMO_VIDEOS = [
       tag: "nfe-toolkit · Python · CLI",
       title: "Kit de ferramentas para XML de NF-e",
       desc: "Confere a chave de acesso, organiza os XMLs por ano e mês sem sobrescrever nada e mostra quais notas faltam numa pasta.",
+    },
+  },
+  {
+    id: "10",
+    mp4: "assets/videos/10-ad-access-audit.mp4",
+    poster: "assets/videos/posters/10-ad-access-audit.jpg",
+    duration: "0:30",
+    href: "https://github.com/gavicoding/ad-access-audit",
+    external: true,
+    en: {
+      tag: "ad-access-audit · PowerShell · read-only",
+      title: "Active Directory access review",
+      desc: "One command reads the domain without changing anything and lists idle accounts, admins to review and risky passwords in a single report sorted by severity.",
+    },
+    pt: {
+      tag: "ad-access-audit · PowerShell · só leitura",
+      title: "Auditoria de acessos do Active Directory",
+      desc: "Um comando lê o domínio sem alterar nada e lista contas paradas, administradores para revisar e senhas de risco num relatório só, em ordem de gravidade.",
     },
   },
 ];

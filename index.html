@@ -147,7 +147,7 @@
             <div class="metric-label" data-i18n="metric_2_label">Sites and Windows computers I support with Active Directory, Linux and remote help</div>
           </article>
           <article class="metric-card spotlight-card reveal" data-metric="repos">
-            <div class="metric-value mono">7 CI Repos</div>
+            <div class="metric-value mono">8 CI Repos</div>
             <div class="metric-label" data-i18n="metric_3_label">Public repositories with automated tests on every change, in Python, TypeScript, SQL, PowerShell and C#</div>
           </article>
           <article class="metric-card spotlight-card reveal" data-metric="dpo">
@@ -367,7 +367,7 @@
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="demos_eyebrow">30-SECOND VIDEOS</span>
           <h2 data-i18n="demos_title">See each project working</h2>
-          <p data-i18n="demos_desc">Nine short videos, each one showing the problem, what I built and the result. All data is fake.</p>
+          <p data-i18n="demos_desc">Ten short videos, each one showing the problem, what I built and the result. All data is fake.</p>
         </div>
 
         <div class="cinema-grid reveal" id="video-showcase">
@@ -490,6 +490,15 @@
               </div>
               <span class="demo-item-dur mono">0:30</span>
             </button>
+
+            <button type="button" class="demo-item" data-demo-id="10">
+              <img class="demo-thumb" src="assets/videos/posters/10-ad-access-audit.jpg" alt="Active Directory access review demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title" data-i18n="demo_10_nav_title">10 · Active Directory access review</span>
+                <span class="demo-item-sub mono">PowerShell · Pester · Read-only</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
           </div>
         </div>
       </div>
@@ -590,7 +599,7 @@
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="projects_eyebrow">OPEN SOURCE, TESTED ON EVERY CHANGE</span>
           <h2 data-i18n="projects_title">Open-source projects</h2>
-          <p data-i18n="projects_desc">Seven public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.</p>
+          <p data-i18n="projects_desc">Eight public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.</p>
         </div>
 
         <div class="filter-bar" role="group" aria-label="Filter projects by category">
@@ -706,6 +715,21 @@
             <div class="card-links">
               <a href="https://github.com/gavicoding/nfe-toolkit" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
               <button type="button" class="demo-inline-btn" data-open-demo="09" data-i18n="btn_watch_demo">Watch demo</button>
+            </div>
+          </article>
+
+          <article class="card project-card spotlight-card reveal" data-category="security">
+            <div class="card-top">
+              <span class="tag mono">PowerShell · Active Directory · Pester</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
+            </div>
+            <h3 data-i18n="proj_adaudit_name">Active Directory access review</h3>
+            <p class="project-slug mono">ad-access-audit</p>
+            <p data-i18n="proj_adaudit_desc">Reads Active Directory without changing anything and lists the access nobody is watching: idle accounts, passwords that never expire, disabled accounts still in admin groups and supplier accounts that can log on at any hour. Everything comes out in one HTML report sorted by severity, plus CSV and JSON.</p>
+            <p class="project-gain"><strong data-i18n="gain_label">What you gain:</strong> <span data-i18n="proj_adaudit_gain">The monthly access review in one command, with the reason and the fix for each item, ready to show a manager or an auditor. It also works from an exported file, so you can audit without touching the domain.</span></p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/ad-access-audit" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="10" data-i18n="btn_watch_demo">Watch demo</button>
             </div>
           </article>
         </div>
