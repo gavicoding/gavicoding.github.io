@@ -102,6 +102,8 @@ class TestPortfolioSite(unittest.TestCase):
             "09-nfe-toolkit",
             "10-ad-access-audit",
             "11-auditor-ibs-cbs",
+            "12-lgpd-ropa-kit",
+            "13-odata-incremental-sync",
         )
         js_text = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
         for slug in demo_slugs:
@@ -124,6 +126,8 @@ class TestPortfolioSite(unittest.TestCase):
             "auditor-ibs-cbs",
             "agent-mcp-guard",
             "win-event-triage",
+            "lgpd-ropa-kit",
+            "odata-incremental-sync",
         )
         all_hrefs = "\n".join(parser.hrefs)
         for repo in expected_repos:

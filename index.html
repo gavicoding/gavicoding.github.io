@@ -147,7 +147,7 @@
             <div class="metric-label" data-i18n="metric_2_label">Sites and Windows computers I support with Active Directory, Linux and remote help</div>
           </article>
           <article class="metric-card spotlight-card reveal" data-metric="repos">
-            <div class="metric-value mono">11 CI Repos</div>
+            <div class="metric-value mono">13 CI Repos</div>
             <div class="metric-label" data-i18n="metric_3_label">Public repositories with automated tests on every change, in Python, TypeScript, SQL, PowerShell and C#</div>
           </article>
           <article class="metric-card spotlight-card reveal" data-metric="dpo">
@@ -367,7 +367,7 @@
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="demos_eyebrow">30-SECOND VIDEOS</span>
           <h2 data-i18n="demos_title">See each project working</h2>
-          <p data-i18n="demos_desc">Eleven short videos, each one showing the problem, what I built and the result. All data is fake.</p>
+          <p data-i18n="demos_desc">Thirteen short videos, each one showing the problem, what I built and the result. All data is fake.</p>
         </div>
 
         <div class="cinema-grid reveal" id="video-showcase">
@@ -508,6 +508,24 @@
               </div>
               <span class="demo-item-dur mono">0:30</span>
             </button>
+
+            <button type="button" class="demo-item" data-demo-id="12">
+              <img class="demo-thumb" src="assets/videos/posters/12-lgpd-ropa-kit.jpg" alt="LGPD data inventory demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title" data-i18n="demo_12_nav_title">12 · LGPD data inventory in YAML</span>
+                <span class="demo-item-sub mono">Python · YAML · HTML report</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
+
+            <button type="button" class="demo-item" data-demo-id="13">
+              <img class="demo-thumb" src="assets/videos/posters/13-odata-incremental-sync.jpg" alt="OData sync demo poster" width="160" height="90" loading="lazy" />
+              <div class="demo-item-info">
+                <span class="demo-item-title" data-i18n="demo_13_nav_title">13 · OData sync that doesn&#x27;t lose data</span>
+                <span class="demo-item-sub mono">Python · MySQL · PostgreSQL</span>
+              </div>
+              <span class="demo-item-dur mono">0:30</span>
+            </button>
           </div>
         </div>
       </div>
@@ -608,7 +626,7 @@
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="projects_eyebrow">OPEN SOURCE, TESTED ON EVERY CHANGE</span>
           <h2 data-i18n="projects_title">Open-source projects</h2>
-          <p data-i18n="projects_desc">Eleven public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.</p>
+          <p data-i18n="projects_desc">Thirteen public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.</p>
         </div>
 
         <div class="filter-bar" role="group" aria-label="Filter projects by category">
@@ -785,6 +803,36 @@
             <div class="card-links">
               <a href="https://gavicoding.github.io/win-event-triage/" target="_blank" rel="noopener noreferrer" data-i18n="link_open">Open</a>
               <a href="https://github.com/gavicoding/win-event-triage" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+            </div>
+          </article>
+
+          <article class="card project-card spotlight-card reveal" data-category="security">
+            <div class="card-top">
+              <span class="tag mono">Python · YAML · JSON Schema</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
+            </div>
+            <h3 data-i18n="proj_lgpd_name">LGPD data inventory in YAML</h3>
+            <p class="project-slug mono">lgpd-ropa-kit</p>
+            <p data-i18n="proj_lgpd_desc">Keeps the list of everything your company does with personal data in plain files, one per process, and checks each one against the LGPD rules. It flags health data on the wrong legal basis, missing retention periods and transfers abroad with no safeguard, then builds a report and a draft impact assessment.</p>
+            <p class="project-gain"><strong data-i18n="gain_label">What you gain:</strong> <span data-i18n="proj_lgpd_gain">The privacy officer gets a report ready to show an auditor, and every change is reviewed and kept in history, instead of a spreadsheet nobody checks.</span></p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/lgpd-ropa-kit" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="12" data-i18n="btn_watch_demo">Watch demo</button>
+            </div>
+          </article>
+
+          <article class="card project-card spotlight-card reveal" data-category="data">
+            <div class="card-top">
+              <span class="tag mono">Python · MySQL · PostgreSQL · Docker</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
+            </div>
+            <h3 data-i18n="proj_odata_name">OData sync that doesn&#x27;t lose data</h3>
+            <p class="project-slug mono">odata-incremental-sync</p>
+            <p data-i18n="proj_odata_desc">Pulls data from OData APIs (ERPs, tax platforms) bringing only what changed since the last run, and only moves its bookmark after the database confirms the write. A daily check lists just the record keys, finds what is missing and downloads only that.</p>
+            <p class="project-gain"><strong data-i18n="gain_label">What you gain:</strong> <span data-i18n="proj_odata_gain">Integrations stop dying when the API rate-limits them and stop leaving silent gaps: in the demo it found the 4 missing invoices without downloading all 500. Tested on MySQL and PostgreSQL.</span></p>
+            <div class="card-links">
+              <a href="https://github.com/gavicoding/odata-incremental-sync" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+              <button type="button" class="demo-inline-btn" data-open-demo="13" data-i18n="btn_watch_demo">Watch demo</button>
             </div>
           </article>
         </div>
