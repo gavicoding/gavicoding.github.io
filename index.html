@@ -147,7 +147,7 @@
             <div class="metric-label" data-i18n="metric_2_label">Sites and Windows computers I support with Active Directory, Linux and remote help</div>
           </article>
           <article class="metric-card spotlight-card reveal" data-metric="repos">
-            <div class="metric-value mono">9 CI Repos</div>
+            <div class="metric-value mono">11 CI Repos</div>
             <div class="metric-label" data-i18n="metric_3_label">Public repositories with automated tests on every change, in Python, TypeScript, SQL, PowerShell and C#</div>
           </article>
           <article class="metric-card spotlight-card reveal" data-metric="dpo">
@@ -608,7 +608,7 @@
         <div class="section-head reveal">
           <span class="eyebrow mono" data-i18n="projects_eyebrow">OPEN SOURCE, TESTED ON EVERY CHANGE</span>
           <h2 data-i18n="projects_title">Open-source projects</h2>
-          <p data-i18n="projects_desc">Nine public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.</p>
+          <p data-i18n="projects_desc">Eleven public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.</p>
         </div>
 
         <div class="filter-bar" role="group" aria-label="Filter projects by category">
@@ -755,6 +755,36 @@
               <a href="https://gavicoding.github.io/auditor-ibs-cbs/" target="_blank" rel="noopener noreferrer" data-i18n="link_open">Open</a>
               <a href="https://github.com/gavicoding/auditor-ibs-cbs" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
               <button type="button" class="demo-inline-btn" data-open-demo="11" data-i18n="btn_watch_demo">Watch demo</button>
+            </div>
+          </article>
+
+          <article class="card project-card spotlight-card reveal" data-category="security">
+            <div class="card-top">
+              <span class="tag mono">Python · Zero-Dep · SARIF 2.1.0</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
+            </div>
+            <h3 data-i18n="proj_amg_name">AI agent &amp; MCP security guard</h3>
+            <p class="project-slug mono">agent-mcp-guard</p>
+            <p data-i18n="proj_amg_desc">Zero-dependency scanner and SHA-256 rug-pull lockfile guard for CLAUDE.md, .cursorrules, SKILL.md and mcp.json: catches hidden Unicode tags, Trojan Source Bidi markers, tool poisoning, credential exfiltration, unpinned npx/uvx runners and schema drift. Exports SARIF 2.1.0 and HTML reports, and runs 100% locally in the browser.</p>
+            <p class="project-gain"><strong data-i18n="gain_label">What you gain:</strong> <span data-i18n="proj_amg_gain">You catch prompt injection, leaked API keys and silent MCP server changes in CI or offline before an AI agent runs with your developer permissions.</span></p>
+            <div class="card-links">
+              <a href="https://gavicoding.github.io/agent-mcp-guard/" target="_blank" rel="noopener noreferrer" data-i18n="link_open">Open</a>
+              <a href="https://github.com/gavicoding/agent-mcp-guard" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
+            </div>
+          </article>
+
+          <article class="card project-card spotlight-card reveal" data-category="security">
+            <div class="card-top">
+              <span class="tag mono">PowerShell · Python · MITRE ATT&amp;CK</span>
+              <span class="badge-live mono">v1.0.0 · CI</span>
+            </div>
+            <h3 data-i18n="proj_wet_name">Windows Event Log DFIR triage</h3>
+            <p class="project-slug mono">win-event-triage</p>
+            <p data-i18n="proj_wet_desc">Read-only triage for Windows Security, System, PowerShell and Defender logs across 18 MITRE ATT&amp;CK rules: brute force followed by login (4625 to 4624), Kerberoasting (4769 RC4), LSASS/NTDS dumping, rogue services, shadow-copy deletion, cleared logs (1102) and DCSync (4662). Supports live logs, .evtx, Event Viewer XML and offline browser analysis.</p>
+            <p class="project-gain"><strong data-i18n="gain_label">What you gain:</strong> <span data-i18n="proj_wet_gain">Fast incident timeline and containment checklist without changing system state or uploading sensitive .evtx logs anywhere, with optional SHA-256 account anonymization.</span></p>
+            <div class="card-links">
+              <a href="https://gavicoding.github.io/win-event-triage/" target="_blank" rel="noopener noreferrer" data-i18n="link_open">Open</a>
+              <a href="https://github.com/gavicoding/win-event-triage" target="_blank" rel="noopener noreferrer" data-i18n="link_repo">Repository</a>
             </div>
           </article>
         </div>

@@ -127,7 +127,7 @@ const TRANSLATIONS = {
     projects_eyebrow: "OPEN SOURCE, TESTED ON EVERY CHANGE",
     projects_title: "Open-source projects",
     projects_desc:
-      "Nine public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.",
+      "Eleven public repositories, each one born from a real problem. Every card tells what it does and what you gain from it. All of them have automated tests and documentation in English and Portuguese.",
     filter_all: "All",
     filter_security: "Security & privacy",
     filter_observability: "Monitoring",
@@ -152,6 +152,10 @@ const TRANSLATIONS = {
       "Reads Active Directory without changing anything and lists the access nobody is watching: idle accounts, passwords that never expire, disabled accounts still in admin groups and supplier accounts that can log on at any hour. Everything comes out in one HTML report sorted by severity, plus CSV and JSON.",
     proj_ibscbs_desc:
       "Checks the new IBS and CBS fields from Brazil's tax reform in NF-e, NFC-e, CT-e, BP-e, NF3-e and NFS-e, and shows which SEFAZ rejection each mistake would cause, with the rule and page of technical note 2025.002-RTC. It runs in the browser without sending anything out, and also in Python, in SQL (SQL Server, PostgreSQL, MySQL, SQLite), as a local API, a Windows .exe or a GitHub Action.",
+    proj_amg_desc:
+      "Zero-dependency scanner and SHA-256 rug-pull lockfile guard for CLAUDE.md, .cursorrules, SKILL.md and mcp.json: catches hidden Unicode tags, Trojan Source Bidi markers, tool poisoning, credential exfiltration, unpinned npx/uvx runners and schema drift. Exports SARIF 2.1.0 and HTML reports, and runs 100% locally in the browser.",
+    proj_wet_desc:
+      "Read-only triage for Windows Security, System, PowerShell and Defender logs across 18 MITRE ATT&CK rules: brute force followed by login (4625 to 4624), Kerberoasting (4769 RC4), LSASS/NTDS dumping, rogue services, shadow-copy deletion, cleared logs (1102) and DCSync (4662). Supports live logs, .evtx, Event Viewer XML and offline browser analysis.",
     gain_label: "What you gain:",
     proj_pii_name: "Personal data & secrets scanner",
     proj_pii_gain: "Leaks are caught before a log goes into a ticket or a key reaches GitHub. CPF, CNPJ and cards are checked by their check digits, so false alarms are rare.",
@@ -171,6 +175,10 @@ const TRANSLATIONS = {
     proj_adaudit_gain: "The monthly access review in one command, with the reason and the fix for each item, ready to show a manager or an auditor. It also works from an exported file, so you can audit without touching the domain.",
     proj_ibscbs_name: "IBS/CBS e-invoice checker",
     proj_ibscbs_gain: "You fix the invoice before SEFAZ rejects it, not after. The official tables update themselves every day, so the checks keep up with the rules.",
+    proj_amg_name: "AI agent & MCP security guard",
+    proj_amg_gain: "You catch prompt injection, leaked API keys and silent MCP server changes in CI or offline before an AI agent runs with your developer permissions.",
+    proj_wet_name: "Windows Event Log DFIR triage",
+    proj_wet_gain: "Fast incident timeline and containment checklist without changing system state or uploading sensitive .evtx logs anywhere, with optional SHA-256 account anonymization.",
     link_repo: "Repository",
     link_docs: "Docs",
     link_open: "Open",
@@ -445,7 +453,7 @@ const TRANSLATIONS = {
     projects_eyebrow: "CÓDIGO ABERTO, TESTADO A CADA MUDANÇA",
     projects_title: "Projetos de código aberto",
     projects_desc:
-      "Nove repositórios públicos, cada um nascido de um problema real. Cada card conta o que o projeto faz e o que você ganha com ele. Todos têm testes automáticos e documentação em português e inglês.",
+      "Onze repositórios públicos, cada um nascido de um problema real. Cada card conta o que o projeto faz e o que você ganha com ele. Todos têm testes automáticos e documentação em português e inglês.",
     filter_all: "Todos",
     filter_security: "Segurança e privacidade",
     filter_observability: "Monitoramento",
@@ -470,6 +478,10 @@ const TRANSLATIONS = {
       "Lê o Active Directory sem alterar nada e mostra os acessos que ninguém está olhando: contas paradas, senhas que nunca expiram, contas desativadas que continuam em grupo de administrador e contas de fornecedor que entram a qualquer hora. Sai tudo num relatório HTML em ordem de gravidade, além de CSV e JSON.",
     proj_ibscbs_desc:
       "Confere os campos novos de IBS e CBS da reforma tributária em NF-e, NFC-e, CT-e, BP-e, NF3-e e NFS-e e mostra qual rejeição da SEFAZ cada erro vai causar, com a regra e a página da NT 2025.002-RTC. Roda no navegador sem mandar nada para fora da sua máquina, e também em Python, em SQL (SQL Server, PostgreSQL, MySQL e SQLite), como API local, programa .exe ou GitHub Action.",
+    proj_amg_desc:
+      "Auditor sem dependências e proteção SHA-256 contra rug pull para arquivos CLAUDE.md, .cursorrules, SKILL.md e mcp.json: detecta Unicode invisível, Trojan Source, tool poisoning, exfiltração de credenciais, pacotes npx/uvx sem versão fixa e alteração silenciosa de schemas. Exporta SARIF 2.1.0 e HTML, além de rodar 100% no navegador.",
+    proj_wet_desc:
+      "Triagem DFIR somente leitura de logs Windows (Security, System, PowerShell e Defender) em 18 regras mapeadas ao MITRE ATT&CK: força bruta seguida de logon aceito (4625 -> 4624), Kerberoasting (4769 RC4), dump de LSASS/NTDS, serviços suspeitos, exclusão de Shadow Copies, log apagado (1102) e DCSync (4662). Aceita .evtx, XML e roda direto no navegador.",
     gain_label: "O que você ganha:",
     proj_pii_name: "Detector de dados pessoais e senhas",
     proj_pii_gain: "O vazamento é barrado antes de o log ir para um chamado ou de a chave chegar ao GitHub. CPF, CNPJ e cartão são validados pelo dígito verificador, então quase não há alarme falso.",
@@ -489,6 +501,10 @@ const TRANSLATIONS = {
     proj_adaudit_gain: "A revisão de acessos do mês num comando só, com o motivo e a correção de cada item, pronta para mostrar ao gestor ou ao auditor. Também funciona a partir de um arquivo exportado, sem mexer no domínio.",
     proj_ibscbs_name: "Auditor de IBS e CBS na nota fiscal",
     proj_ibscbs_gain: "Você corrige a nota antes de a SEFAZ rejeitar, e não depois. As tabelas oficiais se atualizam sozinhas todo dia, então a conferência acompanha as regras.",
+    proj_amg_name: "Auditor de agentes IA e servidores MCP",
+    proj_amg_gain: "Você barra prompt injection, chaves vazadas e mudanças silenciosas no MCP antes de o agente rodar com as suas permissões, no CI ou direto no navegador.",
+    proj_wet_name: "Triagem DFIR de logs do Windows",
+    proj_wet_gain: "Linha do tempo do incidente e checklist de contenção sem alterar nada no servidor e sem subir logs .evtx sensíveis para terceiros.",
     link_repo: "Repositório",
     link_docs: "Documentação",
     link_open: "Abrir",
@@ -677,6 +693,8 @@ const TERMINAL_DATA = {
       "7. nfe-toolkit            (Python)     checks, sorts & reconciles NF-e XMLs",
       "8. ad-access-audit        (PowerShell) read-only AD review: idle, admins, passwords",
       "9. auditor-ibs-cbs        (Python/JS)  checks IBS/CBS in e-invoices before SEFAZ",
+      "10. agent-mcp-guard       (Python/JS)  audits AI agent rules & MCP rug pulls (SARIF)",
+      "11. win-event-triage      (PS/Python)  read-only Windows event DFIR (MITRE ATT&CK)",
     ],
     cases: [
       "$ ls ./production-cases",
@@ -766,6 +784,8 @@ const TERMINAL_DATA = {
       "7. nfe-toolkit            (Python)     confere, organiza e concilia XMLs de NF-e",
       "8. ad-access-audit        (PowerShell) revisa os acessos do AD sem alterar nada",
       "9. auditor-ibs-cbs        (Python/JS)  confere IBS/CBS na nota antes da SEFAZ",
+      "10. agent-mcp-guard       (Python/JS)  audita agentes IA, MCP e rug pulls (SARIF)",
+      "11. win-event-triage      (PS/Python)  triagem DFIR de logs Windows (MITRE ATT&CK)",
     ],
     cases: [
       "$ ls ./casos-em-producao",

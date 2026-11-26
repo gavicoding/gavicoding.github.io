@@ -122,6 +122,8 @@ class TestPortfolioSite(unittest.TestCase):
             "nfe-toolkit",
             "ad-access-audit",
             "auditor-ibs-cbs",
+            "agent-mcp-guard",
+            "win-event-triage",
         )
         all_hrefs = "\n".join(parser.hrefs)
         for repo in expected_repos:
