@@ -2,6 +2,24 @@ const EMAIL_ADDRESS = "gavicoding@gmail.com";
 
 const TRANSLATIONS = {
   en: {
+    nf_role_k: "role",
+    nf_role: "IT automation · DevOps · DPO (LGPD)",
+    nf_loc_k: "location",
+    nf_loc: "Brazil · remote (BR & abroad)",
+    nf_code_k: "code",
+    nf_infra_k: "infra",
+    nf_priv_k: "privacy",
+    nf_repos_k: "repos",
+    nf_repos: "13 public · tests on every push",
+    nf_status_k: "status",
+    nf_status: "open to remote roles",
+    cta_projects: "ls ~/projects",
+    term_label: "Type a command",
+    impact_cmt: "real numbers from production",
+    media_play: "play demo.mp4",
+    media_play_aria: "Play demo video:",
+    theater_close: "close [Esc]",
+    kw_cmt: "what recruiters search for",
     skip_link: "Skip to main content",
     nav_lab: "Live Lab",
     nav_demos: "Videos",
@@ -155,7 +173,7 @@ const TRANSLATIONS = {
     proj_ibscbs_desc:
       "Checks the new IBS and CBS fields from Brazil's tax reform in NF-e, NFC-e, CT-e, BP-e, NF3-e and NFS-e, and shows which SEFAZ rejection each mistake would cause, with the rule and page of technical note 2025.002-RTC. It runs in the browser without sending anything out, and also in Python, in SQL (SQL Server, PostgreSQL, MySQL, SQLite), as a local API, a Windows .exe or a GitHub Action.",
     proj_amg_desc:
-      "Zero-dependency scanner and SHA-256 rug-pull lockfile guard for CLAUDE.md, .cursorrules, SKILL.md and mcp.json: catches hidden Unicode tags, Trojan Source Bidi markers, tool poisoning, credential exfiltration, unpinned npx/uvx runners and schema drift. Exports SARIF 2.1.0 and HTML reports, and runs 100% locally in the browser.",
+      "Scans the rule files and MCP server configs that coding agents read (AGENTS.md, SKILL.md, mcp.json) for hidden instructions, exposed keys and unpinned packages. A SHA-256 lockfile catches a server that changed after you approved it. Runs offline, in the terminal or the browser, and exports SARIF for GitHub.",
     proj_wet_desc:
       "Read-only triage for Windows Security, System, PowerShell and Defender logs across 18 MITRE ATT&CK rules: brute force followed by login (4625 to 4624), Kerberoasting (4769 RC4), LSASS/NTDS dumping, rogue services, shadow-copy deletion, cleared logs (1102) and DCSync (4662). Supports live logs, .evtx, Event Viewer XML and offline browser analysis.",
     gain_label: "What you gain:",
@@ -177,7 +195,7 @@ const TRANSLATIONS = {
     proj_adaudit_gain: "The monthly access review in one command, with the reason and the fix for each item, ready to show a manager or an auditor. It also works from an exported file, so you can audit without touching the domain.",
     proj_ibscbs_name: "IBS/CBS e-invoice checker",
     proj_ibscbs_gain: "You fix the invoice before SEFAZ rejects it, not after. The official tables update themselves every day, so the checks keep up with the rules.",
-    proj_amg_name: "AI agent & MCP security guard",
+    proj_amg_name: "Security check for coding agents & MCP",
     proj_amg_gain: "You catch prompt injection, leaked API keys and silent MCP server changes in CI or offline before an AI agent runs with your developer permissions.",
     proj_wet_name: "Windows Event Log DFIR triage",
     proj_wet_gain: "Fast incident timeline and containment checklist without changing system state or uploading sensitive .evtx logs anywhere, with optional SHA-256 account anonymization.",
@@ -246,7 +264,7 @@ const TRANSLATIONS = {
     c4_title:
       "Automatic resend of offline sales invoices",
     c4_pain:
-      "When a checkout lost connection it issued invoices in offline mode, and someone had to resend them by hand and open a vendor ticket for every failure.",
+      "When a billing terminal lost connection it issued invoices in offline mode, and someone had to resend them by hand and open a vendor ticket for every failure.",
     c4_built:
       "A robot that keeps resending with a retry limit, a status page and automatic vendor tickets during business hours.",
     c4_result:
@@ -338,6 +356,24 @@ const TRANSLATIONS = {
     toast_copy_fallback: "Email: gavicoding@gmail.com",
   },
   pt: {
+    nf_role_k: "função",
+    nf_role: "automação de TI · DevOps · DPO (LGPD)",
+    nf_loc_k: "local",
+    nf_loc: "Brasil · remoto (BR e exterior)",
+    nf_code_k: "código",
+    nf_infra_k: "infra",
+    nf_priv_k: "privacidade",
+    nf_repos_k: "repos",
+    nf_repos: "13 públicos · testes a cada push",
+    nf_status_k: "status",
+    nf_status: "aberto a vagas remotas",
+    cta_projects: "ls ~/projetos",
+    term_label: "Digite um comando",
+    impact_cmt: "números reais de produção",
+    media_play: "ver demo.mp4",
+    media_play_aria: "Ver vídeo de demonstração:",
+    theater_close: "fechar [Esc]",
+    kw_cmt: "o que recrutadores procuram",
     skip_link: "Pular para o conteúdo",
     nav_lab: "Laboratório",
     nav_demos: "Vídeos",
@@ -491,7 +527,7 @@ const TRANSLATIONS = {
     proj_ibscbs_desc:
       "Confere os campos novos de IBS e CBS da reforma tributária em NF-e, NFC-e, CT-e, BP-e, NF3-e e NFS-e e mostra qual rejeição da SEFAZ cada erro vai causar, com a regra e a página da NT 2025.002-RTC. Roda no navegador sem mandar nada para fora da sua máquina, e também em Python, em SQL (SQL Server, PostgreSQL, MySQL e SQLite), como API local, programa .exe ou GitHub Action.",
     proj_amg_desc:
-      "Auditor sem dependências e proteção SHA-256 contra rug pull para arquivos CLAUDE.md, .cursorrules, SKILL.md e mcp.json: detecta Unicode invisível, Trojan Source, tool poisoning, exfiltração de credenciais, pacotes npx/uvx sem versão fixa e alteração silenciosa de schemas. Exporta SARIF 2.1.0 e HTML, além de rodar 100% no navegador.",
+      "Confere os arquivos de regras e as configurações de servidores MCP que os agentes de código leem (AGENTS.md, SKILL.md, mcp.json) atrás de instruções escondidas, chaves expostas e pacotes sem versão fixa. Um lockfile SHA-256 pega o servidor que mudou depois de aprovado. Roda sem internet, no terminal ou no navegador, e exporta SARIF para o GitHub.",
     proj_wet_desc:
       "Triagem DFIR somente leitura de logs Windows (Security, System, PowerShell e Defender) em 18 regras mapeadas ao MITRE ATT&CK: força bruta seguida de logon aceito (4625 -> 4624), Kerberoasting (4769 RC4), dump de LSASS/NTDS, serviços suspeitos, exclusão de Shadow Copies, log apagado (1102) e DCSync (4662). Aceita .evtx, XML e roda direto no navegador.",
     gain_label: "O que você ganha:",
@@ -513,7 +549,7 @@ const TRANSLATIONS = {
     proj_adaudit_gain: "A revisão de acessos do mês num comando só, com o motivo e a correção de cada item, pronta para mostrar ao gestor ou ao auditor. Também funciona a partir de um arquivo exportado, sem mexer no domínio.",
     proj_ibscbs_name: "Auditor de IBS e CBS na nota fiscal",
     proj_ibscbs_gain: "Você corrige a nota antes de a SEFAZ rejeitar, e não depois. As tabelas oficiais se atualizam sozinhas todo dia, então a conferência acompanha as regras.",
-    proj_amg_name: "Auditor de agentes IA e servidores MCP",
+    proj_amg_name: "Auditor de agentes de código e servidores MCP",
     proj_amg_gain: "Você barra prompt injection, chaves vazadas e mudanças silenciosas no MCP antes de o agente rodar com as suas permissões, no CI ou direto no navegador.",
     proj_wet_name: "Triagem DFIR de logs do Windows",
     proj_wet_gain: "Linha do tempo do incidente e checklist de contenção sem alterar nada no servidor e sem subir logs .evtx sensíveis para terceiros.",
@@ -582,7 +618,7 @@ const TRANSLATIONS = {
     c4_title:
       "Reenvio automático de notas emitidas em contingência",
     c4_pain:
-      "Quando o caixa perdia a conexão e emitia notas em contingência, alguém tinha que reenviá-las à mão e abrir um chamado no fornecedor para cada falha.",
+      "Quando um terminal de faturamento perdia a conexão e emitia notas em contingência, alguém tinha que reenviá-las à mão e abrir um chamado no fornecedor para cada falha.",
     c4_built:
       "Um robô que reenvia sem parar, com limite de tentativas, uma página de status e abertura automática de chamado no fornecedor em horário comercial.",
     c4_result:
@@ -713,7 +749,7 @@ const TERMINAL_DATA = {
       "7. nfe-toolkit            (Python)     checks, sorts & reconciles NF-e XMLs",
       "8. ad-access-audit        (PowerShell) read-only AD review: idle, admins, passwords",
       "9. auditor-ibs-cbs        (Python/JS)  checks IBS/CBS in e-invoices before SEFAZ",
-      "10. agent-mcp-guard       (Python/JS)  audits AI agent rules & MCP rug pulls (SARIF)",
+      "10. agent-mcp-guard       (Python/JS)  audits coding-agent rules & MCP configs",
       "11. win-event-triage      (PS/Python)  read-only Windows event DFIR (MITRE ATT&CK)",
       "12. lgpd-ropa-kit         (Python)     LGPD data inventory in YAML, checks + report",
       "13. odata-incremental-sync (Python)    OData sync: only what changed, finds gaps",
@@ -806,7 +842,7 @@ const TERMINAL_DATA = {
       "7. nfe-toolkit            (Python)     confere, organiza e concilia XMLs de NF-e",
       "8. ad-access-audit        (PowerShell) revisa os acessos do AD sem alterar nada",
       "9. auditor-ibs-cbs        (Python/JS)  confere IBS/CBS na nota antes da SEFAZ",
-      "10. agent-mcp-guard       (Python/JS)  audita agentes IA, MCP e rug pulls (SARIF)",
+      "10. agent-mcp-guard       (Python/JS)  audita regras de agentes e configs MCP",
       "11. win-event-triage      (PS/Python)  triagem DFIR de logs Windows (MITRE ATT&CK)",
       "12. lgpd-ropa-kit         (Python)     inventário da LGPD em YAML, com conferência",
       "13. odata-incremental-sync (Python)    sincroniza OData só com o que mudou",
@@ -889,7 +925,7 @@ const DPO_STAGES = {
       tag: "LGPD Arts. 37 & 50 · GDPR Art. 30",
       title: "01. Find out where personal data lives (RoPA)",
       summary:
-        "Before protecting data you need to know where it is. I map every place personal and sensitive data passes through: checkout systems, the business system, back office, web portals, integrations and paper archives.",
+        "Before protecting data you need to know where it is. I map every place personal and sensitive data passes through: billing terminals, the business system, back office, web portals, integrations and paper archives.",
       deliverables: [
         "A record of processing (RoPA) linking each process to its tables, owner and how long data is kept.",
         "Sensitive data kept apart from regular customer records.",
@@ -947,7 +983,7 @@ const DPO_STAGES = {
       tag: "LGPD Arts. 37 e 50 · GDPR Art. 30",
       title: "01. Descobrir onde estão os dados pessoais (RoPA)",
       summary:
-        "Antes de proteger os dados é preciso saber onde eles estão. Mapeio todos os lugares por onde passam dados pessoais e sensíveis: caixas, sistema de gestão, retaguarda, portais web, integrações e arquivos em papel.",
+        "Antes de proteger os dados é preciso saber onde eles estão. Mapeio todos os lugares por onde passam dados pessoais e sensíveis: terminais de faturamento, sistema de gestão, retaguarda, portais web, integrações e arquivos em papel.",
       deliverables: [
         "Registro das operações de tratamento (RoPA) ligando cada processo às suas tabelas, ao responsável e ao prazo de guarda.",
         "Dados sensíveis separados dos cadastros comuns.",
@@ -1007,6 +1043,9 @@ const DEMO_VIDEOS = [
     id: "01",
     mp4: "assets/videos/01-pii-screenshot-guard.mp4",
     poster: "assets/videos/posters/01-pii-screenshot-guard.jpg",
+    vertical: "assets/videos/vertical/pii-screenshot-guard.mp4",
+    verticalPoster: "assets/videos/vertical/pii-screenshot-guard.webp",
+    verticalDuration: "0:43",
     duration: "0:30",
     href: "https://github.com/gavicoding/pii-screenshot-guard",
     external: true,
@@ -1025,6 +1064,9 @@ const DEMO_VIDEOS = [
     id: "02",
     mp4: "assets/videos/02-queue-health-watchdog.mp4",
     poster: "assets/videos/posters/02-queue-health-watchdog.jpg",
+    vertical: "assets/videos/vertical/queue-health-watchdog.mp4",
+    verticalPoster: "assets/videos/vertical/queue-health-watchdog.webp",
+    verticalDuration: "0:43",
     duration: "0:30",
     href: "https://github.com/gavicoding/queue-health-watchdog",
     external: true,
@@ -1079,6 +1121,9 @@ const DEMO_VIDEOS = [
     id: "05",
     mp4: "assets/videos/05-otimizapc.mp4",
     poster: "assets/videos/posters/05-otimizapc.jpg",
+    vertical: "assets/videos/vertical/otimizapc.mp4",
+    verticalPoster: "assets/videos/vertical/otimizapc.webp",
+    verticalDuration: "0:43",
     duration: "0:30",
     href: "https://github.com/gavicoding/OtimizaPC",
     external: true,
@@ -1151,6 +1196,9 @@ const DEMO_VIDEOS = [
     id: "09",
     mp4: "assets/videos/09-nfe-toolkit.mp4",
     poster: "assets/videos/posters/09-nfe-toolkit.jpg",
+    vertical: "assets/videos/vertical/nfe-toolkit.mp4",
+    verticalPoster: "assets/videos/vertical/nfe-toolkit.webp",
+    verticalDuration: "0:43",
     duration: "0:30",
     href: "https://github.com/gavicoding/nfe-toolkit",
     external: true,
@@ -1169,6 +1217,9 @@ const DEMO_VIDEOS = [
     id: "10",
     mp4: "assets/videos/10-ad-access-audit.mp4",
     poster: "assets/videos/posters/10-ad-access-audit.jpg",
+    vertical: "assets/videos/vertical/ad-access-audit.mp4",
+    verticalPoster: "assets/videos/vertical/ad-access-audit.webp",
+    verticalDuration: "0:43",
     duration: "0:30",
     href: "https://github.com/gavicoding/ad-access-audit",
     external: true,
@@ -1187,6 +1238,9 @@ const DEMO_VIDEOS = [
     id: "11",
     mp4: "assets/videos/11-auditor-ibs-cbs.mp4",
     poster: "assets/videos/posters/11-auditor-ibs-cbs.jpg",
+    vertical: "assets/videos/vertical/auditor-ibs-cbs.mp4",
+    verticalPoster: "assets/videos/vertical/auditor-ibs-cbs.webp",
+    verticalDuration: "0:43",
     duration: "0:30",
     href: "https://gavicoding.github.io/auditor-ibs-cbs/",
     external: true,
@@ -1205,6 +1259,9 @@ const DEMO_VIDEOS = [
     id: "12",
     mp4: "assets/videos/12-lgpd-ropa-kit.mp4",
     poster: "assets/videos/posters/12-lgpd-ropa-kit.jpg",
+    vertical: "assets/videos/vertical/lgpd-ropa-kit.mp4",
+    verticalPoster: "assets/videos/vertical/lgpd-ropa-kit.webp",
+    verticalDuration: "0:43",
     duration: "0:30",
     href: "https://github.com/gavicoding/lgpd-ropa-kit",
     external: true,
@@ -1223,6 +1280,9 @@ const DEMO_VIDEOS = [
     id: "13",
     mp4: "assets/videos/13-odata-incremental-sync.mp4",
     poster: "assets/videos/posters/13-odata-incremental-sync.jpg",
+    vertical: "assets/videos/vertical/odata-incremental-sync.mp4",
+    verticalPoster: "assets/videos/vertical/odata-incremental-sync.webp",
+    verticalDuration: "0:43",
     duration: "0:30",
     href: "https://github.com/gavicoding/odata-incremental-sync",
     external: true,
@@ -1237,7 +1297,83 @@ const DEMO_VIDEOS = [
       desc: "Traz da API OData só o que mudou, aguenta o limite de requisições e acha o que faltou listando as chaves dia a dia.",
     },
   },
+  {
+    id: "14",
+    mp4: null,
+    poster: "assets/videos/vertical/agent-mcp-guard.webp",
+    vertical: "assets/videos/vertical/agent-mcp-guard.mp4",
+    verticalPoster: "assets/videos/vertical/agent-mcp-guard.webp",
+    verticalDuration: "0:43",
+    duration: "0:43",
+    href: "https://github.com/gavicoding/agent-mcp-guard",
+    external: true,
+    en: {
+      tag: "agent-mcp-guard · Python · SARIF",
+      title: "Security check for coding agents & MCP",
+      desc: "Finds hidden instructions, exposed keys and unpinned packages in agent rule files and MCP configs, and flags a server that changed after it was approved.",
+    },
+    pt: {
+      tag: "agent-mcp-guard · Python · SARIF",
+      title: "Auditor de agentes de código e servidores MCP",
+      desc: "Acha instruções escondidas, chaves expostas e pacotes sem versão fixa nas regras de agentes e configs MCP, e avisa quando um servidor muda depois de aprovado.",
+    },
+  },
+  {
+    id: "15",
+    mp4: null,
+    poster: "assets/videos/vertical/win-event-triage.webp",
+    vertical: "assets/videos/vertical/win-event-triage.mp4",
+    verticalPoster: "assets/videos/vertical/win-event-triage.webp",
+    verticalDuration: "0:43",
+    duration: "0:43",
+    href: "https://github.com/gavicoding/win-event-triage",
+    external: true,
+    en: {
+      tag: "win-event-triage · PowerShell · Python",
+      title: "Windows Event Log DFIR triage",
+      desc: "Reads Windows security logs without changing anything, matches 18 MITRE ATT&CK rules and builds the incident timeline.",
+    },
+    pt: {
+      tag: "win-event-triage · PowerShell · Python",
+      title: "Triagem DFIR de logs do Windows",
+      desc: "Lê os logs de segurança do Windows sem alterar nada, cruza 18 regras do MITRE ATT&CK e monta a linha do tempo do incidente.",
+    },
+  },
 ];
+
+const BUDDY_MOODS = {
+  top: "smile",
+  projects: "typing",
+  experience: "glint",
+  lab: "typing",
+  sql: "typing",
+  dpo: "glint",
+  stack: "idle",
+  contact: "smile",
+};
+
+const BUDDY_STATUS = {
+  en: {
+    top: "saying hi",
+    projects: "shipping code",
+    experience: "reading logs",
+    lab: "running sims",
+    sql: "tuning queries",
+    dpo: "auditing access",
+    stack: "grepping skills",
+    contact: "waiting for you",
+  },
+  pt: {
+    top: "dando oi",
+    projects: "subindo código",
+    experience: "lendo logs",
+    lab: "rodando testes",
+    sql: "ajustando queries",
+    dpo: "auditando acessos",
+    stack: "listando skills",
+    contact: "esperando você",
+  },
+};
 
 const RECON_TEXT = {
   en: {
@@ -1285,7 +1421,6 @@ const PALETTE_TEXT = {
     items: {
       lab: "Go to Live Lab",
       sim: "Run the invoice check",
-      demos: "Go to Video Demos",
       dpo: "Go to Privacy (DPO)",
       projects: "Go to Projects",
       sql: "Go to SQL Casebook",
@@ -1308,7 +1443,6 @@ const PALETTE_TEXT = {
     items: {
       lab: "Ir para o Laboratório",
       sim: "Rodar a conferência de notas",
-      demos: "Ir para os Vídeos",
       dpo: "Ir para Privacidade (DPO)",
       projects: "Ir para os Projetos",
       sql: "Ir para os Casos de SQL",
@@ -1391,6 +1525,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let topoMode = "healthy";
   let topoQueueDepth = 14;
   let termTypingTimer = null;
+  let buddySection = "top";
+  let termAnimate = false; // first render is static, keeps the load light
   const termHistory = [];
   let termHistoryIdx = -1;
 
@@ -1617,7 +1753,6 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollToId("recon-lab");
         window.setTimeout(reconRun, prefersReduced ? 0 : 650);
       },
-      demos: () => scrollToId("demos"),
       dpo: () => scrollToId("dpo"),
       projects: () => scrollToId("projects"),
       sql: () => scrollToId("sql"),
@@ -1848,28 +1983,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function selectDemo(demoId, autoplay = false) {
+  function selectDemo(demoId, loadMedia = false) {
     const item = DEMO_VIDEOS.find((d) => d.id === demoId) || DEMO_VIDEOS[0];
     currentDemoId = item.id;
     const copy = item[currentLang] || item.en;
 
     const video = document.getElementById("demo-player");
-    const source = document.getElementById("demo-source");
     const tagEl = document.getElementById("demo-active-tag");
     const durEl = document.getElementById("demo-active-duration");
     const titleEl = document.getElementById("demo-active-title");
     const descEl = document.getElementById("demo-active-desc");
     const linkEl = document.getElementById("demo-active-link");
 
-    if (video) {
-      video.setAttribute("poster", item.poster);
-    }
-    if (source && video && source.getAttribute("src") !== item.mp4) {
-      source.setAttribute("src", item.mp4);
-      video.load();
+    const portrait =
+      window.matchMedia && window.matchMedia("(max-aspect-ratio: 4/5)").matches;
+    const useVertical = Boolean(item.vertical) && (!item.mp4 || portrait);
+    const src = useVertical ? item.vertical : item.mp4;
+    const poster = useVertical ? item.verticalPoster : item.poster;
+    // media is only attached when the player opens, so nothing downloads before a click
+    if (video && loadMedia) {
+      video.setAttribute("poster", poster);
+      video.classList.toggle("is-vertical", useVertical);
+      if (video.getAttribute("src") !== src) {
+        video.setAttribute("src", src);
+      }
     }
     if (tagEl) tagEl.textContent = copy.tag;
-    if (durEl) durEl.textContent = item.duration;
+    if (durEl) durEl.textContent = useVertical ? item.verticalDuration : item.duration;
     if (titleEl) titleEl.textContent = copy.title;
     if (descEl) descEl.textContent = copy.desc;
     if (linkEl) {
@@ -1893,9 +2033,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    if (autoplay && video) {
-      video.play().catch(() => {});
-    }
   }
 
   function renderDpoStage(stepIndex) {
@@ -1937,7 +2074,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const fullText = lines.join("\n");
-    if (prefersReduced) {
+    if (prefersReduced || !termAnimate) {
       out.textContent = fullText;
       return;
     }
@@ -2203,6 +2340,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function setBuddy(sectionId) {
+    const id = Object.prototype.hasOwnProperty.call(BUDDY_MOODS, sectionId) ? sectionId : "top";
+    buddySection = id;
+    document.documentElement.setAttribute("data-buddy", BUDDY_MOODS[id]);
+    const sec = document.getElementById(id);
+    const cmdEl = document.getElementById("buddy-cmd");
+    const statusEl = document.getElementById("buddy-status");
+    const cmd = sec ? sec.getAttribute("data-buddy-cmd") : "whoami";
+    if (cmdEl && cmd && cmdEl.textContent !== cmd) {
+      cmdEl.textContent = cmd;
+      const box = document.getElementById("buddy");
+      if (box && !prefersReduced) {
+        box.classList.remove("is-new");
+        void box.offsetWidth;
+        box.classList.add("is-new");
+      }
+    }
+    if (statusEl) statusEl.textContent = (BUDDY_STATUS[currentLang] || BUDDY_STATUS.en)[id];
+  }
+
   function applyLanguage(lang) {
     currentLang = lang === "pt" ? "pt" : "en";
     const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
@@ -2222,9 +2379,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    document.querySelectorAll(".proj-media[data-slug]").forEach((btn) => {
+      btn.setAttribute("aria-label", `${dict.media_play_aria} ${btn.getAttribute("data-slug")}`);
+    });
+    setBuddy(buddySection);
+
     const langLabel = document.getElementById("lang-label");
     if (langLabel) {
       langLabel.textContent = currentLang === "en" ? "PT-BR" : "EN";
+      const langBtn = document.getElementById("lang-toggle");
+      if (langBtn) {
+        langBtn.setAttribute(
+          "aria-label",
+          currentLang === "en" ? "PT-BR: mudar para português" : "EN: switch to English",
+        );
+      }
     }
 
     try {
@@ -2258,6 +2427,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   applyTheme(currentTheme);
   applyLanguage(currentLang);
+  termAnimate = true;
 
   const langToggle = document.getElementById("lang-toggle");
   if (langToggle) {
@@ -2467,22 +2637,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Video Cinema Showcase events
-  document.querySelectorAll(".demo-item[data-demo-id]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const id = btn.getAttribute("data-demo-id") || "01";
-      selectDemo(id, true);
-    });
-  });
-
+  // Every "play demo" button opens the video theater
   document.querySelectorAll("[data-open-demo]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("data-open-demo") || "01";
-      selectDemo(id, true);
-      const showcase = document.getElementById("demos");
-      if (showcase) {
-        showcase.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
-      }
+      openTheater(id, btn);
     });
   });
 
@@ -2529,8 +2688,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const pct = docHeight > 0 ? Math.min(100, Math.max(0, (window.scrollY / docHeight) * 100)) : 0;
     progressBar.style.width = `${pct.toFixed(1)}%`;
   }
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  updateProgress();
+  window.addEventListener("scroll", () => window.requestAnimationFrame(updateProgress), { passive: true });
+  window.addEventListener("load", () => window.requestAnimationFrame(updateProgress));
 
   // Spotlight cursor glow
   if (!prefersReduced) {
@@ -2541,6 +2700,93 @@ document.addEventListener("DOMContentLoaded", () => {
         card.style.setProperty("--my", `${e.clientY - rect.top}px`);
       });
     });
+  }
+
+  // ---- Video theater (native <dialog>, focus returns to the button) ----
+  const theater = document.getElementById("demo-theater");
+  let theaterReturnFocus = null;
+
+  function openTheater(demoId, trigger) {
+    selectDemo(demoId, true);
+    const video = document.getElementById("demo-player");
+    if (!theater || typeof theater.showModal !== "function") {
+      if (video) video.play().catch(() => {});
+      return;
+    }
+    theaterReturnFocus = trigger || document.activeElement;
+    theater.showModal();
+    document.body.classList.add("theater-open");
+    if (video) video.play().catch(() => {});
+  }
+
+  function closeTheater() {
+    if (theater && theater.open) theater.close();
+  }
+
+  if (theater) {
+    theater.addEventListener("close", () => {
+      const video = document.getElementById("demo-player");
+      if (video) video.pause();
+      document.body.classList.remove("theater-open");
+      if (theaterReturnFocus && typeof theaterReturnFocus.focus === "function") {
+        theaterReturnFocus.focus({ preventScroll: true });
+      }
+    });
+    theater.addEventListener("click", (e) => {
+      if (e.target === theater) closeTheater();
+    });
+  }
+  const theaterClose = document.getElementById("demo-close");
+  if (theaterClose) theaterClose.addEventListener("click", closeTheater);
+
+  // ---- Terminal prompts: each section command is typed once, when it scrolls in ----
+  const promptLines = document.querySelectorAll("[data-prompt]");
+  if (prefersReduced || typeof IntersectionObserver === "undefined") {
+    promptLines.forEach((el) => el.classList.add("is-typed"));
+  } else {
+    const promptObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          promptObs.unobserve(el);
+          const cmd = el.querySelector(".cmd");
+          const chars = cmd ? cmd.textContent.length : 10;
+          el.classList.add("is-typing");
+          window.setTimeout(() => {
+            el.classList.remove("is-typing");
+            el.classList.add("is-typed");
+          }, Math.min(1400, chars * 40 + 120));
+        });
+      },
+      { threshold: 0.6 },
+    );
+    promptLines.forEach((el) => promptObs.observe(el));
+  }
+
+  // ---- Companion avatar: follows the scroll, changes pose for each section ----
+  const buddySections = Array.from(document.querySelectorAll("main section[data-buddy-cmd]"));
+  if (typeof IntersectionObserver !== "undefined") {
+    const buddyObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setBuddy(entry.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    buddySections.forEach((s) => buddyObs.observe(s));
+  }
+  if (!prefersReduced) {
+    const blink = () => {
+      const mood = document.documentElement.getAttribute("data-buddy");
+      if (!document.hidden && mood !== "typing") {
+        document.documentElement.classList.add("buddy-blink");
+        window.setTimeout(() => document.documentElement.classList.remove("buddy-blink"), 170);
+      }
+      window.setTimeout(blink, 2800 + Math.random() * 3200);
+    };
+    window.setTimeout(blink, 2400);
   }
 
   // Active nav highlight & reveal animations
