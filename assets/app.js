@@ -264,7 +264,7 @@ const TRANSLATIONS = {
     c4_title:
       "Automatic resend of offline sales invoices",
     c4_pain:
-      "When a checkout lost connection it issued invoices in offline mode, and someone had to resend them by hand and open a vendor ticket for every failure.",
+      "When a billing terminal lost connection it issued invoices in offline mode, and someone had to resend them by hand and open a vendor ticket for every failure.",
     c4_built:
       "A robot that keeps resending with a retry limit, a status page and automatic vendor tickets during business hours.",
     c4_result:
@@ -618,7 +618,7 @@ const TRANSLATIONS = {
     c4_title:
       "Reenvio automático de notas emitidas em contingência",
     c4_pain:
-      "Quando o caixa perdia a conexão e emitia notas em contingência, alguém tinha que reenviá-las à mão e abrir um chamado no fornecedor para cada falha.",
+      "Quando um terminal de faturamento perdia a conexão e emitia notas em contingência, alguém tinha que reenviá-las à mão e abrir um chamado no fornecedor para cada falha.",
     c4_built:
       "Um robô que reenvia sem parar, com limite de tentativas, uma página de status e abertura automática de chamado no fornecedor em horário comercial.",
     c4_result:
@@ -925,7 +925,7 @@ const DPO_STAGES = {
       tag: "LGPD Arts. 37 & 50 · GDPR Art. 30",
       title: "01. Find out where personal data lives (RoPA)",
       summary:
-        "Before protecting data you need to know where it is. I map every place personal and sensitive data passes through: checkout systems, the business system, back office, web portals, integrations and paper archives.",
+        "Before protecting data you need to know where it is. I map every place personal and sensitive data passes through: billing terminals, the business system, back office, web portals, integrations and paper archives.",
       deliverables: [
         "A record of processing (RoPA) linking each process to its tables, owner and how long data is kept.",
         "Sensitive data kept apart from regular customer records.",
@@ -983,7 +983,7 @@ const DPO_STAGES = {
       tag: "LGPD Arts. 37 e 50 · GDPR Art. 30",
       title: "01. Descobrir onde estão os dados pessoais (RoPA)",
       summary:
-        "Antes de proteger os dados é preciso saber onde eles estão. Mapeio todos os lugares por onde passam dados pessoais e sensíveis: caixas, sistema de gestão, retaguarda, portais web, integrações e arquivos em papel.",
+        "Antes de proteger os dados é preciso saber onde eles estão. Mapeio todos os lugares por onde passam dados pessoais e sensíveis: terminais de faturamento, sistema de gestão, retaguarda, portais web, integrações e arquivos em papel.",
       deliverables: [
         "Registro das operações de tratamento (RoPA) ligando cada processo às suas tabelas, ao responsável e ao prazo de guarda.",
         "Dados sensíveis separados dos cadastros comuns.",
